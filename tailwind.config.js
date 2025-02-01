@@ -4,7 +4,8 @@ export default {
   theme: {
     extend: {
       fontFamily:{
-        LilitaOne: ["Lilita One", "sans-serif"]
+        Inter: ["Inter", "sans-serif"],
+        LilitaOne: ["Lilita One", "sans-serif"],
       },
     },
   },
