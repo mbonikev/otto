@@ -21,8 +21,8 @@ button, input{
 
 
 .custom_scrollbar::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+  width: 7px;
+  height: 7px;
 }
 .custom_scrollbar::-webkit-scrollbar-thumb {
   background-color: #9292924b;
