@@ -18,8 +18,51 @@ function PromptArea() {
     textareaRef.current.style.height = `${e.target.scrollHeight}px`;
   };
 
-  const submit = () => {
-    document.location.reload();
+  const submit = async () => {
+    const apiKey = "your_groq_api_key"; // Store securely, not in frontend code
+    const projectDescription = "Your project description here";
+
+    try {
+      const response = await axios.post(
+        "https://api.groq.com/v1/chat/completions",
+        {
+          model: "llama3-8b-8192",
+          messages: [
+            { role: "system", content: "You are a helpful assistant." },
+            {
+              role: "user",
+              content: `Generate a list of concise project management board titles for the following project description. Each board title should be short, representing distinct key areas of the project.
+              format example:
+              1. Todo
+              2. Design
+              3. Development
+              4. Testing
+              and so on
+              
+              each board title should be 1 or 2 words, 3 words max.
+              
+              Project Description: 
+              
+              ${projectDescription}
+              `,
+            },
+          ],
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${apiKey}`,
+          },
+        }
+      );
+
+      console.log("Response:", response.data);
+    } catch (error) {
+      console.error(
+        "Error:",
+        error.response ? error.response.data : error.message
+      );
+    }
   };
 
   return (
