@@ -58,7 +58,6 @@ function Navbar() {
         <button className="group h-9 w-fit px-3 ring-1 ring-stone-200 flex items-center justify-center gap-1 text-sm hover:bg-stone-100 text-dark-text-weak hover:text-dark-text rounded-full relative">
           <RiShareLine className="text-xl" />
           <h1>Share</h1>
-          <Tooltip title="New chat" placement="center" />
         </button>
         <button
           ref={profileRef}
