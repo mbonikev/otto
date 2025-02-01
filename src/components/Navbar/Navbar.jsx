@@ -28,7 +28,7 @@ function Navbar() {
       {/* 3 */}
       <div className="flex items-center justify-end gap-1">
         <button className="w-fit h-fit p-2 rounded-xl">
-          <img src="" alt="" className="bg-stone-100 h-[30px] w-[30px]" />
+          <img src="" alt="" className="bg-stone-100 h-[30px] w-[30px] rounded-full" />
         </button>
       </div>
     </div>
