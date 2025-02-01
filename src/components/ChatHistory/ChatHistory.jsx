@@ -36,7 +36,7 @@ function ChatHistory() {
             Today
           </h1>
           {/* chats */}
-          <div className="flex flex-col w-full h-fit mb-1">
+          <div className="flex flex-col w-full h-fit">
             {[...Array(20)].map((_, index) => (
               <Link
                 to={"/"}
@@ -51,7 +51,7 @@ function ChatHistory() {
             Older
           </h1>
           {/* chats */}
-          <div className="flex flex-col w-full h-fit mb-1">
+          <div className="flex flex-col w-full h-fit">
             {[...Array(20)].map((_, index) => (
               <Link
                 to={"/"}
