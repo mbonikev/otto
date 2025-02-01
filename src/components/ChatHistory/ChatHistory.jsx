@@ -13,7 +13,7 @@ function ChatHistory() {
               type="text"
               name=""
               id=""
-              className="h-full flex-1 bg-transparent text-dark-text placeholder:text-dark-text-weak/50 text-sm pr-10"
+              className="h-full flex-1 bg-transparent text-dark-text placeholder:text-dark-text-weak/50 text-sm"
               placeholder="Search chats..."
             />
           </div>
