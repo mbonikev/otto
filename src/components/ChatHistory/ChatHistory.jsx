@@ -8,7 +8,7 @@ function ChatHistory() {
         {/* 1 */}
         <div className="w-full h-[50px] px-2 py-1.5">
           <div className="w-full h-full bg-stone-100 rounded-xl flex items-center justify-start">
-            <HiMiniMagnifyingGlass className="mx-2 text-xl" />
+            <HiMiniMagnifyingGlass className="mx-2 text-lg" />
             <input type="text" name="" id="" className="h-full bg-transparent text-dark-text placeholder:text-dark-text-weak/50 text-sm" placeholder="Search chats..." />
           </div>
         </div>
