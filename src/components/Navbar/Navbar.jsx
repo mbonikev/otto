@@ -1,5 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
-import { HiMiniPlus, HiOutlineChatBubbleLeftRight } from "react-icons/hi2";
+import {
+  HiMiniPlus,
+  HiOutlineArrowLeftStartOnRectangle,
+  HiOutlineChatBubbleLeftRight,
+} from "react-icons/hi2";
 import Tooltip from "../Tooltip/Tooltip";
 import { RxPencil2 } from "react-icons/rx";
 import { TbMessage2Share } from "react-icons/tb";
@@ -77,7 +81,7 @@ function Navbar() {
             className="absolute top-[90%] w-[220px] h-fit rounded-2xl ring-1 ring-stone-200 shadow-lg"
           >
             <button className="w-full rounded-lg p-2 flex items-center justify-start gap-1">
-              
+              <HiOutlineArrowLeftStartOnRectangle />
             </button>
           </div>
         )}
