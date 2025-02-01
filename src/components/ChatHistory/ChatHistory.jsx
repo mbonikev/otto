@@ -30,14 +30,14 @@ function ChatHistory() {
         <h1 className="text-xs font-medium text-dark-text-weak my-2 px-2.5">Today</h1>
         {/* chats */}
         <div className="flex flex-col w-full h-fit mb-1">
-            {[...Array(5)].map((_, index) => (
+            {[...Array(2)].map((_, index) => (
                 <Link to={'/'} key={index} className="w-full px-2.5 py-2 hover:bg-stone-100 rounded-xl text-sm text-dark-text">HTML Banner Implementation</Link>
             ))}
         </div>
         <h1 className="text-xs font-medium text-dark-text-weak my-2 px-2.5">Older</h1>
         {/* chats */}
         <div className="flex flex-col w-full h-fit mb-1">
-            {[...Array(5)].map((_, index) => (
+            {[...Array(2)].map((_, index) => (
                 <Link to={'/'} key={index} className="w-full px-2.5 py-2 hover:bg-stone-100 rounded-xl text-sm text-dark-text">HTML Banner Implementation</Link>
             ))}
         </div>
