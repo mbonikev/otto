@@ -13,7 +13,7 @@ function Navbar() {
         </button>
         <button className="group h-10 w-auto aspect-square flex items-center justify-center text-2xl bg-stone-100 hover:bg-stone-200 text-dark-text/70 rounded-full relative">
           <HiMiniPlus />
-          <Tooltip title="New Chat" placement="center"/>
+          <Tooltip title="New chat" placement="center"/>
         </button>
       </div>
       {/* 2 */}
