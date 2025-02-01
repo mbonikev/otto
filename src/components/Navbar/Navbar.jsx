@@ -9,13 +9,10 @@ function Navbar() {
       <div className="flex items-center justify-start gap-1">
           <button className="h-9 w-9 text-xl bg-stone-100 hover:bg-stone-200 active:scale-95 rounded-full">
             <HiOutlineChatBubbleLeftRight />
-            <Tooltip title="Chat history" />
           </button>
-        <Tooltip title="New Chat">
           <button className="h-9 w-9 text-xl bg-stone-100 hover:bg-stone-200 active:scale-95 rounded-full">
             <HiMiniPlus />
           </button>
-        </Tooltip>
       </div>
       {/* 2 */}
       <div className="flex items-center justify-center gap-1 select-none">
