@@ -3,7 +3,7 @@ import React from "react";
 function Tooltip({ title, placement, shortcut }) {
   return (
     <div
-      className={`absolute z-10 w-fit whitespace-nowrap px-3 py-[10px] rounded-[9px] bg-[#222222] text-white/90 text-sm font-semibold pointer-events-none opacity-0 group-hover:opacity-100 delay-150 flex flex-col items-center ${
+      className={`absolute z-10 w-fit whitespace-nowrap px-3 py-[7px] rounded-[9px] bg-[#222222] text-white/90 text-sm font-semibold pointer-events-none opacity-0 group-hover:opacity-100 delay-150 flex flex-col items-center ${
         placement === "left"
           ? "top-[120%] left-0"
           : placement === "center"
@@ -28,7 +28,7 @@ function Tooltip({ title, placement, shortcut }) {
       ></div>
       {title}
       {shortcut && (
-        <span className="text-xs font-medium text-white/60">
+        <span className="text-xs font-medium text-white/60 py-[2px]">
           {shortcut}
         </span>
       )}
