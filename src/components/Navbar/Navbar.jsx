@@ -66,7 +66,7 @@ function Navbar() {
       {/* chats modal */}
       {/* chats */}
       {chatsModal && (
-        <div>
+        <div className="w-fit h-fit required:">
           <ChatHistory />
         </div>
       )}
