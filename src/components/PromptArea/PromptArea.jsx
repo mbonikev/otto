@@ -27,7 +27,11 @@ function PromptArea() {
         ></textarea>
         <div className="flex items-center justify-between w-full  min-h-[40px] bg-red-400/0 p-2">
           {/* 1 */}
-          <div></div>
+          <div>
+            <button className="group h-ull w-auto aspect-square flex items-center justify-center text-[35px] text-dark-text rounded-full relative">
+              <BsArrowUpCircleFill />
+            </button>
+          </div>
           {/* 2 */}
           <div className="w-fit h-full">
             <button className="group h-ull w-auto aspect-square flex items-center justify-center text-[35px] text-dark-text rounded-full relative">
