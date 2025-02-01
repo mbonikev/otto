@@ -4,7 +4,7 @@ function Tooltip({ children, title }) {
   return (
     <div className="h-fit w-fit relative">
       {children}
-      <div className="fixed top-[110%] left-0 bg-dark-text text-white/90 text-xs font-semibold px-2">
+      <div className="asbolute top-[110%] left-0 bg-dark-text text-white/90 text-xs font-semibold px-2">
         {title}
       </div>
     </div>
