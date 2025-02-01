@@ -9,6 +9,7 @@ import {
 } from "react-icons/hi2";
 import Tooltip from "../Tooltip/Tooltip";
 import { RxPencil2 } from "react-icons/rx";
+import { IoShareSocialOutline } from "react-icons/io5";
 
 function Navbar() {
   const [showPopup, setShowPopup] = useState(false);
@@ -59,12 +60,8 @@ function Navbar() {
       </div>
       {/* 3 */}
       <div className="flex items-center justify-end gap-3 relative select-none">
-        {/* <button className="group h-9 w-fit px-3 ring-1 ring-stone-200 flex items-center justify-center gap-1 text-sm hover:bg-stone-100 text-dark-text-weak hover:text-dark-text rounded-full relative">
-          <RiShareLine className="text-xl" />
-          <h1>Share</h1>
-        </button> */}
         <button className="group h-10 w-auto aspect-square flex items-center justify-center text-2xl hover:bg-stone-100 text-dark-text-weak hover:text-dark-text rounded-full relative">
-          <HiOutlineShare />
+          <IoShareSocialOutline />
           <Tooltip title="Share" placement="center" />
         </button>
         <button
