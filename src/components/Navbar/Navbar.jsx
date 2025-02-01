@@ -40,24 +40,6 @@ function Navbar() {
     };
   }, []);
 
-  // close on esc
-  useEffect(() => {
-    const handleKeyDown = (event) => {
-      if (event.key === "Escape") {
-        event.preventDefault();
-        if (moreOpt1 !== "" || saveOpt1 !== "") {
-          handleCancel();
-        }
-        setProfileMenu(false);
-        handleHideCreateWps();
-      }
-    };
-    window.addEventListener("keydown", handleKeyDown);
-    return () => {
-      window.removeEventListener("keydown", handleKeyDown);
-    };
-  }, []);
-
   const handleOpenChatsModal = () => {
     setChatsModal(true);
     setTimeout(() => setAnimateChatsModal(true), 50);
