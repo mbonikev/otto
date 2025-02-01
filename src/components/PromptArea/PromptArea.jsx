@@ -19,30 +19,24 @@ function PromptArea() {
   };
 
   const submit = async () => {
-    const apiKey = import.meta.env.GROQ_API_KEY;
+    const apiUrl = import.meta.env.VITE_BACKEND_API;
+    const apiKey = import.meta.env.VITE_GROQ_API_KEY;
 
     try {
       const response = await axios.post(
-        "https://api.groq.com/openai/v1/chat/completions",
+        `${apiUrl}/api/chat`,
         {
-          model: "llama3-8b-8192",
-          messages: [
-            {
-              role: "system",
-              content: "Your name is Otto, you are a helpful AI assistant.",
-            },
-            { role: "user", content: message },
-          ],
+          message,
         },
         {
           headers: {
-            "Content-Type": "application/json",
             Authorization: `Bearer ${apiKey}`,
+            "Content-Type": "application/json",
           },
         }
       );
 
-      console.log("Response:", response.data);
+      console.log(response.data.message);
     } catch (error) {
       console.error(
         "Error:",
@@ -77,7 +71,12 @@ function PromptArea() {
         <div className="flex items-center justify-between w-full h-[32px] bg-red-400/0 min-h-[32px] px-1.5 mb-1.5">
           {/* 1 */}
           <div className="w-full h-full">
-            <button className="group h-full w-fit px-3 flex items-center justify-center gap-1 text-sm ring-1 ring-stone-300 text-dark-text-weak hover:text-dark-text font-semibold rounded-full relative">
+            <button
+              onClick={(e) => {
+                e.preventDefault();
+              }}
+              className="group h-full w-fit px-3 flex items-center justify-center gap-1 text-sm ring-1 ring-stone-300 text-dark-text-weak hover:text-dark-text font-semibold rounded-full relative"
+            >
               <LuBrain className="text-base" />
               llama3-8b-8192
               <Tooltip title="Models" placement="right-center" />
@@ -87,7 +86,7 @@ function PromptArea() {
           <div className="w-fit h-full">
             <button
               onClick={(e) => {
-                e.preventDefault(); // Prevents newline
+                e.preventDefault();
                 submit();
               }}
               className="group h-full w-auto aspect-square flex items-center justify-center text-dark-text hover:opacity-70 rounded-full relative"
