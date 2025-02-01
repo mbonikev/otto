@@ -50,7 +50,7 @@ function PromptArea() {
             <button className="group h-full w-fit px-3 flex items-center justify-center gap-1 text-sm ring-1 ring-stone-300 text-dark-text-weak hover:text-dark-text font-semibold rounded-full relative">
               <LuBrain className="text-base" />
               Llama 3.1
-              <Tooltip title="Change Model" placement="left-center" />
+              <Tooltip title="Change Model" placement="right-center" />
             </button>
           </div>
           {/* 2 */}
