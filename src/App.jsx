@@ -7,7 +7,7 @@ import NotFound from "./pages/NotFound";
 function App() {
   const hasHash = window.location.hash.includes("#");
   if (!hasHash && window.location.pathname !== "/") {
-    return <NotFound />;
+    return <Home />;
   }
   return (
     <>
