@@ -11,11 +11,9 @@ function Navbar() {
           <button className="h-10 w-10 flex items-center justify-center text-xl bg-stone-100 hover:bg-stone-200 active:scale-95 rounded-full">
             <HiOutlineChatBubbleLeftRight />
           </button>
-          <div className="w-[100px] relative">
-            <div className="asbolute top-[110%] bg-dark-text text-white/80 text-xs font-semibold">
+          <div className="asbolute top-[110%] bg-dark-text text-white/80 text-xs font-semibold">
               Chats
             </div>
-          </div>
         </div>
         <button className="h-10 w-10 flex items-center justify-center text-xl bg-stone-100 hover:bg-stone-200 active:scale-95 rounded-full">
           <HiMiniPlus />
