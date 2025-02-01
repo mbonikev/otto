@@ -18,7 +18,38 @@ function PromptArea() {
     textareaRef.current.style.height = `${e.target.scrollHeight}px`;
   };
 
+  const submit = async () => {
+    const apiKey = "your_groq_api_key"; // Store securely, not in frontend
 
+    try {
+      const response = await axios.post(
+        "https://api.groq.com/openai/v1/chat/completions", // Corrected endpoint
+        {
+          model: "llama3-8b-8192",
+          messages: [
+            {
+              role: "system",
+              content: "Your name is Otto, you are a helpful AI assistant.",
+            },
+            { role: "user", content: message },
+          ],
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${apiKey}`,
+          },
+        }
+      );
+
+      console.log("Response:", response.data);
+    } catch (error) {
+      console.error(
+        "Error:",
+        error.response ? error.response.data : error.message
+      );
+    }
+  };
 
   return (
     <div className="w-full h-fit flex flex-col gap-3 p-3">
