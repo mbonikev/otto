@@ -68,7 +68,7 @@ function Navbar() {
       {/* chats modal */}
       {/* chats */}
       {chatsModal && (
-        <div className={`absolute left-0 z-20 ${animateChatsModal ? "left-0" : "left-[-100%]"}`}>
+        <div className={`absolute left-0 transition z-20 ${animateChatsModal ? "left-0" : "left-[-100%]"}`}>
           <ChatHistory />
         </div>
       )}
