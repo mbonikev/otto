@@ -20,8 +20,6 @@ function PromptArea() {
   };
 
   const submit = async () => {
-    const projectDescription = message;
-
     try {
       const response = await axios.post(
         "https://api.groq.com/v1/chat/completions",
@@ -31,20 +29,7 @@ function PromptArea() {
             { role: "system", content: "You are a helpful assistant." },
             {
               role: "user",
-              content: `Generate a list of concise project management board titles for the following project description. Each board title should be short, representing distinct key areas of the project.
-              format example:
-              1. Todo
-              2. Design
-              3. Development
-              4. Testing
-              and so on
-              
-              each board title should be 1 or 2 words, 3 words max.
-              
-              Project Description: 
-              
-              ${projectDescription}
-              `,
+              content: message,
             },
           ],
         },
