@@ -9,7 +9,7 @@ export default {
       },
       colors:{
         "main-color": "#0066ff",
-        "": "",
+        "dark-text": "#111111",
         "": "",
         "": "",
       },
