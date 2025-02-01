@@ -8,7 +8,10 @@ export default {
         Kanit: ["Kanit", "sans-serif"],
       },
       colors:{
-        
+        "main-color": "#0066ff",
+        "": "",
+        "": "",
+        "": "",
       },
     },
   },
