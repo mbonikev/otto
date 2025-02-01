@@ -15,6 +15,6 @@ body {
   outline-color: #cce1ff;
 }
 
-button{
+button, input{
   outline: none;
 }
