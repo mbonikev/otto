@@ -16,7 +16,7 @@ function Tooltip({ title, placement, shortcut }) {
       }`}
     >
       <div
-        className={`w-2 h-2 bg-[#222222] absolute -top-[4px] rotate-45 ${
+        className={`w-2 h-2 bg-[#222222] absolute rotate-45 ${
           placement === "left"
             ? "left-[16px]"
             : placement === "center"
