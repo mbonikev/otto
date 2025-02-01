@@ -4,6 +4,26 @@ import Tooltip from "../Tooltip/Tooltip";
 import { RxPencil2 } from "react-icons/rx";
 
 function Navbar() {
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        popupRef.current &&
+        !popupRef.current.contains(event.target) &&
+        profileRef.current &&
+        !profileRef.current.contains(event.target)
+      ) {
+        setShowPopup(false);
+      }
+      if (menunRef.current && !menunRef.current.contains(event.target)) {
+        setShowMenu(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
   return (
     <div className="w-full h-[70px] grid grid-cols-3 text-dark-text px-4">
       {/* 1 */}
