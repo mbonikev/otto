@@ -40,6 +40,24 @@ function Navbar() {
     };
   }, []);
 
+  // close on esc
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") {
+        event.preventDefault();
+        if (moreOpt1 !== "" || saveOpt1 !== "") {
+          handleCancel();
+        }
+        setProfileMenu(false);
+        handleHideCreateWps();
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
+
   const handleOpenChatsModal = () => {
     setChatsModal(true);
     setTimeout(() => setAnimateChatsModal(true), 50);
@@ -67,9 +85,7 @@ function Navbar() {
         <div
           className={`w-fit h-svh fixed top-0 left-0 transition-transform duration-300 ease-in-out z-30
                 ${
-                  animateChatsModal
-                    ? "translate-x-0"
-                    : "-translate-x-[300px]"
+                  animateChatsModal ? "translate-x-0" : "-translate-x-[300px]"
                 }`}
         >
           <ChatHistory />
