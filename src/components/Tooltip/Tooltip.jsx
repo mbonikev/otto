@@ -21,6 +21,8 @@ function Tooltip({ title, placement, shortcut }) {
             ? "left-[16px]"
             : placement === "center"
             ? "left-[-50%] right-[-50%] mx-auto"
+            : placement === "right-center"
+            ? ""
             : "right-[16px]"
         }`}
       ></div>
