@@ -7,12 +7,12 @@ function Navbar() {
     <div className="w-full h-[70px] grid grid-cols-3 text-dark-text px-4">
       {/* 1 */}
       <div className="flex items-center justify-start gap-1">
-        <Tooltip title="" placement="bottom-center">
+        <Tooltip title="Chat history" >
           <button className="p-2.5 text-xl bg-stone-100 hover:bg-stone-200 active:scale-95 rounded-full">
             <HiOutlineChatBubbleLeftRight />
           </button>
         </Tooltip>
-        <Tooltip title="New Chat" placement="bottom"  overlayInnerStyle={{ fontSize: "10px", height: "20px" }}>
+        <Tooltip title="New Chat" overlayInnerStyle={{ fontSize: "10px", height: "20px" }}>
           <button className="p-2.5 text-xl bg-stone-100 hover:bg-stone-200 active:scale-95 rounded-full">
             <HiMiniPlus />
           </button>
