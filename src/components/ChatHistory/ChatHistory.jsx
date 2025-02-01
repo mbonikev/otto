@@ -13,7 +13,7 @@ function ChatHistory() {
               type="text"
               name=""
               id=""
-              className="h-full bg-transparent text-dark-text placeholder:text-dark-text-weak/50 text-sm"
+              className="h-full bg-transparent text-dark-text placeholder:text-dark-text-weak/50 text-sm pr-4"
               placeholder="Search chats..."
             />
           </div>
@@ -21,7 +21,7 @@ function ChatHistory() {
         {/*  */}
         <div className="w-[90%] h-[1px] bg-stone-200 mx-auto my-2"></div>
         {/*  */}
-        
+
       </div>
     </div>
   );
