@@ -29,9 +29,9 @@ function ChatHistory() {
         <h1 className="text-xs font-medium text-dark-text-weak mb-2">Today</h1>
         {/* chats */}
         <div className="flex flex-col w-full flex-1">
-            {[...Array(5)].map((_, index) => {
-                <div key={index} className="w-full text-sm text-dark-text">HTML Banner Implementation</div>
-            })}
+            {[...Array(5)].map((_, index) => (
+                <div key={index} className="w-full p-2 text-sm text-dark-text">HTML Banner Implementation</div>
+            ))}
         </div>
       </div>
     </div>
