@@ -27,7 +27,7 @@ function PromptArea() {
           onKeyDown={(e) => {
             if (e.key === "Enter" && !e.shiftKey) {
               e.preventDefault(); // Prevents newline
-              handleSendMessage(); // Call your send function
+              
             }
           }}
           rows="1"
