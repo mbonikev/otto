@@ -1,5 +1,6 @@
 import React from "react";
 import { HiMiniPlus, HiOutlineChatBubbleLeftRight } from "react-icons/hi2";
+import Tooltip from "../Tooltip/Tooltip";
 
 function Navbar() {
   return (
