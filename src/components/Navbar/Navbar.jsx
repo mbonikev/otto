@@ -50,33 +50,20 @@ function Navbar() {
     setTimeout(() => setChatsModal(false), 300);
   };
 
-  // close on esc
+  // shortcuts
   useEffect(() => {
     const handleKeyDown = (event) => {
       if (event.key === "Escape") {
         event.preventDefault();
         handleCloseChatsModal();
-      }
-    };
-    window.addEventListener("keydown", handleKeyDown);
-    return () => {
-      window.removeEventListener("keydown", handleKeyDown);
-    };
-  }, []);
-
-  // open on alt + c
-  useEffect(() => {
-    const handleKeyDown = (event) => {
-      if (event.altKey && event.key.toLowerCase() === "c") {
+      } else if (event.altKey && event.key.toLowerCase() === "c") {
         event.preventDefault();
         handleOpenChatsModal();
       }
     };
 
     window.addEventListener("keydown", handleKeyDown);
-    return () => {
-      window.removeEventListener("keydown", handleKeyDown);
-    };
+    return () => window.removeEventListener("keydown", handleKeyDown);
   }, []);
 
   return (
