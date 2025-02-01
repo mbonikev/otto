@@ -8,7 +8,6 @@ import Tooltip from "../Tooltip/Tooltip";
 import axios from "axios";
 
 function PromptArea() {
-  const apiKey = import.meta.env.GROQ_API_KEY;
   const [message, setMessage] = useState("");
   const textareaRef = useRef(null);
 
@@ -20,6 +19,8 @@ function PromptArea() {
   };
 
   const submit = async () => {
+  const apiKey = import.meta.env.GROQ_API_KEY;
+
     try {
       const response = await axios.post(
         "https://api.groq.com/v1/chat/completions",
