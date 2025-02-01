@@ -24,6 +24,12 @@ function PromptArea() {
           value={message}
           ref={textareaRef}
           onChange={handleInput2Change}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" && !e.shiftKey) {
+              e.preventDefault(); // Prevents newline
+              handleSendMessage(); // Call your send function
+            }
+          }}
           rows="1"
           autoFocus={true}
           placeholder="Message Otto"
@@ -33,8 +39,8 @@ function PromptArea() {
           {/* 1 */}
           <div className="w-full h-full">
             <button className="group h-full w-fit px-3 flex items-center justify-center gap-1 text-sm ring-1 ring-stone-300 text-dark-text-weak font-semibold rounded-full relative">
-            <LuBrain className="text-base" />
-            Llama 3.1
+              <LuBrain className="text-base" />
+              Llama 3.1
             </button>
           </div>
           {/* 2 */}
