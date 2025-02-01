@@ -2,7 +2,7 @@ import React from 'react'
 
 function Tooltip({children}) {
   return (
-    <div>{children}</div>
+    <div className='h-fit w-fit'>{children}</div>
   )
 }
 
