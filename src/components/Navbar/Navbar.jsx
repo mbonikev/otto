@@ -4,6 +4,7 @@ import Tooltip from "../Tooltip/Tooltip";
 import { RxPencil2 } from "react-icons/rx";
 import { TbMessage2Share } from "react-icons/tb";
 import { VscShare } from "react-icons/vsc";
+import { RiShareLine } from "react-icons/ri";
 
 function Navbar() {
   const [showPopup, setShowPopup] = useState(false);
@@ -55,7 +56,7 @@ function Navbar() {
       {/* 3 */}
       <div className="flex items-center justify-end gap-3 relative select-none">
         <button className="group h-9 w-fit px-3 ring-1 ring-stone-200 flex items-center justify-center gap-1 text-sm hover:bg-stone-100 text-dark-text-weak hover:text-dark-text rounded-full relative">
-          <VscShare className="text-xl" />
+          <RiShareLine className="text-xl" />
           <h1>Share</h1>
           <Tooltip title="New chat" placement="center" />
         </button>
