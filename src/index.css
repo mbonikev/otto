@@ -14,3 +14,7 @@ body {
   padding: 0;
   outline-color: #cce1ff;
 }
+
+button{
+  outline: none;
+}
