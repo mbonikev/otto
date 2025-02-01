@@ -7,11 +7,11 @@ function Navbar() {
     <div className="w-full h-[70px] grid grid-cols-3 text-dark-text px-4">
       {/* 1 */}
       <div className="flex items-center justify-start gap-1">
-        <button className="group h-11 w-11 flex items-center justify-center text-2xl bg-stone-100 hover:bg-stone-200 text-dark-text/70 rounded-full relative">
+        <button className="group h-10 w-auto aspect-square flex items-center justify-center text-2xl bg-stone-100 hover:bg-stone-200 text-dark-text/70 rounded-full relative">
           <HiOutlineChatBubbleLeftRight />
           <Tooltip title="Chat history" placement="left"/>
         </button>
-        <button className="group h-11 w-11 flex items-center justify-center text-2xl bg-stone-100 hover:bg-stone-200 text-dark-text/70 rounded-full relative">
+        <button className="group h-10 w-auto aspect-square flex items-center justify-center text-2xl bg-stone-100 hover:bg-stone-200 text-dark-text/70 rounded-full relative">
           <HiMiniPlus />
           <Tooltip title="New Chat" placement="center"/>
         </button>
