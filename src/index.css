@@ -8,3 +8,7 @@
 body {
   font-family: "Inter", sans-serif;
 }
+
+*{
+  transition: .1s ease-in-out;
+}
