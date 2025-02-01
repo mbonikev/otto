@@ -22,7 +22,7 @@ function PromptArea() {
 
   return (
     <div className="w-full h-fit flex flex-col gap-3 p-3">
-      <form className="w-full max-w-[750px] mx-auto h-fit rounded-[25px] shadow-lg ring-1 p-1 ring-stone-200 overflow-hidden">
+      <form onSubmit={submit} className="w-full max-w-[750px] mx-auto h-fit rounded-[25px] shadow-lg ring-1 p-1 ring-stone-200 overflow-hidden">
         <textarea
           type="text"
           id="ProjectDesc"
