@@ -12,7 +12,7 @@ function ChatHistory() {
             <HiMiniMagnifyingGlass className="mx-2 text-lg min-w-fit" />
             <input
               type="text"
-              name=""
+              autoFocus={true}
               onChange={(e) => setSearchValue(e.target.value)}
               value={searchValue}
               className="h-full w-full bg-transparent text-dark-text placeholder:text-dark-text-weak/50 text-sm"
