@@ -8,7 +8,11 @@ function Tooltip({ title, placement, shortcut }) {
           ? "left-0"
           : placement === "center"
           ? "left-[-50%] right-[-50%] mx-auto"
-          : "right-0 "
+          : placement === "center"
+          ? "right-0 "
+          : placement === "left-center"
+          ? ""
+          : ""
       }`}
     >
       <div
@@ -21,7 +25,11 @@ function Tooltip({ title, placement, shortcut }) {
         }`}
       ></div>
       {title}
-      {shortcut && <span className="text-xs font-medium text-white/60 py-[2px]">{shortcut}</span>}
+      {shortcut && (
+        <span className="text-xs font-medium text-white/60 py-[2px]">
+          {shortcut}
+        </span>
+      )}
     </div>
   );
 }
