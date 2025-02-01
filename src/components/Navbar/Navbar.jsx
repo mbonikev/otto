@@ -82,6 +82,7 @@ function Navbar() {
           >
             <button className="w-full rounded-lg p-2 flex items-center justify-start gap-1">
               <HiOutlineArrowLeftStartOnRectangle />
+              <h1>Sign Out</h1>
             </button>
           </div>
         )}
