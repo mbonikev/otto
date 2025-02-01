@@ -25,6 +25,7 @@ function PromptArea() {
           ref={textareaRef}
           onChange={handleInput2Change}
           rows="1"
+          autoFocus={true}
           placeholder="Message Otto"
           className="text-base font-norma bg-transparent min-h-[55px] max-h-[150px] px-3 pt-3 pb-0 outline-none w-full placeholder:text-dark-text-weak text-dark-text resize-none overflow-hidden "
         ></textarea>
