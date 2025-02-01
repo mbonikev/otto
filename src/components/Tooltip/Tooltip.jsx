@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
 
-function Tooltip({children}) {
+function Tooltip({ children }) {
   return (
-    <div className='h-fit w-fit relative'>{children}</div>
-  )
+    <div className="h-fit w-fit relative">
+      {children}
+      <div className=""></div>
+    </div>
+  );
 }
 
-export default Tooltip
+export default Tooltip;
