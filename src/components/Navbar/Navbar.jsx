@@ -68,7 +68,7 @@ function Navbar() {
       {/* chats modal */}
       {/* chats */}
       {chatsModal && (
-        <div className="absolute left-0 top-0">
+        <div className="absolute left-0 top-0 z-20">
           <ChatHistory />
         </div>
       )}
