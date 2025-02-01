@@ -21,7 +21,7 @@ function Tooltip({ title, placement, shortcut }) {
         }`}
       ></div>
       {title}
-      {shortcut && <span className="text-xs font-light text-white/60">{shortcut}</span>}
+      {shortcut && <span className="text-xs font-light text-white/60 py-[2px]">{shortcut}</span>}
     </div>
   );
 }
