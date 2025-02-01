@@ -21,7 +21,7 @@ function PromptArea() {
           ref={textareaRef}
           onChange={handleInput2Change}
           rows="1"
-          placeholder="a short description"
+          placeholder="Message Otto"
           className="text-base font-normal min-h-[100px] max-h-[300px] p-4 outline-none w-full placeholder:text-text-color/70 text-text-color resize-none overflow-hidden dark:bg-dark-body dark:placeholder:text-light-text-color/70 dark:text-[#d4d4d4]"
         ></textarea>
         <div></div>
