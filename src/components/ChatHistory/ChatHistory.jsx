@@ -27,7 +27,7 @@ function ChatHistory() {
         {/*  */}
         <div className="w-[95%] h-[1px] bg-stone-200 mx-auto my-2"></div>
         {/*  */}
-        <h1 className="text-xs font-medium text-dark-text-weak mt-2 px-2.5">Today</h1>
+        <h1 className="text-xs font-medium text-dark-text-weak my-2 px-2.5">Today</h1>
         {/* chats */}
         <div className="flex flex-col w-full h-fit mb-1">
             {[...Array(5)].map((_, index) => (
