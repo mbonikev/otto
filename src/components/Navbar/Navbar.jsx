@@ -47,7 +47,7 @@ function Navbar() {
 
   const handleCloseChatsModal = () => {
     setAnimateChatsModal(false);
-    setTimeout(() => setChatsModal(false), 500);
+    setTimeout(() => setChatsModal(false), 300);
   };
 
   // close on esc
