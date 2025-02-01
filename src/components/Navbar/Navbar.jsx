@@ -27,12 +27,8 @@ function Navbar() {
       </div>
       {/* 3 */}
       <div className="flex items-center justify-end gap-1">
-        <button className="w-fit h-fit p-2 rounded-xl flex items-center gap-2">
+        <button className="p-2.5 text-xl bg-stone-100 hover:bg-stone-200 active:scale-95 rounded-full">
           <img src="" alt="" className="bg-stone-100 h-9 w-9 rounded-full" />
-          <h1 className="flex flex-col items-start leading-3 gap-1 text-sm">
-            <span>Kevin Kan</span>
-            <span>Free</span>
-          </h1>
         </button>
       </div>
     </div>
