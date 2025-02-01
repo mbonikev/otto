@@ -14,7 +14,7 @@ function PromptArea() {
   };
   return (
     <div className="w-full h-fit flex flex-col gap-3 p-3">
-      <div className="w-full max-w-[800px] mx-auto h-fit rounded-[25px] shadow-lg ring-1 p-1 ring-stone-200 overflow-hidden">
+      <div className="w-full max-w-[700px] mx-auto h-fit rounded-[25px] shadow-lg ring-1 p-1 ring-stone-200 overflow-hidden">
         <textarea
           type="text"
           id="ProjectDesc"
