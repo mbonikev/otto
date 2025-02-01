@@ -69,7 +69,7 @@ function Navbar() {
                 ${
                   animateChatsModal
                     ? "translate-x-0 opacity-100"
-                    : "-translate-x-[300px] opacity-0"
+                    : "-translate-x-[300px]"
                 }`}
         >
           <ChatHistory />
