@@ -5,6 +5,10 @@ function Navbar() {
     <div className='w-full h-[50px] bg-emerald-300 grid grid-cols-3'>
         {/* 1 */}
         <div className='flex items-center justify-start gap-1'></div>
+        {/* 2 */}
+        <div className='flex items-center justify-start gap-1'></div>
+        {/* 3 */}
+        <div className='flex items-center justify-start gap-1'></div>
     </div>
   )
 }
