@@ -8,6 +8,7 @@ function App() {
       <HashRouter>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </HashRouter>
     </>
