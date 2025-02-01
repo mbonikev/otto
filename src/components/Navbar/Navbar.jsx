@@ -37,7 +37,7 @@ function Navbar() {
     };
   }, []);
   return (
-    <div className="w-full h-[70px] grid grid-cols-3 text-dark-text px-4">
+    <div className="w-full h-[70px] grid grid-cols-3 text-dark-text px-4 relative">
       {/* 1 */}
       <div className="flex items-center justify-start gap-0">
         <button className="group h-10 w-auto aspect-square flex items-center justify-center text-2xl hover:bg-stone-100 text-dark-text-weak hover:text-dark-text rounded-full relative">
