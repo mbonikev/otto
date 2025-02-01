@@ -82,7 +82,7 @@ function Navbar() {
             className="absolute top-[90%] w-[220px] h-fit rounded-2xl ring-1 ring-stone-200 shadow-lg p-1.5"
           >
             {/*  */}
-            <div className="w-[90%] h-[1px] bg-stone-100 mx-auto"></div>
+            <div className="w-[90%] h-[1px] bg-stone-200 mx-auto my-1"></div>
             {/*  */}
             <button className="w-full rounded-xl p-2 flex items-center justify-start gap-2 hover:bg-stone-100">
               <HiOutlineArrowRightStartOnRectangle className="text-xl text-dark-text-weak/50" />
