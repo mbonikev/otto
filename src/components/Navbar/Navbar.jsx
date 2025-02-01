@@ -54,7 +54,7 @@ function Navbar() {
       </div>
       {/* 3 */}
       <div className="flex items-center justify-end gap-1 relative select-none">
-        <button className="group h-10 w-fit px-3 flex items-center justify-center gap-1 text-sm hover:bg-stone-100 text-dark-text-weak hover:text-dark-text rounded-full relative">
+        <button className="group h-10 w-fit px-3 ring-1 ring-stone-200 flex items-center justify-center gap-1 text-sm hover:bg-stone-100 text-dark-text-weak hover:text-dark-text rounded-full relative">
           <VscShare className="text-2xl" />
           <h1>Share</h1>
           <Tooltip title="New chat" placement="center" />
