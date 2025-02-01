@@ -13,7 +13,7 @@ function ChatHistory() {
             <input
               type="text"
               name=""
-              id=""
+              onChange={(e) => setSearchValue(e.target.value)}
               value={searchValue}
               className="h-full w-full bg-transparent text-dark-text placeholder:text-dark-text-weak/50 text-sm"
               placeholder="Search chats..."
