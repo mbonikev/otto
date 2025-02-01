@@ -58,7 +58,7 @@ function PromptArea() {
                 e.preventDefault(); // Prevents newline
                 submit();
               }}
-              className="group h-full w-auto aspect-square flex items-center justify-center text-dark-text rounded-full relative"
+              className="group h-full w-auto aspect-square flex items-center justify-center text-dark-text hover:opacity-65 rounded-full relative"
             >
               <BsArrowUpCircleFill className="h-full w-full" />
             </button>
