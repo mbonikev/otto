@@ -12,7 +12,7 @@ function Navbar() {
             <HiOutlineChatBubbleLeftRight />
           </button>
         </Tooltip>
-        <Tooltip title="New Chat" overlayInnerStyle={{ fontSize: "10px", height: "20px" }}>
+        <Tooltip title="New Chat">
           <button className="p-2.5 text-xl bg-stone-100 hover:bg-stone-200 active:scale-95 rounded-full">
             <HiMiniPlus />
           </button>
