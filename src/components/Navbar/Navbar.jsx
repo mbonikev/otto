@@ -30,7 +30,7 @@ function Navbar() {
           <img src="/avatars/avatar3.png" alt="avatar" className="bg-stone-100 w-full h-fit min-h-full object-cover rounded-full" />
         </button>
         {/* dropdown */}
-        <div className="w-[300px] h-[400px]"></div>
+        <div className="w-[300px] h-[400px] rounded-2xl ring-1 ring-dark-text-weak"></div>
       </div>
     </div>
   );
