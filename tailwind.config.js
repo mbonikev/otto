@@ -7,6 +7,9 @@ export default {
         Inter: ["Inter", "sans-serif"],
         Kanit: ["Kanit", "sans-serif"],
       },
+      colors:{
+        
+      },
     },
   },
   plugins: [],
