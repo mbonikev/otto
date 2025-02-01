@@ -1,18 +1,29 @@
 import TextArea from "antd/es/input/TextArea";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 
 function PromptArea() {
   const [message, setMessage] = useState("");
+  const textareaRef = useRef(null);
+
+  const handleInput2Change = (e) => {
+    const newInput2 = e.target.value;
+    setProjectDesc(newInput2);
+    debouncedSaveInputs(projectTitle, newInput2);
+    textareaRef.current.style.height = "auto";
+    textareaRef.current.style.height = `${e.target.scrollHeight}px`;
+  };
   return (
     <div className="w-full h-fit flex flex-col gap-3 p-3">
       <div className="w-full max-w-[800px] mx-auto h-[120px] rounded-[25px] shadow-lg ring-1 ring-stone-200">
         <textarea
-          autoFocus={true}
-          className="w-full bg-stone-200/40 dark:bg-[#353535] h-[120px] resize-none rounded-xl leading-5 p-3 text-sm placeholder:text-text-color/50 dark:placeholder:text-white/40 font-medium text-text-color dark:text-white"
+          type="text"
+          id="ProjectDesc"
           value={message}
-          onChange={(e) => setMessage(e.target.value)}
-          placeholder="Describe your project..."
-          required={true}
+          ref={textareaRef}
+          onChange={handleInput2Change}
+          rows="1"
+          placeholder="a short description"
+          className="text-base font-normal w-full placeholder:text-text-color/70 text-text-color resize-none overflow-hidden dark:bg-dark-body dark:placeholder:text-light-text-color/70 dark:text-[#d4d4d4]"
         ></textarea>
       </div>
       <h1 className="text-xs font-normal text-dark-text-weak w-fit mx-auto">
