@@ -9,6 +9,7 @@ function Navbar() {
         <div className='flex items-center justify-center gap-1'>
             <div className='w-7 min-w-7'>
                 <img src="/logo.png" alt="logo" className='w-full h-fit ' />
+                <h1>Otto</h1>
             </div>
         </div>
         {/* 3 */}
