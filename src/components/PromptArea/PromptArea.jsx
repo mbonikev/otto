@@ -19,11 +19,11 @@ function PromptArea() {
   };
 
   const submit = async () => {
-    const apiKey = "your_groq_api_key"; // Store securely, not in frontend
+    const apiKey = import.meta.env.GROQ_API_KEY;
 
     try {
       const response = await axios.post(
-        "https://api.groq.com/openai/v1/chat/completions", // Corrected endpoint
+        "https://api.groq.com/openai/v1/chat/completions",
         {
           model: "llama3-8b-8192",
           messages: [
