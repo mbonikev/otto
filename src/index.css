@@ -21,12 +21,12 @@ button, input{
 
 
 .custom_scrollbar::-webkit-scrollbar {
-  width: 5px;
-  height: 5px;
+  width: 6px;
+  height: 6px;
 }
 .custom_scrollbar::-webkit-scrollbar-thumb {
   background-color: #9292924b;
-  border: 10px solid transparent;
+  border: 3px solid transparent;
   border-radius: 30px;
   cursor: default;
 }
