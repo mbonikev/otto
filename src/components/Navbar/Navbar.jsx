@@ -51,7 +51,7 @@ function Navbar() {
     setAnimateChatsModal(false);
     setTimeout(() => {
       setChatsModal(false);
-    }, 200);
+    }, 400);
   };
 
   return (
