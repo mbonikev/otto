@@ -2,7 +2,7 @@ import React from 'react'
 
 function ChatHistory() {
   return (
-    <div>ChatHistory</div>
+    <div className='w-full'></div>
   )
 }
 
