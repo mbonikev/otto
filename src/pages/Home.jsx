@@ -4,9 +4,9 @@ import PromptArea from '../components/PromptArea/PromptArea'
 
 function Home() {
   return (
-    <div className='w-full h-svh'>
+    <div className='w-full h-svh flex flex-col'>
       <Navbar />
-      <div className=''></div>
+      <div className='w-full flex-1'></div>
       <PromptArea />
     </div>
   )
