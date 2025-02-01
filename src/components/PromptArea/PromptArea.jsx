@@ -26,7 +26,7 @@ function PromptArea() {
         {
           model: "llama3-8b-8192",
           messages: [
-            { role: "system", content: "You are a helpful assistant." },
+            { role: "system", content: "Your name is Otto, you are a helpful Ai assistant." },
             {
               role: "user",
               content: message,
