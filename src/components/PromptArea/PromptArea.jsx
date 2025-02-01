@@ -5,6 +5,7 @@ import { LuBrain } from "react-icons/lu";
 import { PiBrainLight } from "react-icons/pi";
 import { RiRobot3Line } from "react-icons/ri";
 import Tooltip from "../Tooltip/Tooltip";
+import axios from "axios";
 
 function PromptArea() {
   const [message, setMessage] = useState("");
