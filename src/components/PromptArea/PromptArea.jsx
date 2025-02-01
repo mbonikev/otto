@@ -20,7 +20,7 @@ function PromptArea() {
   };
 
   const submit = async () => {
-    const projectDescription = "Your project description here";
+    const projectDescription = message;
 
     try {
       const response = await axios.post(
