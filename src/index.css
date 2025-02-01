@@ -18,3 +18,24 @@ body {
 button, input{
   outline: none;
 }
+
+
+.custom_scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.custom_scrollbar::-webkit-scrollbar-thumb {
+  background-color: #9292924b;
+  border: 3px solid transparent;
+  border-radius: 30px;
+  cursor: default;
+}
+.custom_scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #3a3a3a63;
+}
+.custom_scrollbar::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.custom_scrollbar::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
