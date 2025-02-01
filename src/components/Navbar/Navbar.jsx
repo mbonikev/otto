@@ -81,6 +81,9 @@ function Navbar() {
             ref={popupRef}
             className="absolute top-[90%] w-[220px] h-fit rounded-2xl ring-1 ring-stone-200 shadow-lg p-1.5"
           >
+            {/*  */}
+            <div className="w-[90%] h-[1px]"></div>
+            {/*  */}
             <button className="w-full rounded-xl p-2 flex items-center justify-start gap-2 hover:bg-stone-100">
               <HiOutlineArrowRightStartOnRectangle className="text-xl text-dark-text-weak/50" />
               <h1 className="text-sm">Sign Out</h1>
