@@ -28,13 +28,13 @@ function PromptArea() {
         <div className="flex items-center justify-between w-full min-h-[40px] bg-red-400/0 p-2">
           {/* 1 */}
           <div>
-            <button className="group h-ull w-fit px-3 flex items-center justify-center text-sm ring-1 text-dark-text rounded-full relative">
+            <button className="group h-full w-fit px-3 flex items-center justify-center text-sm ring-1 text-dark-text rounded-full relative">
             Llama 3.1
             </button>
           </div>
           {/* 2 */}
           <div className="w-fit h-full">
-            <button className="group h-full w-auto aspect-square flex items-center justify-center text-[35px] text-dark-text rounded-full relative">
+            <button className="group h-full w-auto aspect-square flex items-center justify-center text-[34px] text-dark-text rounded-full relative">
               <BsArrowUpCircleFill />
             </button>
           </div>
