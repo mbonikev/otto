@@ -3,7 +3,7 @@ import { IoChatbubblesOutline } from "react-icons/io5";
 
 function Navbar() {
   return (
-    <div className="w-full h-[70px] grid grid-cols-3 text-dark-text">
+    <div className="w-full h-[70px] grid grid-cols-3 text-dark-text px-4">
       {/* 1 */}
       <div className="flex items-center justify-start gap-1">
         <button className="p-2.5 text-xl bg-stone-200 rounded-full">
