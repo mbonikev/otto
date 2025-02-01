@@ -8,12 +8,12 @@ function Navbar() {
       {/* 1 */}
       <div className="flex items-center justify-start gap-1">
         <Tooltip title="Chat history" >
-          <button className="p-2.5 text-xl bg-stone-100 hover:bg-stone-200 active:scale-95 rounded-full">
+          <button className="text-xl bg-stone-100 hover:bg-stone-200 active:scale-95 rounded-full">
             <HiOutlineChatBubbleLeftRight />
           </button>
         </Tooltip>
         <Tooltip title="New Chat">
-          <button className="p-2.5 text-xl bg-stone-100 hover:bg-stone-200 active:scale-95 rounded-full">
+          <button className="text-xl bg-stone-100 hover:bg-stone-200 active:scale-95 rounded-full">
             <HiMiniPlus />
           </button>
         </Tooltip>
