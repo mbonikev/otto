@@ -6,7 +6,9 @@ function ChatHistory() {
       <div className="w-full h-full bg-white rounded-2xl">
         {/* 1 */}
         <div className="w-full h-[220px]">
-          <input type="text" name="" id="" className="" />
+          <div className="w-full h-full bg-stone-100 rounded-xl">
+            <input type="text" name="" id="" className="" />
+          </div>
         </div>
       </div>
     </div>
