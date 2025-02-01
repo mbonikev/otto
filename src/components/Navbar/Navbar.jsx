@@ -19,7 +19,7 @@ function Navbar() {
         </Tooltip>
       </div>
       {/* 2 */}
-      <div className="flex items-center justify-center gap-1">
+      <div className="flex items-center justify-center gap-1 select-none">
         <div className="w-7 min-w-7">
           <img src="/logo.png" alt="logo" className="w-full h-fit " />
         </div>
