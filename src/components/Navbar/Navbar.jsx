@@ -25,10 +25,12 @@ function Navbar() {
         <h1 className="font-Kanit text-2xl font-light text-dark-text-weak">Otto</h1>
       </div>
       {/* 3 */}
-      <div className="flex items-center justify-end gap-1">
+      <div className="flex items-center justify-end gap-1 relative">
         <button className="h-9 w-9 rounded-full overflow-hidden">
           <img src="/avatars/avatar3.png" alt="avatar" className="bg-stone-100 w-full h-fit min-h-full object-cover rounded-full" />
         </button>
+        {/* dropdown */}
+        <div className=""></div>
       </div>
     </div>
   );
