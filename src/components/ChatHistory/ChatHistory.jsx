@@ -19,7 +19,7 @@ function ChatHistory() {
               placeholder="Search chats..."
             />
             {searchValue !== "" && (
-              <HiMiniXCircle className="mx-2 min-w-fit text-xl text-dark-text-weak/40 cursor-pointer" />
+              <HiMiniXCircle onClick={() => setSearchValue("")} className="mx-2 min-w-fit text-xl text-dark-text-weak/40 cursor-pointer" />
             )}
           </div>
         </div>
