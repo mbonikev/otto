@@ -39,7 +39,9 @@ function Navbar() {
     };
   }, []);
 
-  const handleOpenChatsModal = () => {};
+  const handleOpenChatsModal = () => {
+    setAnimateChatsModal(true)
+  };
 
   const handleCloseChatsModal = () => {};
 
