@@ -19,15 +19,17 @@ function PromptArea() {
   };
 
   const submit = async () => {
-  const apiKey = import.meta.env.GROQ_API_KEY;
-
+    const apiKey = import.meta.env.GROQ_API_KEY;
     try {
       const response = await axios.post(
         "https://api.groq.com/v1/chat/completions",
         {
           model: "llama3-8b-8192",
           messages: [
-            { role: "system", content: "Your name is Otto, you are a helpful Ai assistant." },
+            {
+              role: "system",
+              content: "Your name is Otto, you are a helpful Ai assistant.",
+            },
             {
               role: "user",
               content: message,
