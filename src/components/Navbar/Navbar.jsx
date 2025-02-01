@@ -5,6 +5,7 @@ import {
   HiOutlineArrowRightStartOnRectangle,
   HiOutlineChatBubbleLeftRight,
   HiOutlineCog6Tooth,
+  HiOutlineUser,
 } from "react-icons/hi2";
 import Tooltip from "../Tooltip/Tooltip";
 import { RxPencil2 } from "react-icons/rx";
@@ -83,7 +84,7 @@ function Navbar() {
             className="absolute top-[90%] w-[220px] h-fit rounded-2xl ring-1 ring-stone-200 shadow-lg p-1.5"
           >
             <button className="w-full rounded-xl p-2 flex items-center justify-start gap-2 hover:bg-stone-100">
-              <HiOutlineCog6Tooth className="text-2xl text-dark-text-weak/70" />
+              <HiOutlineUser className="text-2xl text-dark-text-weak/70" />
               <h1 className="text-sm">My accout</h1>
             </button>
             <button className="w-full rounded-xl p-2 flex items-center justify-start gap-2 hover:bg-stone-100">
