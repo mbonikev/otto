@@ -30,7 +30,7 @@ function PromptArea() {
           {/* 1 */}
           <div className="w-full h-full">
             <button className="group h-full w-fit px-3 flex items-center justify-center text-sm ring-1 ring-stone-300 text-dark-text-weak font-semibold rounded-full relative">
-            <RiRobot3Line className="text-lg" />
+            <RiRobot3Line className="text-base" />
             Llama 3.1
             </button>
           </div>
