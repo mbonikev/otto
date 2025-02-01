@@ -12,7 +12,7 @@ function Navbar() {
             <HiOutlineChatBubbleLeftRight />
           </button>
         </Tooltip>
-        <Tooltip title="" placement="bottom-center">
+        <Tooltip title="New Chat" placement="bottom-center">
           <button className="p-2.5 text-xl bg-stone-100 hover:bg-stone-200 active:scale-95 rounded-full">
             <HiMiniPlus />
           </button>
