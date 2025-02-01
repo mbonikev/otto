@@ -89,7 +89,7 @@ function Navbar() {
             {/*  */}
             <div className="w-[90%] h-[1px] bg-stone-200 mx-auto my-1"></div>
             {/*  */}
-            <button className="w-full rounded-xl px-2 py-1 flex items-center justify-start gap-2 hover:bg-stone-100">
+            <button className="w-full rounded-xl p-2 flex items-center justify-start gap-2 hover:bg-stone-100">
               <HiOutlineArrowRightStartOnRectangle className="text-2xl text-dark-text-weak/70" />
               <h1 className="text-sm">Sign Out</h1>
             </button>
