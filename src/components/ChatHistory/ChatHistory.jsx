@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { HiMiniMagnifyingGlass, HiMiniXCircle } from "react-icons/hi2";
 
 function ChatHistory() {
-    const [searchValue, setSearchValue] = useState(false)
+    const [searchValue, setSearchValue] = useState("")
   return (
     <div className="w-[300px] h-svh p-3">
       <div className="w-full h-full bg-white rounded-2xl p-2">
