@@ -16,7 +16,7 @@ function ChatHistory() {
               className="h-full w-full bg-transparent text-dark-text placeholder:text-dark-text-weak/50 text-sm"
               placeholder="Search chats..."
             />
-            <HiMiniXCircle className="mx-2 min-w-fit text-xl text-dark-text-weak/50" />
+            <HiMiniXCircle className="mx-2 min-w-fit text-xl text-dark-text-weak/50 cursor-pointer" />
           </div>
         </div>
         {/*  */}
