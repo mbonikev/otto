@@ -5,7 +5,6 @@ export default {
     extend: {
       fontFamily:{
         Inter: ["Inter", "sans-serif"],
-        LilitaOne: ["Lilita One", "sans-serif"],
         Kanit: ["Kanit", "sans-serif"],
       },
     },
