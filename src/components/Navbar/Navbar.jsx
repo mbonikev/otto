@@ -29,9 +29,6 @@ function Navbar() {
       ) {
         setShowPopup(false);
       }
-      if (menunRef.current && !menunRef.current.contains(event.target)) {
-        setShowMenu(false);
-      }
     };
 
     document.addEventListener("mousedown", handleClickOutside);
