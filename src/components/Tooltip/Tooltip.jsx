@@ -1,8 +1,8 @@
 import React from 'react'
 
-function Tooltip() {
+function Tooltip({children}) {
   return (
-    <div>Tooltip</div>
+    <div>{children}</div>
   )
 }
 
