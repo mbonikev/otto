@@ -7,7 +7,7 @@ function Navbar() {
         <div className='flex items-center justify-start gap-1'></div>
         {/* 2 */}
         <div className='flex items-center justify-center gap-1'>
-            <div className='w-6 min-w-6'>
+            <div className='w-7 min-w-7'>
                 <img src="/logo.png" alt="logo" className='w-full h-fit ' />
             </div>
         </div>
