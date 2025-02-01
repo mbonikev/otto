@@ -25,7 +25,7 @@ function PromptArea() {
           placeholder="Message Otto"
           className="text-base font-norma bg-transparent min-h-[80px] max-h-[200px] px-4 pt-4 pb-0 outline-none w-full placeholder:text-dark-text-weak text-dark-text resize-none overflow-hidden "
         ></textarea>
-        <div className="flex items-center justify-between w-full">
+        <div className="flex items-center justify-between w-full  min-h-fit">
           {/* 1 */}
           <div></div>
           {/* 2 */}
