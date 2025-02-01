@@ -8,7 +8,7 @@ import Tooltip from "../Tooltip/Tooltip";
 import axios from "axios";
 
 function PromptArea() {
-  const apiUrl = import.meta.env.GROQ_API_KEY;
+  const apiKey = import.meta.env.GROQ_API_KEY;
   const [message, setMessage] = useState("");
   const textareaRef = useRef(null);
 
@@ -20,7 +20,6 @@ function PromptArea() {
   };
 
   const submit = async () => {
-    const apiKey = "your_groq_api_key"; // Store securely, not in frontend code
     const projectDescription = "Your project description here";
 
     try {
