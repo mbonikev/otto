@@ -47,7 +47,7 @@ function ChatHistory() {
               </Link>
             ))}
           </div>
-          <h1 className="text-xs font-medium text-dark-text-weak my-2 px-2.5">
+          <h1 className="text-xs font-medium text-dark-text-weak px-2.5">
             Older
           </h1>
           {/* chats */}
