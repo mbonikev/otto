@@ -66,7 +66,6 @@ function Navbar() {
         ></div>
       )}
       {/* chats modal */}
-      {/* chats */}
       {chatsModal && (
         <div
           className={`w-fit h-svh absolute top-0 left-0 transition-transform duration-200 z-20 ${
