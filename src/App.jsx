@@ -7,7 +7,7 @@ function App() {
     <>
       <HashRouter>
         <Routes>
-          <Route path="/a" element={<Home />} />
+          <Route path="/" element={<Home />} />
         </Routes>
       </HashRouter>
     </>
