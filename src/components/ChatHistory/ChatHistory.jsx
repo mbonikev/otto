@@ -1,5 +1,5 @@
 import React from "react";
-import { HiMiniMagnifyingGlass } from "react-icons/hi2";
+import { HiMiniMagnifyingGlass, HiMiniXCircle } from "react-icons/hi2";
 
 function ChatHistory() {
   return (
@@ -16,12 +16,12 @@ function ChatHistory() {
               className="h-full flex-1 bg-transparent text-dark-text placeholder:text-dark-text-weak/50 text-sm"
               placeholder="Search chats..."
             />
+            <HiMiniXCircle />
           </div>
         </div>
         {/*  */}
         <div className="w-[90%] h-[1px] bg-stone-200 mx-auto my-2"></div>
         {/*  */}
-
       </div>
     </div>
   );
