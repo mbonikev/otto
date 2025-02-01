@@ -6,7 +6,7 @@ function Navbar() {
     <div className="w-full h-[70px] grid grid-cols-3 text-dark-text px-4">
       {/* 1 */}
       <div className="flex items-center justify-start gap-1">
-        <button className="p-2.5 text-xl bg-stone-200 rounded-full">
+        <button className="p-2.5 text-xl bg-stone-100 rounded-full">
           <IoChatbubblesOutline />
         </button>
       </div>
