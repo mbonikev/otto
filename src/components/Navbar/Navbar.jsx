@@ -2,7 +2,7 @@ import React from "react";
 
 function Navbar() {
   return (
-    <div className="w-full h-[70px] grid grid-cols-3">
+    <div className="w-full h-[70px] grid grid-cols-3 text-dark-text">
       {/* 1 */}
       <div className="flex items-center justify-start gap-1"></div>
       {/* 2 */}
