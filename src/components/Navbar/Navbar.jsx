@@ -27,7 +27,7 @@ function Navbar() {
       </div>
       {/* 3 */}
       <div className="flex items-center justify-end gap-1">
-        <button className="w-fit h-fit p-2"></button>
+        <button className="w-fit h-fit p-2 rounded-xl"></button>
       </div>
     </div>
   );
