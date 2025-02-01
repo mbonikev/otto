@@ -65,7 +65,7 @@ function Navbar() {
       {/* Chat Modal */}
       {chatsModal && (
         <div
-          className={`w-fit h-svh fixed top-0 left-0 transition-transform transition-opacity duration-500 ease-in-out z-30
+          className={`w-fit h-svh fixed top-0 left-0 transition-transform duration-500 ease-in-out z-30
                 ${
                   animateChatsModal
                     ? "translate-x-0 opacity-100"
