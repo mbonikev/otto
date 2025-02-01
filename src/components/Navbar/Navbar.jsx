@@ -40,10 +40,12 @@ function Navbar() {
           />
         </button>
         {/* dropdown */}
-        <div
-          ref={popupRef}
-          className="absolute top-[90%] w-[220px] h-[240px] rounded-2xl ring-1 ring-stone-200 shadow-lg"
-        ></div>
+        {showPopup && (
+          <div
+            ref={popupRef}
+            className="absolute top-[90%] w-[220px] h-[240px] rounded-2xl ring-1 ring-stone-200 shadow-lg"
+          ></div>
+        )}
       </div>
     </div>
   );
