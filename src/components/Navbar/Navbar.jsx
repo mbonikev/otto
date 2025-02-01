@@ -84,6 +84,10 @@ function Navbar() {
           >
             <button className="w-full rounded-xl p-2 flex items-center justify-start gap-2 hover:bg-stone-100">
               <HiOutlineCog6Tooth className="text-2xl text-dark-text-weak/70" />
+              <h1 className="text-sm">My accout</h1>
+            </button>
+            <button className="w-full rounded-xl p-2 flex items-center justify-start gap-2 hover:bg-stone-100">
+              <HiOutlineCog6Tooth className="text-2xl text-dark-text-weak/70" />
               <h1 className="text-sm">Settings</h1>
             </button>
             {/*  */}
