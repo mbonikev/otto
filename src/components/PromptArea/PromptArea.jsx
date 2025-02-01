@@ -28,7 +28,7 @@ function PromptArea() {
         <div className="flex items-center justify-between w-full h-[32px] bg-red-400/0 min-h-[32px] px-1.5 mb-1.5">
           {/* 1 */}
           <div className="w-full h-full">
-            <button className="group h-full w-fit px-3 flex items-center justify-center text-sm ring-1 text-dark-text rounded-full relative">
+            <button className="group h-full w-fit px-3 flex items-center justify-center text-sm ring-1 ring-stone-300 text-dark-text rounded-full relative">
             Llama 3.1
             </button>
           </div>
