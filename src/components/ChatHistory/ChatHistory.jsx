@@ -26,7 +26,7 @@ function ChatHistory() {
         {/*  */}
         <div className="w-[90%] h-[1px] bg-stone-200 mx-auto my-2"></div>
         {/*  */}
-        <h1 className="text-sm">Today</h1>
+        <h1 className="text-sm font-medium">Today</h1>
       </div>
     </div>
   );
