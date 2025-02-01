@@ -40,7 +40,7 @@ function Navbar() {
   }, []);
   return (
     <div className="w-full h-[70px] grid grid-cols-3 text-dark-text px-4 relative">
-      {/* shats */}
+      {/* chats */}
       <div className="fixed top-0 left-0 w-full h-full bg-black/10 z-20"></div>
       {/* 1 */}
       <div className="flex items-center justify-start gap-0">
