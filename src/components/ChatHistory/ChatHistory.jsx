@@ -19,7 +19,7 @@ function ChatHistory() {
           </div>
         </div>
         {/*  */}
-        <div className="w-[90%] h-[1px] bg-stone-200 mx-auto my-2"></div>
+        <div className="w-full h-[1px] bg-stone-200 mx-auto my-2"></div>
         {/*  */}
       </div>
     </div>
