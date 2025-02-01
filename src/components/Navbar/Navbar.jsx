@@ -15,6 +15,7 @@ function Navbar() {
   const [showPopup, setShowPopup] = useState(false);
   const profileRef = useRef(null);
   const popupRef = useRef(null);
+  const [chatsModal, setChatsModal] = useState(false);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
