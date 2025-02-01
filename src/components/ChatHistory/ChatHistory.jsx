@@ -27,11 +27,11 @@ function ChatHistory() {
             )}
           </div>
         </div>
+        {/*  */}
+        <div className="w-[95%] h-[1px] bg-stone-200 mx-auto my-2"></div>
+        {/*  */}
         {/* 2 */}
         <div className="w-full flex-1 flex flex-col overflow-y-auto my-2 pr-2">
-          {/*  */}
-          <div className="w-[95%] h-[1px] bg-stone-200 mx-auto"></div>
-          {/*  */}
           <h1 className="text-xs font-medium text-dark-text-weak px-2.5">
             Today
           </h1>
