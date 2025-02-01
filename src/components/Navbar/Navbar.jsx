@@ -46,7 +46,12 @@ function Navbar() {
     }, 100);
   };
 
-  const handleCloseChatsModal = () => {};
+  const handleCloseChatsModal = () => {
+    setAnimateChatsModal(false);
+    setTimeout(() => {
+      setChatsModal(false);
+    }, 100);
+  };
 
   return (
     <div className="w-full h-[70px] grid grid-cols-3 text-dark-text px-4 relative">
