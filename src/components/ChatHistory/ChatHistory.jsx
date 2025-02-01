@@ -28,7 +28,7 @@ function ChatHistory() {
           </div>
         </div>
         {/* 2 */}
-        <div className="w-full flex-1 flex flex-col">
+        <div className="w-full flex-1 flex flex-col overflow-y-auto my-2">
           {/*  */}
           <div className="w-[95%] h-[1px] bg-stone-200 mx-auto mt-2 mb-1"></div>
           {/*  */}
