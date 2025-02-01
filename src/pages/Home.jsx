@@ -2,7 +2,9 @@ import React from 'react'
 
 function Home() {
   return (
-    <div></div>
+    <div className='w-full h-svh'>
+      
+    </div>
   )
 }
 
