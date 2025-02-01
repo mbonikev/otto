@@ -50,6 +50,20 @@ function Navbar() {
     setTimeout(() => setChatsModal(false), 500);
   };
 
+  // close on esc
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") {
+        event.preventDefault();
+        handleCloseChatsModal()
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
+
   return (
     <div className="w-full h-[70px] grid grid-cols-3 text-dark-text px-4 relative">
       {/* Overlay */}
