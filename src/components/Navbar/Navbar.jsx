@@ -7,16 +7,15 @@ function Navbar() {
     <div className="w-full h-[70px] grid grid-cols-3 text-dark-text px-4">
       {/* 1 */}
       <div className="flex items-center justify-start gap-1">
-        <Tooltip title="Chat history" >
-          <button className="p-2.5 text-xl bg-stone-100 hover:bg-stone-200 active:scale-95 rounded-full">
-            <HiOutlineChatBubbleLeftRight />
-          </button>
-        </Tooltip>
-        <Tooltip title="New Chat">
-          <button className="p-2.5 text-xl bg-stone-100 hover:bg-stone-200 active:scale-95 rounded-full">
-            <HiMiniPlus />
-          </button>
-        </Tooltip>
+        <button className="h-10 w-10 flex items-center justify-center text-xl bg-stone-100 hover:bg-stone-200 active:scale-95 rounded-full relative">
+          <HiOutlineChatBubbleLeftRight />
+          <div className="absolute top-[140%] left-0 w-[100px] bg-dark-text text-white/80 text-xs font-semibold">
+            Chats history
+          </div>
+        </button>
+        <button className="h-10 w-10 flex items-center justify-center text-xl bg-stone-100 hover:bg-stone-200 active:scale-95 rounded-full">
+          <HiMiniPlus />
+        </button>
       </div>
       {/* 2 */}
       <div className="flex items-center justify-center gap-1 select-none">
