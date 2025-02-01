@@ -42,37 +42,35 @@ function Navbar() {
 
   const handleOpenChatsModal = () => {
     setChatsModal(true);
-    setTimeout(() => {
-      setAnimateChatsModal(true);
-    }, 100);
+    setTimeout(() => setAnimateChatsModal(true), 50);
   };
 
   const handleCloseChatsModal = () => {
     setAnimateChatsModal(false);
-    setTimeout(() => {
-      setChatsModal(false);
-    }, 400);
+    setTimeout(() => setChatsModal(false), 500);
   };
 
   return (
     <div className="w-full h-[70px] grid grid-cols-3 text-dark-text px-4 relative">
-      {/* chats overlay*/}
+      {/* Overlay */}
       {chatsModal && (
         <div
           onClick={handleCloseChatsModal}
-          className={`fixed top-0 left-0 w-full h-full bg-black/5 z-20 transition duration-200  ${
+          className={`fixed top-0 left-0 w-full h-full bg-black/10 z-20 transition-opacity duration-300 ${
             animateChatsModal ? "opacity-100" : "opacity-0"
           }`}
-        ></div>
+        />
       )}
-      {/* chats modal */}
+
+      {/* Chat Modal */}
       {chatsModal && (
         <div
-          className={`w-fit h-svh absolute top-0 left-0 transition-transform duration-200 z-20 ${
-            animateChatsModal
-              ? "translate-x-0 opacity-100"
-              : "-translate-x-[50px] opacity-0"
-          }`}
+          className={`w-fit h-svh fixed top-0 left-0 transition-transform duration-500 ease-in-out z-30
+                ${
+                  animateChatsModal
+                    ? "translate-x-0 opacity-100"
+                    : "-translate-x-full opacity-0"
+                }`}
         >
           <ChatHistory />
         </div>
