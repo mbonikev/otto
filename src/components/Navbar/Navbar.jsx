@@ -12,7 +12,7 @@ function Navbar() {
             <HiOutlineChatBubbleLeftRight />
           </button>
           <div className="asbolute top-[110%] bg-dark-text text-white/80 text-xs font-semibold">
-              Chats
+              Chats history
             </div>
         </div>
         <button className="h-10 w-10 flex items-center justify-center text-xl bg-stone-100 hover:bg-stone-200 active:scale-95 rounded-full">
