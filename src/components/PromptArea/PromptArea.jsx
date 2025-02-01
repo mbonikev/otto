@@ -6,9 +6,8 @@ function PromptArea() {
   const textareaRef = useRef(null);
 
   const handleInput2Change = (e) => {
-    const newInput2 = e.target.value;
-    setProjectDesc(newInput2);
-    debouncedSaveInputs(projectTitle, newInput2);
+    const newInput = e.target.value;
+    setMessage(newInput);
     textareaRef.current.style.height = "auto";
     textareaRef.current.style.height = `${e.target.scrollHeight}px`;
   };
