@@ -2,7 +2,7 @@ import React from 'react'
 
 function PromptArea() {
   return (
-    <div>PromptArea</div>
+    <div className='w-full'></div>
   )
 }
 
