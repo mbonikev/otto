@@ -28,7 +28,9 @@ function ChatHistory() {
         {/*  */}
         <h1 className="text-xs font-medium text-dark-text-weak mb-2">Today</h1>
         {/* chats */}
-        <div className=""></div>
+        <div className="flex flex-col w-full">
+            
+        </div>
       </div>
     </div>
   );
