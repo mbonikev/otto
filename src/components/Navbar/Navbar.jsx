@@ -7,11 +7,11 @@ function Navbar() {
     <div className="w-full h-[70px] grid grid-cols-3 text-dark-text px-4">
       {/* 1 */}
       <div className="flex items-center justify-start gap-1">
-        <button className="h-10 w-10 flex items-center justify-center text-xl bg-stone-100 hover:bg-stone-200 active:scale-95 rounded-full relative">
+        <button className="h-10 w-10 flex items-center justify-center text-xl bg-stone-100 hover:bg-stone-200 rounded-full relative">
           <HiOutlineChatBubbleLeftRight />
           {/* <Tooltip title="Chat history" placement="left"/> */}
         </button>
-        <button className="h-10 w-10 flex items-center justify-center text-xl bg-stone-100 hover:bg-stone-200 active:scale-95 rounded-full relative">
+        <button className="h-10 w-10 flex items-center justify-center text-xl bg-stone-100 hover:bg-stone-200 rounded-full relative">
           <HiMiniPlus />
           <Tooltip title="New Chat" placement="center"/>
         </button>
@@ -25,7 +25,7 @@ function Navbar() {
       </div>
       {/* 3 */}
       <div className="flex items-center justify-end gap-1">
-        <button className="bg-stone-100 hover:bg-stone-200 active:scale-95 rounded-full overflow-hidden">
+        <button className="bg-stone-100 hover:bg-stone-200 rounded-full overflow-hidden">
           <img src="" alt="" className="bg-stone-100 h-9 w-9 rounded-full" />
         </button>
       </div>
