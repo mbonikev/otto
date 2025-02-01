@@ -76,7 +76,7 @@ function Navbar() {
             ref={popupRef}
             className="absolute top-[90%] w-[220px] h-fit rounded-2xl ring-1 ring-stone-200 shadow-lg"
           >
-            
+            <button className="w-full rounded-lg p-2"></button>
           </div>
         )}
       </div>
