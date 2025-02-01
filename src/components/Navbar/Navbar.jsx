@@ -1,6 +1,7 @@
 import React from "react";
 import { HiMiniPlus, HiOutlineChatBubbleLeftRight } from "react-icons/hi2";
 import Tooltip from "../Tooltip/Tooltip";
+import { RxPencil2 } from "react-icons/rx";
 
 function Navbar() {
   return (
@@ -12,7 +13,7 @@ function Navbar() {
           <Tooltip title="Chat history" placement="left"/>
         </button>
         <button className="group h-10 w-auto aspect-square flex items-center justify-center text-2xl hover:bg-stone-100 text-dark-text/70 rounded-full relative">
-          <HiMiniPlus />
+          <RxPencil2 />
           <Tooltip title="New chat" placement="center"/>
         </button>
       </div>
