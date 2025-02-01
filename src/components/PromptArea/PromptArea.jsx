@@ -1,6 +1,7 @@
 import TextArea from "antd/es/input/TextArea";
 import React, { useRef, useState } from "react";
 import { BsArrowUpCircleFill } from "react-icons/bs";
+import { PiBrainLight } from "react-icons/pi";
 import { RiRobot3Line } from "react-icons/ri";
 
 function PromptArea() {
@@ -30,7 +31,7 @@ function PromptArea() {
           {/* 1 */}
           <div className="w-full h-full">
             <button className="group h-full w-fit px-3 flex items-center justify-center gap-1 text-sm ring-1 ring-stone-300 text-dark-text-weak font-semibold rounded-full relative">
-            <RiRobot3Line className="text-base" />
+            <PiBrainLight className="text-base" />
             Llama 3.1
             </button>
           </div>
