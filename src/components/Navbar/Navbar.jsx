@@ -40,9 +40,9 @@ function Navbar() {
   }, []);
 
   const handleOpenChatsModal = () => {
-    setAnimateChatsModal(true);
+    setChatsModal(true);
     setTimeout(() => {
-      setChatsModal(true);
+      setAnimateChatsModal(true);
     }, 100);
   };
 
