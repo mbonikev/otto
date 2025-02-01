@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { HiMiniMagnifyingGlass, HiMiniXCircle } from "react-icons/hi2";
+import { Link } from "react-router-dom";
 
 function ChatHistory() {
   const [searchValue, setSearchValue] = useState("");
@@ -30,7 +31,7 @@ function ChatHistory() {
         {/* chats */}
         <div className="flex flex-col w-full flex-1">
             {[...Array(5)].map((_, index) => (
-                <button key={index} className="w-full px-2.5 py-2 hover:bg-stone-100 rounded-xl text-sm text-dark-text">HTML Banner Implementation</button>
+                <Link to={'/'} key={index} className="w-full px-2.5 py-2 hover:bg-stone-100 rounded-xl text-sm text-dark-text">HTML Banner Implementation</Link>
             ))}
         </div>
       </div>
