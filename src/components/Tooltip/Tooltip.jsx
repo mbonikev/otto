@@ -10,8 +10,8 @@ function Tooltip({ title, placement, shortcut }) {
           ? "left-[-50%] right-[-50%] mx-auto"
           : placement === "center"
           ? "right-0 "
-          : placement === "left-center"
-          ? ""
+          : placement === "right-center"
+          ? "right-[110px]"
           : ""
       }`}
     >
