@@ -79,7 +79,7 @@ function Navbar() {
         {showPopup && (
           <div
             ref={popupRef}
-            className="absolute top-[95%] w-[220px] h-fit rounded-2xl ring-1 ring-stone-200 shadow-lg p-1.5"
+            className="absolute top-[90%] w-[220px] h-fit rounded-2xl ring-1 ring-stone-200 shadow-lg p-1.5"
           >
             <button className="w-full rounded-xl p-2 flex items-center justify-start gap-2 hover:bg-stone-100">
               <HiOutlineUser className="text-2xl text-dark-text-weak/70" />
