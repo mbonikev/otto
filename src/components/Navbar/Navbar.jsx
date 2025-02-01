@@ -1,7 +1,6 @@
 import { Tooltip } from "antd";
 import React from "react";
-import { HiOutlineChatBubbleLeftRight } from "react-icons/hi2";
-import { IoChatbubblesOutline } from "react-icons/io5";
+import { HiMiniPlus, HiOutlineChatBubbleLeftRight } from "react-icons/hi2";
 
 function Navbar() {
   return (
@@ -11,6 +10,11 @@ function Navbar() {
         <Tooltip title="" placement="bottom-center">
           <button className="p-2.5 text-xl bg-stone-100 hover:bg-stone-200 active:scale-95 rounded-full">
             <HiOutlineChatBubbleLeftRight />
+          </button>
+        </Tooltip>
+        <Tooltip title="" placement="bottom-center">
+          <button className="p-2.5 text-xl bg-stone-100 hover:bg-stone-200 active:scale-95 rounded-full">
+            <HiMiniPlus />
           </button>
         </Tooltip>
       </div>
