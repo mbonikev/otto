@@ -1,10 +1,15 @@
 import React from "react";
+import { IoChatbubblesOutline } from "react-icons/io5";
 
 function Navbar() {
   return (
     <div className="w-full h-[70px] grid grid-cols-3 text-dark-text">
       {/* 1 */}
-      <div className="flex items-center justify-start gap-1"></div>
+      <div className="flex items-center justify-start gap-1">
+        <button className="">
+          <IoChatbubblesOutline />
+        </button>
+      </div>
       {/* 2 */}
       <div className="flex items-center justify-center gap-1">
         <div className="w-7 min-w-7">
