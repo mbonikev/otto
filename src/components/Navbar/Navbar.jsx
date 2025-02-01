@@ -60,13 +60,15 @@ function Navbar() {
       {chatsModal && (
         <div
           onClick={handleCloseChatsModal}
-          className={`fixed top-0 left-0 w-full h-full bg-black/5 z-20 transition ${animateChatsModal ? "opacity-100" : "opacity-0"}`}
+          className={`fixed top-0 left-0 w-full h-full bg-black/5 z-20 transition ${
+            animateChatsModal ? "opacity-100" : "opacity-0"
+          }`}
         ></div>
       )}
       {/* chats modal */}
       {/* chats */}
       {chatsModal && (
-        <div className="w-fit h-fit required:">
+        <div className="absolute left-0 top-0">
           <ChatHistory />
         </div>
       )}
