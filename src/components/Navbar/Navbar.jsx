@@ -42,16 +42,12 @@ function Navbar() {
 
   const handleOpenChatsModal = () => {
     setChatsModal(true);
-    setTimeout(() => {
-      setAnimateChatsModal(true);
-    }, 100);
+    setTimeout(() => setAnimateChatsModal(true), 50);
   };
 
   const handleCloseChatsModal = () => {
     setAnimateChatsModal(false);
-    setTimeout(() => {
-      setChatsModal(false);
-    }, 300);
+    setTimeout(() => setChatsModal(false), 500);
   };
 
   return (
