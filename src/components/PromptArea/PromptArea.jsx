@@ -8,6 +8,7 @@ import Tooltip from "../Tooltip/Tooltip";
 import axios from "axios";
 
 function PromptArea() {
+  const apiUrl = import.meta.env.GROQ_API_KEY;
   const [message, setMessage] = useState("");
   const textareaRef = useRef(null);
 
