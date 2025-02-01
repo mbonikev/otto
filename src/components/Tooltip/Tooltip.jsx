@@ -4,7 +4,7 @@ function Tooltip({ children }) {
   return (
     <div className="h-fit w-fit relative">
       {children}
-      <div className=""></div>
+      <div className="asbolute top-[110%]"></div>
     </div>
   );
 }
