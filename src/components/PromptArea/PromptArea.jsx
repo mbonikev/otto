@@ -1,5 +1,6 @@
 import TextArea from "antd/es/input/TextArea";
 import React, { useRef, useState } from "react";
+import { BsArrowUpCircleFill } from "react-icons/bs";
 
 function PromptArea() {
   const [message, setMessage] = useState("");
