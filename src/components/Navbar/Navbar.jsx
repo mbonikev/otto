@@ -11,7 +11,6 @@ import Tooltip from "../Tooltip/Tooltip";
 import { RxPencil2 } from "react-icons/rx";
 import { IoShareSocialOutline } from "react-icons/io5";
 import ChatHistory from "../ChatHistory/ChatHistory";
-import { Fade } from "react-awesome-reveal";
 
 function Navbar() {
   const [showPopup, setShowPopup] = useState(false);
@@ -65,13 +64,16 @@ function Navbar() {
 
       {/* Chat Modal */}
       {chatsModal && (
-        <Fade direction="left">
-          <div
-            className={`w-fit h-svh fixed top-0 left-0 transition-transform duration-500 ease-in-out z-30`}
-          >
-            <ChatHistory />
-          </div>
-        </Fade>
+        <div
+          className={`w-fit h-svh fixed top-0 left-0 transition-transform duration-500 ease-in-out z-30
+                ${
+                  animateChatsModal
+                    ? "translate-x-0 opacity-100"
+                    : "-translate-x-[300px] opacity-0"
+                }`}
+        >
+          <ChatHistory />
+        </div>
       )}
       {/* 1 */}
       <div className="flex items-center justify-start gap-0">
