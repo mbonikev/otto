@@ -18,12 +18,12 @@ function Tooltip({ title, placement, shortcut }) {
       <div
         className={`w-2 h-2 bg-[#222222] absolute rotate-45 ${
           placement === "left"
-            ? "left-[16px]"
+            ? "-top-[4px] left-[16px]"
             : placement === "center"
-            ? "left-[-50%] right-[-50%] mx-auto"
+            ? "-top-[4px] left-[-50%] right-[-50%] mx-auto"
             : placement === "right-center"
-            ? ""
-            : "right-[16px]"
+            ? "top-0 bottom-0 left-[-4px]"
+            : "-top-[4px] right-[16px]"
         }`}
       ></div>
       {title}
