@@ -13,7 +13,7 @@ function Navbar() {
           </button>
         </Tooltip>
         <Tooltip title="" placement="bottom-center">
-          <button className="p-2.5 text-xl bg-main-color text-white active:scale-95 rounded-full">
+          <button className="p-2.5 text-xl bg-stone-100 hover:bg-stone-200 active:scale-95 rounded-full">
             <HiMiniPlus />
           </button>
         </Tooltip>
