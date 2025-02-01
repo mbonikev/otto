@@ -4,6 +4,7 @@ import { BsArrowUpCircleFill } from "react-icons/bs";
 import { LuBrain } from "react-icons/lu";
 import { PiBrainLight } from "react-icons/pi";
 import { RiRobot3Line } from "react-icons/ri";
+import Tooltip from "../Tooltip/Tooltip";
 
 function PromptArea() {
   const [message, setMessage] = useState("");
@@ -49,6 +50,7 @@ function PromptArea() {
             <button className="group h-full w-fit px-3 flex items-center justify-center gap-1 text-sm ring-1 ring-stone-300 text-dark-text-weak hover:text-dark-text font-semibold rounded-full relative">
               <LuBrain className="text-base" />
               Llama 3.1
+              <Tooltip title={} />
             </button>
           </div>
           {/* 2 */}
