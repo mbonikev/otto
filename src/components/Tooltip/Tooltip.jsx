@@ -22,7 +22,7 @@ function Tooltip({ title, placement, shortcut }) {
             : placement === "center"
             ? "-top-[4px] left-[-50%] right-[-50%] mx-auto"
             : placement === "right-center"
-            ? "top-0 bottom-0 left-[-4px]"
+            ? "top-0 bottom-0 my-auto left-[-4px]"
             : "-top-[4px] right-[16px]"
         }`}
       ></div>
