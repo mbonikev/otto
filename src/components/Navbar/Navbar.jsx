@@ -12,9 +12,8 @@ function Navbar() {
             <HiOutlineChatBubbleLeftRight />
           </button>
           <div className="w-[100px] relative">
-            {children}
             <div className="asbolute top-[110%] bg-dark-text text-white/80 text-xs font-semibold">
-              {title}
+              Chats
             </div>
           </div>
         </div>
