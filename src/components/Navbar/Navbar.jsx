@@ -26,7 +26,9 @@ function Navbar() {
         <h1 className="font-Kanit text-2xl font-light">Otto</h1>
       </div>
       {/* 3 */}
-      <div className="flex items-center justify-end gap-1"></div>
+      <div className="flex items-center justify-end gap-1">
+        <button className=""></button>
+      </div>
     </div>
   );
 }
