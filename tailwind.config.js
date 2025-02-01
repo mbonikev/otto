@@ -10,7 +10,7 @@ export default {
       colors:{
         "main-color": "#0066ff",
         "dark-text": "#111111",
-        "": "",
+        "dark-text-weak": "#5d5d5d",
         "": "",
       },
     },
