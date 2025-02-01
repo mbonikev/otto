@@ -1,18 +1,14 @@
 import React, { useEffect, useRef, useState } from "react";
 import {
-  HiMiniPlus,
-  HiOutlineArrowLeftStartOnRectangle,
   HiOutlineArrowRightStartOnRectangle,
   HiOutlineChatBubbleLeftRight,
   HiOutlineCog6Tooth,
   HiOutlineMegaphone,
+  HiOutlineShare,
   HiOutlineUser,
 } from "react-icons/hi2";
 import Tooltip from "../Tooltip/Tooltip";
 import { RxPencil2 } from "react-icons/rx";
-import { TbMessage2Share } from "react-icons/tb";
-import { VscShare } from "react-icons/vsc";
-import { RiShareLine } from "react-icons/ri";
 
 function Navbar() {
   const [showPopup, setShowPopup] = useState(false);
@@ -68,7 +64,7 @@ function Navbar() {
           <h1>Share</h1>
         </button> */}
         <button className="group h-10 w-auto aspect-square flex items-center justify-center text-2xl hover:bg-stone-100 text-dark-text-weak hover:text-dark-text rounded-full relative">
-          <RiShareLine />
+          <HiOutlineShare />
           <Tooltip title="Share" placement="center" />
         </button>
         <button
