@@ -2,8 +2,8 @@ import React from "react";
 
 function Tooltip({ title, placement }) {
   return (
-    <div className="absolute top-[120%] w-fit whitespace-nowrap px-3 py-1 rounded-[9px] left-0 bg-[#1b1b1b] text-white/90 text-[13px] font-semibold">
-        <div className={`w-2 h-2 bg-[#1b1b1b] absolute -top-1 rotate-45 ${placement  === "left" ? "left-[16px]" : ""}`}></div>
+    <div className="absolute top-[125%] w-fit whitespace-nowrap px-3 py-1 rounded-[9px] left-0 bg-[#1b1b1b] text-white/90 text-[13px] font-semibold">
+        <div className={`w-2 h-2 bg-[#1b1b1b] absolute -top-[10px] rotate-45 ${placement  === "left" ? "left-[16px]" : ""}`}></div>
       {title}
     </div>
   );
