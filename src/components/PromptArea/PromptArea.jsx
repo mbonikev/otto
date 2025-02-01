@@ -23,14 +23,14 @@ function PromptArea() {
           onChange={handleInput2Change}
           rows="1"
           placeholder="Message Otto"
-          className="text-base font-norma bg-red-200 min-h-[100px] max-h-[200px] px-4 pt-4 pb-0 outline-none w-full placeholder:text-dark-text-weak text-dark-text resize-none overflow-hidden "
+          className="text-base font-norma bg-red-200 min-h-[80px] max-h-[200px] px-4 pt-4 pb-0 outline-none w-full placeholder:text-dark-text-weak text-dark-text resize-none overflow-hidden "
         ></textarea>
         <div className="flex items-center justify-between w-full">
           {/* 1 */}
           <div></div>
           {/* 2 */}
           <div className="">
-            <button className="group h-10 w-auto aspect-square flex items-center justify-center text-3xl text-dark-text rounded-full relative">
+            <button className="group h-10 w-auto aspect-square flex items-center justify-center text-3  xl text-dark-text rounded-full relative">
               <BsArrowUpCircleFill />
             </button>
           </div>
