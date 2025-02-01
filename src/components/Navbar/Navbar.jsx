@@ -5,6 +5,7 @@ import {
   HiOutlineArrowRightStartOnRectangle,
   HiOutlineChatBubbleLeftRight,
   HiOutlineCog6Tooth,
+  HiOutlineMegaphone,
   HiOutlineUser,
 } from "react-icons/hi2";
 import Tooltip from "../Tooltip/Tooltip";
@@ -95,7 +96,7 @@ function Navbar() {
             <div className="w-[90%] h-[1px] bg-stone-200 mx-auto my-1"></div>
             {/*  */}
             <button className="w-full rounded-xl p-2 flex items-center justify-start gap-2 hover:bg-stone-100">
-              <HiOutlineArrowRightStartOnRectangle className="text-2xl text-dark-text-weak/70" />
+              <HiOutlineMegaphone className="text-2xl text-dark-text-weak/70" />
               <h1 className="text-sm">Updates</h1>
             </button>
             {/*  */}
