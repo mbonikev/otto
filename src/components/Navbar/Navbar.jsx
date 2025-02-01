@@ -41,7 +41,7 @@ function Navbar() {
   return (
     <div className="w-full h-[70px] grid grid-cols-3 text-dark-text px-4 relative">
       {/* chats */}
-      <div className="fixed top-0 left-0 w-full h-full bg-black/10 z-20"></div>
+      <div onClick={handleCloseChatsModal} className="fixed top-0 left-0 w-full h-full bg-black/10 z-20"></div>
       {/* 1 */}
       <div className="flex items-center justify-start gap-0">
         <button className="group h-10 w-auto aspect-square flex items-center justify-center text-2xl hover:bg-stone-100 text-dark-text-weak hover:text-dark-text rounded-full relative">
