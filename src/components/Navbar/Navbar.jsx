@@ -3,6 +3,7 @@ import { HiMiniPlus, HiOutlineChatBubbleLeftRight } from "react-icons/hi2";
 import Tooltip from "../Tooltip/Tooltip";
 import { RxPencil2 } from "react-icons/rx";
 import { TbMessage2Share } from "react-icons/tb";
+import { VscShare } from "react-icons/vsc";
 
 function Navbar() {
   const [showPopup, setShowPopup] = useState(false);
@@ -54,7 +55,7 @@ function Navbar() {
       {/* 3 */}
       <div className="flex items-center justify-end gap-1 relative select-none">
         <button className="group h-10 w-auto aspect-square flex items-center justify-center text-2xl hover:bg-stone-100 text-dark-text-weak hover:text-dark-text rounded-full relative">
-          <TbMessage2Share />
+          <VscShare />
           <Tooltip title="New chat" placement="center" />
         </button>
         <button
