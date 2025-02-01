@@ -29,7 +29,7 @@ function PromptArea() {
           {/* 1 */}
           <div>
             <button className="group h-ull w-auto aspect-square flex items-center justify-center text-[35px] text-dark-text rounded-full relative">
-              <BsArrowUpCircleFill />
+            Llama 3.1
             </button>
           </div>
           {/* 2 */}
