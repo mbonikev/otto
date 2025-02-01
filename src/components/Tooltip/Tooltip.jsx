@@ -5,14 +5,14 @@ function Tooltip({ title, placement, shortcut }) {
     <div
       className={`absolute z-10 w-fit whitespace-nowrap px-3 py-[7px] rounded-[9px] bg-[#222222] text-white/90 text-sm font-semibold pointer-events-none opacity-0 group-hover:opacity-100 delay-150 flex flex-col items-center ${
         placement === "left"
-          ? "left-0"
+          ? "top-[120%] left-0"
           : placement === "center"
-          ? "left-[-50%] right-[-50%] mx-auto"
+          ? "top-[120%] left-[-50%] right-[-50%] mx-auto"
           : placement === "center"
-          ? "right-0 "
+          ? "top-[120%] right-0 "
           : placement === "right-center"
-          ? "right-[120%]"
-          : ""
+          ? "top-[120%] right-[120%]"
+          : "top-[120%] left-0"
       }`}
     >
       <div
