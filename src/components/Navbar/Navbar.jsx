@@ -5,7 +5,7 @@ import { IoChatbubblesOutline } from "react-icons/io5";
 
 function Navbar() {
   return (
-    <div className="w-full h-[70px] grid grid-cols-3 text-dark-text px-4">
+    <div className="w-full h-fit grid grid-cols-3 text-dark-text px-4">
       {/* 1 */}
       <div className="flex items-center justify-start gap-1">
         <Tooltip title="" placement="bottom-center">
