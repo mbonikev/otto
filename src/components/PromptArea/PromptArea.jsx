@@ -29,7 +29,7 @@ function PromptArea() {
           {/* 1 */}
           <div></div>
           {/* 2 */}
-          <div className="">
+          <div className="w-fit h-full">
             <button className="group h-10 w-auto aspect-square flex items-center justify-center text-3  xl text-dark-text rounded-full relative">
               <BsArrowUpCircleFill />
             </button>
