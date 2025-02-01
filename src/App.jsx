@@ -5,6 +5,10 @@ import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 
 function App() {
+  const hasHash = window.location.hash.includes("#");
+  if (!hasHash && window.location.pathname !== "/") {
+    return <NotFound />;
+  }
   return (
     <>
       <HashRouter>
