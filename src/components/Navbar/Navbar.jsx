@@ -10,11 +10,11 @@ function Navbar() {
       <div className="flex items-center justify-start gap-0">
         <button className="group h-10 w-auto aspect-square flex items-center justify-center text-2xl hover:bg-stone-100 text-dark-text-weak hover:text-dark-text rounded-full relative">
           <HiOutlineChatBubbleLeftRight />
-          <Tooltip title="Chat history" placement="left"/>
+          <Tooltip title="Chat history" placement="left" />
         </button>
         <button className="group h-10 w-auto aspect-square flex items-center justify-center text-2xl hover:bg-stone-100 text-dark-text-weak hover:text-dark-text rounded-full relative">
           <RxPencil2 />
-          <Tooltip title="New chat" placement="center"/>
+          <Tooltip title="New chat" placement="center" />
         </button>
       </div>
       {/* 2 */}
@@ -22,15 +22,28 @@ function Navbar() {
         <div className="w-7 min-w-7">
           <img src="/logo.png" alt="logo" className="w-full h-fit " />
         </div>
-        <h1 className="font-Kanit text-2xl font-light text-dark-text-weak">Otto</h1>
+        <h1 className="font-Kanit text-2xl font-light text-dark-text-weak">
+          Otto
+        </h1>
       </div>
       {/* 3 */}
       <div className="flex items-center justify-end gap-1 relative">
-        <button className="h-9 w-9 rounded-full overflow-hidden">
-          <img src="/avatars/avatar3.png" alt="avatar" className="bg-stone-100 w-full h-fit min-h-full object-cover rounded-full" />
+        <button
+          ref={profileRef}
+          onClick={() => setShowPopup(true)}
+          className="h-9 w-9 rounded-full overflow-hidden"
+        >
+          <img
+            src="/avatars/avatar3.png"
+            alt="avatar"
+            className="bg-stone-100 w-full h-fit min-h-full object-cover rounded-full"
+          />
         </button>
         {/* dropdown */}
-        <div className="absolute top-[90%] w-[220px] h-[240px] rounded-2xl ring-1 ring-stone-200 shadow-lg"></div>
+        <div
+          ref={popupRef}
+          className="absolute top-[90%] w-[220px] h-[240px] rounded-2xl ring-1 ring-stone-200 shadow-lg"
+        ></div>
       </div>
     </div>
   );
