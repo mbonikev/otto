@@ -70,7 +70,7 @@ function Navbar() {
       {chatsModal && (
         <div
           onClick={handleCloseChatsModal}
-          className={`fixed top-0 left-0 w-full h-full bg-black/10 z-20 transition-opacity duration-300 ${
+          className={`fixed top-0 left-0 w-full h-full bg-black/5 z-20 transition-opacity duration-300 ${
             animateChatsModal ? "opacity-100" : "opacity-0"
           }`}
         />
