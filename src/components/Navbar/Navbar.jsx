@@ -7,7 +7,6 @@ function Navbar() {
     <div className="w-full h-[70px] grid grid-cols-3 text-dark-text px-4">
       {/* 1 */}
       <div className="flex items-center justify-start gap-1">
-        <Tooltip title="Chat history" >
           <button className="h-9 w-9 text-xl bg-stone-100 hover:bg-stone-200 active:scale-95 rounded-full">
             <HiOutlineChatBubbleLeftRight />
           </button>
