@@ -51,7 +51,7 @@ function Navbar() {
         </h1>
       </div>
       {/* 3 */}
-      <div className="flex items-center justify-end gap-1 relative">
+      <div className="flex items-center justify-end gap-1 relative select-none">
         <button
           ref={profileRef}
           onClick={() => setShowPopup(true)}
