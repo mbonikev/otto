@@ -17,12 +17,15 @@ function PromptArea() {
   };
 
   const submit = () => {
-    document.location.reload()
-  }
+    document.location.reload();
+  };
 
   return (
     <div className="w-full h-fit flex flex-col gap-3 p-3">
-      <form onSubmit={submit} className="w-full max-w-[750px] mx-auto h-fit rounded-[25px] shadow-lg ring-1 p-1 ring-stone-200 overflow-hidden">
+      <form
+        onSubmit={submit}
+        className="w-full max-w-[750px] mx-auto h-fit rounded-[25px] shadow-lg ring-1 p-1 ring-stone-200 overflow-hidden"
+      >
         <textarea
           type="text"
           id="ProjectDesc"
@@ -32,7 +35,7 @@ function PromptArea() {
           onKeyDown={(e) => {
             if (e.key === "Enter" && !e.shiftKey) {
               e.preventDefault(); // Prevents newline
-              submit()
+              submit();
             }
           }}
           rows="1"
@@ -50,7 +53,13 @@ function PromptArea() {
           </div>
           {/* 2 */}
           <div className="w-fit h-full">
-            <button onClick={submit} className="group h-full w-auto aspect-square flex items-center justify-center text-dark-text hover:text-main-color rounded-full relative">
+            <button
+              onClick={(e) => {
+                e.preventDefault(); // Prevents newline
+                submit();
+              }}
+              className="group h-full w-auto aspect-square flex items-center justify-center text-dark-text hover:text-main-color rounded-full relative"
+            >
               <BsArrowUpCircleFill className="h-full w-full" />
             </button>
           </div>
