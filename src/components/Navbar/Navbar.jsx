@@ -71,7 +71,7 @@ function Navbar() {
           className={`w-fit h-svh absolute top-0 transition-transform duration-300 z-20 ${
             animateChatsModal
               ? "left-0 opacity-100"
-              : "left-0 opacity-0"
+              : "left-0 translate-x-[-200px] opacity-0"
           }`}
         >
           <ChatHistory />
