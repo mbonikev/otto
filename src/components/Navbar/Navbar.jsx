@@ -7,7 +7,7 @@ function Navbar() {
         <div className='flex items-center justify-start gap-1'></div>
         {/* 2 */}
         <div className='flex items-center justify-center gap-1'>
-            
+            <div className='w-10'></div>
         </div>
         {/* 3 */}
         <div className='flex items-center justify-end gap-1'></div>
