@@ -9,7 +9,7 @@ function ChatHistory() {
         <div className="w-full h-[50px]">
           <div className="w-full h-full bg-stone-100 rounded-xl flex items-center justify-start">
             <HiMiniMagnifyingGlass />
-            <input type="text" name="" id="" className="h-full" />
+            <input type="text" name="" id="" className="h-full bg-transparent" placeholder="Search chats..." />
           </div>
         </div>
       </div>
