@@ -29,7 +29,9 @@ function Navbar() {
       <div className="flex items-center justify-end gap-1">
         <button className="w-fit h-fit p-2 rounded-xl">
           <img src="" alt="" className="bg-stone-100 h-9 w-9 rounded-full" />
-          <h1 className="flex flex-col "></h1>
+          <h1 className="flex flex-col leading-4 gap-1">
+            <span></span>
+          </h1>
         </button>
       </div>
     </div>
