@@ -6,7 +6,7 @@ function Home() {
   return (
     <div className='w-full h-svh flex flex-col'>
       <Navbar />
-      <div className='w-full flex-1'></div>
+      <div className='w-full flex-1 flex-col'></div>
       <PromptArea />
     </div>
   )
