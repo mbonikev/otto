@@ -17,7 +17,7 @@ function PromptArea() {
   };
   return (
     <div className="w-full h-fit flex flex-col gap-3 p-3">
-      <div className="w-full max-w-[750px] mx-auto h-fit rounded-[25px] shadow-lg ring-1 p-1 ring-stone-200 overflow-hidden">
+      <form className="w-full max-w-[750px] mx-auto h-fit rounded-[25px] shadow-lg ring-1 p-1 ring-stone-200 overflow-hidden">
         <textarea
           type="text"
           id="ProjectDesc"
@@ -44,7 +44,7 @@ function PromptArea() {
             </button>
           </div>
         </div>
-      </div>
+      </form>
       <h1 className="text-xs font-normal text-dark-text-weak w-fit mx-auto">
         Otto can make mistakes. still in beta.
       </h1>
