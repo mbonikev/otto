@@ -9,7 +9,7 @@ function Navbar() {
       <div className="flex items-center justify-start gap-1">
         <button className="h-10 w-10 flex items-center justify-center text-xl bg-stone-100 hover:bg-stone-200 active:scale-95 rounded-full relative">
           <HiOutlineChatBubbleLeftRight />
-          <Tooltip title="Chat history" placement="left"/>
+          {/* <Tooltip title="Chat history" placement="left"/> */}
         </button>
         <button className="h-10 w-10 flex items-center justify-center text-xl bg-stone-100 hover:bg-stone-200 active:scale-95 rounded-full relative">
           <HiMiniPlus />
