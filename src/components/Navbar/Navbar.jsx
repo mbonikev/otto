@@ -67,6 +67,10 @@ function Navbar() {
           <RiShareLine className="text-xl" />
           <h1>Share</h1>
         </button>
+        <button className="group h-10 w-auto aspect-square flex items-center justify-center text-2xl hover:bg-stone-100 text-dark-text-weak hover:text-dark-text rounded-full relative">
+          <RiShareLine />
+          <Tooltip title="Share" placement="center" />
+        </button>
         <button
           ref={profileRef}
           onClick={() => setShowPopup(true)}
