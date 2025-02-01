@@ -55,7 +55,7 @@ function Navbar() {
 
   return (
     <div className="w-full h-[70px] grid grid-cols-3 text-dark-text px-4 relative">
-      {/* chats */}
+      {/* chats overlay*/}
       {chatsModal && (
         <div
           onClick={handleCloseChatsModal}
