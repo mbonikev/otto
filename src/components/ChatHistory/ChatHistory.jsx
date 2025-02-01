@@ -30,7 +30,7 @@ function ChatHistory() {
         {/* chats */}
         <div className="flex flex-col w-full flex-1">
             {[...Array(5)].map((_, index) => (
-                <div key={index} className="w-full p-2 text-sm text-dark-text">HTML Banner Implementation</div>
+                <div key={index} className="w-full p-2 bg-stone-100 text-sm text-dark-text">HTML Banner Implementation</div>
             ))}
         </div>
       </div>
