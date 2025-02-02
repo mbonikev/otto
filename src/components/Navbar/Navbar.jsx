@@ -133,7 +133,7 @@ function Navbar({ picture, username }) {
               className="bg-stone-100 w-full h-fit min-h-full object-cover rounded-full"
             />
           )}
-          {username}
+          {username}ssodibfoerifbo
         </button>
         {/* dropdown */}
         {showPopup && (
