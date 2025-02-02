@@ -23,7 +23,7 @@ function Home() {
       (msg) => msg.role === "assistant"
     );
     document.title = messages.length
-      ? `Otto - ${firstAssistantMessage?.title?.replace(/['"]/g, "") || "Otto"}`
+      ? `Otto - ${firstAssistantMessage?.title?.replace(/["`]/g, "") || "Otto"}`
       : "Otto";
   }, [messages]);
 
