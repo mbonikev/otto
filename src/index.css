@@ -194,7 +194,7 @@ pre{
 }
 
 .hide_fist_span code span:nth-child(1){
-  color: red !important;
+  color: yellow !important;
 }
 
 table {
