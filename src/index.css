@@ -193,7 +193,7 @@ pre{
   border: 1px solid #aaaaaa1e;
 }
 
-code span{
+code span:first{
   color: red !important;
 }
 
