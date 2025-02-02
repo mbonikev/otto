@@ -13,7 +13,7 @@ const ProtectedRoutes = () => {
         console.log("User Status Response:", response.data);
         if (response.data.user) {
           setUser(response.data.user);
-          console.log(response  )
+          console.log(response);
         } else {
           setUser(null);
         }
@@ -40,7 +40,7 @@ const ProtectedRoutes = () => {
       context={{
         username: displayName,
         userEmail: emails[0].value,
-        profilePicture: picture,
+        profilePicture: photos[0].value,
       }}
     />
   );
