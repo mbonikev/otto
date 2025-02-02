@@ -31,7 +31,7 @@ function Navbar({ picture, username }) {
       await axios.get(`${apiUrl}/auth/logout`, {
         withCredentials: true,
       });
-      window.location.href = "/login";
+      navigate("/login");
     } catch (error) {
       console.error("Error logging out:", error);
       setLoading(false);
