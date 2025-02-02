@@ -36,7 +36,11 @@ function Home() {
     const splitContent = content.split(regex);
 
     return (
-      <div className="w-full flex flex-col gap-4">
+      <div
+        className={`w-full flex flex-col gap-4 ${
+          role === "assistant" ? "hide_fist_span" : "hide_code_space"
+        }`}
+      >
         {splitContent.map((part, index) => {
           // If part is code, render it in a SyntaxHighlighter block
           if (index % 2 === 1) {
@@ -49,8 +53,7 @@ function Home() {
                 wrapLines={true}
                 language="javascript"
                 style={oneLight}
-                className={`rounded-2xl overflow-x-auto max-w-[100%] p-6 break-words whitespace-pre-line
-                  ${role === "assistant" ? "hide_fist_span" : "hide_code_space"}`}
+                className={`rounded-2xl overflow-x-auto max-w-[100%] p-6 break-words whitespace-pre-line`}
               >
                 {part}
               </SyntaxHighlighter>
