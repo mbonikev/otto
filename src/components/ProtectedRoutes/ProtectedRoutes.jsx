@@ -25,9 +25,13 @@ const ProtectedRoutes = () => {
   }, []);
 
   if (loading) {
-    return <div className="w-full h-svh flex items-center justify-center">
-      <img src="./logo.png" className="h-8 opacity-35 w-auto animate-spinLoader saturate-0" />
-    </div>;
+    return (
+      <div className="w-full h-svh flex items-center justify-center">
+        <div className="thinking_container">
+          <div className="dot" />
+        </div>
+      </div>
+    );
   }
 
   if (user === null) {
