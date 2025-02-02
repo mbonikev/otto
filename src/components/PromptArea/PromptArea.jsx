@@ -24,7 +24,7 @@ function PromptArea({ setMessages, thinking, setThinking }) {
       const apiKey = import.meta.env.VITE_GROQ_API_KEY;
 
       // Add user message to the state
-      const userMessage = { role: "user", content: message };
+      const userMessage = { role: "user", content: message};
       setMessages((prev) => [...prev, userMessage]);
 
       setThinking(true);
@@ -51,6 +51,7 @@ function PromptArea({ setMessages, thinking, setThinking }) {
         const assistantMessage = {
           role: "assistant",
           content: response.data.message,
+          title: title,
         };
 
         await setMessages((prev) => [...prev, assistantMessage]);
