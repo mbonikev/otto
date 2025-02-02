@@ -179,8 +179,8 @@ input {
   text-decoration: underline;
 }
 
-.markdown strong{
-  font-weight: 700;
+strong{
+  font-weight: 800 !important;
 }
 
 /* Style for blockquotes (optional) */
