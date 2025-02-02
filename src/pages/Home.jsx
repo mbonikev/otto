@@ -50,7 +50,7 @@ function Home() {
                 language="javascript"
                 style={oneLight}
                 className={`rounded-2xl overflow-x-auto max-w-[100%] p-6 break-words whitespace-pre-line
-                  ${role === "assistant" ? "" : ""}`}
+                  ${role === "assistant" ? "hide_fist_span" : ""}`}
               >
                 {part}
               </SyntaxHighlighter>
