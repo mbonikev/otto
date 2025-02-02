@@ -27,13 +27,10 @@ function Navbar({ picture, username }) {
     const apiUrl = import.meta.env.VITE_BACKEND_API;
     setLoading(true);
     try {
-      // Send logout request to backend
-      await axios.get(`${apiUrl}/auth/logout`, {
+      await axios.get("http://localhost:5000/auth/logout", {
         withCredentials: true,
       });
-
-      // After logout, redirect the user to the login page or home
-      navigate("/login"); // Or any other route you want to redirect to
+      window.location.href = "/login";
     } catch (error) {
       console.error("Error logging out:", error);
       setLoading(false);
