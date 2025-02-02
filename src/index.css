@@ -193,6 +193,10 @@ pre{
   border: 1px solid #aaaaaa1e;
 }
 
+code span{
+  
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
