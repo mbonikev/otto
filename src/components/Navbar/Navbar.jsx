@@ -64,7 +64,7 @@ function Navbar() {
   }, []);
 
   return (
-    <div className="w-full h-[70px] grid grid-cols-3 text-dark-text px-4 relative">
+    <div className="w-full h-[70px] min-h-[70px] bg-white grid grid-cols-3 text-dark-text px-4 sticky">
       {/* Overlay */}
       {chatsModal && (
         <div
