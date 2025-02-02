@@ -3,7 +3,7 @@ import { Outlet, Navigate } from "react-router-dom";
 
 const ProtectedRoutes = () => {
   const [user, setUser] = useState(null);
-  const [loading, setLoading] = useState(true); // To handle loading state
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetch("http://localhost:5000/auth/status", { credentials: "include" })
