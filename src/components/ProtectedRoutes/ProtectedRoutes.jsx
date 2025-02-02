@@ -33,13 +33,13 @@ const ProtectedRoutes = () => {
     return <Navigate to="/login" />;
   }
 
-  const { displayName, email, picture } = user;
+  const { displayName, emails, picture } = user;
 
   return (
     <Outlet
       context={{
         username: displayName,
-        userEmail: email,
+        userEmail: emails[0].value,
         profilePicture: picture,
       }}
     />
