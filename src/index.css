@@ -15,10 +15,10 @@ body {
   outline-color: #cce1ff;
 }
 
-button, input{
+button,
+input {
   outline: none;
 }
-
 
 .custom_scrollbar::-webkit-scrollbar {
   width: 7px;
@@ -38,4 +38,170 @@ button, input{
 }
 .custom_scrollbar::-webkit-scrollbar-corner {
   background-color: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 14px;
+  height: 14px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 100, 100, 0.4);
+  border: 4px solid white;
+  border-radius: 9px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 100, 100, 0.6);
+}
+
+.thinking_container {
+  --uib-size: 30px;
+  --uib-color: #0066ff;
+  --uib-speed: 1s;
+  --uib-dot-size: calc(var(--uib-size) * 0.24);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--uib-dot-size);
+  width: var(--uib-size);
+}
+
+.dot,
+.thinking_container::before,
+.thinking_container::after {
+  content: "";
+  display: block;
+  height: var(--uib-dot-size);
+  width: var(--uib-dot-size);
+  border-radius: 50%;
+  background-color: var(--uib-color);
+  transform: scale(0);
+  transition: background-color 0.3s ease;
+}
+
+.thinking_container::before {
+  animation: pulse var(--uib-speed) ease-in-out calc(var(--uib-speed) * -0.375)
+    infinite;
+}
+
+.dot {
+  animation: pulse var(--uib-speed) ease-in-out calc(var(--uib-speed) * -0.25)
+    infinite both;
+}
+
+.thinking_container::after {
+  animation: pulse var(--uib-speed) ease-in-out calc(var(--uib-speed) * -0.125)
+    infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    /* transform: translateY(10px); */
+  }
+  100% {
+    opacity: 1;
+    /* transform: translateY(0); */
+  }
+}
+
+.animate-message {
+  animation: fadeInUp 0.5s ease-in-out;
+}
+
+
+/* Style for main headings */
+.markdown h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Style for subheadings */
+.markdown h2,
+.markdown h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Style for paragraphs */
+.markdown p {
+  font-size: 1rem;
+  /* line-height: 1.8; */
+}
+
+/* Style for bullet points */
+.markdown ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.markdown ul li {
+  font-size: 1rem;
+}
+
+/* Style for horizontal rules */
+.markdown hr {
+  border: 0;
+  height: 1px;
+  background: #ddd;
+  margin: 20px 0;
+}
+
+/* Style for emphasis */
+.markdown em {
+  color: #2e2e2e;
+}
+
+/* Style for links */
+.markdown a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.markdown a:hover {
+  text-decoration: underline;
+}
+
+/* Style for blockquotes (optional) */
+.markdown blockquote {
+  border-left: 4px solid #ddd;
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  color: #666;
+  background: #f8f8f8;
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0px 0;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: 400;
 }
