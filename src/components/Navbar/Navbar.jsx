@@ -148,8 +148,7 @@ function Navbar({ picture, username }) {
             />
           ) : (
             <img
-              // src="/avatars/avatar3.png"
-              src="https://lh3.googleusercontent.com/a/ACg8ocKdjsmp_8Qq-k0ap2TNzDVp9LqzBOmKrEZgidA1PmpBirzj5hOMLg=s96-c"
+              src="/avatars/avatar3.png"
               alt="avatar"
               className="bg-stone-100 w-full h-fit min-h-full object-cover rounded-full"
             />
