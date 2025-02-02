@@ -14,7 +14,6 @@ const ProtectedRoutes = () => {
         console.log("User Status Response:", response.data);
         if (response.data.user) {
           setUser(response.data.user);
-          console.log(response.data.user);
         } else {
           setUser(null);
         }
@@ -34,6 +33,7 @@ const ProtectedRoutes = () => {
     return <Navigate to="/login" />;
   }
 
+  // Safely handle user data
   const { displayName, emails, photos } = user;
 
   const userEmail = emails && emails.length > 0 ? emails[0].value : "";
@@ -44,7 +44,7 @@ const ProtectedRoutes = () => {
       context={{
         username: displayName,
         userEmail,
-        picture,
+        profilePicture: picture,
       }}
     />
   );
