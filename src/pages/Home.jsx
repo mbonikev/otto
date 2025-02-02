@@ -19,7 +19,7 @@ function Home() {
       });
     }
     if (messages.length > 0) {
-      document.title = "Otto - " + messages[0].content.slice(0, 30);
+      document.title = "Otto - " + messages[0].content.slice(0, 20) + "...";
     }
     if (messages.length < 1) {
       document.title = "Otto";
