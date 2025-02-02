@@ -7,19 +7,16 @@ const ProtectedRoutes = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const token = localStorage.getItem("token"); // Assuming you're storing the token here
-    if (!token) {
-      setLoading(false);
-      setUser(null);
-      return;
-    }
-
+    const apiUrl = import.meta.env.VITE_BACKEND_API;
     axios
-      .get(`${import.meta.env.VITE_BACKEND_API}/auth/status`, {
-        headers: { Authorization: `Bearer ${token}` },
-      })
+      .get(`${apiUrl}/auth/status`, { withCredentials: true })
       .then((response) => {
-        setUser(response.data.user);
+        console.log("User Status Response:", response.data); // Log user status
+        if (response.data.user) {
+          setUser(response.data.user);
+        } else {
+          setUser(null);
+        }
         setLoading(false);
       })
       .catch((error) => {
@@ -36,7 +33,21 @@ const ProtectedRoutes = () => {
     return <Navigate to="/login" />;
   }
 
-  return <Outlet context={{ username: user.name, userEmail: user.email }} />;
+  // Safely handle user data
+  const { displayName, emails, photos } = user;
+
+  const userEmail = emails && emails.length > 0 ? emails[0].value : "";
+  const picture = photos && photos.length > 0 ? photos[0].value : "";
+
+  return (
+    <Outlet
+      context={{
+        username: displayName,
+        userEmail,
+        picture: picture,
+      }}
+    />
+  );
 };
 
 export default ProtectedRoutes;
