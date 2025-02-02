@@ -13,7 +13,7 @@ const ProtectedRoutes = () => {
       .then((response) => {
         console.log("User Status Response:", response.data);
         if (response.data.user) {
-          setUser(response.data);
+          setUser(response.data.user);
         } else {
           setUser(null);
         }
