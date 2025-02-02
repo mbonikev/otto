@@ -198,6 +198,7 @@ code span:nth-child(1){
   font-size: 12px;
   opacity: 0.7;
   width: 100%;
+  float: right;
 }
 
 table {
