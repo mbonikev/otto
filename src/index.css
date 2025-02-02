@@ -188,6 +188,9 @@ input {
   background: #f8f8f8;
 }
 
+pre{
+  border-radius: 40px !important;
+}
 
 table {
   width: 100%;
