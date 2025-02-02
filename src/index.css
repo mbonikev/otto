@@ -195,6 +195,7 @@ pre{
 
 code span:nth-child(1){
   color: red !important;
+  padding-bottom: 20px;
 }
 
 table {
