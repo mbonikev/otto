@@ -33,8 +33,6 @@ function Home() {
     const regex = /```(.*?)```/gs;
     const splitContent = content.split(regex);
 
-    console.log(splitContent);
-
     return (
       <div className="w-full flex flex-col gap-4">
         {splitContent.map((part, index) => {
