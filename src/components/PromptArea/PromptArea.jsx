@@ -7,7 +7,7 @@ import { RiRobot3Line } from "react-icons/ri";
 import Tooltip from "../Tooltip/Tooltip";
 import axios from "axios";
 
-function PromptArea() {
+function PromptArea({ setMessages, thinking, setThinking }) {
   const [message, setMessage] = useState("");
   const textareaRef = useRef(null);
 
@@ -19,37 +19,58 @@ function PromptArea() {
   };
 
   const submit = async () => {
-    const apiUrl = import.meta.env.VITE_BACKEND_API;
-    const apiKey = import.meta.env.VITE_GROQ_API_KEY;
+    if (message !== "") {
+      const apiUrl = import.meta.env.VITE_BACKEND_API;
+      const apiKey = import.meta.env.VITE_GROQ_API_KEY;
 
-    try {
-      const response = await axios.post(
-        `${apiUrl}/api/chat`,
-        {
-          message,
-        },
-        {
-          headers: {
-            Authorization: `Bearer ${apiKey}`,
-            "Content-Type": "application/json",
+      // Add user message to the state
+      const userMessage = { role: "user", content: message };
+      setMessages((prev) => [...prev, userMessage]);
+
+      setThinking(true);
+      setMessage("");
+      textareaRef.current.style.height = "auto";
+      try {
+        const response = await axios.post(
+          `${apiUrl}/api/chat`,
+          {
+            message,
           },
-        }
-      );
+          {
+            headers: {
+              Authorization: `Bearer ${apiKey}`,
+              "Content-Type": "application/json",
+            },
+          }
+        );
 
-      console.log(response.data.message);
-    } catch (error) {
-      console.error(
-        "Error:",
-        error.response ? error.response.data : error.message
-      );
+        console.log(response.data.message);
+        setThinking(false);
+
+        // Add assistant's response to the state
+        const assistantMessage = {
+          role: "assistant",
+          content: response.data.message,
+        };
+
+        await setMessages((prev) => [...prev, assistantMessage]);
+      } catch (error) {
+        setThinking(false);
+        console.error(
+          "Error:",
+          error.response ? error.response.data : error.message
+        );
+        setMessage("");
+        textareaRef.current.style.height = "auto";
+      }
     }
   };
 
   return (
-    <div className="w-full h-fit flex flex-col gap-3 p-3">
+    <div className="w-full h-fit flex flex-col gap-3 px-3 pb-3 z-0 sticky bottom-0 bg-white">
       <form
         onSubmit={submit}
-        className="w-full max-w-[750px] mx-auto h-fit rounded-[25px] shadow-lg ring-1 p-1 ring-stone-200 overflow-hidden"
+        className="w-full max-w-[850px] mx-auto h-fit rounded-[25px] shadow-lg ring-1 p-1 ring-stone-200 overflow-hidden"
       >
         <textarea
           type="text"
@@ -57,6 +78,7 @@ function PromptArea() {
           value={message}
           ref={textareaRef}
           onChange={handleInput2Change}
+          readOnly={thinking}
           onKeyDown={(e) => {
             if (e.key === "Enter" && !e.shiftKey) {
               e.preventDefault(); // Prevents newline
@@ -64,6 +86,7 @@ function PromptArea() {
             }
           }}
           rows="1"
+          required={true}
           autoFocus={true}
           placeholder="Message Otto"
           className="text-base font-norma bg-transparent min-h-[55px] max-h-[150px] px-3 pt-3 pb-4 outline-none w-full placeholder:text-dark-text-weak text-dark-text resize-none overflow-hidden "
@@ -71,25 +94,22 @@ function PromptArea() {
         <div className="flex items-center justify-between w-full h-[32px] bg-red-400/0 min-h-[32px] px-1.5 mb-1.5">
           {/* 1 */}
           <div className="w-full h-full">
-            <button
-              onClick={(e) => {
-                e.preventDefault();
-              }}
-              className="group h-full w-fit px-3 flex items-center justify-center gap-1 text-sm ring-1 ring-stone-300 text-dark-text-weak hover:text-dark-text font-semibold rounded-full relative"
-            >
+            <div className="group cursor-pointer h-full w-fit px-3 flex items-center justify-center gap-1 text-sm ring-1 ring-stone-300 text-dark-text-weak hover:text-dark-text font-semibold rounded-full relative">
               <LuBrain className="text-base" />
               llama3-8b-8192
               <Tooltip title="Models" placement="right-center" />
-            </button>
+            </div>
           </div>
           {/* 2 */}
           <div className="w-fit h-full">
             <button
+              disabled={thinking}
               onClick={(e) => {
                 e.preventDefault();
                 submit();
               }}
-              className="group h-full w-auto aspect-square flex items-center justify-center text-dark-text hover:opacity-70 rounded-full relative"
+              className={`group h-full w-auto aspect-square flex items-center justify-center text-dark-text hover:opacity-70 rounded-full relative
+                ${thinking ? "opacity-30" : "opacity-100"}`}
             >
               <BsArrowUpCircleFill className="h-full w-full" />
             </button>
