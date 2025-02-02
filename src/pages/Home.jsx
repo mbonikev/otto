@@ -18,16 +18,13 @@ function Home() {
         chatBoxRef.current.scrollTop = chatBoxRef.current.scrollHeight;
       });
     }
+
     const firstAssistantMessage = messages.find(
       (msg) => msg.role === "assistant"
     );
-
-    if (firstAssistantMessage?.title) {
-      document.title = "Otto - " + firstAssistantMessage.title;
-    }
-    if (messages.length < 1) {
-      document.title = "Otto";
-    }
+    document.title = messages.length
+      ? `Otto - ${firstAssistantMessage?.title?.replace(/['"]/g, "") || "Otto"}`
+      : "Otto";
   }, [messages]);
 
   // Function to render content with code blocks
