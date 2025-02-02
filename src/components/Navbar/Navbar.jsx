@@ -13,6 +13,7 @@ import { IoShareSocialOutline } from "react-icons/io5";
 import ChatHistory from "../ChatHistory/ChatHistory";
 import { useNavigate } from "react-router-dom";
 import { LuLoaderCircle } from "react-icons/lu";
+import axios from "axios";
 
 function Navbar({ picture, username }) {
   const [showPopup, setShowPopup] = useState(false);
