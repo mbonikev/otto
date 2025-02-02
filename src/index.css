@@ -199,6 +199,10 @@ pre{
   content: "eee";
 }
 
+.hide_code_space pre{
+  background-color: transparent !important;
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
