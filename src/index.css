@@ -180,7 +180,7 @@ input {
 }
 
 .markdown code{
-  font-weight: 800 !important;
+  font-weight: 500 !important;
 }
 
 /* Style for blockquotes (optional) */
