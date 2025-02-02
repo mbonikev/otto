@@ -140,7 +140,7 @@ function Navbar({ picture, username }) {
           onClick={() => setShowPopup(true)}
           className="h-9 w-9 rounded-full overflow-hidden"
         >
-          {picture ? (
+          {picture !== "" ? (
             <img
               src={picture}
               alt="avatar"
