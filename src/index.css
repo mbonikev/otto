@@ -195,6 +195,7 @@ pre{
 
 .hide_fist_span code span:first{
   color: yellow !important;
+  display: none;
 }
 
 table {
