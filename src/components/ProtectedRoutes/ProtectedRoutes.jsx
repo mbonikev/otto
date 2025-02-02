@@ -33,7 +33,7 @@ const ProtectedRoutes = () => {
     return <Navigate to="/login" />;
   }
 
-  const { displayName, emails, picture } = user;
+  const { displayName, emails, photos } = user;
 
   return (
     <Outlet
