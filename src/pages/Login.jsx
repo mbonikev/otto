@@ -6,7 +6,7 @@ function Login() {
     window.location.href = `${apiUrl}/auth/google`;
   };
   return (
-    <div>
+    <div className="p-3">
       <button onClick={loginWithGoogle}>Continue with Google</button>;
     </div>
   );
