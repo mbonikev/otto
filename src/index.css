@@ -193,7 +193,7 @@ pre{
   border: 1px solid #aaaaaa1e;
 }
 
-.hide_fist_span code span::first-letter{
+.hide_fist_span code span:only-child{
   color: yellow !important;
   display: none;
 }
