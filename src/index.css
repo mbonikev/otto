@@ -190,7 +190,7 @@ input {
 
 pre{
   border-radius: 16px !important;
-  box-shadow: ;
+  border: 1px solid #ddd;
 }
 
 table {
