@@ -29,8 +29,8 @@ function Home() {
 
   // Function to render content with code blocks
   const renderContent = (msg) => {
-    const content = msg.content
-    const role = msg.role
+    const content = msg.content;
+    const role = msg.role;
     // Check if content contains code wrapped in triple backticks
     const regex = /```(.*?)```/gs;
     const splitContent = content.split(regex);
@@ -50,7 +50,7 @@ function Home() {
                 language="javascript"
                 style={oneLight}
                 className={`rounded-2xl overflow-x-auto max-w-[100%] p-6 break-words whitespace-pre-line
-                  ${role === "assistant"}`}
+                  ${role === "assistant" ? "" : ""}`}
               >
                 {part}
               </SyntaxHighlighter>
