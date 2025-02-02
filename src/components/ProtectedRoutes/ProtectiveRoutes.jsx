@@ -27,7 +27,7 @@ const ProtectedRoutes = () => {
   return user ? (
     <Outlet context={{ username, userEmail, workspaces, setWorkspaces }} />
   ) : (
-    <Navigate to={"/auth/login"} />
+    <Navigate to={"/#/login"} />
   );
 };
 export default ProtectedRoutes;
