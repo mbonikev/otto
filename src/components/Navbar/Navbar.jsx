@@ -12,6 +12,7 @@ import { RxPencil2 } from "react-icons/rx";
 import { IoShareSocialOutline } from "react-icons/io5";
 import ChatHistory from "../ChatHistory/ChatHistory";
 import { useNavigate } from "react-router-dom";
+import { LuLoaderCircle } from "react-icons/lu";
 
 function Navbar({ picture, username }) {
   const [showPopup, setShowPopup] = useState(false);
@@ -26,10 +27,12 @@ function Navbar({ picture, username }) {
     setLoading(true);
     try {
       // Send logout request to backend
-      await axios.get("http://localhost:5000/auth/logout", { withCredentials: true });
+      await axios.get("http://localhost:5000/auth/logout", {
+        withCredentials: true,
+      });
 
       // After logout, redirect the user to the login page or home
-      navigate("/login");  // Or any other route you want to redirect to
+      navigate("/login"); // Or any other route you want to redirect to
     } catch (error) {
       console.error("Error logging out:", error);
       setLoading(false);
@@ -176,9 +179,22 @@ function Navbar({ picture, username }) {
             {/*  */}
             <div className="w-[90%] h-[1px] bg-stone-200 mx-auto my-1"></div>
             {/*  */}
-            <button onClick={handleLogout} disabled={loading} className="w-full rounded-xl p-2 flex items-center justify-start gap-2 hover:bg-stone-100">
-              <HiOutlineArrowRightStartOnRectangle className="text-2xl text-dark-text-weak/70" />
-              <h1 className="text-sm">Sign Out</h1>
+            <button
+              onClick={handleLogout}
+              disabled={loading}
+              className="w-full rounded-xl p-2 flex items-center justify-start gap-2 hover:bg-stone-100"
+            >
+              {loading ? (
+                <>
+                  <LuLoaderCircle className="text-2xl text-dark-text-weak/70" />
+                  <h1 className="text-sm">Sign Out</h1>
+                </>
+              ) : (
+                <>
+                  <HiOutlineArrowRightStartOnRectangle className="text-2xl text-dark-text-weak/70" />
+                  <h1 className="text-sm">Sign Out</h1>
+                </>
+              )}
             </button>
           </div>
         )}
