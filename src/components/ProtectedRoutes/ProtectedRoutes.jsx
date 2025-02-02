@@ -26,7 +26,7 @@ const ProtectedRoutes = () => {
 
   if (loading) {
     return <div className="w-full h-svh flex items-center justify-center">
-      <img src="./logo.png" className="h-8 opacity-35 w-auto animate-spinLoader saturate-0" />
+      <img src="./logo.png" className="h-8 opacity-35 w-auto animate-spin saturate-0" />
     </div>;
   }
 
