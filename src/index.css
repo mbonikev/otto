@@ -194,11 +194,12 @@ pre{
 }
 
 code span:nth-child(1){
-  background-color: red !important;
+  /* background-color: red !important; */
   font-size: 12px;
   opacity: 0.7;
   width: 100% !important;
   display: flex;
+  justify-content: end;
 }
 
 table {
