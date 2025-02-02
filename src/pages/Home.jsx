@@ -29,6 +29,7 @@ function Home() {
 
   // Function to render content with code blocks
   const renderContent = (msg) => {
+    const content = msg.content
     // Check if content contains code wrapped in triple backticks
     const regex = /```(.*?)```/gs;
     const splitContent = content.split(regex);
