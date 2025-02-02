@@ -182,7 +182,7 @@ input {
 .markdown code{
   font-weight: 500 !important;
   background-color: #f0f0f0;
-  padding: 3px 6px;
+  padding: 4px 6px;
   border-radius: 7px;
   font-family: monospace;
   font-size: 13px;
