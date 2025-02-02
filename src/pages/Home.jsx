@@ -19,7 +19,7 @@ function Home() {
       });
     }
     if(messages.length > 0){
-      
+      document.title = messages[0].content
     }
   }, [messages]);
 
