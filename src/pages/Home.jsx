@@ -21,6 +21,9 @@ function Home() {
     if(messages.length > 0){
       document.title = "Otto - " + messages[0].content
     }
+    if(messages.length  < 1){
+      document.title = "Otto"
+    }
   }, [messages]);
 
   // Function to render content with code blocks
