@@ -119,7 +119,7 @@ function PromptArea({ setMessages, thinking, setThinking }) {
         </div>
       </form>
       <h1 className="text-xs font-normal text-dark-text-weak w-fit mx-auto">
-        Otto can make mistakes. still in beta.
+        Otto can make mistakes. double check!
       </h1>
     </div>
   );
