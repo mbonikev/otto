@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
 import { Outlet, Navigate } from "react-router-dom";
 const ProtectedRoutes = () => {
-  const [user, setUser] = useState(null);
+  const [userId, setUserId] = useState(null);
   const [username, setUserName] = useState(null);
   const [userEmail, setUserEmail] = useState(null);
-  const [workspaces, setWorkspaces] = useState([]);
 
   useEffect(() => {
     const email = localStorage.getItem("upfront_user");
