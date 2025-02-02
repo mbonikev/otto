@@ -37,7 +37,7 @@ function Home() {
 
     return (
       <div
-        className={`w-full flex flex-col gap-4 ${
+        className={`w-full flex flex-col gap-0 ${
           role === "assistant" ? "hide_fist_span" : "hide_code_space"
         }`}
       >
