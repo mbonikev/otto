@@ -5,13 +5,11 @@ const ProtectedRoutes = () => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true); // To handle loading state
 
-  // Fetch user status when the component mounts
   useEffect(() => {
     fetch("http://localhost:5000/auth/status", { credentials: "include" })
       .then((res) => res.json())
       .then((data) => {
         if (data.user) {
-          // Set user data from the response (data.user will contain the Google profile)
           setUser(data.user);
         } else {
           setUser(null);
