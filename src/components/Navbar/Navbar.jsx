@@ -24,10 +24,11 @@ function Navbar({ picture, username }) {
   const navigate = useNavigate();
 
   const handleLogout = async () => {
+    const apiUrl = import.meta.env.VITE_BACKEND_API;
     setLoading(true);
     try {
       // Send logout request to backend
-      await axios.get("http://localhost:5000/auth/logout", {
+      await axios.get(`${apiUrl}/auth/logout`, {
         withCredentials: true,
       });
 
