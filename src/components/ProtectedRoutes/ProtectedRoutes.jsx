@@ -11,7 +11,6 @@ const ProtectedRoutes = () => {
     axios
       .get(`${apiUrl}/auth/status`, { withCredentials: true })
       .then((response) => {
-        console.log("User Status Response:", response.data);
         if (response.data.user) {
           setUser(response.data.user);
         } else {
