@@ -18,11 +18,11 @@ function Home() {
         chatBoxRef.current.scrollTop = chatBoxRef.current.scrollHeight;
       });
     }
-    if(messages.length > 0){
-      document.title = "Otto - " + messages[0].content
+    if (messages.length > 0) {
+      document.title = "Otto - " + messages[0].content;
     }
-    if(messages.length  < 1){
-      document.title = "Otto"
+    if (messages.length < 1) {
+      document.title = "Otto";
     }
   }, [messages]);
 
@@ -32,7 +32,7 @@ function Home() {
     const regex = /```(.*?)```/gs;
     const splitContent = content.split(regex);
 
-    console.log(part)
+    console.log(splitContent);
 
     return (
       <div className="w-full flex flex-col gap-4">
