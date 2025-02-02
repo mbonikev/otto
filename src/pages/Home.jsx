@@ -96,7 +96,7 @@ function Home() {
                     className={`text-base leading-[22px] ${
                       msg.role === "user"
                         ? "w-fit bg-stone-200/40 px-4 py-2.5 ml-auto max-w-[500px] mr-9 rounded-3xl"
-                        : "w-full bg-transparent flex items-start justify-start gap-4 break-words whitespace-pre-line pr-9"
+                        : "w-full bg-transparent flex items-start justify-start gap-0 break-words whitespace-pre-line pr-9"
                     } ${isLastNonUserMsg ? "animate-message" : ""}`}
                   >
                     {msg.role !== "user" && (
