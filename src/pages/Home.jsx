@@ -18,6 +18,9 @@ function Home() {
         chatBoxRef.current.scrollTop = chatBoxRef.current.scrollHeight;
       });
     }
+    if(messages.length > 0){
+      
+    }
   }, [messages]);
 
   // Function to render content with code blocks
