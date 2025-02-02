@@ -7,32 +7,19 @@ const ProtectedRoutes = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const apiUrl = import.meta.env.VITE_BACKEND_API;
-
-    // Retrieve the JWT from cookies or localStorage
-    const token = document.cookie.replace(
-      /(?:(?:^|.*;\s*)token\s*=\s*([^;]*).*$)|^.*$/,
-      "$1"
-    );
-
+    const token = localStorage.getItem("token"); // Assuming you're storing the token here
     if (!token) {
-      setUser(null);
       setLoading(false);
+      setUser(null);
       return;
     }
 
-    // Check the user's authentication status
     axios
-      .get(`${apiUrl}/auth/status`, {
-        headers: { Authorization: `Bearer ${token}` }, // Send the JWT in the Authorization header
-        withCredentials: true, // If you're using cookies
+      .get(`${import.meta.env.VITE_BACKEND_API}/auth/status`, {
+        headers: { Authorization: `Bearer ${token}` },
       })
       .then((response) => {
-        if (response.data.user) {
-          setUser(response.data.user);
-        } else {
-          setUser(null);
-        }
+        setUser(response.data.user);
         setLoading(false);
       })
       .catch((error) => {
@@ -49,21 +36,7 @@ const ProtectedRoutes = () => {
     return <Navigate to="/login" />;
   }
 
-  // Safely handle user data
-  const { displayName, emails, photos } = user;
-
-  const userEmail = emails && emails.length > 0 ? emails[0].value : "";
-  const picture = photos && photos.length > 0 ? photos[0].value : "";
-
-  return (
-    <Outlet
-      context={{
-        username: displayName,
-        userEmail,
-        picture,
-      }}
-    />
-  );
+  return <Outlet context={{ username: user.name, userEmail: user.email }} />;
 };
 
 export default ProtectedRoutes;
