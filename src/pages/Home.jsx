@@ -134,6 +134,7 @@ function Home() {
         setMessages={setMessages}
         thinking={thinking}
         setThinking={setThinking}
+        username={username}
       />
     </div>
   );
