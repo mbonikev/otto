@@ -7,33 +7,27 @@ const ProtectedRoutes = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchUserStatus = async () => {
-      try {
-        const apiUrl = import.meta.env.VITE_BACKEND_API;
-        const response = await axios.get(`${apiUrl}/auth/status`, {
-          withCredentials: true,
-        });
-
-        setUser(response.data.user || null);
-      } catch (error) {
-        console.error("Error fetching user status:", error);
-      } finally {
+    const apiUrl = import.meta.env.VITE_BACKEND_API;
+    axios
+      .get(`${apiUrl}/auth/status`, { withCredentials: true })
+      .then((response) => {
+        if (response.data.user) {
+          setUser(response.data.user);
+        } else {
+          setUser(null);
+        }
         setLoading(false);
-      }
-    };
-
-    fetchUserStatus()
+      })
+      .catch((error) => {
+        console.error("Error fetching user status:", error);
+        setLoading(false);
+      });
   }, []);
 
   if (loading) {
-    return (
-      <div className="w-full h-svh flex items-center justify-center">
-        <img
-          src="./logo.png"
-          className="h-8 opacity-35 w-auto animate-spinLoader saturate-0"
-        />
-      </div>
-    );
+    return <div className="w-full h-svh flex items-center justify-center">
+      <img src="./logo.png" className="h-8 opacity-35 w-auto animate-spinLoader saturate-0" />
+    </div>;
   }
 
   if (user === null) {
