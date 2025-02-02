@@ -12,7 +12,7 @@ import { RxPencil2 } from "react-icons/rx";
 import { IoShareSocialOutline } from "react-icons/io5";
 import ChatHistory from "../ChatHistory/ChatHistory";
 
-function Navbar({picture}) {
+function Navbar({ picture }) {
   const [showPopup, setShowPopup] = useState(false);
   const profileRef = useRef(null);
   const popupRef = useRef(null);
@@ -120,11 +120,19 @@ function Navbar({picture}) {
           onClick={() => setShowPopup(true)}
           className="h-9 w-9 rounded-full overflow-hidden"
         >
-          <img
-            src="/avatars/avatar3.png"
-            alt="avatar"
-            className="bg-stone-100 w-full h-fit min-h-full object-cover rounded-full"
-          />
+          {picture ? (
+            <img
+              src={picture}
+              alt="avatar"
+              className="bg-stone-100 w-full h-fit min-h-full object-cover rounded-full"
+            />
+          ) : (
+            <img
+              src="/avatars/avatar3.png"
+              alt="avatar"
+              className="bg-stone-100 w-full h-fit min-h-full object-cover rounded-full"
+            />
+          )}
         </button>
         {/* dropdown */}
         {showPopup && (
