@@ -179,6 +179,10 @@ input {
   text-decoration: underline;
 }
 
+.markdown strong{
+  font-weight: 700;
+}
+
 /* Style for blockquotes (optional) */
 .markdown blockquote {
   border-left: 4px solid #ddd;
