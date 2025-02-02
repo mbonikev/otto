@@ -1,16 +1,17 @@
 import { useEffect, useState } from "react";
 import { Outlet, Navigate } from "react-router-dom";
+import axios from "axios";
 
 const ProtectedRoutes = () => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:5000/auth/status", { credentials: "include" })
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.user) {
-          setUser(data.user);
+    axios
+      .get("http://localhost:5000/auth/status", { withCredentials: true })
+      .then((response) => {
+        if (response.data.user) {
+          setUser(response.data.user);
         } else {
           setUser(null);
         }
@@ -25,7 +26,7 @@ const ProtectedRoutes = () => {
   if (loading) {
     return <div>Loading...</div>;
   }
-  
+
   if (user === null) {
     return <Navigate to="/login" />;
   }
