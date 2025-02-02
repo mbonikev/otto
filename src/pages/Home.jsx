@@ -43,7 +43,7 @@ function Home() {
               <SyntaxHighlighter
                 key={index}
                 lineProps={{
-                  style: { wordBreak: "break-all", whiteSpace: "pre-wrap" },
+                  style: { wordBreak: "break-all", whiteSpace: "pre-line" },
                 }}
                 wrapLines={true}
                 language="javascript"
