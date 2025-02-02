@@ -45,7 +45,7 @@ function PromptArea({ setMessages, thinking, setThinking }) {
 
         const { title, message: assistantResponse } = response.data;
 
-        console.log(assistantResponse);
+        // console.log(assistantResponse);
         setThinking(false);
 
         // Add assistant's response with title to the state
