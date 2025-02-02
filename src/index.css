@@ -181,7 +181,7 @@ input {
 
 .markdown code{
   font-weight: 600 !important;
-  background-color: #aaa;
+  background-color: #eeeeee;
 }
 
 /* Style for blockquotes (optional) */
