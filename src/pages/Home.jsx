@@ -20,6 +20,7 @@ function Home() {
     }
     if (messages.length > 0) {
       document.title = "Otto - ";
+      console.log(messages)
     }
     if (messages.length < 1) {
       document.title = "Otto";
