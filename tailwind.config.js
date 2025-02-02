@@ -14,7 +14,7 @@ export default {
         "": "",
       },
       animation: {
-        spinLoader: "spin .6s linear infinite",
+        spinLoader: "spin .5s linear infinite",
       },
     },
   },
