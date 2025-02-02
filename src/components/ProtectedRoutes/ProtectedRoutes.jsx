@@ -9,23 +9,22 @@ const ProtectedRoutes = () => {
   useEffect(() => {
     const apiUrl = import.meta.env.VITE_BACKEND_API;
 
-    // Retrieve the token from cookies or localStorage
+    // Retrieve the JWT from cookies or localStorage
     const token = document.cookie.replace(
       /(?:(?:^|.*;\s*)token\s*=\s*([^;]*).*$)|^.*$/,
       "$1"
     );
 
-    // If there's no token, the user is not authenticated
     if (!token) {
       setUser(null);
       setLoading(false);
       return;
     }
 
-    // Use JWT for authentication check
+    // Check the user's authentication status
     axios
       .get(`${apiUrl}/auth/status`, {
-        headers: { Authorization: `Bearer ${token}` },
+        headers: { Authorization: `Bearer ${token}` }, // Send the JWT in the Authorization header
         withCredentials: true, // If you're using cookies
       })
       .then((response) => {
