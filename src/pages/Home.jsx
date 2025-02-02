@@ -35,7 +35,7 @@ function Home() {
     console.log(splitContent);
 
     return (
-      <div className="w-full flex flex-col gap-4">
+      <div className="w-full flex flex-col gap-4 bg-red-200">
         {splitContent.map((part, index) => {
           // If part is code, render it in a SyntaxHighlighter block
           if (index % 2 === 1) {
