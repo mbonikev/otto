@@ -27,7 +27,7 @@ function Navbar({ picture, username }) {
     const apiUrl = import.meta.env.VITE_BACKEND_API;
     setLoading(true);
     try {
-      await axios.get("http://localhost:5000/auth/logout", {
+      await axios.get(`${apiUrl}/auth/logout`, {
         withCredentials: true,
       });
       window.location.href = "/login";
