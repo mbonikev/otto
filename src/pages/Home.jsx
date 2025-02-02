@@ -18,9 +18,12 @@ function Home() {
         chatBoxRef.current.scrollTop = chatBoxRef.current.scrollHeight;
       });
     }
-    if (messages.length > 0) {
-      document.title = "Otto - " + messages["assistant"].title;
-      console.log(messages)
+    const firstAssistantMessage = messages.find(
+      (msg) => msg.role === "assistant"
+    );
+
+    if (firstAssistantMessage?.title) {
+      document.title = "Otto - " + firstAssistantMessage.title;
     }
     if (messages.length < 1) {
       document.title = "Otto";
