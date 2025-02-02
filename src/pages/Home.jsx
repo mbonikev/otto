@@ -45,7 +45,7 @@ function Home() {
                   style: { wordBreak: "break-words", whiteSpace: "pre-line" },
                 }}
                 wrapLines={true}
-                language="html"
+                language="javascript"
                 style={oneLight}
                 className="rounded-2xl overflow-x-auto max-w-[100%] p-6 break-words whitespace-pre-line"
               >
