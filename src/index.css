@@ -179,7 +179,7 @@ input {
   text-decoration: underline;
 }
 
-strong{
+.markdown code{
   font-weight: 800 !important;
 }
 
