@@ -34,7 +34,7 @@ function PromptArea({ setMessages, thinking, setThinking, username }) {
       try {
         const response = await axios.post(
           `${apiUrl}/api/chat`,
-          { message },
+          { message, username },
           {
             headers: {
               Authorization: `Bearer ${apiKey}`,
