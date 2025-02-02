@@ -24,18 +24,17 @@ function PromptArea({ setMessages, thinking, setThinking }) {
       const apiKey = import.meta.env.VITE_GROQ_API_KEY;
 
       // Add user message to the state
-      const userMessage = { role: "user", content: message};
+      const userMessage = { role: "user", content: message };
       setMessages((prev) => [...prev, userMessage]);
 
       setThinking(true);
       setMessage("");
       textareaRef.current.style.height = "auto";
+
       try {
         const response = await axios.post(
           `${apiUrl}/api/chat`,
-          {
-            message,
-          },
+          { message },
           {
             headers: {
               Authorization: `Bearer ${apiKey}`,
@@ -44,17 +43,19 @@ function PromptArea({ setMessages, thinking, setThinking }) {
           }
         );
 
-        console.log(response.data.message);
+        const { title, message: assistantResponse } = response.data;
+
+        console.log(assistantResponse);
         setThinking(false);
 
-        // Add assistant's response to the state
+        // Add assistant's response with title to the state
         const assistantMessage = {
           role: "assistant",
-          content: response.data.message,
-          title: title,
+          content: assistantResponse,
+          title: title, // Include the title
         };
 
-        await setMessages((prev) => [...prev, assistantMessage]);
+        setMessages((prev) => [...prev, assistantMessage]);
       } catch (error) {
         setThinking(false);
         console.error(
