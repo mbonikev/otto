@@ -10,6 +10,7 @@ const ProtectedRoutes = () => {
     axios
       .get("http://localhost:5000/auth/status", { withCredentials: true })
       .then((response) => {
+        console.log("User Status Response:", response.data);
         if (response.data.user) {
           setUser(response.data.user);
         } else {
