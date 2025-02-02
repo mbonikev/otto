@@ -142,7 +142,7 @@ function Navbar({ picture, username }) {
         >
           {picture !== "" ? (
             <img
-              src={picture}
+              src={`${picture}`}
               alt="avatar"
               className="bg-stone-100 w-full h-fit min-h-full object-cover rounded-full"
             />
