@@ -7,8 +7,9 @@ const ProtectedRoutes = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    const apiUrl = import.meta.env.VITE_BACKEND_API;
     axios
-      .get("http://localhost:5000/auth/status", { withCredentials: true })
+      .get(`${apiUrl}/auth/status`, { withCredentials: true })
       .then((response) => {
         console.log("User Status Response:", response.data);
         if (response.data.user) {
