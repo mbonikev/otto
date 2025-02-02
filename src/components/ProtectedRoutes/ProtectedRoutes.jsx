@@ -12,6 +12,7 @@ const ProtectedRoutes = () => {
       .get(`${apiUrl}/auth/status`, { withCredentials: true })
       .then((response) => {
         if (response.data.user) {
+          console.log(response.data.user);
           setUser(response.data.user);
         } else {
           setUser(null);
