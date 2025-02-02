@@ -11,6 +11,7 @@ import Tooltip from "../Tooltip/Tooltip";
 import { RxPencil2 } from "react-icons/rx";
 import { IoShareSocialOutline } from "react-icons/io5";
 import ChatHistory from "../ChatHistory/ChatHistory";
+import { useNavigate } from "react-router-dom";
 
 function Navbar({ picture, username }) {
   const [showPopup, setShowPopup] = useState(false);
@@ -18,6 +19,22 @@ function Navbar({ picture, username }) {
   const popupRef = useRef(null);
   const [chatsModal, setChatsModal] = useState(false);
   const [animateChatsModal, setAnimateChatsModal] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
+
+  const handleLogout = async () => {
+    setLoading(true);
+    try {
+      // Send logout request to backend
+      await axios.get("http://localhost:5000/auth/logout", { withCredentials: true });
+
+      // After logout, redirect the user to the login page or home
+      navigate("/login");  // Or any other route you want to redirect to
+    } catch (error) {
+      console.error("Error logging out:", error);
+      setLoading(false);
+    }
+  };
 
   useEffect(() => {
     const handleClickOutside = (event) => {
