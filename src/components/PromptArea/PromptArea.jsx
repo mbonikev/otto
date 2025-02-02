@@ -7,7 +7,7 @@ import { RiRobot3Line } from "react-icons/ri";
 import Tooltip from "../Tooltip/Tooltip";
 import axios from "axios";
 
-function PromptArea({ setMessages, thinking, setThinking }) {
+function PromptArea({ setMessages, thinking, setThinking, username }) {
   const [message, setMessage] = useState("");
   const textareaRef = useRef(null);
 
