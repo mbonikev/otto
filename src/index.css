@@ -185,6 +185,7 @@ input {
   padding: 3px 6px;
   border-radius: 7px;
   font-family: monospace;
+  font-size: 13px;
 }
 
 /* Style for blockquotes (optional) */
