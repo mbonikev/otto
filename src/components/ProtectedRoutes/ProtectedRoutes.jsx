@@ -44,7 +44,7 @@ const ProtectedRoutes = () => {
       context={{
         username: displayName,
         userEmail,
-        profilePicture: picture,
+        picture: picture,
       }}
     />
   );
