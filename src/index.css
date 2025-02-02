@@ -197,6 +197,7 @@ code span:nth-child(1){
   /* color: red !important; */
   font-size: 12px;
   opacity: 0.7;
+  width: 100%;
 }
 
 table {
