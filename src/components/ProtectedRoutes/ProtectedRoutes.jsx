@@ -36,14 +36,14 @@ const ProtectedRoutes = () => {
   const { displayName, emails, photos } = user;
 
   const userEmail = emails && emails.length > 0 ? emails[0].value : "";
-  const profilePicture = photos && photos.length > 0 ? photos[0].value : "";
+  const picture = photos && photos.length > 0 ? photos[0].value : "";
 
   return (
     <Outlet
       context={{
         username: displayName,
         userEmail,
-        profilePicture,
+        picture,
       }}
     />
   );
