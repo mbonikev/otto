@@ -195,7 +195,8 @@ pre{
 
 .hide_fist_span code span:only-child{
   color: yellow !important;
-  display: none;
+  /* display: none; */
+  content: "eee";
 }
 
 table {
