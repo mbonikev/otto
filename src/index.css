@@ -194,7 +194,7 @@ pre{
 }
 
 code span{
-  
+  color: red !important;
 }
 
 table {
