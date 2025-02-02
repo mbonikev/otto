@@ -28,7 +28,7 @@ function Home() {
   }, [messages]);
 
   // Function to render content with code blocks
-  const renderContent = (content) => {
+  const renderContent = (msg) => {
     // Check if content contains code wrapped in triple backticks
     const regex = /```(.*?)```/gs;
     const splitContent = content.split(regex);
@@ -98,7 +98,7 @@ function Home() {
                         <img src="./logo.png" className="rounded-full" />
                       </div>
                     )}
-                    {renderContent(msg.content)}{" "}
+                    {renderContent(msg)}{" "}
                   </div>
                 );
               })}
