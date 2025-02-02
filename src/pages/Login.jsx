@@ -2,7 +2,8 @@ import React from "react";
 
 function Login() {
   const loginWithGoogle = () => {
-    window.location.href = "http://localhost:5000/auth/google";
+    const apiUrl = import.meta.env.VITE_BACKEND_API;
+    window.location.href = `${apiUrl}/auth/google`;
   };
   return (
     <div>
