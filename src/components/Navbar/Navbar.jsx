@@ -15,6 +15,7 @@ import { useNavigate } from "react-router-dom";
 import { LuLoaderCircle } from "react-icons/lu";
 
 function Navbar({ picture, username }) {
+  console.log(picture)
   const [showPopup, setShowPopup] = useState(false);
   const profileRef = useRef(null);
   const popupRef = useRef(null);
