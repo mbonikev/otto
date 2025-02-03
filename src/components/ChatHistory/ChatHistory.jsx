@@ -6,7 +6,7 @@ function ChatHistory() {
   const [searchValue, setSearchValue] = useState("");
   return (
     <div className="w-[300px] h-svh py-2">
-      <div className="w-full h-full bg-white rounded-2xl p-2 flex flex-col">
+      <div className="w-full h-full bg-white rounded-s-2xl p-2 flex flex-col">
         {/* 1 */}
         <div className="w-full h-[36px] min-h-[36px]">
           <div className="w-full h-full bg-stone-100 rounded-xl flex items-center justify-start">
