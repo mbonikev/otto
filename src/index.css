@@ -130,6 +130,7 @@ input {
 .markdown ul {
   display: flex;
   flex-direction: column;
+  gap: 20px;
 }
 
 /* Style for main headings */
