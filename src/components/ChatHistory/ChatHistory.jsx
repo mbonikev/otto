@@ -31,13 +31,13 @@ function ChatHistory() {
         {/* <div className="w-[95%] h-[1px] bg-stone-200 mx-auto my-2"></div> */}
         {/*  */}
         {/* 2 */}
-        <div className="w-full flex-1 flex flex-col overflow-y-auto custom_scrollbar gap-2 pt-2 my-0 pr-2">
+        <div className="w-full flex-1 flex flex-col overflow-y- custom_scrollbar gap-2 pt-2 my-0 pr-2">
           {/* <h1 className="text-xs font-medium text-dark-text-weak px-2.5">
             Today
           </h1> */}
           {/* chats */}
           <div className="flex flex-col w-full h-fit">
-            {[...Array(2)].map((_, index) => (
+            {[...Array(20)].map((_, index) => (
               <Link
                 to={"/"}
                 key={index}
