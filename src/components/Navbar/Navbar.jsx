@@ -152,7 +152,7 @@ function Navbar({ photo, displayName }) {
                     </p>
                   </div>
                 </div>
-                <div className="h-full w-5 min-w-5 flex items-center justify-center">
+                <div className="h-full w-8 min-w-5 flex items-center justify-center">
                   <BsLockFill className="text-dark-text-weak" />
                 </div>
               </div>
