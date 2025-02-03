@@ -16,9 +16,19 @@ function Home() {
   // Scroll to bottom when messages update
   useEffect(() => {
     if (chatBoxRef.current) {
-      requestAnimationFrame(() => {
-        chatBoxRef.current.scrollTop = chatBoxRef.current.scrollHeight;
-      });
+      const chatBox = chatBoxRef.current;
+      const lastMessage = chatBox.lastElementChild; // Get the last message element
+      const lastMessageOffsetTop = lastMessage.offsetTop; // Get the offset of the last message from the top of the chat box
+      const chatBoxHeight = chatBox.clientHeight; // Get the height of the chat box
+      const scrollPosition = chatBox.scrollTop; // Current scroll position
+
+      // Scroll until the last message is 200px from the top
+      if (
+        lastMessageOffsetTop + lastMessage.clientHeight - scrollPosition >
+        200
+      ) {
+        chatBox.scrollTop = lastMessageOffsetTop - 200;
+      }
     }
 
     const firstAssistantMessage = messages.find(
