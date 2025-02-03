@@ -1,6 +1,6 @@
 import TextArea from "antd/es/input/TextArea";
 import React, { useRef, useState } from "react";
-import { BsArrowUpCircleFill } from "react-icons/bs";
+import { BsArrowUpCircleFill, BsFileEarmarkText } from "react-icons/bs";
 import { LuBrain } from "react-icons/lu";
 import { PiBrainLight } from "react-icons/pi";
 import { RiRobot3Line } from "react-icons/ri";
@@ -117,7 +117,7 @@ function PromptArea({
               <Tooltip title="Type Codes" placement="right-center" />
             </div>
             <div className="group cursor-pointer h-full w-fit px-3 flex items-center justify-center gap-1 text-sm ring-1 ring-stone-300 text-dark-text-weak hover:text-dark-text font-semibold rounded-full relative">
-              <RxTextAlignMiddle className="text-lg" />
+              <BsFileEarmarkText className="text-lg" />
               Summarize
               <Tooltip title="Models" placement="right-center" />
             </div>
