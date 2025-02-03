@@ -17,20 +17,23 @@ function Home() {
   useEffect(() => {
     if (chatBoxRef.current) {
       const chatBox = chatBoxRef.current;
-      const messageElements = chatBox.querySelectorAll('.message');
+      const messageElements = chatBox.querySelectorAll(".message");
       const lastMessage = messageElements[messageElements.length - 1];
-  
+
       if (lastMessage) {
         const lastMessageOffsetTop = lastMessage.offsetTop;
         const chatBoxHeight = chatBox.clientHeight;
         const scrollPosition = chatBox.scrollTop;
-  
-        if (lastMessageOffsetTop + lastMessage.clientHeight - scrollPosition > 200) {
+
+        if (
+          lastMessageOffsetTop + lastMessage.clientHeight - scrollPosition >
+          200
+        ) {
           chatBox.scrollTop = lastMessageOffsetTop - 200;
         }
       }
     }
-  
+
     const firstAssistantMessage = messages.find(
       (msg) => msg.role === "assistant"
     );
@@ -38,7 +41,6 @@ function Home() {
       ? `Otto - ${firstAssistantMessage?.title?.replace(/["`]/g, "") || ""}`
       : "Otto";
   }, [messages]);
-  
 
   // Function to render content with code blocks
   const renderContent = (msg) => {
@@ -106,7 +108,7 @@ function Home() {
                 return (
                   <div
                     key={index}
-                    className={`text-base font-normal text-dark-text tracking-tight leading-[26px] ${
+                    className={`message text-base font-normal text-dark-text tracking-tight leading-[26px] ${
                       msg.role === "user"
                         ? "w-fit bg-stone-200/40 px-4 py-2 ml-auto max-w-[500px] rounded-3xl"
                         : "w-full bg-transparent flex items-start justify-start gap-4 break-words whitespace-pre-line pr-9"
@@ -117,7 +119,7 @@ function Home() {
                         <img src="./logo.png" className="rounded-full" />
                       </div>
                     )}
-                    {renderContent(msg)}{" "}
+                    {renderContent(msg)}
                   </div>
                 );
               })}
