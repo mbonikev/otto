@@ -213,6 +213,10 @@ pre{
   margin: 0px !important;
 }
 
+p strong{
+    
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
