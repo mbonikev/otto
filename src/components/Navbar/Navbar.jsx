@@ -132,7 +132,7 @@ function Navbar({ photo, displayName }) {
               Otto
             </h1>
             <h1 className="text-sm font-light text-dark-text-weak">
-              Otto
+              V1.0.1
             </h1>
           </div>
         </div>
