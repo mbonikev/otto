@@ -127,7 +127,7 @@ input {
 }
 
 .markdown {
-  flex: ;
+  display: flex;
 }
 
 
