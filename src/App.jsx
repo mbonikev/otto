@@ -6,6 +6,12 @@ import Login from "./pages/Login";
 import ProtectedRoutes from "./components/ProtectedRoutes/ProtectedRoutes";
 
 function App() {
+  React.useEffect(() => {
+    if (!window.location.hash) {
+      window.location.replace(window.location.origin + "/");
+    }
+  }, []);
+
   return (
     <HashRouter>
       <Routes>
