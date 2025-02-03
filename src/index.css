@@ -217,6 +217,12 @@ p strong{
   font-weight: 600;  
 }
 
+br{
+  margin: 0;
+  padding: 0;
+  height: 0;
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
