@@ -126,7 +126,7 @@ function Navbar({ photo, displayName }) {
       {/* 2 */}
       <div className="flex items-center justify-center gap-1 select-none w-full max-w-[100px] mx-auto relative bg-yellow-100">
         {/* info */}
-        <div className="w-[300px] h-[12px] bg-white ring-1 absolute top-0 mx-auto"></div>
+        <div className="w-[120px] h-[200px] bg-white ring-1 absolute top-0 mx-auto"></div>
         <div className="w-7 min-w-7">
           <img src="/logo.png" alt="logo" className="w-full h-fit " />
         </div>
