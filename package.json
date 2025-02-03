@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@tanstack/react-router": "^1.99.0",
     "antd": "^5.23.3",
     "axios": "^1.7.9",
     "react": "^18.3.1",
