@@ -152,8 +152,8 @@ input {
   padding-left: 20px;
 }
 
-.markdown ul li {
-  font-size: 12px;
+.markdown ul li strong {
+  font-size: 15px;
 }
 
 /* Style for horizontal rules */
