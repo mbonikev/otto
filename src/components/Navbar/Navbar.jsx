@@ -135,7 +135,7 @@ function Navbar({ photo, displayName }) {
         <div className="w-[260px] h-fit delay-150 scale-0 group-hover:scale-100 opacity-0 group-hover:opacity-100 group-hover:transition-all bg-transparent absolute top-0 mx-auto z-10 pt-2">
           <div className="w-full h-full bg-white ring-1 ring-stone-200 shadow-lg rounded-2xl pt-[88px] px-2 pb-2 text-center">
             <h1 className="font-Kanit delay-150 transition-all whitespace-nowrap opacity-0 group-hover:opacity-100 text-2xl font-light text-dark-text-weak text-center">
-              OTTO
+              Otto
               <span className="text-xs mx-1 rounded-xl bg-stone-200/50 font-Inter px-2 py-0.5 delay-150 transition-all whitespace-nowrap opacity-0 group-hover:opacity-100 font-medium text-dark-text-weak mt-0">
                 Beta
               </span>
@@ -147,7 +147,7 @@ function Navbar({ photo, displayName }) {
                     <BsStars />
                   </div>
                   <div className="flex flex-col gap-[2px] items-start leading-5">
-                    <h1>OTTO Plus</h1>
+                    <h1>Otto Plus</h1>
                     <p className="text-xs text-dark-text/50 leading-3">
                       More Models & more
                     </p>
