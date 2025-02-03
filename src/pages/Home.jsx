@@ -83,11 +83,11 @@ function Home() {
 
       <div
         ref={chatBoxRef}
-        className="w-full flex-1 flex flex-col mt-[70px] overflow-y-scroll px-4"
+        className="w-full flex-1 flex flex-col mt-[70px] overflow-y-scroll pl-[12px] bg-yellow-500 "
       >
         {messages.length > 0 ? (
-          <div className="w-full flex-1 flex flex-col items-center justify-start py-10">
-            <div className="w-full max-w-[900px] flex flex-col gap-10">
+          <div className="w-full flex-1 flex flex-col items-center justify-start py-10 bg-red-300">
+            <div className="w-full flex flex-col gap-10">
               {messages.map((msg, index) => {
                 const isLastNonUserMsg =
                   msg.role !== "user" && index === messages.length - 1;
@@ -97,7 +97,7 @@ function Home() {
                     key={index}
                     className={`text-base font-normal text-dark-text/90 tracking-tight leading-[26px] ${
                       msg.role === "user"
-                        ? "w-fit bg-stone-200/40 px-4 py-2.5 ml-auto max-w-[500px] mr-9 rounded-3xl"
+                        ? "w-fit bg-stone-200/40 px-4 py-2 ml-auto max-w-[500px] rounded-3xl"
                         : "w-full bg-transparent flex items-start justify-start gap-4 break-words whitespace-pre-line pr-9"
                     } ${isLastNonUserMsg ? "animate-message" : ""}`}
                   >
