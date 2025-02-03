@@ -153,7 +153,7 @@ function Navbar({ photo, displayName }) {
                     </p>
                   </div>
                 </div>
-                <div className="h-full w-9 min-w-5 flex items-center justify-center text-dark-text text-lg">
+                <div className="h-full w-9 min-w-5 flex items-center justify-center text-dark-text/60 text-lg">
                   <BiSolidLockAlt />
                 </div>
               </div>
