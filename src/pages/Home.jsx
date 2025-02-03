@@ -17,20 +17,20 @@ function Home() {
   useEffect(() => {
     if (chatBoxRef.current) {
       const chatBox = chatBoxRef.current;
-      const lastMessage = chatBox.lastElementChild; // Get the last message element
-      const lastMessageOffsetTop = lastMessage.offsetTop; // Get the offset of the last message from the top of the chat box
-      const chatBoxHeight = chatBox.clientHeight; // Get the height of the chat box
-      const scrollPosition = chatBox.scrollTop; // Current scroll position
-
-      // Scroll until the last message is 200px from the top
-      if (
-        lastMessageOffsetTop + lastMessage.clientHeight - scrollPosition >
-        40
-      ) {
-        chatBox.scrollTop = lastMessageOffsetTop - 40;
+      const messageElements = chatBox.querySelectorAll('.message');
+      const lastMessage = messageElements[messageElements.length - 1];
+  
+      if (lastMessage) {
+        const lastMessageOffsetTop = lastMessage.offsetTop;
+        const chatBoxHeight = chatBox.clientHeight;
+        const scrollPosition = chatBox.scrollTop;
+  
+        if (lastMessageOffsetTop + lastMessage.clientHeight - scrollPosition > 200) {
+          chatBox.scrollTop = lastMessageOffsetTop - 200;
+        }
       }
     }
-
+  
     const firstAssistantMessage = messages.find(
       (msg) => msg.role === "assistant"
     );
@@ -38,6 +38,7 @@ function Home() {
       ? `Otto - ${firstAssistantMessage?.title?.replace(/["`]/g, "") || ""}`
       : "Otto";
   }, [messages]);
+  
 
   // Function to render content with code blocks
   const renderContent = (msg) => {
