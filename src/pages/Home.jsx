@@ -115,7 +115,7 @@ function Home() {
                     } ${isLastNonUserMsg ? "animate-message" : ""}`}
                   >
                     {msg.role !== "user" && (
-                      <div className="h-8 aspect-square min-w-fit bg-white rounded-full overflow-hidden ring-1 ring-stone-200/60 p-1 -translate-y-[3px]">
+                      <div className="h-8 aspect-square min-w-fit bg-white rounded-full overflow-hidden ring-1 ring-stone-200/60 p-1 -translate-y-0.5">
                         <img src="./logo.png" className="rounded-full" />
                       </div>
                     )}
