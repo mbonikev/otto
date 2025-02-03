@@ -39,7 +39,7 @@ function Navbar({ photo, displayName }) {
     );
 
     // Clear the token cookie on the frontend
-    clearCookie("token");
+    // clearCookie("token");
 
     window.location.reload();
   };
