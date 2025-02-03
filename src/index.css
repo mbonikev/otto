@@ -155,7 +155,9 @@ input {
 .markdown ul {
   list-style-type: disc;
   padding-left: 40px;
+  flex: ;
 }
+
 
 .markdown ul li strong {
   font-size: 18px;
