@@ -156,6 +156,7 @@ input {
   list-style-type: disc;
   padding-left: 40px;
   display: flex;
+  flex-direction: column;
 }
 
 
