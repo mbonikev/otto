@@ -131,7 +131,7 @@ function Navbar({ photo, displayName }) {
             <h1 className="font-Kanit delay-300 transition-all whitespace-nowrap opacity-0 group-hover:opacity-100 text-2xl font-light text-dark-text-weak text-center">
               Otto
             </h1>
-            <h1 className="text-xs delay-300 transition-all whitespace-nowrap opacity-0 group-hover:opacity-100 font-light text-dark-text-weak mt-1">
+            <h1 className="text-xs delay-300 transition-all whitespace-nowrap opacity-0 group-hover:opacity-100 font-light text-dark-text-weak mt-0">
               V1.0.1
             </h1>
             <h1 className="text-sm delay-300 transition-all whitespace-nowrap opacity-0 group-hover:opacity-100 font-light text-dark-text-weak mt-1">
