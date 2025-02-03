@@ -140,7 +140,7 @@ function Navbar({ photo, displayName }) {
               </span>
             </h1>
           <div className="w-full flex flex-col">
-            
+            <div className="w-full h-52">d</div>
           </div>
           </div>
         </div>
