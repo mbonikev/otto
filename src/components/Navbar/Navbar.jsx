@@ -15,7 +15,7 @@ import { useNavigate } from "react-router-dom";
 import { LuLoaderCircle } from "react-icons/lu";
 import axios from "axios";
 
-function Navbar({ photo, username }) {
+function Navbar({ photo, displayName }) {
   const [showPopup, setShowPopup] = useState(false);
   const profileRef = useRef(null);
   const popupRef = useRef(null);
@@ -157,7 +157,7 @@ function Navbar({ photo, username }) {
             />
           )}
         </button>
-        {username}
+        {displayName}
         {/* dropdown */}
         {showPopup && (
           <div
