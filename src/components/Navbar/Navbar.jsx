@@ -14,6 +14,7 @@ import ChatHistory from "../ChatHistory/ChatHistory";
 import { useNavigate } from "react-router-dom";
 import { LuLoaderCircle } from "react-icons/lu";
 import axios from "axios";
+import { BsIncognito } from "react-icons/bs";
 
 function Navbar({ photo, displayName }) {
   const [showPopup, setShowPopup] = useState(false);
