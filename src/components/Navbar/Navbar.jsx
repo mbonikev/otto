@@ -128,9 +128,9 @@ function Navbar({ photo, displayName }) {
         <div className="w-7 min-w-7">
           <img src="/logo.png" alt="logo" className="w-full h-fit " />
         </div>
-        <h1 className="font-Kanit text-2xl font-light text-dark-text-weak">
+        {/* <h1 className="font-Kanit text-2xl font-light text-dark-text-weak">
           Otto
-        </h1>
+        </h1> */}
       </div>
       {/* 3 */}
       <div className="flex items-center justify-end gap-3 relative select-none">
