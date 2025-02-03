@@ -95,7 +95,7 @@ function PromptArea({ setMessages, thinking, setThinking, displayName, email }) 
         ></textarea>
         <div className="flex items-center justify-between w-full h-[36px] bg-red-400/0 min-h-[32px] px-1.5 mb-1.5">
           {/* 1 */}
-          <div className="w-full h-full">
+          <div className="w-full h-full flex items-center justify-start gap-2">
             <div className="group cursor-pointer h-full w-fit px-3 flex items-center justify-center gap-1 text-sm ring-1 ring-stone-300 text-dark-text-weak hover:text-dark-text font-semibold rounded-full relative">
               <LuBrain className="text-base" />
               llama3-8b-8192
