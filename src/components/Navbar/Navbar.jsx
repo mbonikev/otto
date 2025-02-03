@@ -124,7 +124,7 @@ function Navbar({ photo, displayName }) {
         </button>
         <button className="group h-10 w-auto aspect-square flex items-center justify-center text-2xl hover:bg-stone-100 text-dark-text-weak hover:text-dark-text rounded-full relative">
           <BsIncognito />
-          <Tooltip title="New chat" placement="center" />
+          <Tooltip title="Temporary Mode" placement="center" />
         </button>
       </div>
       {/* 2 */}
