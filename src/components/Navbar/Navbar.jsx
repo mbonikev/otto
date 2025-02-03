@@ -14,7 +14,7 @@ import ChatHistory from "../ChatHistory/ChatHistory";
 import { useNavigate } from "react-router-dom";
 import { LuLoaderCircle } from "react-icons/lu";
 import axios from "axios";
-import { BsIncognito } from "react-icons/bs";
+import { BsIncognito, BsStars } from "react-icons/bs";
 
 function Navbar({ photo, displayName }) {
   const [showPopup, setShowPopup] = useState(false);
@@ -142,7 +142,7 @@ function Navbar({ photo, displayName }) {
           <div className="w-full flex flex-col">
             <div className="w-full h-9 bg-red-200 flex items-center justify-between">
               <div className="flex-1 flex">
-                <span>Otto Pro</span>
+                <BsStars className="" />
                 <span></span>
               </div>
             </div>
