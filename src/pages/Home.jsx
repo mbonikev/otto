@@ -27,9 +27,9 @@ function Home() {
 
         if (
           lastMessageOffsetTop + lastMessage.clientHeight - scrollPosition >
-          200
+          0
         ) {
-          chatBox.scrollTop = lastMessageOffsetTop - 200;
+          chatBox.scrollTop = lastMessageOffsetTop - 0;
         }
       }
     }
