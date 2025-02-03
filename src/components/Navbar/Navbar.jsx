@@ -131,7 +131,7 @@ function Navbar({ photo, displayName }) {
       {/* 2 */}
       <div className="flex items-center justify-center gap-1 select-none w-full max-w-[100px] mx-auto relative group bg-transparent">
         {/* info */}
-        <div className="w-[260px] h-[185px] delay-150 scale-0 group-hover:scale-100 opacity-0 group-hover:opacity-100 group-hover:transition-all bg-transparent absolute top-0 mx-auto z-10 pt-2">
+        <div className="w-[260px] h-fit delay-150 scale-0 group-hover:scale-100 opacity-0 group-hover:opacity-100 group-hover:transition-all bg-transparent absolute top-0 mx-auto z-10 pt-2">
           <div className="w-full h-full bg-white ring-1 ring-stone-200 shadow-lg rounded-3xl pt-[88px] px-2 pb-2 text-center">
             <h1 className="font-Kanit delay-150 transition-all whitespace-nowrap opacity-0 group-hover:opacity-100 text-2xl font-light text-dark-text-weak text-center">
               Otto
