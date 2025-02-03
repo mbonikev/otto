@@ -41,7 +41,7 @@ function Navbar({ photo, displayName }) {
   
       // Wait briefly to allow the cookie to be cleared
       setTimeout(() => {
-        window.location.href = "/login";
+        window.location.href = "/";
       }, 500);
     } catch (error) {
       console.error("Logout failed:", error);
