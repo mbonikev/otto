@@ -78,7 +78,7 @@ function Home() {
   return (
     <div className="w-full h-svh flex flex-col relative">
       <div className="w-full h-fit z-30 fixed top-0">
-        <Navbar photo={photo} username={username} />
+        <Navbar photo={photo} displayName={displayName} />
       </div>
 
       <div
@@ -134,7 +134,7 @@ function Home() {
         setMessages={setMessages}
         thinking={thinking}
         setThinking={setThinking}
-        username={username}
+        displayName={displayName}
         email={email}
       />
     </div>
