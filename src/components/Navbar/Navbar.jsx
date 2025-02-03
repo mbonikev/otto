@@ -157,7 +157,7 @@ function Navbar({ photo, username }) {
             />
           )}
         </button>
-        {username}
+        {username}ss
         {/* dropdown */}
         {showPopup && (
           <div
