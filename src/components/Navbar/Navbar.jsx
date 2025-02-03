@@ -29,20 +29,27 @@ function Navbar({ photo, displayName }) {
   const clearCookie = (name) => {
     document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/;`;
   };
-
+  
   const handleLogout = async () => {
     setLoading(true);
-    await axios.post(
-      `${import.meta.env.VITE_BACKEND_API}/auth/logout`,
-      {},
-      { withCredentials: true }
-    );
-
-    // Clear the token cookie on the frontend
-    // clearCookie("token");
-
-    window.location.reload();
+    try {
+      await axios.post(
+        `${import.meta.env.VITE_BACKEND_API}/auth/logout`,
+        {},
+        { withCredentials: true }
+      );
+  
+      // Wait briefly to allow the cookie to be cleared
+      setTimeout(() => {
+        window.location.href = "/login";
+      }, 500);
+    } catch (error) {
+      console.error("Logout failed:", error);
+    } finally {
+      setLoading(false);
+    }
   };
+  
 
   useEffect(() => {
     const handleClickOutside = (event) => {
