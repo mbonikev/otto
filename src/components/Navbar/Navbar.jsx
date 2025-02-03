@@ -14,7 +14,7 @@ import ChatHistory from "../ChatHistory/ChatHistory";
 import { useNavigate } from "react-router-dom";
 import { LuLoaderCircle } from "react-icons/lu";
 import axios from "axios";
-import { BsIncognito, BsStars } from "react-icons/bs";
+import { BsIncognito, BsLockFill, BsStars } from "react-icons/bs";
 
 function Navbar({ photo, displayName }) {
   const [showPopup, setShowPopup] = useState(false);
@@ -150,7 +150,9 @@ function Navbar({ photo, displayName }) {
                     <p className="text-xs text-dark-text/50 leading-5">Upgrade to </p>
                   </div>
                 </div>
-                <div className="h-full w-5"></div>
+                <div className="h-full w-5 min-w-5 flex items-center justify-center">
+                  <BsLockFill />
+                </div>
               </div>
             </div>
           </div>
