@@ -7,6 +7,7 @@ import { RiRobot3Line } from "react-icons/ri";
 import Tooltip from "../Tooltip/Tooltip";
 import axios from "axios";
 import { GoCommandPalette } from "react-icons/go";
+import { IoSend } from "react-icons/io5";
 
 function PromptArea({ setMessages, thinking, setThinking, displayName, email }) {
   const [message, setMessage] = useState("");
@@ -124,7 +125,7 @@ function PromptArea({ setMessages, thinking, setThinking, displayName, email }) 
               className={`group h-full w-auto aspect-square flex items-center justify-center text-dark-text hover:opacity-70 rounded-full relative
                 ${thinking ? "opacity-30" : "opacity-100"}`}
             >
-              <BsArrowUpCircleFill className="h-full w-full" />
+              <IoSend className="h-full w-full" />
             </button>
           </div>
         </div>
