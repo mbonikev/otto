@@ -131,7 +131,7 @@ function Navbar({ photo, displayName }) {
             <h1 className="font-Kanit text-2xl font-light text-dark-text-weak w-full text-center">
               Otto
             </h1>
-            <h1 className="text-sm font-light text-dark-text-weak">
+            <h1 className="text-sm font-light text-dark-text-weak mt-1">
               V1.0.1
             </h1>
           </div>
