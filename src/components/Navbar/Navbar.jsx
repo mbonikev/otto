@@ -135,7 +135,7 @@ function Navbar({ photo, displayName }) {
               V1.0.1
             </h1>
             <h1 className="text-sm delay-300 transition-all whitespace-nowrap opacity-0 group-hover:opacity-100 font-light text-dark-text-weak mt-1">
-              V1.0.1
+              developed by kevin Mk
             </h1>
           </div>
         </div>
