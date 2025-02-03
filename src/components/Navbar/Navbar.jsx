@@ -124,7 +124,7 @@ function Navbar({ photo, displayName }) {
         </button>
       </div>
       {/* 2 */}
-      <div className="flex items-center justify-center gap-1 select-none">
+      <div className="flex items-center justify-center gap-1 select-none max-w-[400px] relative bg-yellow-100">
         <div className="w-7 min-w-7">
           <img src="/logo.png" alt="logo" className="w-full h-fit " />
         </div>
