@@ -8,7 +8,7 @@ import remarkGfm from "remark-gfm";
 import { useOutletContext } from "react-router-dom";
 
 function Home() {
-  const { username, photo, email } = useOutletContext();
+  const { displayName, photo, email } = useOutletContext();
   const [messages, setMessages] = useState([]);
   const [thinking, setThinking] = useState(false);
   const chatBoxRef = useRef(null);
