@@ -148,7 +148,7 @@ function Navbar({ photo, displayName }) {
                   <div className="flex flex-col gap-[2px] items-start leading-5">
                     <h1>Otto Pro</h1>
                     <p className="text-xs text-dark-text/50 leading-3">
-                      Upgrade to{" "}
+                      Upgrade to more inteligent
                     </p>
                   </div>
                 </div>
