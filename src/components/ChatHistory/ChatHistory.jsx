@@ -47,21 +47,6 @@ function ChatHistory() {
               </Link>
             ))}
           </div>
-          <h1 className="text-xs font-medium text-dark-text-weak px-2.5">
-            Older
-          </h1>
-          {/* chats */}
-          <div className="flex flex-col w-full h-fit">
-            {[...Array(2)].map((_, index) => (
-              <Link
-                to={"/"}
-                key={index}
-                className="w-full px-2.5 py-2 hover:bg-stone-100 rounded-xl text-sm text-dark-text"
-              >
-                HTML Banner Implementation
-              </Link>
-            ))}
-          </div>
         </div>
       </div>
     </div>
