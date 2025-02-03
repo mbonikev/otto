@@ -147,6 +147,7 @@ function Navbar({ photo, displayName }) {
                   </div>
                   <div className="flex flex-col">
                     <h1>Otto Pro</h1>
+                    <p className="text-xs text-dark-text/50">Comming soon</p>
                   </div>
                 </div>
               </div>
