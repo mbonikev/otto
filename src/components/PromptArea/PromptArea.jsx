@@ -125,7 +125,7 @@ function PromptArea({ setMessages, thinking, setThinking, displayName, email }) 
               className={`group h-full w-auto aspect-square flex items-center justify-center text-dark-text hover:opacity-70 rounded-full relative
                 ${thinking ? "opacity-30" : "opacity-100"}`}
             >
-              <IoSend className="text-2xl" />
+              <IoSend className="text-3xl" />
             </button>
           </div>
         </div>
