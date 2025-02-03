@@ -161,7 +161,7 @@ function Navbar({ photo, displayName }) {
         </div>
       </div>
       {/* 3 */}
-      <div className="flex items-center justify-end gap-3 relative select-none">
+      <div className="flex items-center justify-end gap-1 relative select-none">
         <button className="group h-10 w-auto aspect-square flex items-center justify-center text-2xl hover:bg-stone-100 text-dark-text-weak hover:text-dark-text rounded-full relative">
           <IoShareSocialOutline />
           <Tooltip title="Share" placement="center" />
