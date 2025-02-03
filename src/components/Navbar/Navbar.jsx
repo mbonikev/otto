@@ -15,6 +15,7 @@ import { useNavigate } from "react-router-dom";
 import { LuLoaderCircle } from "react-icons/lu";
 import axios from "axios";
 import { BsIncognito, BsLockFill, BsStars } from "react-icons/bs";
+import { BiSolidLockAlt } from "react-icons/bi";
 
 function Navbar({ photo, displayName }) {
   const [showPopup, setShowPopup] = useState(false);
@@ -153,7 +154,7 @@ function Navbar({ photo, displayName }) {
                   </div>
                 </div>
                 <div className="h-full w-9 min-w-5 flex items-center justify-center">
-                  <BsLockFill className="text-dark-text-weak" />
+                  <BiSolidLockAlt className="text-dark-text-weak" />
                 </div>
               </div>
             </div>
