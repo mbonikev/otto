@@ -127,7 +127,7 @@ function Navbar({ photo, displayName }) {
       <div className="flex items-center justify-center gap-1 select-none w-full max-w-[100px] mx-auto relative group bg-yellow-100">
         {/* info */}
         <div className="w-0 h-0 group-hover:w-[210px] delay-150 group-hover:h-[180px] opacity-0 group-hover:opacity-100 transition-all bg-transparent absolute top-0 mx-auto z-10 pt-2">
-          <div className="w-full h-full bg-white ring-1 ring-stone-200 shadow-lg rounded-3xl pt-20">
+          <div className="w-full h-full bg-white ring-1 ring-stone-200 shadow-lg rounded-3xl pt-24">
             <h1 className="font-Kanit text-2xl font-light text-dark-text-weak w-full text-center">
           Otto
         </h1>
