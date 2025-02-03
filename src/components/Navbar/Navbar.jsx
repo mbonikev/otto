@@ -142,7 +142,7 @@ function Navbar({ photo, displayName }) {
           <div className="w-full flex flex-col">
             <div className="w-full h-9 bg-red-200 flex items-center justify-between">
               <div className="flex-1 flex">
-                <BsStars className="" />
+                <div className="w-10 h-10"><BsStars /></div>
                 <span></span>
               </div>
             </div>
