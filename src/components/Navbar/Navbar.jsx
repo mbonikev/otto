@@ -144,7 +144,7 @@ function Navbar({ photo, displayName }) {
             </h1>
           </div>
         </div>
-        <div className="w-7 min-w-7 z-20 group-hover:w-16 delay-150 translate-y-5 transition-all group-hover:animate-spinSlow">
+        <div className="w-7 min-w-7 z-20 group-hover:w-16 delay-150 translate-y-5 transition-all group-hover:animate-spin">
           <img src="/logo.png" alt="logo" className="w-full h-fit " />
         </div>
       </div>
