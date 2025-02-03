@@ -3,7 +3,7 @@ import { Fade } from "react-awesome-reveal";
 
 function Tooltip({ title, placement, shortcut }) {
   return (
-    <Fade duration={1200} className="z-20">
+    <Fade duration={1200}>
       <div
         className={`absolute z-10 w-fit h-fit whitespace-nowrap px-3 py-[7px] rounded-[9px] bg-[#222222] text-white/90 text-sm font-semibold pointer-events-none opacity-0 group-hover:opacity-100 delay-150 flex flex-col items-center ${
           placement === "left"
