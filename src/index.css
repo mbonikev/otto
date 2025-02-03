@@ -193,7 +193,7 @@ input {
   font-family: monospace;
   font-size: 13px;
   color: #5f5f5f;
-  margin-top: 40px;
+  padding-top: 40px !important;
 }
 
 /* Style for blockquotes (optional) */
