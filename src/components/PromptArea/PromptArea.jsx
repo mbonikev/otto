@@ -117,7 +117,7 @@ function PromptArea({
               <Tooltip title="Type Codes" placement="right-center" />
             </div>
             <div className="group cursor-pointer h-full w-fit px-3 flex items-center justify-center gap-1 text-sm ring-1 ring-stone-300 text-dark-text-weak hover:text-dark-text font-semibold rounded-full relative">
-              <BsFileEarmarkText className="text-lg text-red-600" />
+              <BsFileEarmarkText className="text-base text-red-600" />
               Summarize
               <Tooltip title="Models" placement="right-center" />
             </div>
