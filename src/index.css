@@ -126,6 +126,10 @@ input {
   animation: fadeInUp 0.5s ease-in-out;
 }
 
+.markdown {
+  flex: ;
+}
+
 
 /* Style for main headings */
 .markdown h1 {
