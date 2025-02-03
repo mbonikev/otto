@@ -6,6 +6,10 @@ import Login from "./pages/Login";
 import ProtectedRoutes from "./components/ProtectedRoutes/ProtectedRoutes";
 
 function App() {
+  const hasHash = window.location.hash.includes("#");
+  if (!hasHash && window.location.pathname !== "/") {
+    return <NotFound />;
+  }
   return (
     <HashRouter>
       <Routes>
