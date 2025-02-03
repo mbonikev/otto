@@ -6,6 +6,13 @@
   <link rel="shortcut icon" type="image/x-icon" href="/logo.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Otto</title>
+  <script>
+    (function () {
+      if (!window.location.hash) {
+        window.location.replace(window.location.origin + "/#/");
+      }
+    })();
+  </script>
 </head>
 
 <body>
