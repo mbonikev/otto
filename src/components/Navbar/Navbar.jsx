@@ -147,11 +147,13 @@ function Navbar({ photo, displayName }) {
                   </div>
                   <div className="flex flex-col items-start leading-5">
                     <h1>Otto Pro</h1>
-                    <p className="text-xs text-dark-text/50 leading-5">Upgrade to </p>
+                    <p className="text-xs text-dark-text/50 leading-5">
+                      Upgrade to{" "}
+                    </p>
                   </div>
                 </div>
                 <div className="h-full w-5 min-w-5 flex items-center justify-center">
-                  <BsLockFill />
+                  <BsLockFill className="text-dark-text-weak" />
                 </div>
               </div>
             </div>
