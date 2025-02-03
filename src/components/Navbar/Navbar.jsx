@@ -128,13 +128,13 @@ function Navbar({ photo, displayName }) {
         {/* info */}
         <div className="w-[210px] h-[185px] delay-150 scale-75 group-hover:scale-100 opacity-0 group-hover:opacity-100 transition-all bg-transparent absolute top-0 mx-auto z-10 pt-2">
           <div className="w-full h-full bg-white ring-1 ring-stone-200 shadow-lg rounded-3xl pt-[88px] px-2 pb-2 text-center">
-            <h1 className="font-Kanit delay-300 transition-all whitespace-nowrap opacity-0 group-hover:opacity-100 text-2xl font-light text-dark-text-weak text-center">
+            <h1 className="font-Kanit delay-150 transition-all whitespace-nowrap opacity-0 group-hover:opacity-100 text-2xl font-light text-dark-text-weak text-center">
               Otto
             </h1>
-            <h1 className="text-xs delay-300 transition-all whitespace-nowrap opacity-0 group-hover:opacity-100 font-light text-dark-text-weak mt-0">
+            <h1 className="text-xs delay-150 transition-all whitespace-nowrap opacity-0 group-hover:opacity-100 font-light text-dark-text-weak mt-0">
               V1.0.1
             </h1>
-            <h1 className="text-sm delay-300 transition-all whitespace-nowrap opacity-0 group-hover:opacity-100 font-light text-dark-text-weak mt-1">
+            <h1 className="text-sm delay-150 transition-all whitespace-nowrap opacity-0 group-hover:opacity-100 font-light text-dark-text-weak mt-1">
               developed by kevin Mk
             </h1>
           </div>
