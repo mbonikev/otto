@@ -33,7 +33,7 @@ const ProtectedRoutes = () => {
       <div className="w-full h-svh flex items-center justify-center">
         <img
           src="./logo.png"
-          className="h-8 opacity-35 w-auto animate-spinLoader saturate-0"
+          className="h-12 opacity-35 w-auto animate-ping"
         />
       </div>
     );
