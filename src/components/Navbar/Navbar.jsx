@@ -149,7 +149,7 @@ function Navbar({ photo, displayName }) {
                   <div className="flex flex-col gap-[2px] items-start leading-5">
                     <h1>Otto+</h1>
                     <p className="text-xs text-dark-text/50 leading-3">
-                      Smartest Models & more
+                      More Models & more
                     </p>
                   </div>
                 </div>
