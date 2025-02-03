@@ -25,9 +25,9 @@ function Home() {
       // Scroll until the last message is 200px from the top
       if (
         lastMessageOffsetTop + lastMessage.clientHeight - scrollPosition >
-        20
+        40
       ) {
-        chatBox.scrollTop = lastMessageOffsetTop - 20;
+        chatBox.scrollTop = lastMessageOffsetTop - 40;
       }
     }
 
