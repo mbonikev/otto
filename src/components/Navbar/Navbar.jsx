@@ -135,7 +135,7 @@ function Navbar({ photo, displayName }) {
           <div className="w-full h-full bg-white ring-1 ring-stone-200 shadow-lg rounded-3xl pt-[88px] px-2 pb-2 text-center">
             <h1 className="font-Kanit delay-150 transition-all whitespace-nowrap opacity-0 group-hover:opacity-100 text-2xl font-light text-dark-text-weak text-center">
               Otto
-              <span className="text-xs mx-1 bg-stone-200/50 font-Inter px-1.5 py-1 delay-150 transition-all whitespace-nowrap opacity-0 group-hover:opacity-100 font-semibold text-dark-text-weak mt-0">
+              <span className="text-xs mx-1 rounded-xl bg-stone-200/50 font-Inter px-1.5 py-1 delay-150 transition-all whitespace-nowrap opacity-0 group-hover:opacity-100 font-semibold text-dark-text-weak mt-0">
                 1.0.1
               </span>
             </h1>
