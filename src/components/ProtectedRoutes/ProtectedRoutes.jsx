@@ -15,6 +15,7 @@ const ProtectedRoutes = () => {
         });
 
         setUser(response.data.user || null);
+        console.log(response.data)
       } catch (error) {
         console.error("Error fetching user status:", error);
         setUser(null);

@@ -15,7 +15,7 @@ import { useNavigate } from "react-router-dom";
 import { LuLoaderCircle } from "react-icons/lu";
 import axios from "axios";
 
-function Navbar({ picture, username }) {
+function Navbar({ photo, username }) {
   const [showPopup, setShowPopup] = useState(false);
   const profileRef = useRef(null);
   const popupRef = useRef(null);
@@ -24,11 +24,21 @@ function Navbar({ picture, username }) {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
+  const clearCookie = (name) => {
+    document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/;`;
+  };
+
   const handleLogout = async () => {
     setLoading(true);
-    await axios.post(`${import.meta.env.VITE_BACKEND_API}/auth/logout`, {
-      withCredentials: true,
-    });
+    await axios.post(
+      `${import.meta.env.VITE_BACKEND_API}/auth/logout`,
+      {},
+      { withCredentials: true }
+    );
+
+    // Clear the token cookie on the frontend
+    clearCookie("token");
+
     window.location.reload();
   };
 
@@ -133,9 +143,9 @@ function Navbar({ picture, username }) {
           onClick={() => setShowPopup(true)}
           className="h-9 w-9 rounded-full overflow-hidden"
         >
-          {picture !== "" ? (
+          {photo !== "" ? (
             <img
-              src={`${picture}`}
+              src={photo}
               alt="avatar"
               className="bg-stone-100 w-full h-fit min-h-full object-cover rounded-full"
             />
