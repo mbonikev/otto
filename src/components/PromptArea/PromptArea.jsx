@@ -7,7 +7,7 @@ import { RiRobot3Line } from "react-icons/ri";
 import Tooltip from "../Tooltip/Tooltip";
 import axios from "axios";
 
-function PromptArea({ setMessages, thinking, setThinking, username, email }) {
+function PromptArea({ setMessages, thinking, setThinking, displayName, email }) {
   const [message, setMessage] = useState("");
   const textareaRef = useRef(null);
 
@@ -34,7 +34,7 @@ function PromptArea({ setMessages, thinking, setThinking, username, email }) {
       try {
         const response = await axios.post(
           `${apiUrl}/api/chat`,
-          { message, username, userId: email },
+          { message, displayName, userId: email },
           {
             headers: {
               Authorization: `Bearer ${apiKey}`,
