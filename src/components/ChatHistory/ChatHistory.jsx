@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function ChatHistory() {
   const [searchValue, setSearchValue] = useState("");
   return (
-    <div className="w-[300px] h-svh p-3">
+    <div className="w-[300px] h-svh p-0">
       <div className="w-full h-full bg-white rounded-2xl p-2 flex flex-col">
         {/* 1 */}
         <div className="w-full h-[36px] min-h-[36px]">
