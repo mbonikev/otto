@@ -140,7 +140,7 @@ function Navbar({ photo, displayName }) {
               </span>
             </h1>
             <div className="w-full flex flex-col mt-2">
-              <div className="w-full h-9 bg-red-200 flex items-center justify-between">
+              <div className="w-full h-9 bg-red-200 p-1 flex items-center justify-between">
                 <div className="flex-1 flex gap-2">
                   <div className="w-9 h-19 aspect-square flex justify-center items-center rounded-full bg-stone-200/50 text-dark-text text-lg">
                     <BsStars />
@@ -152,7 +152,7 @@ function Navbar({ photo, displayName }) {
                     </p>
                   </div>
                 </div>
-                <div className="h-full w-8 min-w-5 flex items-center justify-center">
+                <div className="h-full w-9 min-w-5 flex items-center justify-center">
                   <BsLockFill className="text-dark-text-weak" />
                 </div>
               </div>
