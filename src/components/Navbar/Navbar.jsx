@@ -129,7 +129,7 @@ function Navbar({ photo, displayName }) {
         </button>
       </div>
       {/* 2 */}
-      <div className="flex items-center justify-center gap-1 select-none w-full max-w-[100px] mx-auto relative group bg-yellow-100">
+      <div className="flex items-center justify-center gap-1 select-none w-full max-w-[100px] mx-auto relative group bg-transparent">
         {/* info */}
         <div className="w-[210px] h-[185px] delay-150 scale-75 group-hover:scale-100 opacity-0 group-hover:opacity-100 transition-all bg-transparent absolute top-0 mx-auto z-10 pt-2">
           <div className="w-full h-full bg-white ring-1 ring-stone-200 shadow-lg rounded-3xl pt-[88px] px-2 pb-2 text-center">
