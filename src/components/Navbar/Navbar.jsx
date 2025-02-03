@@ -150,7 +150,7 @@ function Navbar({ photo, displayName }) {
                     <p className="text-xs text-dark-text/50 leading-5">Upgrade to </p>
                   </div>
                 </div>
-                <div className=""></div>
+                <div className="h-full w-5"></div>
               </div>
             </div>
           </div>
