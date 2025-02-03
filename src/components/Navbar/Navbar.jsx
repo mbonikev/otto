@@ -139,7 +139,7 @@ function Navbar({ photo, displayName }) {
                 1.0.1
               </span>
             </h1>
-            <div className="w-full flex flex-col mt-2">
+            <div className="w-full flex flex-col mt-3">
               <div className="w-full h-11 rounded-2xl hover:bg-stone-200 p-1 flex items-center justify-between">
                 <div className="flex-1 flex items-center gap-2">
                   <div className="w-9 h-9 min-w-9 aspect-square flex justify-center items-center rounded-full bg-stone-200/50 text-dark-text text-lg">
