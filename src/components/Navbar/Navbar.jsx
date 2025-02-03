@@ -145,7 +145,9 @@ function Navbar({ photo, displayName }) {
                   <div className="w-9 h-19 aspect-square flex justify-center items-center rounded-full bg-stone-200/50 text-dark-text text-lg">
                     <BsStars />
                   </div>
-                  <div className=""></div>
+                  <div className="flex flex-col">
+                    <h1>Otto Pro</h1>
+                  </div>
                 </div>
               </div>
             </div>
