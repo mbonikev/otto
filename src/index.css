@@ -130,14 +130,14 @@ input {
 /* Style for main headings */
 .markdown h1 {
   font-size: 2rem;
-  font-weight: 300;
+  font-weight: bold;
 }
 
 /* Style for subheadings */
 .markdown h2,
 .markdown h3 {
   font-size: 1.5rem;
-  font-weight: 300;
+  font-weight: bold;
 }
 
 /* Style for paragraphs */
