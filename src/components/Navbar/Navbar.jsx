@@ -139,10 +139,7 @@ function Navbar({ photo, displayName }) {
                 1.0.1
               </span>
             </h1>
-
-            <h1 className="text-sm delay-150 transition-all whitespace-nowrap opacity-0 group-hover:opacity-100 font-light text-dark-text-weak mt-1">
-              developed by kevin Mk
-            </h1>
+          <div className=""></div>
           </div>
         </div>
         <div className="w-7 min-w-7 z-20 group-hover:w-16 delay-150 translate-y-5 transition-all">
