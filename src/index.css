@@ -149,7 +149,7 @@ input {
 /* Style for bullet points */
 .markdown ul {
   list-style-type: disc;
-  padding-left: 20px;
+  padding-left: 40px;
 }
 
 .markdown ul li strong {
