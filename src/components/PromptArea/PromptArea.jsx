@@ -93,7 +93,7 @@ function PromptArea({ setMessages, thinking, setThinking, username, email }) {
           placeholder="Message Otto"
           className="text-base font-norma bg-transparent min-h-[55px] max-h-[150px] px-3 pt-3 pb-4 outline-none w-full placeholder:text-dark-text-weak text-dark-text resize-none overflow-hidden "
         ></textarea>
-        <div className="flex items-center justify-between w-full h-[42px] bg-red-400/0 min-h-[32px] px-1.5 mb-1.5">
+        <div className="flex items-center justify-between w-full h-[36px] bg-red-400/0 min-h-[32px] px-1.5 mb-1.5">
           {/* 1 */}
           <div className="w-full h-full">
             <div className="group cursor-pointer h-full w-fit px-3 flex items-center justify-center gap-1 text-sm ring-1 ring-stone-300 text-dark-text-weak hover:text-dark-text font-semibold rounded-full relative">
