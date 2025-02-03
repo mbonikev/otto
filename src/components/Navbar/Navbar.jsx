@@ -139,7 +139,7 @@ function Navbar({ photo, displayName }) {
                 1.0.1
               </span>
             </h1>
-          <div className=""></div>
+          <div className="w-full flex flex-col"></div>
           </div>
         </div>
         <div className="w-7 min-w-7 z-20 group-hover:w-16 delay-150 translate-y-5 transition-all">
