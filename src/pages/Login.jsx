@@ -1,15 +1,13 @@
-import React from "react";
+const Login = () => {
+  const backendUrl = import.meta.env.VITE_BACKEND_API;
 
-function Login() {
-  const loginWithGoogle = () => {
-    const apiUrl = import.meta.env.VITE_BACKEND_API;
-    window.location.href = `${apiUrl}/auth/google`;
-  };
   return (
-    <div className="p-3">
-      <button onClick={loginWithGoogle}>Continue with Google</button>;
+    <div className="h-screen flex justify-center items-center">
+      <a href={`${backendUrl}/auth/google`} className="bg-blue-500 text-white p-3 rounded">
+        Continue with Google
+      </a>
     </div>
   );
-}
+};
 
 export default Login;

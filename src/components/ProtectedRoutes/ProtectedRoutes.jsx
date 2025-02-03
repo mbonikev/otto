@@ -10,16 +10,14 @@ const ProtectedRoutes = () => {
     const fetchUserStatus = async () => {
       try {
         const apiUrl = import.meta.env.VITE_BACKEND_API;
-        const response = await axios.get(`${apiUrl}/auth/status`, { withCredentials: true });
+        const response = await axios.get(`${apiUrl}/auth/status`, {
+          withCredentials: true, // Sends JWT token in cookies
+        });
 
-        if (response.data.user) {
-          console.log(response.data.user);
-          setUser(response.data.user);
-        } else {
-          setUser(null);
-        }
+        setUser(response.data.user || null);
       } catch (error) {
         console.error("Error fetching user status:", error);
+        setUser(null);
       } finally {
         setLoading(false);
       }
@@ -30,31 +28,13 @@ const ProtectedRoutes = () => {
 
   if (loading) {
     return (
-      <div className="w-full h-svh flex items-center justify-center">
-        <img
-          src="./logo.png"
-          className="h-12 opacity-35 w-auto animate-ping"
-        />
+      <div className="w-full h-screen flex items-center justify-center">
+        <img src="./logo.png" className="h-12 opacity-35 w-auto animate-ping" />
       </div>
     );
   }
 
-  if (user === null) {
-    return <Navigate to="/login" />;
-  }
-
-  // Safely handle user data
-  const { displayName, email, photo } = user;
-
-  return (
-    <Outlet
-      context={{
-        username: displayName,
-        userEmail: email,
-        picture: photo,
-      }}
-    />
-  );
+  return user ? <Outlet context={user} /> : <Navigate to="/login" />;
 };
 
 export default ProtectedRoutes;
