@@ -122,7 +122,7 @@ function PromptArea({ setMessages, thinking, setThinking, displayName, email }) 
                 e.preventDefault();
                 submit();
               }}
-              className={`group h-full w-auto aspect-square flex items-center justify-center text-dark-text hover:opacity-70 rounded-full relative pr-2
+              className={`group h-full w-auto aspect-square flex items-center justify-center text-dark-text hover:opacity-70 rounded-full relative pr-2 pb-1
                 ${thinking ? "opacity-30" : "opacity-100"}`}
             >
               <IoSend className="text-[27px]" />
