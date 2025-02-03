@@ -25,17 +25,11 @@ function Navbar({ picture, username }) {
   const navigate = useNavigate();
 
   const handleLogout = async () => {
-    const apiUrl = import.meta.env.VITE_BACKEND_API;
     setLoading(true);
-    try {
-      await axios.get(`${apiUrl}/auth/logout`, {
-        withCredentials: true,
-      });
-      window.location.reload()
-    } catch (error) {
-      console.error("Error logging out:", error);
-      setLoading(false);
-    }
+    await axios.post(`${import.meta.env.VITE_BACKEND_API}/auth/logout`, {
+      withCredentials: true,
+    });
+    window.location.reload();
   };
 
   useEffect(() => {
