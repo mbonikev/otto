@@ -121,6 +121,8 @@ function PromptArea({
                 <div className="w-full flex-1 flex flex-col gap-1 overflow-y-auto p-1">
                   {/* owner */}
                   <h1 className="text-sm font-medium text-dark-text-weak/60 py-1.5 px-2">Deepseek / Meta</h1>
+                  {/* models */}
+                  
                 </div> 
               </div>
             </div>
