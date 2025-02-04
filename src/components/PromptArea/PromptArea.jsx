@@ -1,7 +1,7 @@
 import TextArea from "antd/es/input/TextArea";
 import React, { useEffect, useRef, useState } from "react";
 import { BsArrowUpCircleFill, BsFileEarmarkText } from "react-icons/bs";
-import { LuBrain } from "react-icons/lu";
+import { LuBrain, LuCheck } from "react-icons/lu";
 import { PiBrainLight } from "react-icons/pi";
 import { RiRobot3Line } from "react-icons/ri";
 import Tooltip from "../Tooltip/Tooltip";
@@ -211,7 +211,7 @@ function PromptArea({
                                   className="px-2 py-1.5 rounded-lg w-full hover:bg-stone-200/60 text-dark-text-weak hover:text-dark-text text-sm font-medium cursor-pointer flex items-center justify-between"
                                 >
                                   {model.id}
-                                  {selectedModel === modelId && (<></>)}
+                                  {selectedModel === model.id && (<LuCheck />)}
                                 </div>
                               ))}
                           </div>
