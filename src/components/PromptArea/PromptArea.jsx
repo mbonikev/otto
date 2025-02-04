@@ -150,14 +150,15 @@ function PromptArea({
                           </h1>
                           {/* Models List */}
                           <div className="w-full h-fit flex flex-col">
-                            {ownerModels.map((model) => (
-                              <div
-                                key={model.id}
-                                className="px-2 py-1.5 rounded-lg w-full hover:bg-stone-200/60 text-dark-text-weak hover:text-dark-text text-sm font-medium cursor-pointer flex items-center justify-between"
-                              >
-                                {model.id}
-                              </div>
-                            ))}
+                            {ownerModels.active === true &&
+                              ownerModels.map((model) => (
+                                <div
+                                  key={model.id}
+                                  className="px-2 py-1.5 rounded-lg w-full hover:bg-stone-200/60 text-dark-text-weak hover:text-dark-text text-sm font-medium cursor-pointer flex items-center justify-between"
+                                >
+                                  {model.id}
+                                </div>
+                              ))}
                           </div>
                         </div>
                       ))
