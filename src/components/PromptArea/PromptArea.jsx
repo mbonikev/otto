@@ -211,7 +211,7 @@ function PromptArea({
                                   className="px-2 py-1.5 rounded-lg w-full hover:bg-stone-200/60 text-dark-text-weak hover:text-dark-text text-sm font-medium cursor-pointer flex items-center justify-between"
                                 >
                                   {model.id}
-                                  {selectedModel === model.id && (<LuCheck />)}
+                                  {selectedModel === model.id && (<LuCheck className="text-lg" />)}
                                 </div>
                               ))}
                           </div>
