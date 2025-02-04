@@ -29,7 +29,7 @@ const ProtectedRoutes = () => {
 
     const fetchModels = async () => {
       try {
-        const response = await axios.get(`${apiUrl}/auth/status`, {
+        const response = await axios.get(`${apiUrl}/api/models`, {
           withCredentials: true, // Sends JWT token in cookies
         });
 
