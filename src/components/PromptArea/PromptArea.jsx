@@ -195,7 +195,7 @@ function PromptArea({
                             model.id
                               .toLowerCase()
                               .includes(searchModel.toLowerCase()) &&
-                            model.owned_by !== "openai" && // Exclude models owned by OpenAI
+                            model.owned_by !== "openAi" && // Exclude models owned by OpenAI
                             model.owned_by !== "huggingface" // Exclude models owned by Hugging Face
                         )
                         .reduce((acc, model) => {
