@@ -136,7 +136,9 @@ function PromptArea({
             <div className=" h-full w-fit px-3 flex items-center justify-center gap-1 text-sm ring-1 ring-stone-300 text-dark-text-weak font-semibold rounded-full relative">
               <div
                 // ref={modelsButtonRef}
-                onClick={() => setShowModels(true)}
+                onClick={() =>
+                  showModels ? setShowModels(false) : setShowModels(true)
+                }
                 className="group cursor-pointer w-full h-full flex items-center justify-center gap-1 hover:text-dark-text"
               >
                 <LuBrain className="text-lg text-purple-500" />
