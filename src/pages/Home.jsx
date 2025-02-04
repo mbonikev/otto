@@ -68,7 +68,7 @@ function Home() {
                 wrapLines={true}
                 language="javascript"
                 style={oneLight}
-                className={`rounded-2xl overflow-x-auto max-w-[100%] p-6 break-before-avoid whitespace-pre-line`}
+                className={`rounded-2xl overflow-x-auto max-w-[100%] p-6 break-all whitespace-pre-line`}
               >
                 {part}
               </SyntaxHighlighter>
