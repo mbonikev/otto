@@ -3,13 +3,13 @@ import { Outlet, Navigate } from "react-router-dom";
 import axios from "axios";
 
 const ProtectedRoutes = () => {
+  const apiUrl = import.meta.env.VITE_BACKEND_API;
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchUserStatus = async () => {
       try {
-        const apiUrl = import.meta.env.VITE_BACKEND_API;
         const response = await axios.get(`${apiUrl}/auth/status`, {
           withCredentials: true, // Sends JWT token in cookies
         });
@@ -26,16 +26,15 @@ const ProtectedRoutes = () => {
       }
     };
 
+    const fetchModels = async () => {};
+
     fetchUserStatus();
   }, []);
 
   if (loading) {
     return (
       <div className="w-full h-screen flex items-center justify-center">
-        <img
-          src="./logo.png"
-          className="h-10 w-auto animate-spinLoader"
-        />
+        <img src="./logo.png" className="h-10 w-auto animate-spinLoader" />
       </div>
     );
   }
