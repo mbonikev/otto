@@ -112,6 +112,7 @@ function PromptArea({
   const handleModelSelect = (modelId) => {
     Cookies.set("selectedModel", modelId, { expires: 7, path: "/" });
     console.log("Model selected:", modelId);
+    setSelectedModel(modelId)
   };
 
   return (
