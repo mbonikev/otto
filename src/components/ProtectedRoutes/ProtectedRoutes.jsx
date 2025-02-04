@@ -33,7 +33,7 @@ const ProtectedRoutes = () => {
           withCredentials: true,
         });
   
-        setModels(response.data); // Fix: Set models instead of user
+        setModels(response.data);
       } catch (error) {
         console.error("Error fetching models:", error);
         setModels(null);
