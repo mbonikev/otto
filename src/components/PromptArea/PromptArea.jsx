@@ -9,7 +9,11 @@ import axios from "axios";
 import { GoCommandPalette } from "react-icons/go";
 import { IoSend } from "react-icons/io5";
 import { RxTextAlignMiddle } from "react-icons/rx";
-import { HiChevronUpDown, HiMiniMagnifyingGlass, HiMiniXCircle } from "react-icons/hi2";
+import {
+  HiChevronUpDown,
+  HiMiniMagnifyingGlass,
+  HiMiniXCircle,
+} from "react-icons/hi2";
 
 function PromptArea({
   setMessages,
@@ -129,17 +133,32 @@ function PromptArea({
                   </div>
                 </div>
                 <div className="w-full flex-1 flex flex-col gap-0 overflow-y-auto">
-                  {/* owner */}
-                  <h1 className="text-xs font-bold text-dark-text-weak/60 py-1.5 px-2">
-                    Deepseek / Meta
-                  </h1>
-                  {/* models */}
-                  <div className="w-full h-fit flex flex-col">
-                    {/* single model */}
-                    <div className="px-2 py-1.5 rounded-lg w-full hover:bg-stone-200/60 text-dark-text-weak hover:text-dark-text text-sm font-medium cursor-pointer flex items-center justify-between">
-                      llama3-8b-8192
-                    </div>
-                  </div>
+                  {models &&
+                    Object.entries(
+                      models.reduce((acc, model) => {
+                        acc[model.owned_by] ||= [];
+                        acc[model.owned_by].push(model);
+                        return acc;
+                      }, {})
+                    ).map(([owner, ownerModels]) => (
+                      <div key={owner} className="w-full">
+                        {/* Owner */}
+                        <h1 className="text-xs font-bold text-dark-text-weak/60 py-1.5 px-2">
+                          {owner}
+                        </h1>
+                        {/* Models */}
+                        <div className="w-full h-fit flex flex-col">
+                          {ownerModels.map((model) => (
+                            <div
+                              key={model.id}
+                              className="px-2 py-1.5 rounded-lg w-full hover:bg-stone-200/60 text-dark-text-weak hover:text-dark-text text-sm font-medium cursor-pointer flex items-center justify-between"
+                            >
+                              {model.id}
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
                 </div>
               </div>
             </div>
