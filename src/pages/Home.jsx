@@ -149,6 +149,7 @@ function Home() {
         setThinking={setThinking}
         displayName={displayName}
         email={email}
+        models={models}
       />
     </div>
   );
