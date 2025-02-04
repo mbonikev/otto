@@ -16,6 +16,7 @@ function PromptArea({
   setThinking,
   displayName,
   email,
+  models
 }) {
   const [message, setMessage] = useState("");
   const textareaRef = useRef(null);
