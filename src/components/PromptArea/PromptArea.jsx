@@ -124,7 +124,7 @@ function PromptArea({
                   {/* models */}
                   <div className="w-full h-fit flex flex-col">
                     {/* single model */}
-                    <div className="p-2 rounded-lg w-full hover:bg-stone-200"></div>
+                    <div className="p-2 rounded-lg w-full hover:bg-stone-200 text-sm font-medium"></div>
                   </div>
                 </div> 
               </div>
