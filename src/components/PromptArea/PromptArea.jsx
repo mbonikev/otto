@@ -120,7 +120,7 @@ function PromptArea({
                 <div className="border-b border-stone-300 h-[50px]"></div>
                 <div className="w-full flex-1 flex flex-col gap-1 overflow-y-auto">
                   {/* owner */}
-                  <h1></h1>
+                  <h1 className="text-sm font-medium text-dark-text-weak"></h1>
                 </div> 
               </div>
             </div>
