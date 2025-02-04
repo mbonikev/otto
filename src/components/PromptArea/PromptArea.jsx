@@ -9,7 +9,7 @@ import axios from "axios";
 import { GoCommandPalette } from "react-icons/go";
 import { IoSend } from "react-icons/io5";
 import { RxTextAlignMiddle } from "react-icons/rx";
-import { HiChevronUpDown } from "react-icons/hi2";
+import { HiChevronUpDown, HiMiniMagnifyingGlass } from "react-icons/hi2";
 
 function PromptArea({
   setMessages,
@@ -117,7 +117,25 @@ function PromptArea({
               </div>
               {/* models */}
               <div className="w-[300px] h-[300px] bg-white ring-1 ring-stone-300 shadow-md rounded-2xl absolute mx-auto bottom-[130%] flex flex-col">
-                <div className="border-b border-stone-300 h-[50px]"></div>
+                <div className="border-b border-stone-300 h-[50px]">
+                  <div className="w-full h-full bg-stone-100 rounded-xl flex items-center justify-start">
+                    <HiMiniMagnifyingGlass className="mx-2 text-lg min-w-fit" />
+                    <input
+                      type="text"
+                      autoFocus={true}
+                      onChange={(e) => setSearchValue(e.target.value)}
+                      value={searchValue}
+                      className="h-full w-full bg-transparent text-dark-text placeholder:text-dark-text-weak/50 text-sm"
+                      placeholder="Search chats..."
+                    />
+                    {searchValue !== "" && (
+                      <HiMiniXCircle
+                        onClick={() => setSearchValue("")}
+                        className="mx-2 min-w-fit text-xl text-dark-text-weak/40 cursor-pointer"
+                      />
+                    )}
+                  </div>
+                </div>
                 <div className="w-full flex-1 flex flex-col gap-0 overflow-y-auto p-1">
                   {/* owner */}
                   <h1 className="text-xs font-bold text-dark-text-weak/60 py-1.5 px-2">
