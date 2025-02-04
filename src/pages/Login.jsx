@@ -1,6 +1,6 @@
 const Login = () => {
   const backendUrl = import.meta.env.VITE_BACKEND_API;
-  document.title += "ww"
+  document.title = "Login - Otto"
   return (
   
     <div className="h-screen flex justify-start items-center flex-col p-5">
