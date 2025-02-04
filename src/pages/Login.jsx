@@ -3,7 +3,7 @@ const Login = () => {
 
   return (
     <div className="h-screen flex justify-center items-center flex-col">
-      <div className="w-full h-fit flex p-2">
+      <div className="w-full h-fit flex p-2 bg-red-300">
         <img src="./logo.png" className="h-12" />
       </div>
       <a href={`${backendUrl}/auth/google`} className="bg-blue-500 text-white p-3 rounded">
