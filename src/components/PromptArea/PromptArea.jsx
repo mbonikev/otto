@@ -29,7 +29,9 @@ function PromptArea({
   const modelsButtonRef = useRef(null);
   const modelsRef = useRef(null);
   const [showModels, setShowModels] = useState(false);
-  const selectedModel = Cookies.get("selectedModel") || "llama3-8b-8192";
+  const [selectedModel, setSelectedModel] = useState(
+    Cookies.get("selectedModel") || "llama3-8b-8192"
+  );
 
   const handleInput2Change = (e) => {
     const newInput = e.target.value;
