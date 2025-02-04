@@ -47,7 +47,6 @@ function Navbar({ photo, displayName }) {
     } catch (error) {
       console.error("Logout failed:", error);
       setLoading(false);
-
     }
   };
 
