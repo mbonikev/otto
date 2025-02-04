@@ -22,7 +22,7 @@ function PromptArea({
 
   const handleInput2Change = (e) => {
     const newInput = e.target.value;
-    console.log(JSON.stringify(message));
+    // console.log(JSON.stringify(message));
     setMessage(newInput);
     textareaRef.current.style.height = "auto";
     textareaRef.current.style.height = `${e.target.scrollHeight}px`;
