@@ -120,13 +120,17 @@ function PromptArea({
                 <div className="border-b border-stone-300 h-[50px]"></div>
                 <div className="w-full flex-1 flex flex-col gap-1 overflow-y-auto p-1">
                   {/* owner */}
-                  <h1 className="text-sm font-medium text-dark-text-weak/60 py-1.5 px-2">Deepseek / Meta</h1>
+                  <h1 className="text-sm font-medium text-dark-text-weak/60 py-1.5 px-2">
+                    Deepseek / Meta
+                  </h1>
                   {/* models */}
                   <div className="w-full h-fit flex flex-col">
                     {/* single model */}
-                    <div className="p-2 rounded-lg w-full hover:bg-stone-200 text-sm font-medium"></div>
+                    <div className="p-2 rounded-lg w-full hover:bg-stone-200 text-sm font-medium">
+                      llama3-8b-8192
+                    </div>
                   </div>
-                </div> 
+                </div>
               </div>
             </div>
             <div className="group cursor-pointer h-full w-fit px-3 flex items-center justify-center gap-1 text-sm ring-1 ring-stone-300 text-dark-text-weak hover:text-dark-text font-semibold rounded-full relative">
