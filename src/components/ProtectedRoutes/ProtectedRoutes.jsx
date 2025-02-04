@@ -30,17 +30,17 @@ const ProtectedRoutes = () => {
     const fetchModels = async () => {
       try {
         const response = await axios.get(`${apiUrl}/api/models`, {
-          withCredentials: true, // Sends JWT token in cookies
+          withCredentials: true,
         });
-
-        setUser(response.data.user || null);
-        // console.log(response.data);
+  
+        setModels(response.data); // Fix: Set models instead of user
       } catch (error) {
-        console.error("Error fetching user status:", error);
-        setUser(null);
+        console.error("Error fetching models:", error);
+        setModels(null);
       }
     };
-
+  
+    fetchModels();
     fetchUserStatus();
   }, []);
 
