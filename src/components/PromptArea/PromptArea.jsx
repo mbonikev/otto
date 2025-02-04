@@ -105,6 +105,11 @@ function PromptArea({
     };
   }, []);
 
+  const handleModelSelect = (modelId) => {
+    Cookies.set("selectedModel", modelId, { expires: 7, path: "/" });
+    console.log("Model selected:", modelId);
+  };
+
   return (
     <div className="w-full h-fit flex flex-col gap-3 px-3 pb-3 z-0 sticky bottom-0 bg-white">
       <form
