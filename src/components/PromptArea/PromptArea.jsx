@@ -123,17 +123,9 @@ function PromptArea({
                     <input
                       type="text"
                       autoFocus={true}
-                      onChange={(e) => setSearchValue(e.target.value)}
-                      value={searchValue}
                       className="h-full w-full bg-transparent text-dark-text placeholder:text-dark-text-weak/50 text-sm"
                       placeholder="Search chats..."
                     />
-                    {searchValue !== "" && (
-                      <HiMiniXCircle
-                        onClick={() => setSearchValue("")}
-                        className="mx-2 min-w-fit text-xl text-dark-text-weak/40 cursor-pointer"
-                      />
-                    )}
                   </div>
                 </div>
                 <div className="w-full flex-1 flex flex-col gap-0 overflow-y-auto p-1">
