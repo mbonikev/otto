@@ -116,9 +116,9 @@ function PromptArea({
                 <Tooltip title="Models" placement="right-center" />
               </div>
               {/* models */}
-              <div className="w-[300px] h-[300px] bg-white ring-1 ring-stone-300 shadow-md rounded-2xl absolute mx-auto bottom-[130%] ">
+              <div className="w-[300px] h-[300px] bg-white ring-1 ring-stone-300 shadow-md rounded-2xl absolute mx-auto bottom-[130%]">
                 <div className="border-b border-stone-300 h-[50px]"></div>
-                
+
               </div>
             </div>
             <div className="group cursor-pointer h-full w-fit px-3 flex items-center justify-center gap-1 text-sm ring-1 ring-stone-300 text-dark-text-weak hover:text-dark-text font-semibold rounded-full relative">
