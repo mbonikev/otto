@@ -117,7 +117,7 @@ function PromptArea({
               </div>
               {/* models */}
               <div className="w-[300px] h-[300px] bg-white ring-1 ring-stone-300 shadow-md rounded-2xl absolute mx-auto bottom-[130%] p-2 flex flex-col">
-                <div className="h-[45px]">
+                <div className="h-[40px] mb-2">
                   <div className="w-full h-full bg-stone-200/60 rounded-xl flex items-center justify-start">
                     <HiMiniMagnifyingGlass className="mx-3 text-lg min-w-fit" />
                     <input
