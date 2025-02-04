@@ -140,25 +140,27 @@ function PromptArea({
                         acc[model.owned_by].push(model);
                         return acc;
                       }, {})
-                    ).map(([owner, ownerModels]) => (
-                      <div key={owner} className="w-full">
-                        {/* Owner Header */}
-                        <h1 className="text-xs font-bold text-dark-text-weak/60 py-1.5 px-2">
-                          {owner}
-                        </h1>
-                        {/* Models List */}
-                        <div className="w-full h-fit flex flex-col">
-                          {ownerModels.map((model) => (
-                            <div
-                              key={model.id}
-                              className="px-2 py-1.5 rounded-lg w-full hover:bg-stone-200/60 text-dark-text-weak hover:text-dark-text text-sm font-medium cursor-pointer flex items-center justify-between"
-                            >
-                              {model.id}
-                            </div>
-                          ))}
+                    )
+                      .sort(([a], [b]) => a.localeCompare(b)) // 🔥 Sort owners A-Z
+                      .map(([owner, ownerModels]) => (
+                        <div key={owner} className="w-full">
+                          {/* Owner Header */}
+                          <h1 className="text-xs font-bold text-dark-text-weak/60 py-1.5 px-2">
+                            {owner}
+                          </h1>
+                          {/* Models List */}
+                          <div className="w-full h-fit flex flex-col">
+                            {ownerModels.map((model) => (
+                              <div
+                                key={model.id}
+                                className="px-2 py-1.5 rounded-lg w-full hover:bg-stone-200/60 text-dark-text-weak hover:text-dark-text text-sm font-medium cursor-pointer flex items-center justify-between"
+                              >
+                                {model.id}
+                              </div>
+                            ))}
+                          </div>
                         </div>
-                      </div>
-                    ))
+                      ))
                   ) : (
                     <div className="w-full h-full flex items-center justify-center">
                       <p className="text-sm pb-5">No models available</p>
