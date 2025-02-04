@@ -6,7 +6,7 @@ const ProtectedRoutes = () => {
   const apiUrl = import.meta.env.VITE_BACKEND_API;
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [models, setModels] = useState()
+  const [models, setModels] = useState([])
 
   useEffect(() => {
     const fetchUserStatus = async () => {
