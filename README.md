@@ -1,5 +1,6 @@
 
 <img src="https://otto-ai.onrender.com/logo.png" alt="Otto-AI Screenshot" width="100"/>
+
 # Welcome to Otto
 
 Otto-AI is a powerful, **free-to-use AI tool** that offers intelligent and responsive chat capabilities. Powered by several advanced models from **Groq**, it delivers fast and reliable performance for a variety of tasks.
