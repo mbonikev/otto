@@ -120,7 +120,7 @@ function PromptArea({
                 <Tooltip title="Models" placement="right-center" />
               </div>
               {/* models */}
-              <div className="w-[300px] h-[300px] bg-white ring-1 ring-stone-300/80 shadow-md rounded-2xl absolute mx-auto max-lg:left-0 bottom-[130%] p-2 flex flex-col">
+              <div className="w-[300px] max-sm:w-full h-[300px] bg-white ring-1 ring-stone-300/80 shadow-md rounded-2xl absolute mx-auto max-lg:left-0 bottom-[130%] p-2 flex flex-col">
                 <div className="h-[40px] mb-2">
                   <div className="w-full h-full bg-stone-200/60 rounded-xl flex items-center justify-start">
                     <HiMiniMagnifyingGlass className="mx-3 text-lg min-w-fit" />
