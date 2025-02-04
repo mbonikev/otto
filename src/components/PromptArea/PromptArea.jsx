@@ -123,7 +123,7 @@ function PromptArea({
                     <input
                       type="text"
                       autoFocus={true}
-                      className="h-full w-full bg-transparent text-dark-text placeholder:text-dark-text-weak/50 text-sm"
+                      className="h-full w-full bg-transparent text-dark-text placeholder:text-dark-text-weak/50 text-sm font-normal"
                       placeholder="Search chats..."
                     />
                   </div>
