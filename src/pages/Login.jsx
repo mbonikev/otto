@@ -10,7 +10,7 @@ const Login = () => {
           Otto
         </h1>
       </div>
-      <div className="flex-1 flex flex-col w-full">
+      <div className="flex-1 flex flex-col w-full py-10">
         <a
           href={`${backendUrl}/auth/google`}
           className="bg-blue-500 text-white p-3 w-fit"
