@@ -194,7 +194,9 @@ function PromptArea({
                           (model) =>
                             model.id
                               .toLowerCase()
-                              .includes(searchModel.toLowerCase())
+                              .includes(searchModel.toLowerCase()) &&
+                            model.owned_by !== "openai" && // Exclude models owned by OpenAI
+                            model.owned_by !== "huggingface" // Exclude models owned by Hugging Face
                         )
                         .reduce((acc, model) => {
                           acc[model.owned_by] ||= [];
@@ -202,7 +204,7 @@ function PromptArea({
                           return acc;
                         }, {})
                     )
-                      .sort(([a], [b]) => a.localeCompare(b))
+                      .sort(([a], [b]) => a.localeCompare(b)) // 🔥 Sort owners A-Z
                       .map(([owner, ownerModels]) => (
                         <div key={owner} className="w-full">
                           {/* Owner Header */}
