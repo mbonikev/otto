@@ -119,7 +119,7 @@ function PromptArea({
             <div className="group cursor-pointer h-full w-fit px-3 flex items-center justify-center gap-1 text-sm ring-1 ring-stone-300 text-dark-text-weak hover:text-dark-text font-semibold rounded-full relative">
               <BsFileEarmarkText className="text-base text-blue-400 stroke-[0.6px]" />
               Summarize
-              <Tooltip title="Models" placement="right-center" />
+              <Tooltip title="Summarize text" placement="right-center" />
             </div>
           </div>
           {/* 2 */}
