@@ -29,6 +29,7 @@ function PromptArea({
   const modelsButtonRef = useRef(null);
   const modelsRef = useRef(null);
   const [showModels, setShowModels] = useState(false);
+  const selectedModel = Cookies.get("selectedModel") || "llama3-8b-8192";
 
   const handleInput2Change = (e) => {
     const newInput = e.target.value;
@@ -146,10 +147,11 @@ function PromptArea({
                 className="group cursor-pointer w-full h-full flex items-center justify-center gap-1 hover:text-dark-text"
               >
                 <LuBrain className="text-lg text-purple-500" />
-                llama3-8b-8192
+                {selectedModel} {/* Display selected model */}
                 <HiChevronUpDown className="text-lg opacity-75" />
                 <Tooltip title="Models" placement="right-center" />
               </div>
+              ;
             </div>
             <div className="group cursor-pointer h-full w-fit px-3 flex items-center justify-center gap-1 text-sm ring-1 ring-stone-300 text-dark-text-weak hover:text-dark-text font-semibold rounded-full relative">
               <GoCommandPalette className="text-lg text-lime-600 stroke-[1px]" />
