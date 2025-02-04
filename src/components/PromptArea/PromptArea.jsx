@@ -133,7 +133,7 @@ function PromptArea({
                   </div>
                 </div>
                 <div className="w-full flex-1 flex flex-col gap-0 overflow-y-auto">
-                  {models &&
+                  {models?.length > 0 ? (
                     Object.entries(
                       models.reduce((acc, model) => {
                         acc[model.owned_by] ||= [];
@@ -142,11 +142,11 @@ function PromptArea({
                       }, {})
                     ).map(([owner, ownerModels]) => (
                       <div key={owner} className="w-full">
-                        {/* Owner */}
+                        {/* Owner Header */}
                         <h1 className="text-xs font-bold text-dark-text-weak/60 py-1.5 px-2">
                           {owner}
                         </h1>
-                        {/* Models */}
+                        {/* Models List */}
                         <div className="w-full h-fit flex flex-col">
                           {ownerModels.map((model) => (
                             <div
@@ -158,7 +158,12 @@ function PromptArea({
                           ))}
                         </div>
                       </div>
-                    ))}
+                    ))
+                  ) : (
+                    <p className="text-center text-gray-500">
+                      No models available
+                    </p>
+                  )}
                 </div>
               </div>
             </div>
