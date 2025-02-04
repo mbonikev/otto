@@ -63,12 +63,12 @@ function Home() {
               <SyntaxHighlighter
                 key={index}
                 lineProps={{
-                  style: { wordBreak: "break-words", whiteSpace: "pre-line" },
+                  style: { wordBreak: "break-words", whiteSpace: "pre-wrap" },
                 }}
                 wrapLines={true}
                 language="javascript"
                 style={oneLight}
-                className={`rounded-2xl overflow-x-auto max-w-[100%] p-6 break-words whitespace-pre-line`}
+                className={`rounded-2xl overflow-x-auto max-w-[100%] p-6 break-all whitespace-pre-wrap`}
               >
                 {part}
               </SyntaxHighlighter>
