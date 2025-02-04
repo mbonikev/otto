@@ -151,7 +151,7 @@ function PromptArea({
                 className="group cursor-pointer w-full h-full flex items-center justify-center gap-1 hover:text-dark-text"
               >
                 <LuBrain className="text-lg text-purple-500" />
-                {selectedModel}
+                <p className="w-full ">{selectedModel}</p>
                 <HiChevronUpDown className="text-lg opacity-75" />
                 <Tooltip title="Models" placement="right-center" />
               </div>
