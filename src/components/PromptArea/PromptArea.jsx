@@ -128,7 +128,7 @@ function PromptArea({
                     />
                   </div>
                 </div>
-                <div className="w-full flex-1 flex flex-col gap-0 overflow-y-auto p-1">
+                <div className="w-full flex-1 flex flex-col gap-0 overflow-y-auto">
                   {/* owner */}
                   <h1 className="text-xs font-bold text-dark-text-weak/60 py-1.5 px-2">
                     Deepseek / Meta
