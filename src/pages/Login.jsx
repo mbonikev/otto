@@ -11,7 +11,7 @@ const Login = () => {
         </h1>
       </div>
       <div className="flex-1 flex flex-col items-center w-full py-14">
-        <h1 className="text-4xl font-semibold">Welcome back</h1>
+        <h1 className="text-3xl font-semibold">Welcome back</h1>
         <a
           href={`${backendUrl}/auth/google`}
           className="bg-blue-500 text-white p-3 w-fit"
