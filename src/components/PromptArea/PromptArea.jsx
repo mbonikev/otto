@@ -113,6 +113,7 @@ function PromptArea({
     Cookies.set("selectedModel", modelId, { expires: 7, path: "/" });
     console.log("Model selected:", modelId);
     setSelectedModel(modelId);
+    setShowModels(false)
   };
 
   return (
