@@ -91,9 +91,9 @@ function PromptArea({
     const handleClickOutside = (event) => {
       if (
         modelsRef.current &&
-        !modelsRef.current.contains(event.target) &&
-        modelsButtonRef.current &&
-        !modelsButtonRef.current.contains(event.target)
+        !modelsRef.current.contains(event.target)
+        // && modelsButtonRef.current &&
+        // !modelsButtonRef.current.contains(event.target)
       ) {
         setShowModels(false);
       }
