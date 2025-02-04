@@ -15,12 +15,14 @@ const ProtectedRoutes = () => {
         });
 
         setUser(response.data.user || null);
-        console.log(response.data)
+        // console.log(response.data);
       } catch (error) {
         console.error("Error fetching user status:", error);
         setUser(null);
       } finally {
-        setLoading(false);
+        setTimeout(() => {
+          setLoading(false);
+        }, 1000);
       }
     };
 
@@ -30,7 +32,10 @@ const ProtectedRoutes = () => {
   if (loading) {
     return (
       <div className="w-full h-screen flex items-center justify-center">
-        <img src="./logo.png" className="h-12 opacity-35 w-auto animate-ping" />
+        <img
+          src="./logo.png"
+          className="h-10 w-auto animate-spinLoader"
+        />
       </div>
     );
   }
