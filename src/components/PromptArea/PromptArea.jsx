@@ -9,7 +9,7 @@ import axios from "axios";
 import { GoCommandPalette } from "react-icons/go";
 import { IoSend } from "react-icons/io5";
 import { RxTextAlignMiddle } from "react-icons/rx";
-import { HiChevronUpDown, HiMiniMagnifyingGlass } from "react-icons/hi2";
+import { HiChevronUpDown, HiMiniMagnifyingGlass, HiMiniXCircle } from "react-icons/hi2";
 
 function PromptArea({
   setMessages,
