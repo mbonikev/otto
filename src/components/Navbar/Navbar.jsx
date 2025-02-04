@@ -42,7 +42,7 @@ function Navbar({ photo, displayName }) {
 
       Cookies.remove("selectedModel");
       setTimeout(() => {
-        window.location.href = "/";
+        window.location.reload();
       }, 500);
     } catch (error) {
       console.error("Logout failed:", error);
