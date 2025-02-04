@@ -66,7 +66,7 @@ function Home() {
                   style: { wordBreak: "break-words", whiteSpace: "pre-wrap" },
                 }}
                 wrapLines={true}
-                language="kotlin"
+                language="html"
                 style={oneLight}
                 className={`rounded-2xl overflow-x-auto max-w-[100%] p-6 break-all whitespace-pre-wrap`}
               >
