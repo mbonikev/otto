@@ -109,7 +109,7 @@ function PromptArea({
           {/* 1 */}
           <div className="w-full h-full flex items-center justify-start gap-3 select-none">
             <div className=" h-full w-fit px-3 flex items-center justify-center gap-1 text-sm ring-1 ring-stone-300 text-dark-text-weak font-semibold rounded-full relative">
-              <div className="group cursor-pointer w-full h-full flex items-center justify-center gap-1">
+              <div className="group cursor-pointer w-full h-full flex items-center justify-center gap-1 hover:text-dark-text">
                 <LuBrain className="text-lg text-purple-500" />
                 llama3-8b-8192
                 <HiChevronUpDown className="text-lg opacity-75" />
