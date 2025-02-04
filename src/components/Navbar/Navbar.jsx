@@ -40,10 +40,7 @@ function Navbar({ photo, displayName }) {
         { withCredentials: true }
       );
 
-      // ✅ Clear the selected model cookie
       Cookies.remove("selectedModel");
-
-      // Wait briefly before redirecting
       setTimeout(() => {
         window.location.href = "/";
       }, 500);
