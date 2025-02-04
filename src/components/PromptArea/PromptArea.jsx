@@ -118,9 +118,9 @@ function PromptArea({
               {/* models */}
               <div className="w-[300px] h-[300px] bg-white ring-1 ring-stone-300 shadow-md rounded-2xl absolute mx-auto bottom-[130%] flex flex-col">
                 <div className="border-b border-stone-300 h-[50px]"></div>
-                <div className="w-full flex-1 flex flex-col gap-1 overflow-auto">
+                <div className="w-full flex-1 flex flex-col gap-1 overflow-y-auto">
                   
-                </div>
+                </div> 
               </div>
             </div>
             <div className="group cursor-pointer h-full w-fit px-3 flex items-center justify-center gap-1 text-sm ring-1 ring-stone-300 text-dark-text-weak hover:text-dark-text font-semibold rounded-full relative">
