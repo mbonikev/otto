@@ -2,7 +2,7 @@ const Login = () => {
   const backendUrl = import.meta.env.VITE_BACKEND_API;
 
   return (
-    <div className="h-screen flex justify-center items-center">
+    <div className="h-screen flex justify-center items-center flex-col">
       <div className="w-full h-fit flex p-2">
         <img src="./logo.png" className="h-12" />
       </div>
