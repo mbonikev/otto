@@ -14,6 +14,7 @@ import {
   HiMiniMagnifyingGlass,
   HiMiniXCircle,
 } from "react-icons/hi2";
+import Cookies from "js-cookie";
 
 function PromptArea({
   setMessages,
