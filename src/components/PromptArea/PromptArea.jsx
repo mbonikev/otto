@@ -123,7 +123,8 @@ function PromptArea({
                   <h1 className="text-sm font-medium text-dark-text-weak/60 py-1.5 px-2">Deepseek / Meta</h1>
                   {/* models */}
                   <div className="w-full h-fit flex flex-col">
-                    
+                    {/* single model */}
+                    <div className=""></div>
                   </div>
                 </div> 
               </div>
