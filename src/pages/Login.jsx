@@ -3,7 +3,7 @@ const Login = () => {
 
   return (
     <div className="h-screen flex justify-start items-center flex-col p-5">
-      <div className="w-full h-fit flexgap-2">
+      <div className="w-full h-fit flex gap-2">
         <img src="./logo.png" className="h-9" />
         <h1 className="font-Kanit text-2xl font-light text-dark-text-weak text-center">
           Otto
