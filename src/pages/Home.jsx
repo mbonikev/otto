@@ -108,7 +108,7 @@ function Home() {
                 return (
                   <div
                     key={index}
-                    className={`message text-base font-normal text-dark-text leading-[26px] overflow-x-auto no_scroll whitespace-pre-wrap ${
+                    className={`message text-base font-normal text-dark-text leading-[26px] overflow-x-hidden no_scroll whitespace-pre-wrap ${
                       msg.role === "user"
                         ? "w-fit bg-stone-200/40 px-4 py-2 ml-auto max-w-[600px] rounded-3xl"
                         : "w-full bg-transparent flex items-start justify-start gap-4 break-words whitespace-pre-wrap pr-9"
