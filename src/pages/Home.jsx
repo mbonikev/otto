@@ -9,7 +9,7 @@ import { useOutletContext } from "react-router-dom";
 
 function Home() {
   const { user, models } = useOutletContext();
-  const { displayName, photo, email } = user || {}; 
+  const { displayName, photo, email } = user || {};
   const [messages, setMessages] = useState([]);
   const [thinking, setThinking] = useState(false);
   const chatBoxRef = useRef(null);
