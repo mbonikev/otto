@@ -6,7 +6,7 @@ const ProtectedRoutes = () => {
   const apiUrl = import.meta.env.VITE_BACKEND_API;
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [models, setModels] = useState([])
+  const [models, setModels] = useState([]);
 
   useEffect(() => {
     const fetchUserStatus = async () => {
@@ -32,15 +32,14 @@ const ProtectedRoutes = () => {
         const response = await axios.get(`${apiUrl}/api/models`, {
           withCredentials: true,
         });
-  
-        setModels(response.data);
-        console.log(response.data)
+        console.log("Fetched models:", response.data); // Ensure data is logged
+        setModels(response.data); // Set models properly
       } catch (error) {
         console.error("Error fetching models:", error);
-        setModels(null);
+        setModels([]); // Set empty array to prevent undefined issues
       }
     };
-  
+
     fetchModels();
     fetchUserStatus();
   }, []);
