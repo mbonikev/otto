@@ -115,7 +115,9 @@ function PromptArea({
               <Tooltip title="Models" placement="right-center" />
 
               {/* models */}
-              <div className="w-[400px] h-[200px] absolute bg-white ring-1 ring-stone-200 bottom-[120%] "></div>
+              <div className="w-[400px] h-[200px] bg-white ring-1 ring-stone-200 absolute mx-auto bottom-[120%] "></div>
+
+
             </div>
             <div className="group cursor-pointer h-full w-fit px-3 flex items-center justify-center gap-1 text-sm ring-1 ring-stone-300 text-dark-text-weak hover:text-dark-text font-semibold rounded-full relative">
               <GoCommandPalette className="text-lg text-lime-600 stroke-[1px]" />
