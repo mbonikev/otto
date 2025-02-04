@@ -160,7 +160,7 @@ function PromptArea({
                       </div>
                     ))
                   ) : (
-                    <p className="text-left text-dark-text-weak py-1 px-2">
+                    <p className="w-full h-full flex items-center justify-center">
                       No models available
                     </p>
                   )}
