@@ -12,7 +12,7 @@ const ProtectedRoutes = () => {
     const fetchUserStatus = async () => {
       try {
         const response = await axios.get(`${apiUrl}/auth/status`, {
-          withCredentials: true, // Sends JWT token in cookies
+          withCredentials: true,
         });
 
         setUser(response.data.user || null);
@@ -32,11 +32,10 @@ const ProtectedRoutes = () => {
         const response = await axios.get(`${apiUrl}/api/models`, {
           withCredentials: true,
         });
-        console.log("Fetched models:", response.data); // Ensure data is logged
-        setModels(response.data); // Set models properly
+        setModels(response.data);
       } catch (error) {
         console.error("Error fetching models:", error);
-        setModels([]); // Set empty array to prevent undefined issues
+        setModels([]);
       }
     };
 
@@ -52,7 +51,11 @@ const ProtectedRoutes = () => {
     );
   }
 
-  return user ? <Outlet context={{ user, models }} /> : <Navigate to="/login" />;
+  return user ? (
+    <Outlet context={{ user, models }} />
+  ) : (
+    <Navigate to="/login" />
+  );
 };
 
 export default ProtectedRoutes;
