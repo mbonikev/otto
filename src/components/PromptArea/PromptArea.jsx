@@ -9,6 +9,7 @@ import axios from "axios";
 import { GoCommandPalette } from "react-icons/go";
 import { IoSend } from "react-icons/io5";
 import { RxTextAlignMiddle } from "react-icons/rx";
+import { HiChevronUpDown } from "react-icons/hi2";
 
 function PromptArea({
   setMessages,
@@ -110,6 +111,7 @@ function PromptArea({
             <div className="group cursor-pointer h-full w-fit px-3 flex items-center justify-center gap-1 text-sm ring-1 ring-stone-300 text-dark-text-weak hover:text-dark-text font-semibold rounded-full relative">
               <LuBrain className="text-lg text-purple-500" />
               llama3-8b-8192
+              <HiChevronUpDown className="text-lg" />
               <Tooltip title="Models" placement="right-center" />
             </div>
             <div className="group cursor-pointer h-full w-fit px-3 flex items-center justify-center gap-1 text-sm ring-1 ring-stone-300 text-dark-text-weak hover:text-dark-text font-semibold rounded-full relative">
