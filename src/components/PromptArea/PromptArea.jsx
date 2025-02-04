@@ -32,7 +32,7 @@ function PromptArea({
   const [selectedModel, setSelectedModel] = useState(
     Cookies.get("selectedModel") || "llama3-8b-8192"
   );
-  const [searchModel, setSearchModel] = useState("")
+  const [searchModel, setSearchModel] = useState("");
 
   const handleInput2Change = (e) => {
     const newInput = e.target.value;
@@ -114,7 +114,7 @@ function PromptArea({
     Cookies.set("selectedModel", modelId, { expires: 7, path: "/" });
     console.log("Model selected:", modelId);
     setSelectedModel(modelId);
-    setShowModels(false)
+    setShowModels(false);
   };
 
   return (
@@ -189,13 +189,20 @@ function PromptArea({
                 <div className="w-full flex-1 flex flex-col gap-0 overflow-y-auto pr-1">
                   {models?.length > 0 ? (
                     Object.entries(
-                      models.reduce((acc, model) => {
-                        acc[model.owned_by] ||= [];
-                        acc[model.owned_by].push(model);
-                        return acc;
-                      }, {})
+                      models
+                        .filter(
+                          (model) =>
+                            model.id
+                              .toLowerCase()
+                              .includes(searchModel.toLowerCase())
+                        )
+                        .reduce((acc, model) => {
+                          acc[model.owned_by] ||= [];
+                          acc[model.owned_by].push(model);
+                          return acc;
+                        }, {})
                     )
-                      .sort(([a], [b]) => a.localeCompare(b)) // 🔥 Sort owners A-Z
+                      .sort(([a], [b]) => a.localeCompare(b))
                       .map(([owner, ownerModels]) => (
                         <div key={owner} className="w-full">
                           {/* Owner Header */}
@@ -213,7 +220,9 @@ function PromptArea({
                                   className="px-2 py-1.5 rounded-lg w-full hover:bg-stone-200/60 text-dark-text-weak hover:text-dark-text text-sm font-medium cursor-pointer flex items-center justify-between"
                                 >
                                   {model.id}
-                                  {selectedModel === model.id && (<LuCheck className="text-lg" />)}
+                                  {selectedModel === model.id && (
+                                    <LuCheck className="text-lg" />
+                                  )}
                                 </div>
                               ))}
                           </div>
