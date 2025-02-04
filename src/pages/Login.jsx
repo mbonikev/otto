@@ -9,12 +9,14 @@ const Login = () => {
           Otto
         </h1>
       </div>
-      <a
-        href={`${backendUrl}/auth/google`}
-        className="bg-blue-500 text-white p-3 rounded"
-      >
-        Continue with Google
-      </a>
+      <div className="flex-1 flex flex-col w-full">
+        <a
+          href={`${backendUrl}/auth/google`}
+          className="bg-blue-500 text-white p-3 rounded"
+        >
+          Continue with Google
+        </a>
+      </div>
     </div>
   );
 };
