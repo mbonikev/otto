@@ -101,7 +101,7 @@ function PromptArea({
           required={true}
           autoFocus={true}
           placeholder="Message Otto"
-          className="text-base font-norma bg-transparent min-h-[55px] max-h-[150px] px-3 pt-3 pb-4 outline-none w-full placeholder:text-dark-text-weak text-dark-text resize-none whitespace-pre-wrap "
+          className="text-base font-norma bg-transparent min-h-[60px] max-h-[150px] px-3 pt-3 pb-4 outline-none w-full placeholder:text-dark-text-weak text-dark-text resize-none whitespace-pre-wrap "
         ></textarea>
         <div className="flex items-center justify-between w-full h-[36px] bg-red-400/0 min-h-[32px] px-1.5 mb-1.5">
           {/* 1 */}
