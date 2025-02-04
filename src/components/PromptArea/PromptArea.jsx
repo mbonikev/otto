@@ -27,6 +27,7 @@ function PromptArea({
   const textareaRef = useRef(null);
   const profileRef = useRef(null);
   const modelsRef = useRef(null);
+  const [showModels, setShowModels] = useState(false);
 
   const handleInput2Change = (e) => {
     const newInput = e.target.value;
