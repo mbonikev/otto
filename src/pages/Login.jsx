@@ -10,6 +10,7 @@ const Login = () => {
           Otto
         </h1>
       </div>
+      <div className="w-full grid grid-cols-2 max-lg:grid-cols-1">
       <div className="flex-1 flex flex-col items-center gap-6 w-full py-14">
         <h1 className="text-3xl font-semibold">Welcome back</h1>
         <a
@@ -18,6 +19,10 @@ const Login = () => {
         >
           Continue with Google
         </a>
+      </div>
+      <div className="flex-1 flex flex-col items-center gap-6 w-full py-14">
+
+      </div>
       </div>
     </div>
   );
