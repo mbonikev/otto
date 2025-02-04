@@ -25,6 +25,8 @@ function PromptArea({
 }) {
   const [message, setMessage] = useState("");
   const textareaRef = useRef(null);
+  const profileRef = useRef(null);
+  const modalRef = useRef(null);
 
   const handleInput2Change = (e) => {
     const newInput = e.target.value;
