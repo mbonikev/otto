@@ -16,6 +16,7 @@ import { LuLoaderCircle } from "react-icons/lu";
 import axios from "axios";
 import { BsIncognito, BsLockFill, BsStars } from "react-icons/bs";
 import { BiSolidLockAlt } from "react-icons/bi";
+import Cookies from "js-cookie";
 
 function Navbar({ photo, displayName }) {
   const [showPopup, setShowPopup] = useState(false);
@@ -29,7 +30,7 @@ function Navbar({ photo, displayName }) {
   const clearCookie = (name) => {
     document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/;`;
   };
-  
+
   const handleLogout = async () => {
     setLoading(true);
     try {
@@ -38,8 +39,11 @@ function Navbar({ photo, displayName }) {
         {},
         { withCredentials: true }
       );
-  
-      // Wait briefly to allow the cookie to be cleared
+
+      // ✅ Clear the selected model cookie
+      Cookies.remove("selectedModel");
+
+      // Wait briefly before redirecting
       setTimeout(() => {
         window.location.href = "/";
       }, 500);
@@ -49,7 +53,6 @@ function Navbar({ photo, displayName }) {
       setLoading(false);
     }
   };
-  
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -169,14 +172,14 @@ function Navbar({ photo, displayName }) {
       </div>
       {/* 3 */}
       <div className="flex items-center justify-end gap-0 relative select-none">
-      <button className="group h-10 w-auto aspect-square flex items-center justify-center text-2xl hover:bg-stone-100 text-dark-text-weak hover:text-dark-text rounded-full relative">
+        <button className="group h-10 w-auto aspect-square flex items-center justify-center text-2xl hover:bg-stone-100 text-dark-text-weak hover:text-dark-text rounded-full relative">
           <BsIncognito />
           <Tooltip title="Temporary Mode" placement="center" />
         </button>
         <button className="group h-10 w-auto aspect-square flex items-center justify-center text-2xl hover:bg-stone-100 text-dark-text-weak hover:text-dark-text rounded-full relative">
           <IoShareSocialOutline />
           <Tooltip title="Share" placement="center" />
-        </button>    
+        </button>
         <button
           ref={profileRef}
           onClick={() => setShowPopup(true)}
