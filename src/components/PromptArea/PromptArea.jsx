@@ -130,6 +130,7 @@ function PromptArea({
           <div className="w-full h-full flex items-center justify-start gap-3 select-none relative">
             <div className=" h-full w-fit px-3 flex items-center justify-center gap-1 text-sm ring-1 ring-stone-300 text-dark-text-weak font-semibold rounded-full relative">
               <div
+                ref={modelsButtonRef}
                 onClick={() => setShowModels(true)}
                 className="group cursor-pointer w-full h-full flex items-center justify-center gap-1 hover:text-dark-text"
               >
