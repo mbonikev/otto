@@ -58,7 +58,7 @@ function PromptArea({
       try {
         const response = await axios.post(
           `${apiUrl}/api/chat`,
-          { message, displayName, userId: email },
+          { message, displayName, userId: email, selectedModel },
           {
             headers: {
               Authorization: `Bearer ${apiKey}`,
