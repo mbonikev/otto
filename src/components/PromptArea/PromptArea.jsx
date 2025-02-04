@@ -173,7 +173,7 @@ function PromptArea({
                     />
                   </div>
                 </div>
-                <div className="w-full flex-1 flex flex-col gap-0 overflow-y-auto">
+                <div className="w-full flex-1 flex flex-col gap-0 overflow-y-auto pr-1">
                   {models?.length > 0 ? (
                     Object.entries(
                       models.reduce((acc, model) => {
