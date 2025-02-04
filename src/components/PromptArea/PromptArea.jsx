@@ -91,9 +91,9 @@ function PromptArea({
     const handleClickOutside = (event) => {
       if (
         modelsRef.current &&
-        !modelsRef.current.contains(event.target)
-        // && modelsButtonRef.current &&
-        // !modelsButtonRef.current.contains(event.target)
+        !modelsRef.current.contains(event.target) &&
+        modelsButtonRef.current &&
+        !modelsButtonRef.current.contains(event.target)
       ) {
         setShowModels(false);
       }
@@ -135,10 +135,8 @@ function PromptArea({
           <div className="w-full h-full flex items-center justify-start gap-3 select-none relative">
             <div className=" h-full w-fit px-3 flex items-center justify-center gap-1 text-sm ring-1 ring-stone-300 text-dark-text-weak font-semibold rounded-full relative">
               <div
-                // ref={modelsButtonRef}
-                onClick={() =>
-                  showModels ? setShowModels(false) : setShowModels(true)
-                }
+                ref={modelsButtonRef}
+                onClick={() => setShowModels(true)}
                 className="group cursor-pointer w-full h-full flex items-center justify-center gap-1 hover:text-dark-text"
               >
                 <LuBrain className="text-lg text-purple-500" />
