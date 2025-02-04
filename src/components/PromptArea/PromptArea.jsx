@@ -112,7 +112,7 @@ function PromptArea({
   const handleModelSelect = (modelId) => {
     Cookies.set("selectedModel", modelId, { expires: 7, path: "/" });
     console.log("Model selected:", modelId);
-    setSelectedModel(modelId)
+    setSelectedModel(modelId);
   };
 
   return (
@@ -150,11 +150,10 @@ function PromptArea({
                 className="group cursor-pointer w-full h-full flex items-center justify-center gap-1 hover:text-dark-text"
               >
                 <LuBrain className="text-lg text-purple-500" />
-                {selectedModel} {/* Display selected model */}
+                {selectedModel}
                 <HiChevronUpDown className="text-lg opacity-75" />
                 <Tooltip title="Models" placement="right-center" />
               </div>
-              ;
             </div>
             <div className="group cursor-pointer h-full w-fit px-3 flex items-center justify-center gap-1 text-sm ring-1 ring-stone-300 text-dark-text-weak hover:text-dark-text font-semibold rounded-full relative">
               <GoCommandPalette className="text-lg text-lime-600 stroke-[1px]" />
