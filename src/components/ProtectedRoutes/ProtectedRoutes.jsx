@@ -1,20 +1,17 @@
 import { useEffect, useState } from "react";
 import { Outlet, Navigate } from "react-router-dom";
 import axios from "axios";
-
 const ProtectedRoutes = () => {
   const apiUrl = import.meta.env.VITE_BACKEND_API;
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
   const [models, setModels] = useState([]);
-
   useEffect(() => {
     const fetchUserStatus = async () => {
       try {
         const response = await axios.get(`${apiUrl}/auth/status`, {
           withCredentials: true,
         });
-
         setUser(response.data.user || null);
       } catch (error) {
         console.error("Error fetching user status:", error);
@@ -25,7 +22,6 @@ const ProtectedRoutes = () => {
         }, 1000);
       }
     };
-
     const fetchModels = async () => {
       try {
         const response = await axios.get(`${apiUrl}/api/models`, {
@@ -37,11 +33,9 @@ const ProtectedRoutes = () => {
         setModels([]);
       }
     };
-
     fetchModels();
     fetchUserStatus();
   }, []);
-
   if (loading) {
     return (
       <div className="w-full h-screen flex items-center justify-center">
@@ -49,12 +43,10 @@ const ProtectedRoutes = () => {
       </div>
     );
   }
-
   return user ? (
     <Outlet context={{ user, models }} />
   ) : (
     <Navigate to="/login" />
   );
 };
-
 export default ProtectedRoutes;
