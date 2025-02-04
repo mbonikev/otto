@@ -12,7 +12,7 @@ const Login = () => {
       <div className="flex-1 flex flex-col w-full">
         <a
           href={`${backendUrl}/auth/google`}
-          className="bg-blue-500 text-white p-3 rounded"
+          className="bg-blue-500 text-white p-3 w-fit"
         >
           Continue with Google
         </a>
