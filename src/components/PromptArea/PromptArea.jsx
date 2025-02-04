@@ -32,6 +32,7 @@ function PromptArea({
   const [selectedModel, setSelectedModel] = useState(
     Cookies.get("selectedModel") || "llama3-8b-8192"
   );
+  const [searchModel, setSearchModel] = useState("")
 
   const handleInput2Change = (e) => {
     const newInput = e.target.value;
