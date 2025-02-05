@@ -12,18 +12,23 @@ function App() {
   if (!hasHash && window.location.pathname !== "/") {
     return <NotFound />;
   }
+
   return (
     <HashRouter>
       <Routes>
+        {/* Protect login-related routes for non-logged-in users */}
         <Route element={<ProtectedRoutesLoggedIn />}>
           <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
         </Route>
+
+        {/* Protect chat-related routes for logged-in users */}
         <Route element={<ProtectedRoutes />}>
           <Route path="/c/:id" element={<Chat />} />
         </Route>
 
+        {/* Catch-all route */}
         <Route path="*" element={<NotFound />} />
-        <Route path="/login" element={<Login />} />
       </Routes>
     </HashRouter>
   );
