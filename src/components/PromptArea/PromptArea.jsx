@@ -67,9 +67,9 @@ function PromptArea({
           );
           const transformedMessages = response.data.map((message) => {
             return {
-              role: message.reply ? "assistant" : "user", // Set role based on whether there's a reply
+              role: message.reply ? "assistant" : "user",
               content: message.content,
-              title: message.title, // Use sender's _id as title (or modify based on your need)
+              title: message.title,
             };
           });
 
