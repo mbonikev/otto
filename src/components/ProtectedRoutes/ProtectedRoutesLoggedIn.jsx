@@ -48,6 +48,8 @@ const ProtectedRoutesLoggedIn = () => {
     if (token) {
       fetchModels();
       fetchUserStatus();
+    } else{
+      setLoading(false)
     }
   }, []);
 
