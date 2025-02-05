@@ -55,18 +55,33 @@ function PromptArea({
         const apiUrl = import.meta.env.VITE_BACKEND_API;
         const apiKey = import.meta.env.VITE_GROQ_API_KEY;
         try {
-          const response = await axios.get(
-            `${apiUrl}/api/getconvs`, // Keep the URL as it is
-            {
-              params: { convId: retrieveId }, // Pass convId as query parameter
-              headers: {
-                Authorization: `Bearer ${apiKey}`,
-                "Content-Type": "application/json",
+          const response = await axios.get(`${apiUrl}/api/getconvs`, {
+            params: { convId: retrieveId },
+            headers: {
+              Authorization: `Bearer ${apiKey}`,
+              "Content-Type": "application/json",
+            },
+          });
+
+          if (response.data && response.data.messages) {
+            const mappedMessages = response.data.messages.flatMap((msg) => [
+              {
+                role: "user",
+                content: msg.content[0]?.prompt, // User's message
+                title: msg.title || "Untitled",
               },
-            }
-          );
-          console.log(response.data)
-        } catch (error) {}
+              {
+                role: "assistant",
+                content: msg.content[0]?.reply, // Assistant's reply
+                title: msg.title || "Untitled",
+              },
+            ]);
+
+            setMessages(mappedMessages); // Update state with structured messages
+          }
+        } catch (error) {
+          console.error("Error fetching conversations:", error);
+        }
       }
     };
 
