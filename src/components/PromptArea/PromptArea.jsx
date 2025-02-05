@@ -57,10 +57,6 @@ function PromptArea({
           const response = await axios.post(
             `${apiUrl}/api/getconvs`,
             {
-              message: messageToSend,
-              displayName,
-              userId,
-              selectedModel,
               convId,
             },
             {
