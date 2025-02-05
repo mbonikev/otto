@@ -135,7 +135,7 @@ function PromptArea({
         };
 
         setMessages((prev) => [...prev, assistantMessage]);
-        console.log(message)
+        
       } catch (error) {
         setThinking(false);
         console.error(
