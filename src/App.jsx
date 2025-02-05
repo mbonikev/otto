@@ -16,8 +16,8 @@ function App() {
       <Routes>
         <Route element={<ProtectedRoutes />}>
           <Route path="/" element={<Home />} />
-          <Route path="/c/:id" element={<Chat />} />
         </Route>
+        <Route path="/chat" element={<Chat />} />
         <Route path="/login" element={<Login />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
