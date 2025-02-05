@@ -11,9 +11,10 @@ function ChatHistory({ messages }) {
       acc[msg.convId] = []; // Initialize array if not exists
     }
     acc[msg.convId].push(msg);
-    return acc;
+    return acc || [];
   }, {});
-  const firstMessages = Object.values(groupedMessages).map((group) => group[0]) || [];
+  const firstMessages =
+    Object.values(groupedMessages).map((group) => group[0]) || [];
 
   // setConvs(firstMessages);
 
