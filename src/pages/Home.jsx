@@ -21,7 +21,7 @@ function Home() {
       setParam(newParam);
 
       // Modify URL without reloading the page
-      navigate(`?param=${newParam}`, { replace: true });
+      navigate(`?chat=${newParam}`, { replace: true });
     };
     handleChangeParam();
   }, []);
