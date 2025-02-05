@@ -9,7 +9,7 @@ function ChatHistory({ convs }) {
 
   // Get the 'chat' parameter from the URL
   const urlParams = new URLSearchParams(location.search);
-  const chatId = urlParams.get("chat");
+  const chatId = urlParams.get("chat") : "";
 
   useEffect(() => {
     console.log(chatId);
