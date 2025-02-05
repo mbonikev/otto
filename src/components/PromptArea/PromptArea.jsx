@@ -35,6 +35,7 @@ function PromptArea({
     Cookies.get("selectedModel") || "llama3-8b-8192"
   );
   const [searchModel, setSearchModel] = useState("");
+  const { id } = useParams();
 
   const handleInput2Change = (e) => {
     const newInput = e.target.value;
@@ -45,7 +46,6 @@ function PromptArea({
   };
 
   const submit = async () => {
-    const { id } = useParams(); // No need for || "" since useParams() returns an object
     const convId = id || ""; // Ensure convId is always a string
 
     if (message.trim() !== "") {
