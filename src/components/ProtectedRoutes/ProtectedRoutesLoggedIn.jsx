@@ -8,6 +8,7 @@ const ProtectedRoutesLoggedIn = () => {
     const tokenCheck = Cookies.get("token");
     if (tokenCheck) {
       setToken(true);
+      console.log(tokenCheck)
     } else {
       setToken(false);
     }
