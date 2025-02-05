@@ -93,8 +93,36 @@ function Navbar({ photo, displayName, user, convs }) {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, []);
 
-  const handleNew = () => {
-    
+  const handleNew = async () => {
+    const apiUrl = import.meta.env.VITE_BACKEND_API;
+      const apiKey = import.meta.env.VITE_GROQ_API_KEY;
+
+      try {
+        const response = await axios.post(
+          `${apiUrl}/api/createconv`,
+          {
+            message: messageToSend,
+            displayName,
+            userId,
+            selectedModel,
+            convId,
+            messages
+          },
+          {
+            headers: {
+              Authorization: `Bearer ${apiKey}`,
+              "Content-Type": "application/json",
+            },
+          }
+        );
+        
+      } catch (error) {
+        setThinking(false);
+        console.error(
+          "Error:",
+          error
+        );
+      }
   }
 
   return (
