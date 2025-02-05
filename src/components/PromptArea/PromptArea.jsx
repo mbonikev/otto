@@ -41,13 +41,14 @@ function PromptArea({
   const navigate = useNavigate();
 
   useEffect(() => {
-    const retrieveId = Cookies.get("convId") || chat;
+    const retrieveId = Cookies.get("convId") ?? chat;
     setConvId(retrieveId);
-    if (retrieveId !== "" || retrieveId !== null) {
+
+    if (retrieveId && retrieveId !== "null") {
       navigate(`?chat=${retrieveId}`, { replace: true });
     }
   }, []);
-  
+
   const handleInput2Change = (e) => {
     const newInput = e.target.value;
     // console.log(JSON.stringify(message));
