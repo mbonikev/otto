@@ -11,7 +11,7 @@ const Login = () => {
               Otto
             </h1>
           </div>
-          <div className="w-full flex-1 flex flex-col items-center justify-center">
+          <div className="w-full flex-1 flex flex-col items-center justify-center gap-4">
             <h1 className="text-3xl font-semibold">Welcome back</h1>
             <a
               href={`${backendUrl}/auth/google`}
