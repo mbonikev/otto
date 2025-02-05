@@ -51,7 +51,7 @@ function ChatHistory({ convs, thinking }) {
               <RiLoader2Fill className="text-2xl w-auto animate-spin text-dark-text-weak/50 stroke-[1px]" />
             </div>
           ) : (
-            <div className="flex flex-col w-full h-fit">
+            <div className="flex flex-col w-full h-fit gap-1">
               {convs.map((msg, index) => (
                 <button
                   key={index}
