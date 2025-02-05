@@ -15,17 +15,13 @@ function App() {
   return (
     <HashRouter>
       <Routes>
-        <Route element={<ProtectedRoutesLoggedIn />}>
-          <Route path="/" element={<Home />} />
-        </Route>
-
+        <Route path="/" element={<Home />} />
         <Route element={<ProtectedRoutes />}>
           <Route path="/c/:id" element={<Chat />} />
         </Route>
 
         <Route path="*" element={<NotFound />} />
         <Route path="/login" element={<Login />} />
-
       </Routes>
     </HashRouter>
   );
