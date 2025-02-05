@@ -19,11 +19,10 @@ import { BiSolidLockAlt } from "react-icons/bi";
 import Cookies from "js-cookie";
 import avatar3 from "/avatars/avatar3.png";
 
-function Navbar({ photo, displayName, user }) {
+function Navbar({ photo, displayName, user, chatsModal, setChatsModal }) {
   const [showPopup, setShowPopup] = useState(false);
   const profileRef = useRef(null);
   const popupRef = useRef(null);
-  const [chatsModal, setChatsModal] = useState(false);
   const [animateChatsModal, setAnimateChatsModal] = useState(false);
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
