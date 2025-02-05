@@ -8,7 +8,7 @@ const ProtectedRoutesLoggedIn = () => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
   const [models, setModels] = useState([]);
-  const token = Cookies.get("token")
+  const token = Cookies.get("token");
   useEffect(() => {
     const fetchUserStatus = async () => {
       try {
@@ -45,9 +45,10 @@ const ProtectedRoutesLoggedIn = () => {
         setModels([]);
       }
     };
-
-    fetchModels();
-    fetchUserStatus();
+    if (token) {
+      fetchModels();
+      fetchUserStatus();
+    }
   }, []);
 
   if (loading) {
@@ -58,11 +59,7 @@ const ProtectedRoutesLoggedIn = () => {
     );
   }
 
-  return user ? (
-    <Outlet context={{ user, models }} />
-  ) : (
-    <Navigate to="/" />
-  );
+  return user ? <Outlet context={{ user, models }} /> : <Navigate to="/" />;
 };
 
 export default ProtectedRoutesLoggedIn;
