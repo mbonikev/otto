@@ -154,7 +154,7 @@ function Home() {
           <div className="w-full h-full flex flex-col items-center justify-center">
             {thinking ? (
               <RiLoader2Fill
-                className="h-10 w-auto animate-spinLoader saturate-0"
+                className="text-2xl w-auto animate-spin saturate-0"
               />
             ) : (
               <h1 className="text-3xl font-semibold">How can I assist you?</h1>
