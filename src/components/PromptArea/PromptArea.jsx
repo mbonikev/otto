@@ -45,7 +45,7 @@ function PromptArea({
     setConvId(retrieveId);
     setTimeout(() => {
       navigate(`?chat=${retrieveId}`, { replace: true });
-    }, 300);
+    }, 100);
   }, []);
 
   const handleInput2Change = (e) => {
