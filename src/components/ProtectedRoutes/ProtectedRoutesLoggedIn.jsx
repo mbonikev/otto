@@ -62,7 +62,7 @@ const ProtectedRoutesLoggedIn = () => {
     );
   }
 
-  return user ? <Navigate to="/c/1" /> : <Outlet context={{ user, models }} />;
+  return user !== null ? <Navigate to="/c/1" /> : <Outlet context={{ user, models }} />;
 };
 
 export default ProtectedRoutesLoggedIn;
