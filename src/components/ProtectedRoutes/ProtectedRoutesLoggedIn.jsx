@@ -67,7 +67,7 @@ const ProtectedRoutesLoggedIn = () => {
 
   // Redirect logged-in users to the default page (e.g., `/c/1`)
   if (user !== null) {
-    return <Navigate to="/c/1" />;
+    return <Navigate to="/c/121" />;
   }
 
   // Allow non-logged-in users to access the login page (by rendering Outlet)
