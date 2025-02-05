@@ -217,6 +217,7 @@ function Home() {
 
       <PromptArea
         setMessages={setMessages}
+        messages={messages}
         thinking={thinking}
         setThinking={setThinking}
         displayName={displayName}
