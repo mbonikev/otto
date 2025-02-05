@@ -35,36 +35,8 @@ function Home() {
   }, []);
 
   // Scroll to bottom when messages update
-  const [isUserScrolling, setIsUserScrolling] = useState(false);
-
   useEffect(() => {
-    const handleUserScroll = () => {
-      const chatBox = chatBoxRef.current;
-      if (chatBox) {
-        const isAtBottom =
-          chatBox.scrollHeight - chatBox.scrollTop === chatBox.clientHeight;
-        if (!isAtBottom) {
-          setIsUserScrolling(true);
-        } else {
-          setIsUserScrolling(false);
-        }
-      }
-    };
-
-    const chatBox = chatBoxRef.current;
-    if (chatBox) {
-      chatBox.addEventListener("scroll", handleUserScroll);
-    }
-
-    return () => {
-      if (chatBox) {
-        chatBox.removeEventListener("scroll", handleUserScroll);
-      }
-    };
-  }, []);
-
-  useEffect(() => {
-    if (!isUserScrolling && chatBoxRef.current) {
+    if (chatBoxRef.current) {
       const chatBox = chatBoxRef.current;
       const messageElements = chatBox.querySelectorAll(".message");
       const lastMessage = messageElements[messageElements.length - 1];
@@ -89,7 +61,7 @@ function Home() {
     document.title = messages.length
       ? `Otto - ${firstAssistantMessage?.title?.replace(/["`]/g, "") || ""}`
       : "Otto";
-  }, [messages, isUserScrolling]);
+  }, [messages]);
 
   useEffect(() => {
     const handleGetMessages = async () => {
