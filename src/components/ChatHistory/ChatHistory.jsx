@@ -2,11 +2,8 @@ import React, { useState } from "react";
 import { HiMiniMagnifyingGlass, HiMiniXCircle } from "react-icons/hi2";
 import { Link } from "react-router-dom";
 
-function ChatHistory({ messages }) {
+function ChatHistory({ convs }) {
   const [searchValue, setSearchValue] = useState("");
-  const [convs, setConvs] = useState([]);
-
-  console.log(messages)
 
   return (
     <div className="w-[300px] h-svh p-2">
@@ -41,7 +38,7 @@ function ChatHistory({ messages }) {
           </h1> */}
           {/* chats */}
           <div className="flex flex-col w-full h-fit">
-            {messages.map((msg, index) => (
+            {convs.map((msg, index) => (
                 <Link
                   to={"/"}
                   key={index}
