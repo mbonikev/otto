@@ -163,6 +163,7 @@ function Home() {
           user={user}
           convs={convs}
           userId={userId}
+          setMessages={setMessages}
         />
       </div>
 
