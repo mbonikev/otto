@@ -43,10 +43,7 @@ function PromptArea({
   useEffect(() => {
     const retrieveId = Cookies.get("convId") ?? chat;
     setConvId(retrieveId);
-
-    if (retrieveId && retrieveId !== "null") {
-      navigate(`?chat=${retrieveId}`, { replace: true });
-    }
+    navigate(`?chat=${retrieveId}`, { replace: true });
   }, []);
 
   const handleInput2Change = (e) => {
