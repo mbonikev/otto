@@ -40,7 +40,7 @@ function ChatHistory({ convs }) {
           <div className="flex flex-col w-full h-fit">
             {convs.map((msg, index) => (
               <Link
-                to={msg.conversationId}
+                to={`/?chat=${msg.conversationId}`}
                 key={index}
                 className={`w-full px-2.5 py-2 hover:bg-stone-100 rounded-xl text-sm text-dark-text`}
               >
