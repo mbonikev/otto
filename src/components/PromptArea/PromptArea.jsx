@@ -83,7 +83,7 @@ function PromptArea({
             },
           }
         );
-
+        console.log(response.data)
         const { title, message: assistantResponse } = response.data;
 
         setThinking(false);
