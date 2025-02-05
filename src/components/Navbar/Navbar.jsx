@@ -102,37 +102,11 @@ function Navbar({
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, []);
 
-  const handleNew = async () => {
-    const apiUrl = import.meta.env.VITE_BACKEND_API;
-    const apiKey = import.meta.env.VITE_GROQ_API_KEY;
-    setThinking(true);
-    try {
-      const response = await axios.post(
-        `${apiUrl}/api/createconv`,
-        {
-          userId,
-        },
-        {
-          headers: {
-            Authorization: `Bearer ${apiKey}`,
-            "Content-Type": "application/json",
-          },
-        }
-      );
-      console.log(response.data.conversationId);
-      Cookies.set("convId", response.data.conversationId, {
-        expires: 1,
-        path: "/",
-      });
+  const handleNew = () => {
+      Cookies.remove("convId")
+      setMessages("")
       window.location.reload()
-      setTimeout(() => {
-        setThinking(false);
-        setMessages("");
-      }, 1000);
-    } catch (error) {
-      setThinking(false);
-      console.error("Error:", error);
-    }
+
   };
 
   return (
