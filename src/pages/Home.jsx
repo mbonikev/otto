@@ -15,6 +15,7 @@ function Home() {
   const { displayName, photo, email, userId } = user || {};
   const [messages, setMessages] = useState([]);
   const [thinking, setThinking] = useState(false);
+  const [thinkingMessages, setThinkingMessages] = useState(false);
   const chatBoxRef = useRef(null);
   const { chat } = useParams();
   const [convId, setConvId] = useState("");
@@ -67,7 +68,7 @@ function Home() {
       const apiUrl = import.meta.env.VITE_BACKEND_API;
       const apiKey = import.meta.env.VITE_GROQ_API_KEY;
       if (retrieveId !== "") {
-        setThinking(true);
+        setThinkingMessages(true);
         try {
           const response = await axios.get(`${apiUrl}/api/getmsg`, {
             params: { convId: retrieveId },
