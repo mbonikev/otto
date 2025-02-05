@@ -146,9 +146,6 @@ function Home() {
         setMessages={setMessages}
         thinking={thinking}
         setThinking={setThinking}
-        displayName={displayName}
-        email={email}
-        models={models}
       />
     </div>
   );
