@@ -11,12 +11,12 @@ const Login = () => {
     <div className="h-svh flex justify-start items-center flex-col py-5 px-10 max-lg:p-0">
       <div className="w-full h-full flex">
         <div className="h-full flex-1 flex flex-col items-center justify-start gap-6 w-full py-10 px-5">
-          <div className="w-full h-fit flex gap-2">
+          <Link to={'/'} className="w-full h-fit flex gap-2">
             <img src="./logo.png" className="h-9" />
             <h1 className="font-Kanit text-2xl font-light text-dark-text-weak text-center">
               Otto
             </h1>
-          </div>
+          </Link>
           <div className="w-full flex-1 flex flex-col items-center justify-center gap-3">
             <h1 className="text-3xl font-semibold max-2xl:text-2xl mb-4">
               Welcome back
