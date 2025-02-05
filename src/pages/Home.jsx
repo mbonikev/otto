@@ -96,6 +96,7 @@ function Home() {
         
       } catch (error) {
         console.error("messages:", error);
+        setThinking(false);
       }
     };
 
