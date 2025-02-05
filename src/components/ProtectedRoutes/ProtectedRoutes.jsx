@@ -17,9 +17,7 @@ const ProtectedRoutes = () => {
         });
 
         setUser(response.data.user || null);
-        console.log(response.data.user || null);
 
-        // ✅ Set the default model cookie if not set
         if (!Cookies.get("selectedModel")) {
           Cookies.set("selectedModel", "llama3-8b-8192", {
             expires: 7,
@@ -59,11 +57,7 @@ const ProtectedRoutes = () => {
     );
   }
 
-  return user ? (
-    <Outlet context={{ user, models }} />
-  ) : (
-    <Navigate to="/chat" />
-  );
+  return user ? <Outlet context={{ user, models }} /> : <Navigate to="/chat" />;
 };
 
 export default ProtectedRoutes;
