@@ -8,7 +8,7 @@ const ProtectedRoutesLoggedIn = () => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
   const [models, setModels] = useState([]);
-  const token = Cookies.get("token") || null;
+  const token = Cookies.get("token");
 
   useEffect(() => {
     const fetchUserStatus = async () => {
