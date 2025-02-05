@@ -103,12 +103,10 @@ function Navbar({
   }, []);
 
   const handleNew = () => {
-    console.log("Before removing:", Cookies.get("convId"));
-    Cookies.remove("convId");
-    console.log("After removing:", Cookies.get("convId"));
+      Cookies.remove("convId")
+      setMessages("")
+      window.location.reload()
 
-    setMessages([]);
-    navigate(`?chat=`, { replace: true });
   };
 
   return (
