@@ -6,7 +6,7 @@ function ChatHistory({ messages }) {
   const [searchValue, setSearchValue] = useState("");
   const [convs, setConvs] = useState([])
   if (messages){
-    
+    const filtered = messages.filter((msg) => msg.role === "user")
   }
   return (
     <div className="w-[300px] h-svh p-2">
