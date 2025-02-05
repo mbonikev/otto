@@ -8,7 +8,6 @@ function ChatHistory({ convs }) {
   const location = useLocation();
   const { chat } = useParams();
   console.log(location.pathname, chat);
-  console.log(convs);
   const handleMigrate = (link) => {
     Cookies.set("convId", link, {
       expires: 1,
