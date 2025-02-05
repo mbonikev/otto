@@ -3,16 +3,7 @@ import { Outlet, Navigate } from "react-router-dom";
 import Cookies from "js-cookie";
 
 const ProtectedRoutesLoggedIn = () => {
-  const [token, setToken] = useState(null)
-  useEffect(() => {
-    const tokenCheck = Cookies.get("token");
-    if (tokenCheck) {
-      setToken(true);
-      console.log(tokenCheck)
-    } else {
-      setToken(false);
-    }
-  }, []);
+  const token = ('; '+document.cookie).split(`; token=`).pop().split(';')[0];
   if (token === null) {
     return <></>;
   }
