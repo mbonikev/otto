@@ -66,8 +66,8 @@ function Home() {
       const retrieveId = Cookies.get("convId") || "";
       const apiUrl = import.meta.env.VITE_BACKEND_API;
       const apiKey = import.meta.env.VITE_GROQ_API_KEY;
+      setThinking(true);
       try {
-        setThinking(true);
         const response = await axios.get(`${apiUrl}/api/getmsg`, {
           params: { convId: retrieveId },
           headers: {
@@ -116,7 +116,7 @@ function Home() {
         }
       } catch (error) {
         console.error("conversations:", error);
-      } 
+      }
     };
 
     // Call both functions to fetch data
