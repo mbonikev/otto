@@ -1,3 +1,5 @@
+import { Player } from 'react-player';
+
 const Login = () => {
   const backendUrl = import.meta.env.VITE_BACKEND_API;
   document.title = "Login - Otto";
@@ -22,10 +24,7 @@ const Login = () => {
           </div>
         </div>
         <div className="flex- col-span-2 flex flex-col items-center justify-center gap-6 w-full py-14 bg-red-300">
-          <video width="640" height="480" controls>
-            <source src="video.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+          <Player src="video.mp4" controls={false} />
         </div>
       </div>
     </div>
