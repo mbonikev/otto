@@ -19,6 +19,7 @@ import { useNavigate, useParams } from "react-router-dom";
 
 function PromptArea({
   setMessages,
+  messages,
   thinking,
   setThinking,
   displayName,
