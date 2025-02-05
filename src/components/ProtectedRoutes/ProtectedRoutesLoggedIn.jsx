@@ -1,60 +1,21 @@
 import { useEffect, useState } from "react";
 import { Outlet, Navigate } from "react-router-dom";
-import axios from "axios";
 import Cookies from "js-cookie";
 
 const ProtectedRoutesLoggedIn = () => {
-  const apiUrl = import.meta.env.VITE_BACKEND_API;
-  const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [models, setModels] = useState([]);
-  const token = Cookies.get("token");
+  const [user, setUser] = useState(null);
+  const token = Cookies.get("token"); // Get the token from cookies
 
   useEffect(() => {
-    const fetchUserStatus = async () => {
-      try {
-        const response = await axios.get(`${apiUrl}/auth/status`, {
-          withCredentials: true,
-        });
-
-        setUser(response.data.user || null);
-
-        // Set the default model cookie if not set
-        if (!Cookies.get("selectedModel")) {
-          Cookies.set("selectedModel", "llama3-8b-8192", {
-            expires: 7,
-            path: "/",
-          });
-        }
-      } catch (error) {
-        console.error("Error fetching user status:", error);
-        setUser(null);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    const fetchModels = async () => {
-      try {
-        const response = await axios.get(`${apiUrl}/api/models`, {
-          withCredentials: true,
-        });
-
-        setModels(response.data);
-      } catch (error) {
-        console.error("Error fetching models:", error);
-        setModels([]);
-      }
-    };
-
-    // Fetch user status and models if token is present
     if (token) {
-      fetchModels();
-      fetchUserStatus();
+      // If token exists, consider the user logged in
+      setUser({}); // This is where you can set user data if available or just an empty object
     } else {
-      setLoading(false);
+      // If no token, user is not logged in
       setUser(null);
     }
+    setLoading(false); // Set loading to false after the check
   }, [token]);
 
   if (loading) {
@@ -65,13 +26,13 @@ const ProtectedRoutesLoggedIn = () => {
     );
   }
 
-  // Redirect logged-in users to the default page (e.g., `/c/1`)
-  if (user !== null) {
+  // If the user is logged in (i.e., token is present), redirect to chat page (e.g., /c/121)
+  if (user) {
     return <Navigate to="/c/121" />;
   }
 
-  // Allow non-logged-in users to access the login page (by rendering Outlet)
-  return <Outlet context={{ user, models }} />;
+  // If the user is not logged in, show the login page
+  return <Outlet context={{ user }} />;
 };
 
 export default ProtectedRoutesLoggedIn;
