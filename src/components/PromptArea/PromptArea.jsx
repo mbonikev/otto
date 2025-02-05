@@ -62,7 +62,7 @@ function PromptArea({
       try {
         const response = await axios.post(
           `${apiUrl}${routePath}`,
-          { message, displayName, userId: email, selectedModel, convId: id, userId },
+          { message, displayName, userId, selectedModel, convId: id },
           {
             headers: {
               Authorization: `Bearer ${apiKey}`,
