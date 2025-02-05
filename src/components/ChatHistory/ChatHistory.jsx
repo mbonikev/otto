@@ -4,7 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 import Cookies from "js-cookie";
 import { RiLoader2Fill } from "react-icons/ri";
 
-function ChatHistory({ convs, thinking }) {
+function ChatHistory({ convs }) {
   const [searchValue, setSearchValue] = useState("");
   const location = useLocation(); // Use the useLocation hook to get the current URL
 
