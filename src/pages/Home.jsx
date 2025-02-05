@@ -99,7 +99,6 @@ function Home() {
           setThinking(false);
         }
       }
-      setThinking(false);
     };
 
     const handleGetConvs = async () => {
