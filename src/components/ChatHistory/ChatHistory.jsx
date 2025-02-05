@@ -59,7 +59,7 @@ function ChatHistory({ messages }) {
                   key={index}
                   className={`w-full px-2.5 py-2 hover:bg-stone-100 rounded-xl text-sm text-dark-text`}
                 >
-                  {msg.title.replace(`""`, "")}
+                  {msg.title}
                 </Link>
               ))}
           </div>
