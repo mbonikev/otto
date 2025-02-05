@@ -55,7 +55,7 @@ function PromptArea({
         const apiKey = import.meta.env.VITE_GROQ_API_KEY;
         try {
           const response = await axios.post(
-            `${apiUrl}${routePath}`,
+            `${apiUrl}/api/getconvs`,
             {
               message: messageToSend,
               displayName,
