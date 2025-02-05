@@ -46,13 +46,12 @@ function PromptArea({
     if (retrieveId) {
       navigate(`?chat=${retrieveId}`, { replace: true });
     }
-    
   }, [convId]);
 
   useEffect(() => {
     const handleGetConvs = async () => {
-      if (convId) {
-        const retrieveId = Cookies.get("convId") ?? chat;
+      const retrieveId = Cookies.get("convId") ?? chat;
+      if (retrieveId) {
         const apiUrl = import.meta.env.VITE_BACKEND_API;
         const apiKey = import.meta.env.VITE_GROQ_API_KEY;
         try {
