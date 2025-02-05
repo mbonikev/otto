@@ -9,8 +9,6 @@ import { useOutletContext, useParams } from "react-router-dom";
 
 function Chat() {
   const { id } = useParams();
-  const { user, models } = useOutletContext();
-  const { displayName, photo, email } = user || {};
   const [messages, setMessages] = useState([]);
   const [thinking, setThinking] = useState(false);
   const chatBoxRef = useRef(null);
