@@ -93,11 +93,11 @@ function Home() {
               },
             ]);
             setMessages(mappedMessages);
-            setThinking(false);
+            setThinkingMessages(false);
           }
         } catch (error) {
           console.error("messages:", error);
-          setThinking(false);
+          setThinkingMessages(false);
         }
       }
     };
