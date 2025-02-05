@@ -52,7 +52,7 @@ function Home() {
         }
       }
     }
-    
+
     const firstAssistantMessage = messages.find(
       (msg) => msg.role === "assistant"
     );
