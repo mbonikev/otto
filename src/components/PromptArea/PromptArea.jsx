@@ -44,7 +44,7 @@ function PromptArea({
   };
 
   const submit = async () => {
-    const { id } = useParams()
+    const { id } = useParams() || null;
     if (message !== "") {
       const apiUrl = import.meta.env.VITE_BACKEND_API;
       const apiKey = import.meta.env.VITE_GROQ_API_KEY;
