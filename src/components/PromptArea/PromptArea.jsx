@@ -37,6 +37,7 @@ function PromptArea({
   );
   const [searchModel, setSearchModel] = useState("");
   const { id } = useParams();
+  const [convId, setConvId] = useState(id)
 
   const handleInput2Change = (e) => {
     const newInput = e.target.value;
@@ -84,6 +85,9 @@ function PromptArea({
           }
         );
         console.log(response.data)
+        if(!convId){
+          set
+        }
         const { title, message: assistantResponse } = response.data;
 
         setThinking(false);
