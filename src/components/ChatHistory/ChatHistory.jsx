@@ -1,13 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { HiMiniMagnifyingGlass, HiMiniXCircle } from "react-icons/hi2";
-import { Link, useLocation, useParams } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Cookies from "js-cookie";
 
 function ChatHistory({ convs }) {
   const [searchValue, setSearchValue] = useState("");
-  const urlParams = new URLSearchParams(window.location.search);
+  const location = useLocation(); // Use the useLocation hook to get the current URL
+
+  // Get the 'chat' parameter from the URL
+  const urlParams = new URLSearchParams(location.search);
   const chatId = urlParams.get("chat");
-  console.log(location.pathname, chatId);
+
+  useEffect(() => {
+    console.log("Current path:", location.pathname, "Chat ID:", chatId);
+  }, [location]); // Re-run the effect when location changes
+
   const handleMigrate = (link) => {
     Cookies.set("convId", link, {
       expires: 1,
@@ -15,6 +22,7 @@ function ChatHistory({ convs }) {
     });
     window.location.reload();
   };
+
   return (
     <div className="w-[300px] h-svh p-2">
       <div className="w-full h-full bg-white rounded-2xl p-2 flex flex-col">
@@ -39,13 +47,7 @@ function ChatHistory({ convs }) {
           </div>
         </div>
         {/*  */}
-        {/* <div className="w-[95%] h-[1px] bg-stone-200 mx-auto my-2"></div> */}
-        {/*  */}
-        {/* 2 */}
         <div className="w-full flex-1 flex flex-col overflow-y-auto custom_scrollbar gap-2 mt-2 pr-1 my-0">
-          {/* <h1 className="text-xs font-medium text-dark-text-weak px-2.5">
-            Today
-          </h1> */}
           {/* chats */}
           <div className="flex flex-col w-full h-fit">
             {convs.map((msg, index) => (
