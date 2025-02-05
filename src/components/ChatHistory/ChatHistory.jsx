@@ -13,7 +13,7 @@ function ChatHistory({ messages }) {
     acc[msg.convId].push(msg);
     return acc;
   }, {});
-  const firstMessages = Object.values(groupedMessages).map((group) => group[0]);
+  const firstMessages = Object.values(groupedMessages).map((group) => group[0]) || [];
 
   // setConvs(firstMessages);
 
