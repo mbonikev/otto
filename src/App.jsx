@@ -14,8 +14,8 @@ function App() {
   return (
     <HashRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
         <Route element={<ProtectedRoutes />}>
+          <Route path="/" element={<Home />} />
           <Route path="/c/:id" element={<Chat />} />
         </Route>
 
