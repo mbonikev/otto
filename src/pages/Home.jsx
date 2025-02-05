@@ -6,6 +6,7 @@ import { oneLight } from "react-syntax-highlighter/dist/esm/styles/prism";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { useNavigate, useOutletContext } from "react-router-dom";
+import { RiLoader2Fill } from "react-icons/ri";
 
 function Home() {
   const { user, models } = useOutletContext() || {};
@@ -152,8 +153,7 @@ function Home() {
         ) : (
           <div className="w-full h-full flex flex-col items-center justify-center">
             {thinking ? (
-              <img
-                src="./logo.png"
+              <RiLoader2Fill
                 className="h-10 w-auto animate-spinLoader saturate-0"
               />
             ) : (
