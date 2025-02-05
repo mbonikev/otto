@@ -123,7 +123,7 @@ function Navbar({
         expires: 1,
         path: "/",
       });
-      navigate(`?chat=${response.data.conversationId}`, { replace: true });
+      window.location.reload()
       setTimeout(() => {
         setThinking(false);
         setMessages("");
