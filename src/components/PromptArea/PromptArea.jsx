@@ -78,6 +78,7 @@ function PromptArea({
             ]);
 
             setMessages(mappedMessages); // Update state with structured messages
+            console.log(mappedMessages)
           }
         } catch (error) {
           console.error("Error fetching conversations:", error);
