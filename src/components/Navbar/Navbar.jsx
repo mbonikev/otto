@@ -19,7 +19,7 @@ import { BiSolidLockAlt } from "react-icons/bi";
 import Cookies from "js-cookie";
 import avatar3 from "/avatars/avatar3.png";
 
-function Navbar({ photo, displayName, user, messages }) {
+function Navbar({ photo, displayName, user, messages,convs }) {
   const [showPopup, setShowPopup] = useState(false);
   const profileRef = useRef(null);
   const popupRef = useRef(null);
