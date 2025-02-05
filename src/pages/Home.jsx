@@ -92,10 +92,9 @@ function Home() {
           ]);
           setThinking(false);
           setMessages(mappedMessages);
-          setConvs(response.data.convsWithTitles);
         }
       } catch (error) {
-        console.error("conversations:", error);
+        console.error("messages:", error);
         setThinking(false);
       } finally {
         setThinking(false);
