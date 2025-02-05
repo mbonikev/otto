@@ -4,8 +4,8 @@ import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 import Login from "./pages/Login";
 import Chat from "./pages/Chat";
-import LoggedInRoutes
-import LoggedOutRoutes from "./components/LoggedOutRoutes";
+import LoggedInRoutes from "./components/ProtectedRoutes/LoggedInRoutes";
+import LoggedOutRoutes from "./components/ProtectedRoutes/LoggedOutRoutes";
 
 function App() {
   const hasHash = window.location.hash.includes("#");
