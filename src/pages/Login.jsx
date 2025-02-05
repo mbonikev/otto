@@ -8,9 +8,9 @@ const Login = () => {
   const backendUrl = import.meta.env.VITE_BACKEND_API;
   document.title = "Login - Otto";
   return (
-    <div className="h-svh flex justify-start items-center flex-col py-5 px-10 max-lg:p-0">
+    <div className="h-svh flex justify-start items-center flex-col max-lg:p-0">
       <div className="w-full h-full flex">
-        <div className="h-full flex-1 flex flex-col items-start justify-start gap-6 w-full py-10 px-5">
+        <div className="h-full flex-1 flex flex-col items-start justify-start gap-6 w-full p-10">
           <Link to={'/'} className="w-fit h-fit flex gap-2">
             <img src="./logo.png" className="h-9" />
             <h1 className="font-Kanit text-2xl font-light text-dark-text-weak text-center">
@@ -39,7 +39,7 @@ const Login = () => {
             </div>
           </div>
         </div>
-        <div className="w-3/5 max-xl:hidden flex flex-col items-end justify-center gap-6 overflow-hidden py-10 px-5">
+        <div className="w-2/4 h-full max-xl:hidden flex flex-col items-end justify-center gap-6 overflow-hidden p-10 bg-stone-100">
           <div className="w-full h-fit object-contain overflow-hidden rounded-[30px] ring-1 ring-stone-200 relative">
             <h1 className="absolute top-8 right-8 text-dark-text-weak text-sm flex items-center gap-2 font-medium">
               <FaPlay className="text-xs opacity-40" />
