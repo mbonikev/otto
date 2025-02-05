@@ -11,6 +11,7 @@ function ChatHistory({ convs }) {
       expires: 1,
       path: "/",
     });
+    window.location.reload()
   }
   return (
     <div className="w-[300px] h-svh p-2">
