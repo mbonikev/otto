@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { HiMiniMagnifyingGlass, HiMiniXCircle } from "react-icons/hi2";
 import { Link, useLocation } from "react-router-dom";
 import Cookies from "js-cookie";
+import { RiLoader2Fill } from "react-icons/ri";
 
 function ChatHistory({ convs, thinking }) {
   const [searchValue, setSearchValue] = useState("");
@@ -45,17 +46,27 @@ function ChatHistory({ convs, thinking }) {
         {/*  */}
         <div className="w-full flex-1 flex flex-col overflow-y-auto custom_scrollbar gap-2 mt-2 pr-1 my-0">
           {/* chats */}
-          <div className="flex flex-col w-full h-fit">
-            {convs.map((msg, index) => (
-              <button
-                key={index}
-                onClick={() => handleMigrate(msg.conversationId)}
-                className={`w-full px-3 py-2 ${chatId === msg.conversationId ? 'bg-stone-100 ' : 'hover:bg-stone-100 '} rounded-xl text-sm text-left text-dark-text`}
-              >
-                {msg.title.replace(/"/g, "")}
-              </button>
-            ))}
-          </div>
+          {thinking ? (
+            <div className="w-full h-full flex flex-col items-center justify-center">
+              <RiLoader2Fill className="text-2xl w-auto animate-spin text-dark-text-weak/50 stroke-[1px]" />
+            </div>
+          ) : (
+            <div className="flex flex-col w-full h-fit">
+              {convs.map((msg, index) => (
+                <button
+                  key={index}
+                  onClick={() => handleMigrate(msg.conversationId)}
+                  className={`w-full px-3 py-2 ${
+                    chatId === msg.conversationId
+                      ? "bg-stone-100 "
+                      : "hover:bg-stone-100 "
+                  } rounded-xl text-sm text-left text-dark-text`}
+                >
+                  {msg.title.replace(/"/g, "")}
+                </button>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </div>
