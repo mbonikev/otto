@@ -46,9 +46,6 @@ function PromptArea({
     if (retrieveId) {
       navigate(`?chat=${retrieveId}`, { replace: true });
     }
-  }, [convId]);
-
-  useEffect(() => {
     const handleGetConvs = async () => {
       if (convId) {
         const apiUrl = import.meta.env.VITE_BACKEND_API;
@@ -66,12 +63,14 @@ function PromptArea({
               },
             }
           );
-          console.log(response)
+          console.log(response);
         } catch (error) {}
       }
     };
-    handleGetConvs()
-  }, []);
+    handleGetConvs();
+  }, [convId]);
+
+  useEffect(() => {}, []);
 
   const handleInput2Change = (e) => {
     const newInput = e.target.value;
@@ -137,7 +136,6 @@ function PromptArea({
         };
 
         setMessages((prev) => [...prev, assistantMessage]);
-        
       } catch (error) {
         setThinking(false);
         console.error(
