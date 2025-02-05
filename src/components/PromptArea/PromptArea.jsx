@@ -25,7 +25,7 @@ function PromptArea({
   email,
   models,
   userId,
-  user
+  user,
 }) {
   const [message, setMessage] = useState("");
   const textareaRef = useRef(null);
@@ -37,9 +37,11 @@ function PromptArea({
   );
   const [searchModel, setSearchModel] = useState("");
   const { chat } = useParams();
-  const [convId, setConvId] = useState(Cookies.get("convId") || chat)
+  const [convId, setConvId] = useState(Cookies.get("convId") || chat);
   const navigate = useNavigate();
-
+  if (convId !== "" || convId !== null) {
+    navigate(`?chat=${convId}`, { replace: true });
+  }
   const handleInput2Change = (e) => {
     const newInput = e.target.value;
     // console.log(JSON.stringify(message));
@@ -49,7 +51,6 @@ function PromptArea({
   };
 
   const submit = async () => {
-
     if (message.trim() !== "") {
       const apiUrl = import.meta.env.VITE_BACKEND_API;
       const apiKey = import.meta.env.VITE_GROQ_API_KEY;
@@ -84,9 +85,9 @@ function PromptArea({
             },
           }
         );
-        console.log(response.data)
-        if(convId !== "" || convId !== null){
-          setConvId(response.data.conversationId)
+        console.log(response.data);
+        if (convId !== "" || convId !== null) {
+          setConvId(response.data.conversationId);
           navigate(`?chat=${response.data.conversationId}`, { replace: true });
           Cookies.set("convId", response.data.conversationId);
         }
