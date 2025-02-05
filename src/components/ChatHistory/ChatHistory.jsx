@@ -9,7 +9,7 @@ function ChatHistory() {
       <div className="w-full h-full bg-white rounded-none p-2 flex flex-col">
         {/* 1 */}
         <div className="w-full h-[44px] min-h-[44px] border-b-[1px] pb-2">
-          <div className="w-full h-full bg-stone-200/60 rounded-xl flex items-center justify-start">
+          <div className="w-full h-full bg-transparent rounded-xl flex items-center justify-start">
             <HiMiniMagnifyingGlass className="mx-2 text-lg min-w-fit" />
             <input
               type="text"
