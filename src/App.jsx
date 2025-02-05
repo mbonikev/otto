@@ -1,5 +1,5 @@
 import React from "react";
-import { HashRouter, Routes, Route, BrowserRouter } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 import Login from "./pages/Login";
@@ -8,12 +8,12 @@ import Chat from "./pages/Chat";
 import AuthRedirect from "./components/AuthRedirect/AuthRedirect"; // Import AuthRedirect
 
 function App() {
-  // const hasHash = window.location.hash.includes("#");
-  // if (!hasHash && window.location.pathname !== "/") {
-  //   return <NotFound />;
-  // }
+  const hasHash = window.location.hash.includes("#");
+  if (!hasHash && window.location.pathname !== "/") {
+    return <NotFound />;
+  }
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         {/* Protected Routes for Logged-In Users */}
         <Route element={<ProtectedRoutes />}>
@@ -41,7 +41,7 @@ function App() {
         {/* Catch-All Route */}
         <Route path="*" element={<NotFound />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
