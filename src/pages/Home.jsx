@@ -165,7 +165,7 @@ function Home() {
           userId={userId}
           setMessages={setMessages}
           setThinking={setThinking}
-          thinking={}
+          thinking={thinking}
         />
       </div>
 
