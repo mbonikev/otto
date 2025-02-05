@@ -19,7 +19,7 @@ const Login = () => {
             Continue with Google
           </a>
         </div>
-        <div className="flex-1 flex flex-col items-center gap-6 w-full py-14"></div>
+        <div className="flex-1 flex flex-col items-center gap-6 w-full py-14 bg-red-300"></div>
       </div>
     </div>
   );
