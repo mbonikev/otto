@@ -49,7 +49,30 @@ function PromptArea({
     handleGetConvs();
   }, [convId]);
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    const handleGetConvs = async () => {
+      if (convId) {
+        const retrieveId = Cookies.get("convId") ?? chat;
+        const apiUrl = import.meta.env.VITE_BACKEND_API;
+        const apiKey = import.meta.env.VITE_GROQ_API_KEY;
+        try {
+          const response = await axios.get(
+            `${apiUrl}/api/getconvs`,
+            {
+              convId: retrieveId,
+            },
+            {
+              headers: {
+                Authorization: `Bearer ${apiKey}`,
+                "Content-Type": "application/json",
+              },
+            }
+          );
+          console.log(response);
+        } catch (error) {}
+      }
+    };
+  }, []);
 
   const handleInput2Change = (e) => {
     const newInput = e.target.value;
