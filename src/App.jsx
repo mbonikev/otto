@@ -5,6 +5,7 @@ import NotFound from "./pages/NotFound";
 import Login from "./pages/Login";
 import ProtectedRoutes from "./components/ProtectedRoutes/ProtectedRoutes";
 import Chat from "./pages/Chat";
+import ProtectedRoutesLoggedIn from "./components/ProtectedRoutes/ProtectedRoutesLoggedIn";
 
 function App() {
   const hasHash = window.location.hash.includes("#");
@@ -14,7 +15,9 @@ function App() {
   return (
     <HashRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route element={<ProtectedRoutes />}>
+          <Route path="/" element={<Home />} />
+        </Route>
         <Route element={<ProtectedRoutes />}>
           <Route path="/c/:id" element={<Chat />} />
         </Route>
