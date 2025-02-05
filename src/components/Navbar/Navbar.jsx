@@ -222,6 +222,7 @@ function Navbar({ photo, displayName, user }) {
                 />
               )}
             </button>
+            {displayName}
             {/* dropdown */}
             {showPopup && (
               <div
