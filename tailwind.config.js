@@ -11,7 +11,7 @@ export default {
         "main-color": "#3d8bff",
         "dark-text": "#111111",
         "dark-text-weak": "#5d5d5d",
-        "body": "#212121",
+        "body-dark": "#212121",
         "": "",
         "": "",
         "": "",
