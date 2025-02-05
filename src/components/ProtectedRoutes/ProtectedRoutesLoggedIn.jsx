@@ -10,7 +10,7 @@ const ProtectedRoutesLoggedIn = () => {
   useEffect(() => {
     if (token) {
       // If token exists, consider the user logged in
-      setUser({}); // This is where you can set user data if available or just an empty object
+      setUser({}); // This can be expanded to hold actual user data if necessary
     } else {
       // If no token, user is not logged in
       setUser(null);
@@ -26,12 +26,12 @@ const ProtectedRoutesLoggedIn = () => {
     );
   }
 
-  // If the user is logged in (i.e., token is present), redirect to chat page (e.g., /c/121)
+  // If the user is logged in (i.e., token is present), redirect them to the chat page (or any other page you prefer)
   if (user) {
     return <Navigate to="/c/0" />;
   }
 
-  // If the user is not logged in, show the login page
+  // If the user is not logged in, render the content inside <Outlet>
   return <Outlet context={{}} />;
 };
 
