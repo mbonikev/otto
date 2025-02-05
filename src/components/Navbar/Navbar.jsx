@@ -93,6 +93,10 @@ function Navbar({ photo, displayName, user, convs }) {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, []);
 
+  const handleNew = () => {
+    
+  }
+
   return (
     <div className="w-full h-[70px] min-h-[70px] bg-white grid grid-cols-3 text-dark-text px-4 sticky">
       {/* Overlay */}
@@ -131,7 +135,7 @@ function Navbar({ photo, displayName, user, convs }) {
                 shortcut="Alt + c"
               />
             </button>
-            <button className="group h-10 w-auto aspect-square flex items-center justify-center text-2xl hover:bg-stone-100 text-dark-text-weak hover:text-dark-text rounded-full relative">
+            <button onClick={handleNew} className="group h-10 w-auto aspect-square flex items-center justify-center text-2xl hover:bg-stone-100 text-dark-text-weak hover:text-dark-text rounded-full relative">
               <RxPencil2 />
               <Tooltip title="New chat" placement="center" />
             </button>
