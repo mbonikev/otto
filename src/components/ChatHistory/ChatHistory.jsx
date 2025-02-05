@@ -39,13 +39,13 @@ function ChatHistory({ convs }) {
           {/* chats */}
           <div className="flex flex-col w-full h-fit">
             {convs.map((msg, index) => (
-              <Link
-                to={`/?chat=${msg.conversationId}`}
+              <button
                 key={index}
+                onClick={() => handleMigrate(msg.conversationId)}
                 className={`w-full px-2.5 py-2 hover:bg-stone-100 rounded-xl text-sm text-dark-text`}
               >
                 {msg.title.replace(/"/g, "")}
-              </Link>
+              </button>
             ))}
           </div>
         </div>
