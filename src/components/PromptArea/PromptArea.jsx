@@ -43,7 +43,7 @@ function PromptArea({
   useEffect(() => {
     const retrieveId = Cookies.get("convId") || chat;
     setConvId(retrieveId);
-    if (convId !== "" || convId !== null) {
+    if (retrieveId !== "" || retrieveId !== null) {
       navigate(`?chat=${convId}`, { replace: true });
     }
   }, []);
