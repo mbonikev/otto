@@ -4,6 +4,10 @@ import { Link } from "react-router-dom";
 
 function ChatHistory({ messages }) {
   const [searchValue, setSearchValue] = useState("");
+  const [convs, setConvs] = useState([])
+  if (messages){
+    
+  }
   return (
     <div className="w-[300px] h-svh p-2">
       <div className="w-full h-full bg-white rounded-2xl p-2 flex flex-col">
