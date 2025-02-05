@@ -93,7 +93,6 @@ function Home() {
             ]);
 
             setMessages(mappedMessages);
-            setThinking(false);
           }
         } catch (error) {
           console.error("Error fetching conversations:", error);
