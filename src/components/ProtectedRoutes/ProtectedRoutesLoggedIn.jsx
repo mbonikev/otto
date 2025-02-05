@@ -32,7 +32,7 @@ const ProtectedRoutesLoggedIn = () => {
   }
 
   // If the user is not logged in, show the login page
-  return <Outlet context={{ user }} />;
+  return <Outlet context={{}} />;
 };
 
 export default ProtectedRoutesLoggedIn;
