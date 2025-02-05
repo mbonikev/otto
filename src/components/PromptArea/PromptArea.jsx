@@ -65,13 +65,23 @@ function PromptArea({
               },
             }
           );
-          console.log(response);
+          const transformedMessages = response.data.map((message) => {
+            return {
+              role: message.reply ? "assistant" : "user", // Set role based on whether there's a reply
+              content: message.content,
+              title: message.sender ? message.sender._id : "", // Use sender's _id as title (or modify based on your need)
+            };
+          });
+
+          // Store the transformed messages
+          setMessages(transformedMessages);
+          console.log(transformedMessages);
         } catch (error) {}
       }
     };
 
     handleGetConvs();
-  }, []);
+  }, [message]);
 
   const handleInput2Change = (e) => {
     const newInput = e.target.value;
