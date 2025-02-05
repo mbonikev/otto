@@ -67,27 +67,18 @@ function PromptArea({
           );
           
           const transformedMessages = response.data.map((message) => {
-            // Check if message.content is an array and log it for debugging
-            if (Array.isArray(message.content)) {
-              return message.content.map((contentItem) => {
-                return {
-                  role: contentItem.reply ? "assistant" : "user",  // Determine role based on reply
-                  content: contentItem.reply || contentItem.prompt,  // Use reply if available, otherwise prompt
-                  title: message.title,  // Use the title from the message schema
-                };
-              });
-            } else {
-              // If message.content is not an array, log the issue and return an empty array or handle the error as needed
-              console.error("Expected message.content to be an array but got:", message.content);
-              return []; // or handle it based on your use case
-            }
+            return message.content.map((contentItem) => {
+              return {
+                role: contentItem.reply ? "assistant" : "user",  // Determine role based on reply
+                content: contentItem.reply || contentItem.prompt,  // Use reply if available, otherwise prompt
+                title: message.title,  // Use the title from the message schema
+              };
+            });
           });
-          
-          // Flatten the array in case each message has multiple content items
-          const flattenedMessages = transformedMessages.flat();
-          console.log(flattenedMessages);  // To inspect the final output
-          
           console.log(response.data)
+          // Store the transformed messages
+          setMessage(transformedMessages);
+          console.log(transformedMessages);
         } catch (error) {}
       }
     };
