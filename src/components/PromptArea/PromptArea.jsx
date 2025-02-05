@@ -86,6 +86,7 @@ function PromptArea({
         console.log(response.data)
         if(!convId){
           setConvId(response.data.conversationId)
+          navigate(`?chat=${newParam}`, { replace: true });
         }
         const { title, message: assistantResponse } = response.data;
 
