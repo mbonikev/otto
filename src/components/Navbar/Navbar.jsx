@@ -27,7 +27,6 @@ function Navbar({ photo, displayName, user, messages }) {
   const [animateChatsModal, setAnimateChatsModal] = useState(false);
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
-  console.log(messages)
 
   const handleLogout = async () => {
     setLoading(true);
