@@ -96,6 +96,8 @@ function Home() {
           }
         } catch (error) {
           console.error("Error fetching conversations:", error);
+        } finally {
+          setThinking(false);
         }
       }
     };
