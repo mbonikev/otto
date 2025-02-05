@@ -69,7 +69,8 @@ function PromptArea({
                 "Content-Type": "application/json",
               },
             }
-          );}catch(error){}
+          );
+        } catch (error) {}
       }
     };
   }, []);
