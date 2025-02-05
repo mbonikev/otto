@@ -8,7 +8,7 @@ function ChatHistory() {
     <div className="w-[300px] h-svh p-0">
       <div className="w-full h-full bg-white rounded-none p-2 flex flex-col">
         {/* 1 */}
-        <div className="w-full h-[36px] min-h-[36px] my-1.5 px-1.5 border-b-[1px]">
+        <div className="w-full h-[36px] min-h-[36px] my-1.5 px-1.5 border-b-[1px] pb-2">
           <div className="w-full h-full bg-stone-200/60 rounded-xl flex items-center justify-start">
             <HiMiniMagnifyingGlass className="mx-2 text-lg min-w-fit" />
             <input
