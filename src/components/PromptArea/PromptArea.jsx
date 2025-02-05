@@ -63,7 +63,7 @@ function PromptArea({
             },
           });
 
-          if (response.data && response.data.messages) {
+          if (response.data) {
             const mappedMessages = response.data.messages.flatMap((msg) => [
               {
                 role: "user",
