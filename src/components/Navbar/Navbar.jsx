@@ -115,7 +115,7 @@ function Navbar({ photo, displayName, user }) {
       )}
       {/* 1 */}
       <div className="flex items-center justify-start gap-0">
-        {user !== null ? (
+        {user !== "" ? (
           <>
             <button
               onClick={handleOpenChatsModal}
@@ -193,7 +193,7 @@ function Navbar({ photo, displayName, user }) {
       </div>
       {/* 3 */}
       <div className="flex items-center justify-end gap-0 relative select-none">
-        {user !== null ? (
+        {user !== "" ? (
           <>
             <button className="group h-10 w-auto aspect-square flex items-center justify-center text-2xl hover:bg-stone-100 text-dark-text-weak hover:text-dark-text rounded-full relative">
               <BsIncognito />
