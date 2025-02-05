@@ -111,7 +111,7 @@ function Navbar({ photo, displayName, user, messages }) {
                   animateChatsModal ? "translate-x-0" : "-translate-x-[300px]"
                 }`}
         >
-          <ChatHistory />
+          <ChatHistory messages={messages} />
         </div>
       )}
       {/* 1 */}
