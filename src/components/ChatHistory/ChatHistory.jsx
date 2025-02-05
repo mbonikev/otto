@@ -55,7 +55,7 @@ function ChatHistory({ messages }) {
                 <Link
                   to={"/"}
                   key={index}
-                  className={`w-full px-2.5 py-2 hover:bg-stone-100 rounded-xl text-sm text-dark-text truncate`}
+                  className={`w-full px-2.5 py-2 hover:bg-stone-100 rounded-xl text-sm text-dark-text truncate capitalize`}
                 >
                   {msg.content}
                 </Link>
