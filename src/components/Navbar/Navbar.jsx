@@ -17,6 +17,8 @@ import axios from "axios";
 import { BsIncognito, BsLockFill, BsStars } from "react-icons/bs";
 import { BiSolidLockAlt } from "react-icons/bi";
 import Cookies from "js-cookie";
+import avatar3 from "../assets/avatars/avatar3.png";
+
 
 function Navbar({ photo, displayName, user }) {
   const [showPopup, setShowPopup] = useState(false);
