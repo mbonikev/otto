@@ -66,7 +66,6 @@ function Home() {
       if (retrieveId) {
         const apiUrl = import.meta.env.VITE_BACKEND_API;
         const apiKey = import.meta.env.VITE_GROQ_API_KEY;
-        setThinking(true);
         try {
           const response = await axios.get(`${apiUrl}/api/getconvs`, {
             params: { convId: retrieveId },
@@ -75,7 +74,7 @@ function Home() {
               "Content-Type": "application/json",
             },
           });
-
+          setThinking(true);
           if (response.data) {
             const mappedMessages = response.data.flatMap((msg) => [
               {
