@@ -19,7 +19,6 @@ function App() {
         {/* Protect login-related routes for non-logged-in users */}
         <Route element={<ProtectedRoutesLoggedIn />}>
           <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
         </Route>
 
         {/* Protect chat-related routes for logged-in users */}
@@ -29,6 +28,7 @@ function App() {
 
         {/* Catch-all route */}
         <Route path="*" element={<NotFound />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </HashRouter>
   );
