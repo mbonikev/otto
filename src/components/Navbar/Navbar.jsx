@@ -18,7 +18,7 @@ import { BsIncognito, BsLockFill, BsStars } from "react-icons/bs";
 import { BiSolidLockAlt } from "react-icons/bi";
 import Cookies from "js-cookie";
 
-function Navbar({ photo, displayName }) {
+function Navbar({ photo, displayName, user }) {
   const [showPopup, setShowPopup] = useState(false);
   const profileRef = useRef(null);
   const popupRef = useRef(null);
@@ -119,17 +119,25 @@ function Navbar({ photo, displayName }) {
       )}
       {/* 1 */}
       <div className="flex items-center justify-start gap-0">
-        <button
-          onClick={handleOpenChatsModal}
-          className="group h-10 w-auto aspect-square flex items-center justify-center text-2xl hover:bg-stone-100 text-dark-text-weak hover:text-dark-text rounded-full relative"
-        >
-          <HiOutlineChatBubbleLeftRight />
-          <Tooltip title="Chat history" placement="left" shortcut="Alt + c" />
-        </button>
-        <button className="group h-10 w-auto aspect-square flex items-center justify-center text-2xl hover:bg-stone-100 text-dark-text-weak hover:text-dark-text rounded-full relative">
-          <RxPencil2 />
-          <Tooltip title="New chat" placement="center" />
-        </button>
+        {user && (
+          <>
+            <button
+              onClick={handleOpenChatsModal}
+              className="group h-10 w-auto aspect-square flex items-center justify-center text-2xl hover:bg-stone-100 text-dark-text-weak hover:text-dark-text rounded-full relative"
+            >
+              <HiOutlineChatBubbleLeftRight />
+              <Tooltip
+                title="Chat history"
+                placement="left"
+                shortcut="Alt + c"
+              />
+            </button>
+            <button className="group h-10 w-auto aspect-square flex items-center justify-center text-2xl hover:bg-stone-100 text-dark-text-weak hover:text-dark-text rounded-full relative">
+              <RxPencil2 />
+              <Tooltip title="New chat" placement="center" />
+            </button>
+          </>
+        )}
       </div>
       {/* 2 */}
       <div className="flex items-center justify-center gap-1 select-none w-full max-w-[100px] mx-auto relative group bg-transparent">
