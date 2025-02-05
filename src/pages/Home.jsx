@@ -76,7 +76,7 @@ function Home() {
             },
           });
           console.log(response.data.messages)
-          if (response.data.messages) {
+          if (response.data) {
             const mappedMessages = response.data.messages.flatMap((msg) => [
               {
                 role: "user",
