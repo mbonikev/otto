@@ -66,27 +66,13 @@ function PromptArea({
             }
           );
           
-          const transformedMessages = response.data.reduce((acc, message) => {
-            // Map the content and replies separately
-            if (message.reply) {
-              // If there is a reply, treat it as the "assistant" role
-              acc.assistant.push({
-                role: "assistant",
-                content: message.content,
-                title: message.sender ? message.sender._id : "", // or any other title logic you need
-              });
-            } else {
-              // If no reply, treat it as the "user" role
-              acc.user.push({
-                role: "user",
-                content: message.content,
-                title: message.sender ? message.sender._id : "", // or any other title logic you need
-              });
-            }
-          
-            return acc;
-          }, { user: [], assistant: [] });
-          
+          const transformedMessages = response.data.map((message) => {
+            return {
+              role: message.reply ? "assistant" : "user",
+              content: message.content,
+              title: message.title,
+            };
+          });
           console.log(response.data)
           // Store the transformed messages
           setMessages(transformedMessages);
