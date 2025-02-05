@@ -17,7 +17,6 @@ function App() {
       <Routes>
         <Route element={<ProtectedRoutesLoggedIn />}>
           <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
         </Route>
 
         <Route element={<ProtectedRoutes />}>
@@ -25,6 +24,8 @@ function App() {
         </Route>
 
         <Route path="*" element={<NotFound />} />
+        <Route path="/login" element={<Login />} />
+
       </Routes>
     </HashRouter>
   );
