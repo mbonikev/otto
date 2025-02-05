@@ -12,7 +12,7 @@ export default {
         "dark-text": "#111111",
         "dark-text-weak": "#5d5d5d",
         "body-dark": "#212121",
-        "": "",
+        "card-dark-1": "#303030",
         "": "",
         "": "",
       },
