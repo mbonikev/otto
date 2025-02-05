@@ -151,8 +151,14 @@ function Home() {
           </div>
         ) : (
           <div className="w-full h-full flex flex-col items-center justify-center">
-            {thinking ? (<></>):(<>
-              <h1 className="text-3xl font-semibold">How can I assist you?</h1></>)}
+            {thinking ? (
+              <img
+                src="./logo.png"
+                className="h-10 w-auto animate-spinLoader"
+              />
+            ) : (
+              <h1 className="text-3xl font-semibold">How can I assist you?</h1>
+            )}
           </div>
         )}
       </div>
