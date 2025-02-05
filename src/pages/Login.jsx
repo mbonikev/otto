@@ -11,13 +11,15 @@ const Login = () => {
               Otto
             </h1>
           </div>
-          <h1 className="text-3xl font-semibold">Welcome back</h1>
-          <a
-            href={`${backendUrl}/auth/google`}
-            className="bg-blue-500 text-white p-3 w-fit"
-          >
-            Continue with Google
-          </a>
+          <div className="w-full flex-1 flex flex-col items-center justify-center">
+            <h1 className="text-3xl font-semibold">Welcome back</h1>
+            <a
+              href={`${backendUrl}/auth/google`}
+              className="bg-blue-500 text-white p-3 w-fit"
+            >
+              Continue with Google
+            </a>
+          </div>
         </div>
         <div className="flex-1 flex flex-col items-center gap-6 w-full py-14 bg-red-300"></div>
       </div>
