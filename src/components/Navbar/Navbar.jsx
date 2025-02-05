@@ -27,10 +27,6 @@ function Navbar({ photo, displayName, user }) {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
-  const clearCookie = (name) => {
-    document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/;`;
-  };
-
   const handleLogout = async () => {
     setLoading(true);
     try {
