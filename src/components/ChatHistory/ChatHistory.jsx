@@ -7,7 +7,7 @@ function ChatHistory({ convs }) {
   const [searchValue, setSearchValue] = useState("");
   console.log(convs);
   const handleMigrate = (link) => {
-    Cookies.set("convId", response.data.conversationId, {
+    Cookies.set("convId", link, {
       expires: 1,
       path: "/",
     });
