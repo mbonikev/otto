@@ -95,30 +95,32 @@ function Navbar({ photo, displayName, user, convs, userId }) {
 
   const handleNew = async () => {
     const apiUrl = import.meta.env.VITE_BACKEND_API;
-      const apiKey = import.meta.env.VITE_GROQ_API_KEY;
+    const apiKey = import.meta.env.VITE_GROQ_API_KEY;
 
-      try {
-        const response = await axios.post(
-          `${apiUrl}/api/createconv`,
-          {
-            userId,
+    try {
+      const response = await axios.post(
+        `${apiUrl}/api/createconv`,
+        {
+          userId,
+        },
+        {
+          headers: {
+            Authorization: `Bearer ${apiKey}`,
+            "Content-Type": "application/json",
           },
-          {
-            headers: {
-              Authorization: `Bearer ${apiKey}`,
-              "Content-Type": "application/json",
-            },
-          }
-        );
-        console.log(response.data.conversationId)
-      } catch (error) {
-        setThinking(false);
-        console.error(
-          "Error:",
-          error
-        );
-      }
-  }
+        }
+      );
+      console.log(response.data.conversationId);
+      Cookies.set("convId", response.data.conversationId, {
+        expires: 1,
+        path: "/",
+      });
+      navigate(`?chat=${response.data.conversationId}`, { replace: true });
+    } catch (error) {
+      setThinking(false);
+      console.error("Error:", error);
+    }
+  };
 
   return (
     <div className="w-full h-[70px] min-h-[70px] bg-white grid grid-cols-3 text-dark-text px-4 sticky">
@@ -158,7 +160,10 @@ function Navbar({ photo, displayName, user, convs, userId }) {
                 shortcut="Alt + c"
               />
             </button>
-            <button onClick={handleNew} className="group h-10 w-auto aspect-square flex items-center justify-center text-2xl hover:bg-stone-100 text-dark-text-weak hover:text-dark-text rounded-full relative">
+            <button
+              onClick={handleNew}
+              className="group h-10 w-auto aspect-square flex items-center justify-center text-2xl hover:bg-stone-100 text-dark-text-weak hover:text-dark-text rounded-full relative"
+            >
               <RxPencil2 />
               <Tooltip title="New chat" placement="center" />
             </button>
