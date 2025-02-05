@@ -114,23 +114,8 @@ function Home() {
             "Content-Type": "application/json",
           },
         });
-        if (response.data.messages) {
-          const mappedMessages = response.data.messages.flatMap((msg) => [
-            {
-              role: "user",
-              content: msg.content[0]?.prompt, // User's message
-              title: msg.title || "Untitled",
-              convId: msg.conversationId,
-            },
-            {
-              role: "assistant",
-              content: msg.content[0]?.reply, // Assistant's reply
-              title: msg.title || "Untitled",
-              convId: msg.conversationId,
-            },
-          ]);
+        if (response.data.convsWithTitles) {
           setThinking(false);
-          setMessages(mappedMessages);
           setConvs(response.data.convsWithTitles);
         }
       } catch (error) {
