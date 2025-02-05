@@ -113,7 +113,7 @@ function Navbar({ photo, displayName, user, messages,convs }) {
                   animateChatsModal ? "translate-x-0" : "-translate-x-[300px]"
                 }`}
         >
-          <ChatHistory messages={messages} />
+          <ChatHistory convs={convs} />
         </div>
       )}
       {/* 1 */}
