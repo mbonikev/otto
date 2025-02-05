@@ -56,11 +56,9 @@ function PromptArea({
         const apiKey = import.meta.env.VITE_GROQ_API_KEY;
         try {
           const response = await axios.get(
-            `${apiUrl}/api/getconvs`,
+            `${apiUrl}/api/getconvs`, // Keep the URL as it is
             {
-              convId: retrieveId,
-            },
-            {
+              params: { convId: retrieveId }, // Pass convId as query parameter
               headers: {
                 Authorization: `Bearer ${apiKey}`,
                 "Content-Type": "application/json",
