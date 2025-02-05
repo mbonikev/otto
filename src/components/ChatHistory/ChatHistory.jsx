@@ -13,6 +13,9 @@ function ChatHistory({ messages }) {
       acc[msg.convId].push(msg);
       return acc;
     }, {});
+    const firstMessages = Object.values(groupedMessages).map(
+      (group) => group[0]
+    );
   }
   return (
     <div className="w-[300px] h-svh p-2">
