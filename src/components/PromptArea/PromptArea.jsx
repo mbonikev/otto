@@ -46,7 +46,7 @@ function PromptArea({
     if (retrieveId) {
       navigate(`?chat=${retrieveId}`, { replace: true });
     }
-    handleGetConvs();
+    
   }, [convId]);
 
   useEffect(() => {
@@ -72,6 +72,8 @@ function PromptArea({
         } catch (error) {}
       }
     };
+
+    handleGetConvs();
   }, []);
 
   const handleInput2Change = (e) => {
