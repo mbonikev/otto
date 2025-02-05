@@ -61,7 +61,7 @@ const ProtectedRoutes = () => {
   return user ? (
     <Outlet context={{ user, models }} />
   ) : (
-    <Navigate to="/login" />
+    <Navigate to="/chat" />
   );
 };
 
