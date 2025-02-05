@@ -15,6 +15,7 @@ import {
   HiMiniXCircle,
 } from "react-icons/hi2";
 import Cookies from "js-cookie";
+import { useParams } from "react-router-dom";
 
 function PromptArea({
   setMessages,
@@ -43,6 +44,7 @@ function PromptArea({
   };
 
   const submit = async () => {
+    const { id } = useParams()
     if (message !== "") {
       const apiUrl = import.meta.env.VITE_BACKEND_API;
       const apiKey = import.meta.env.VITE_GROQ_API_KEY;
