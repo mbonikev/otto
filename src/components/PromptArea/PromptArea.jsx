@@ -45,24 +45,36 @@ function PromptArea({
   };
 
   const submit = async () => {
-    const { id } = useParams() || "";
-    if (message !== "") {
+    const { id } = useParams(); // No need for || "" since useParams() returns an object
+    const convId = id || ""; // Ensure convId is always a string
+
+    if (message.trim() !== "") {
       const apiUrl = import.meta.env.VITE_BACKEND_API;
       const apiKey = import.meta.env.VITE_GROQ_API_KEY;
-      const routePath = user ? "/api/chat" : "/api/unsavedchat"
+      const routePath = user ? "/api/chat" : "/api/unsavedchat";
 
-      // Add user message to the state
+      // Store the message before resetting state
       const userMessage = { role: "user", content: message };
       setMessages((prev) => [...prev, userMessage]);
 
       setThinking(true);
+      const messageToSend = message; // Store message before resetting
       setMessage("");
-      textareaRef.current.style.height = "auto";
+
+      if (textareaRef.current) {
+        textareaRef.current.style.height = "auto";
+      }
 
       try {
         const response = await axios.post(
           `${apiUrl}${routePath}`,
-          { message, displayName, userId, selectedModel, convId: id },
+          {
+            message: messageToSend,
+            displayName,
+            userId,
+            selectedModel,
+            convId,
+          },
           {
             headers: {
               Authorization: `Bearer ${apiKey}`,
@@ -73,14 +85,13 @@ function PromptArea({
 
         const { title, message: assistantResponse } = response.data;
 
-        // console.log(assistantResponse);
         setThinking(false);
 
         // Add assistant's response with title to the state
         const assistantMessage = {
           role: "assistant",
           content: assistantResponse,
-          title: title, // Include the title
+          title: title || "Untitled",
         };
 
         setMessages((prev) => [...prev, assistantMessage]);
@@ -91,7 +102,10 @@ function PromptArea({
           error.response ? error.response.data : error.message
         );
         setMessage("");
-        textareaRef.current.style.height = "auto";
+
+        if (textareaRef.current) {
+          textareaRef.current.style.height = "auto";
+        }
       }
     }
   };
