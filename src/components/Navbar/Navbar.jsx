@@ -119,7 +119,25 @@ function Navbar({ photo, displayName, user }) {
       )}
       {/* 1 */}
       <div className="flex items-center justify-start gap-0">
-        {user && (
+        {user ? (
+          <>
+            <button
+              onClick={handleOpenChatsModal}
+              className="group h-10 w-auto aspect-square flex items-center justify-center text-2xl hover:bg-stone-100 text-dark-text-weak hover:text-dark-text rounded-full relative"
+            >
+              <HiOutlineChatBubbleLeftRight />
+              <Tooltip
+                title="Chat history"
+                placement="left"
+                shortcut="Alt + c"
+              />
+            </button>
+            <button className="group h-10 w-auto aspect-square flex items-center justify-center text-2xl hover:bg-stone-100 text-dark-text-weak hover:text-dark-text rounded-full relative">
+              <RxPencil2 />
+              <Tooltip title="New chat" placement="center" />
+            </button>
+          </>
+        ) : (
           <>
             <button
               onClick={handleOpenChatsModal}
