@@ -5,7 +5,7 @@ import Cookies from "js-cookie";
 const ProtectedRoutesLoggedIn = () => {
   const token = Cookies.get("token");
 
-  if (user) {
+  if (token) {
     return <Navigate to="/c/0" />;
   }
 
