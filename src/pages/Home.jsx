@@ -15,7 +15,6 @@ function Home() {
   const { displayName, photo, email, userId } = user || {};
   const [messages, setMessages] = useState([]);
   const [thinking, setThinking] = useState(false);
-  const [thinkingConvs, setThinkingConvs] = useState(false);
   const chatBoxRef = useRef(null);
   const { chat } = useParams();
   const [convId, setConvId] = useState("");
@@ -184,8 +183,8 @@ function Home() {
           convs={convs}
           userId={userId}
           setMessages={setMessages}
-          setThinking={setThinkingConvs}
-          thinking={thinkingConvs}
+          setThinking={setThinking}
+          thinking={thinking}
         />
       </div>
 
