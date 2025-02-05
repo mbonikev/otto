@@ -51,7 +51,8 @@ function PromptArea({
   useEffect(() => {
     const handleGetConvs = () => {
       if (convId) {
-        
+        const apiUrl = import.meta.env.VITE_BACKEND_API;
+        const apiKey = import.meta.env.VITE_GROQ_API_KEY;
       }
     };
   }, []);
