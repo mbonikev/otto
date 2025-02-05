@@ -85,7 +85,7 @@ function PromptArea({
           }
         );
         console.log(response.data)
-        if(!convId){
+        if(convId !== "" || convId !== null){
           setConvId(response.data.conversationId)
           navigate(`?chat=${response.data.conversationId}`, { replace: true });
         }
