@@ -64,46 +64,43 @@ function Home() {
   useEffect(() => {
     const handleGetConvs = async () => {
       const retrieveId = Cookies.get("convId") || "";
-      if (retrieveId) {
-        const apiUrl = import.meta.env.VITE_BACKEND_API;
-        const apiKey = import.meta.env.VITE_GROQ_API_KEY;
-        setThinking(true);
-        try {
-          const response = await axios.get(`${apiUrl}/api/getconvs`, {
-            params: { convId: retrieveId, userId },
-            headers: {
-              Authorization: `Bearer ${apiKey}`,
-              "Content-Type": "application/json",
+      const apiUrl = import.meta.env.VITE_BACKEND_API;
+      const apiKey = import.meta.env.VITE_GROQ_API_KEY;
+      setThinking(true);
+      try {
+        const response = await axios.get(`${apiUrl}/api/getconvs`, {
+          params: { convId: retrieveId, userId },
+          headers: {
+            Authorization: `Bearer ${apiKey}`,
+            "Content-Type": "application/json",
+          },
+        });
+        if (response.data.messages) {
+          const mappedMessages = response.data.messages.flatMap((msg) => [
+            {
+              role: "user",
+              content: msg.content[0]?.prompt, // User's message
+              title: msg.title || "Untitled",
+              convId: msg.conversationId,
             },
-          });
-          if (response.data.messages) {
-            const mappedMessages = response.data.messages.flatMap((msg) => [
-              {
-                role: "user",
-                content: msg.content[0]?.prompt, // User's message
-                title: msg.title || "Untitled",
-                convId: msg.conversationId,
-              },
-              {
-                role: "assistant",
-                content: msg.content[0]?.reply, // Assistant's reply
-                title: msg.title || "Untitled",
-                convId: msg.conversationId,
-              },
-            ]);
-            setThinking(false);
-            setMessages(mappedMessages);
-            setConvs(response.data.convsWithTitles)
-          }
-        } catch (error) {
-          console.error("conversations:", error);
+            {
+              role: "assistant",
+              content: msg.content[0]?.reply, // Assistant's reply
+              title: msg.title || "Untitled",
+              convId: msg.conversationId,
+            },
+          ]);
           setThinking(false);
-        } finally {
-          setThinking(false);
+          setMessages(mappedMessages);
+          setConvs(response.data.convsWithTitles);
         }
+      } catch (error) {
+        console.error("conversations:", error);
+        setThinking(false);
+      } finally {
+        setThinking(false);
       }
     };
-
 
     handleGetConvs();
   }, []);
