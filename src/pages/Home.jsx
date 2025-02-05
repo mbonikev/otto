@@ -190,6 +190,7 @@ function Home() {
           setMessages={setMessages}
           setThinking={setThinking}
           thinking={thinking}
+          loadingConvs={loadingConvs}
         />
       </div>
 
