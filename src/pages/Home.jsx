@@ -14,7 +14,7 @@ function Home() {
   const { user, models } = useOutletContext() || {};
   const { displayName, photo, email, userId } = user || {};
   const [messages, setMessages] = useState([]);
-  const [thinking, setThinking] = useState(true);
+  const [thinking, setThinking] = useState(false);
   const chatBoxRef = useRef(null);
   const { chat } = useParams();
   const [convId, setConvId] = useState("");
