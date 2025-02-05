@@ -46,27 +46,6 @@ function PromptArea({
     if (retrieveId) {
       navigate(`?chat=${retrieveId}`, { replace: true });
     }
-    const handleGetConvs = async () => {
-      if (convId) {
-        const apiUrl = import.meta.env.VITE_BACKEND_API;
-        const apiKey = import.meta.env.VITE_GROQ_API_KEY;
-        try {
-          const response = await axios.get(
-            `${apiUrl}/api/getconvs`,
-            {
-              convId,
-            },
-            {
-              headers: {
-                Authorization: `Bearer ${apiKey}`,
-                "Content-Type": "application/json",
-              },
-            }
-          );
-          console.log(response);
-        } catch (error) {}
-      }
-    };
     handleGetConvs();
   }, [convId]);
 
