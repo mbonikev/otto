@@ -11,7 +11,7 @@ import Tooltip from "../Tooltip/Tooltip";
 import { RxPencil2 } from "react-icons/rx";
 import { IoShareSocialOutline } from "react-icons/io5";
 import ChatHistory from "../ChatHistory/ChatHistory";
-import { replace, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { LuLoaderCircle } from "react-icons/lu";
 import axios from "axios";
 import { BsIncognito, BsLockFill, BsStars } from "react-icons/bs";
@@ -104,9 +104,10 @@ function Navbar({
   }, []);
 
   const handleNew = () => {
-    Cookies.remove("convId");
-    setMessages([]);
-    navigate("/", { replace: true });
+      Cookies.remove("convId")
+      setMessages([])
+      window.location.reload()
+
   };
 
   return (
