@@ -23,7 +23,7 @@ function Home() {
       // Modify URL without reloading the page
       navigate(`?chat=${newParam}`, { replace: true });
     };
-    handleChangeParam();
+    handleChangeParam("auto");
   }, []);
 
   // Scroll to bottom when messages update
