@@ -75,6 +75,7 @@ function Home() {
               "Content-Type": "application/json",
             },
           });
+          setThinking(false);
           console.log(response.data);
           if (response.data) {
             const mappedMessages = response.data.flatMap((msg) => [
@@ -94,7 +95,7 @@ function Home() {
 
             setMessages(mappedMessages);
           }
-          setThinking(false);
+          
         } catch (error) {
           console.error("Error fetching conversations:", error);
           setThinking(false);
