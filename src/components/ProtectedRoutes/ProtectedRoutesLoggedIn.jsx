@@ -28,7 +28,7 @@ const ProtectedRoutesLoggedIn = () => {
 
   // If the user is logged in (i.e., token is present), redirect to chat page (e.g., /c/121)
   if (user) {
-    return <Navigate to="/c/121" />;
+    return <Navigate to="/c/0" />;
   }
 
   // If the user is not logged in, show the login page
