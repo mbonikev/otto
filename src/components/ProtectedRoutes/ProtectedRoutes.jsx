@@ -18,7 +18,7 @@ const ProtectedRoutes = () => {
         });
 
         setUser(response.data.user || null);
-
+        console.log(response.data.user)
         // ✅ Set the default model cookie if not set
         if (!Cookies.get("selectedModel")) {
           Cookies.set("selectedModel", "llama3-8b-8192", {
