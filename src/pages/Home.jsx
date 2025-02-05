@@ -90,14 +90,12 @@ function Home() {
               convId: msg.conversationId,
             },
           ]);
-          setThinking(false);
           setMessages(mappedMessages);
         }
       } catch (error) {
         console.error("messages:", error);
-        setThinking(false);
       } finally {
-        setThinking(false);
+        setThinking(false); // Ensure this is only called once after completion
       }
     };
 
@@ -115,20 +113,19 @@ function Home() {
           },
         });
         if (response.data.convsWithTitles) {
-          setThinking(false);
           setConvs(response.data.convsWithTitles);
         }
       } catch (error) {
         console.error("conversations:", error);
-        setThinking(false);
       } finally {
-        setThinking(false);
+        setThinking(false); // Ensure this is only called once after completion
       }
     };
 
-    handleGetConvs()
+    // Call both functions to fetch data
+    handleGetConvs();
     handleGetMessages();
-  }, [messages]);
+  }, []); // Only run once when the component mounts
 
   // Function to render content with code blocks
   const renderContent = (msg) => {
