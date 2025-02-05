@@ -106,6 +106,7 @@ function Home() {
       const apiUrl = import.meta.env.VITE_BACKEND_API;
       const apiKey = import.meta.env.VITE_GROQ_API_KEY;
       try {
+        setThinking(true);
         const response = await axios.get(`${apiUrl}/api/getconvs`, {
           params: { userId },
           headers: {
@@ -118,6 +119,8 @@ function Home() {
         }
       } catch (error) {
         console.error("conversations:", error);
+      } finally{
+        setThinking(false);
       }
     };
 
