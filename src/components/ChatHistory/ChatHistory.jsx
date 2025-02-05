@@ -37,7 +37,7 @@ function ChatHistory() {
           </h1> */}
           {/* chats */}
           <div className="flex flex-col w-full h-fit">
-            {[...Array(20)].map((_, index) => (
+            {[...Array(220)].map((_, index) => (
               <Link
                 to={"/"}
                 key={index}
