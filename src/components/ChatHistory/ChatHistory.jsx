@@ -5,6 +5,9 @@ import { Link } from "react-router-dom";
 function ChatHistory({ convs }) {
   const [searchValue, setSearchValue] = useState("");
   console.log(convs);
+  const handleMigrate = (link) => {
+
+  }
   return (
     <div className="w-[300px] h-svh p-2">
       <div className="w-full h-full bg-white rounded-2xl p-2 flex flex-col">
