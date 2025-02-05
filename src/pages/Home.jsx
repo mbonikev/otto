@@ -46,11 +46,13 @@ function Home() {
         const chatBoxHeight = chatBox.clientHeight;
         const scrollPosition = chatBox.scrollTop;
 
+        // Scroll to bottom only when new message is added
         if (
-          lastMessageOffsetTop + lastMessage.clientHeight - scrollPosition >
-          160
+          lastMessageOffsetTop + lastMessage.clientHeight >
+          scrollPosition + chatBoxHeight - 160
         ) {
-          chatBox.scrollTop = lastMessageOffsetTop - 160;
+          chatBox.scrollTop =
+            lastMessageOffsetTop + lastMessage.clientHeight - chatBoxHeight;
         }
       }
     }
