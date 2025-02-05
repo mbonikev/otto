@@ -46,6 +46,7 @@ function PromptArea({
     if (message !== "") {
       const apiUrl = import.meta.env.VITE_BACKEND_API;
       const apiKey = import.meta.env.VITE_GROQ_API_KEY;
+      const routePath = user ? "" : "/api/chat"
 
       // Add user message to the state
       const userMessage = { role: "user", content: message };
@@ -57,7 +58,7 @@ function PromptArea({
 
       try {
         const response = await axios.post(
-          `${apiUrl}/api/chat`,
+          `${apiUrl}${routePath}`,
           { message, displayName, userId: email, selectedModel },
           {
             headers: {
