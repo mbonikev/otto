@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { HiMiniMagnifyingGlass, HiMiniXCircle } from "react-icons/hi2";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Cookies from "js-cookie";
 
 function ChatHistory({ convs }) {
   const [searchValue, setSearchValue] = useState("");
+  const location = useLocation()
   console.log(convs);
   const handleMigrate = (link) => {
     Cookies.set("convId", link, {
