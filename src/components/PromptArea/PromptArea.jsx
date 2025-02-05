@@ -103,7 +103,7 @@ function PromptArea({
           });
         }
         const { title, message: assistantResponse } = response.data;
-        console.log(messages)
+        
         setThinking(false);
 
         // Add assistant's response with title to the state
