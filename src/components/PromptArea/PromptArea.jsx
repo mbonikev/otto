@@ -48,6 +48,10 @@ function PromptArea({
     }
   }, [convId]);
 
+  useEffect(() => {
+    
+  },[])
+
   const handleInput2Change = (e) => {
     const newInput = e.target.value;
     // console.log(JSON.stringify(message));
