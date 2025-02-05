@@ -15,8 +15,6 @@ function Home() {
   const { displayName, photo, email, userId } = user || {};
   const [messages, setMessages] = useState([]);
   const [thinking, setThinking] = useState(false);
-  const [thinkingMessages, setThinkingMessages] = useState(false);
-  const [loadingConvs, setLoadingConvs] = useState(false);
   const chatBoxRef = useRef(null);
   const { chat } = useParams();
   const [convId, setConvId] = useState("");
@@ -65,12 +63,11 @@ function Home() {
 
   useEffect(() => {
     const handleGetMessages = async () => {
-      const retrieveId = Cookies.get("convId");
+      const retrieveId = Cookies.get("convId") || "";
       const apiUrl = import.meta.env.VITE_BACKEND_API;
       const apiKey = import.meta.env.VITE_GROQ_API_KEY;
-
-      setThinkingMessages(true);
       try {
+        setThinking(true);
         const response = await axios.get(`${apiUrl}/api/getmsg`, {
           params: { convId: retrieveId },
           headers: {
@@ -78,8 +75,8 @@ function Home() {
             "Content-Type": "application/json",
           },
         });
-        if (response.data.messages) {
-          const mappedMessages = response.data.messages.flatMap((msg) => [
+        if (response.data) {
+          const mappedMessages = response.data.flatMap((msg) => [
             {
               role: "user",
               content: msg.content[0]?.prompt, // User's message
@@ -94,11 +91,11 @@ function Home() {
             },
           ]);
           setMessages(mappedMessages);
-          setThinkingMessages(false);
         }
       } catch (error) {
         console.error("messages:", error);
-        setThinkingMessages(false);
+      } finally {
+        setThinking(false); // Ensure this is only called once after completion
       }
     };
 
@@ -107,6 +104,7 @@ function Home() {
       const apiUrl = import.meta.env.VITE_BACKEND_API;
       const apiKey = import.meta.env.VITE_GROQ_API_KEY;
       try {
+        setThinking(true);
         const response = await axios.get(`${apiUrl}/api/getconvs`, {
           params: { userId },
           headers: {
@@ -119,13 +117,15 @@ function Home() {
         }
       } catch (error) {
         console.error("conversations:", error);
+      } finally {
+        setThinking(false); // Ensure this is only called once after completion
       }
     };
 
     // Call both functions to fetch data
     handleGetConvs();
     handleGetMessages();
-  }, [messages]);
+  }, []); // Only run once when the component 
 
   // Function to render content with code blocks
   const renderContent = (msg) => {
@@ -232,7 +232,7 @@ function Home() {
           </div>
         ) : (
           <div className="w-full h-full flex flex-col items-center justify-center">
-            {thinkingMessages ? (
+            {thinking ? (
               <RiLoader2Fill className="text-2xl w-auto animate-spin text-dark-text-weak/50 stroke-[1px]" />
             ) : (
               <h1 className="text-3xl font-semibold">How can I assist you?</h1>
