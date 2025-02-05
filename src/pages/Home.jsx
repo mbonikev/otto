@@ -62,12 +62,12 @@ function Home() {
   }, [messages]);
 
   useEffect(() => {
+    setThinking(true);
     const handleGetMessages = async () => {
       const retrieveId = Cookies.get("convId") || "";
       const apiUrl = import.meta.env.VITE_BACKEND_API;
       const apiKey = import.meta.env.VITE_GROQ_API_KEY;
       try {
-        setThinking(true);
         const response = await axios.get(`${apiUrl}/api/getmsg`, {
           params: { convId: retrieveId },
           headers: {
