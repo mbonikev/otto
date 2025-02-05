@@ -19,7 +19,15 @@ import { BiSolidLockAlt } from "react-icons/bi";
 import Cookies from "js-cookie";
 import avatar3 from "/avatars/avatar3.png";
 
-function Navbar({ photo, displayName, user, convs, userId, setMessages }) {
+function Navbar({
+  photo,
+  displayName,
+  user,
+  convs,
+  userId,
+  setMessages,
+  setThinking,
+}) {
   const [showPopup, setShowPopup] = useState(false);
   const profileRef = useRef(null);
   const popupRef = useRef(null);
@@ -96,7 +104,7 @@ function Navbar({ photo, displayName, user, convs, userId, setMessages }) {
   const handleNew = async () => {
     const apiUrl = import.meta.env.VITE_BACKEND_API;
     const apiKey = import.meta.env.VITE_GROQ_API_KEY;
-
+    setThinking(true);
     try {
       const response = await axios.post(
         `${apiUrl}/api/createconv`,
@@ -116,7 +124,10 @@ function Navbar({ photo, displayName, user, convs, userId, setMessages }) {
         path: "/",
       });
       navigate(`?chat=${response.data.conversationId}`, { replace: true });
-      setMessages("")
+      setTimeout(() => {
+        setThinking(false);
+        setMessages("");
+      }, 1000);
     } catch (error) {
       setThinking(false);
       console.error("Error:", error);
