@@ -85,7 +85,7 @@ function PromptArea({
         );
         console.log(response.data)
         if(!convId){
-          set
+          setConvId(response.data.conversationId)
         }
         const { title, message: assistantResponse } = response.data;
 
