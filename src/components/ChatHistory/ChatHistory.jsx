@@ -16,7 +16,7 @@ function ChatHistory({ messages }) {
   const firstMessages =
     Object.values(groupedMessages).map((group) => group[0]) || [];
 
-  console.log(firstMessages);
+  console.log(messages);
 
   return (
     <div className="w-[300px] h-svh p-2">
