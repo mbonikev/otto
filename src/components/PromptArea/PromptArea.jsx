@@ -65,6 +65,7 @@ function PromptArea({
               },
             }
           );
+          
           const transformedMessages = response.data.map((message) => {
             return {
               role: message.reply ? "assistant" : "user",
@@ -72,7 +73,7 @@ function PromptArea({
               title: message.title,
             };
           });
-
+          console.log(response.data)
           // Store the transformed messages
           setMessages(transformedMessages);
           console.log(transformedMessages);
