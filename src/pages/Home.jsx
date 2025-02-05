@@ -162,6 +162,7 @@ function Home() {
           displayName={displayName}
           user={user}
           convs={convs}
+          userId={userId}
         />
       </div>
 
