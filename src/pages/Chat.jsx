@@ -91,7 +91,7 @@ function Chat() {
   return (
     <div className="w-full h-svh flex flex-col relative">
       <div className="w-full h-fit z-30 fixed top-0">
-        <Navbar photo={photo} displayName={displayName} user={user}/>
+        <Navbar photo={photo} displayName={displayName}/>
       </div>
 
       <div
@@ -147,10 +147,6 @@ function Chat() {
         setMessages={setMessages}
         thinking={thinking}
         setThinking={setThinking}
-        displayName={displayName}
-        email={email}
-        models={models}
-        user={user}
       />
     </div>
   );
