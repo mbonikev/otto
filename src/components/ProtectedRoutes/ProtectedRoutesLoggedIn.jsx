@@ -7,7 +7,7 @@ const ProtectedRoutesLoggedIn = () => {
   const loggedIn = Cookies.get("token");
 
   return loggedIn ? (
-    <Outlet {{user: "", models: ''}} />
+    <Outlet context={{ user: "", models: "" }} />
   ) : (
     <Navigate to="/c/222" />
   );
