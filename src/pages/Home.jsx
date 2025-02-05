@@ -114,14 +114,14 @@ function Home() {
           },
         });
         if (response.data.convsWithTitles) {
-          // setThinking(false);
+          setThinking(false);
           setConvs(response.data.convsWithTitles);
         }
       } catch (error) {
         console.error("conversations:", error);
-        // setThinking(false);
+        setThinking(false);
       } finally {
-        // setThinking(false);
+        setThinking(false);
       }
     };
 
