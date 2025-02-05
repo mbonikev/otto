@@ -15,6 +15,6 @@ const ProtectedRoutesLoggedIn = () => {
   if (token === null) {
     return <></>;
   }
-  return token ? <Navigate to={"/"} /> : <Outlet />;
+  return token ? <Navigate to={"/c/123"} /> : <Outlet />;
 };
 export default ProtectedRoutesLoggedIn;
