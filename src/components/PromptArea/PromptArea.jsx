@@ -54,7 +54,7 @@ function PromptArea({
         const apiUrl = import.meta.env.VITE_BACKEND_API;
         const apiKey = import.meta.env.VITE_GROQ_API_KEY;
         try {
-          const response = await axios.post(
+          const response = await axios.get(
             `${apiUrl}/api/getconvs`,
             {
               convId,
@@ -135,6 +135,7 @@ function PromptArea({
         };
 
         setMessages((prev) => [...prev, assistantMessage]);
+        console.log(message)
       } catch (error) {
         setThinking(false);
         console.error(
