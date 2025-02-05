@@ -48,9 +48,9 @@ const ProtectedRoutesLoggedIn = () => {
     if (token) {
       fetchModels();
       fetchUserStatus();
-    } else {
-      setLoading(false);
-      setUser(null);
+    } else{
+      setLoading(false)
+      setUser(null)
     }
   }, []);
 
@@ -62,11 +62,7 @@ const ProtectedRoutesLoggedIn = () => {
     );
   }
 
-  return user ? (
-    <Outlet context={{ user, models }} />
-  ) : (
-    <Outlet context={{ user, models }} />
-  );
+  return user ? <Navigate to="/c/1" /> : <Outlet context={{ user, models }} />;
 };
 
 export default ProtectedRoutesLoggedIn;
