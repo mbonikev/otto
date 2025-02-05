@@ -9,7 +9,7 @@ const ProtectedRoutesLoggedIn = () => {
   return loggedIn ? (
     <Outlet />
   ) : (
-    <Navigate to="/login" />
+    <Navigate to="/" />
   );
 };
 
