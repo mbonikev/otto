@@ -67,36 +67,37 @@ function Home() {
       const apiUrl = import.meta.env.VITE_BACKEND_API;
       const apiKey = import.meta.env.VITE_GROQ_API_KEY;
       setThinking(true);
-      try {
-        const response = await axios.get(`${apiUrl}/api/getmsg`, {
-          params: { convId: retrieveId },
-          headers: {
-            Authorization: `Bearer ${apiKey}`,
-            "Content-Type": "application/json",
-          },
-        });
-        if (response.data) {
-          const mappedMessages = response.data.flatMap((msg) => [
-            {
-              role: "user",
-              content: msg.content[0]?.prompt, // User's message
-              title: msg.title || "Untitled",
-              convId: msg.conversationId,
+      if (retrieveId !== "") {
+        try {
+          const response = await axios.get(`${apiUrl}/api/getmsg`, {
+            params: { convId: retrieveId },
+            headers: {
+              Authorization: `Bearer ${apiKey}`,
+              "Content-Type": "application/json",
             },
-            {
-              role: "assistant",
-              content: msg.content[0]?.reply, // Assistant's reply
-              title: msg.title || "Untitled",
-              convId: msg.conversationId,
-            },
-          ]);
-          setMessages(mappedMessages);
+          });
+          if (response.data) {
+            const mappedMessages = response.data.flatMap((msg) => [
+              {
+                role: "user",
+                content: msg.content[0]?.prompt, // User's message
+                title: msg.title || "Untitled",
+                convId: msg.conversationId,
+              },
+              {
+                role: "assistant",
+                content: msg.content[0]?.reply, // Assistant's reply
+                title: msg.title || "Untitled",
+                convId: msg.conversationId,
+              },
+            ]);
+            setMessages(mappedMessages);
+            setThinking(false);
+          }
+        } catch (error) {
+          console.error("messages:", error);
           setThinking(false);
         }
-        
-      } catch (error) {
-        console.error("messages:", error);
-        setThinking(false);
       }
     };
 
