@@ -5,9 +5,10 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneLight } from "react-syntax-highlighter/dist/esm/styles/prism";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import { useOutletContext } from "react-router-dom";
+import { useOutletContext, useParams } from "react-router-dom";
 
 function Chat() {
+  const { id } = useParams();
   const { user, models } = useOutletContext();
   const { displayName, photo, email } = user || {};
   const [messages, setMessages] = useState([]);
