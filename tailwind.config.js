@@ -14,7 +14,7 @@ export default {
         "body-dark": "#212121",
         "card-dark-1": "#303030",
         "card-dark-2": "#2f2f2f",
-        "": "",
+        "light-color": "#ececec",
       },
       animation: {
         spinLoader: "spin .5s linear infinite",
