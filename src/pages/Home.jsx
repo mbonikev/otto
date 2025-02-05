@@ -108,7 +108,7 @@ function Home() {
       const apiKey = import.meta.env.VITE_GROQ_API_KEY;
       try {
         setThinking(true);
-        const response = await axios.get(`${apiUrl}/api/getmsg`, {
+        const response = await axios.get(`${apiUrl}/api/getconvs`, {
           params: { convId: retrieveId, userId },
           headers: {
             Authorization: `Bearer ${apiKey}`,
@@ -142,7 +142,7 @@ function Home() {
       }
     };
 
-
+    handleGetConvs()
     handleGetMessages();
   }, [messages]);
 
