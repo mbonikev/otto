@@ -9,7 +9,7 @@ import { useNavigate, useOutletContext } from "react-router-dom";
 
 function Home() {
   const { user, models } = useOutletContext() || {};
-  const { displayName, photo, email } = user || {};
+  const { displayName, photo, email, userId } = user || {};
   const [messages, setMessages] = useState([]);
   const [thinking, setThinking] = useState(false);
   const chatBoxRef = useRef(null);
@@ -164,6 +164,7 @@ function Home() {
         email={email}
         models={models}
         user={user}
+        userId={userId}
       />
     </div>
   );
