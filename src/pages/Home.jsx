@@ -75,8 +75,8 @@ function Home() {
             "Content-Type": "application/json",
           },
         });
-        if (response.data.messages) {
-          const mappedMessages = response.data.messages.flatMap((msg) => [
+        if (response.data) {
+          const mappedMessages = response.data.flatMap((msg) => [
             {
               role: "user",
               content: msg.content[0]?.prompt, // User's message
