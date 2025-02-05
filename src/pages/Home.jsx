@@ -69,7 +69,7 @@ function Home() {
         setThinking(true);
         try {
           const response = await axios.get(`${apiUrl}/api/getconvs`, {
-            params: { convId: retrieveId },
+            params: { convId: retrieveId, userId },
             headers: {
               Authorization: `Bearer ${apiKey}`,
               "Content-Type": "application/json",
