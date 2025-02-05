@@ -4,10 +4,16 @@ import { Link } from "react-router-dom";
 
 function ChatHistory({ messages }) {
   const [searchValue, setSearchValue] = useState("");
-  const [convs, setConvs] = useState([])
-  // if (messages){
-    console.log(messages)
-
+  const [convs, setConvs] = useState([]);
+  if (messages) {
+    const groupedMessages = messages.reduce((acc, msg) => {
+      if (!acc[msg.convId]) {
+        acc[msg.convId] = []; // Initialize array if not exists
+      }
+      acc[msg.convId].push(msg);
+      return acc;
+    }, {});
+  }
   return (
     <div className="w-[300px] h-svh p-2">
       <div className="w-full h-full bg-white rounded-2xl p-2 flex flex-col">
@@ -41,15 +47,17 @@ function ChatHistory({ messages }) {
           </h1> */}
           {/* chats */}
           <div className="flex flex-col w-full h-fit">
-            {messages.filter((msg) => msg.role === "user").map((msg, index) => (
-              <Link
-                to={"/"}
-                key={index}
-                className="w-full px-2.5 py-2 hover:bg-stone-100 rounded-xl text-sm text-dark-text"
-              >
-                {msg.title}
-              </Link>
-            ))}
+            {messages
+              .filter((msg) => msg.role === "user")
+              .map((msg, index) => (
+                <Link
+                  to={"/"}
+                  key={index}
+                  className="w-full px-2.5 py-2 hover:bg-stone-100 rounded-xl text-sm text-dark-text"
+                >
+                  {msg.title}
+                </Link>
+              ))}
           </div>
         </div>
       </div>
