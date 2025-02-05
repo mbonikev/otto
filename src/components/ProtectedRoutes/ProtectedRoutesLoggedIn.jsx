@@ -1,20 +1,22 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import { Outlet, Navigate } from "react-router-dom";
-import Cookies from "js-cookie";
 
 const ProtectedRoutesLoggedIn = () => {
   const [token, setToken] = useState(null);
+
   useEffect(() => {
-    const tokenCheck = Cookies.get("token");
-    if (tokenCheck) {
-      setToken(true);
-    } else {
-      setToken(false);
-    }
+    // Directly checking if the "token" cookie exists
+    const tokenCheck = document.cookie
+      .split("; ")
+      .find((row) => row.startsWith("token="));
+    setToken(tokenCheck ? true : false); // Set token to true if found, otherwise false
   }, []);
+
   if (token === null) {
-    return <></>;
+    return <></>; // You could also add a loading spinner here while checking
   }
+
   return token ? <Navigate to={"/c/123"} /> : <Outlet />;
 };
+
 export default ProtectedRoutesLoggedIn;
