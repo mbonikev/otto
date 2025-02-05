@@ -37,7 +37,7 @@ function PromptArea({
   );
   const [searchModel, setSearchModel] = useState("");
   const { chat } = useParams();
-  const [convId, setConvId] = useState(Cookies.get("convId"));
+  const [convId, setConvId] = useState(Cookies.get("convId") || );
   const navigate = useNavigate();
   if (convId !== "" || convId !== null) {
     navigate(`?chat=${convId}`, { replace: true });
