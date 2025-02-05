@@ -62,7 +62,7 @@ function Home() {
   }, [messages]);
 
   useEffect(() => {
-    const handleGetConvs = async () => {
+    const handleGetMessages = async () => {
       const retrieveId = Cookies.get("convId") || "";
       const apiUrl = import.meta.env.VITE_BACKEND_API;
       const apiKey = import.meta.env.VITE_GROQ_API_KEY;
@@ -102,7 +102,7 @@ function Home() {
       }
     };
 
-    handleGetConvs();
+    handleGetMessages();
   }, [messages]);
 
   // Function to render content with code blocks
