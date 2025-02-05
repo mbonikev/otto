@@ -44,7 +44,7 @@ function PromptArea({
   };
 
   const submit = async () => {
-    const { id } = useParams() || null;
+    const { id } = useParams() || "";
     if (message !== "") {
       const apiUrl = import.meta.env.VITE_BACKEND_API;
       const apiKey = import.meta.env.VITE_GROQ_API_KEY;
@@ -61,7 +61,7 @@ function PromptArea({
       try {
         const response = await axios.post(
           `${apiUrl}${routePath}`,
-          { message, displayName, userId: email, selectedModel },
+          { message, displayName, userId: email, selectedModel, id },
           {
             headers: {
               Authorization: `Bearer ${apiKey}`,
