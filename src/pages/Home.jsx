@@ -63,7 +63,7 @@ function Home() {
 
   useEffect(() => {
     const handleGetConvs = async () => {
-      const retrieveId = Cookies.get("convId") ?? chat;
+      const retrieveId = Cookies.get("convId") || "";
       if (retrieveId) {
         const apiUrl = import.meta.env.VITE_BACKEND_API;
         const apiKey = import.meta.env.VITE_GROQ_API_KEY;
