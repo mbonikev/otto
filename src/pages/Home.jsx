@@ -82,13 +82,13 @@ function Home() {
                 role: "user",
                 content: msg.content[0]?.prompt, // User's message
                 title: msg.title || "Untitled",
-                convId: conversationId,
+                convId: msg.conversationId,
               },
               {
                 role: "assistant",
                 content: msg.content[0]?.reply, // Assistant's reply
                 title: msg.title || "Untitled",
-                convId: conversationId,
+                convId: msg.conversationId,
               },
             ]);
 
