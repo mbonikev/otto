@@ -197,8 +197,6 @@ function PromptArea({
                 </div>
               ) : (
                 <div
-                  ref={modelsButtonRef}
-                  onClick={() => setShowModels(true)}
                   className="group cursor-pointer w-full h-full flex items-center justify-center gap-1 hover:text-dark-text"
                 >
                   <LuBrain className="text-lg text-purple-500" />
