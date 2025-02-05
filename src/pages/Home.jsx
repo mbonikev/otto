@@ -91,11 +91,10 @@ function Home() {
             },
           ]);
           setMessages(mappedMessages);
-          setThinking(false);
+          
         }
       } catch (error) {
         console.error("messages:", error);
-        setThinking(false);
       }
     };
 
