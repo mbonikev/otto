@@ -13,6 +13,16 @@ function Home() {
   const [messages, setMessages] = useState([]);
   const [thinking, setThinking] = useState(false);
   const chatBoxRef = useRef(null);
+  const [param, setParam] = useState("default");
+
+  const handleChangeParam = (newParam) => {
+    setParam(newParam);
+
+    // Modify URL without reloading the page
+    navigate(`?param=${newParam}`, { replace: true });
+  };
+
+  handleChangeParam()
 
   // Scroll to bottom when messages update
   useEffect(() => {
