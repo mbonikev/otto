@@ -3,15 +3,18 @@ import { Outlet, Navigate } from "react-router-dom";
 import Cookies from "js-cookie";
 
 const ProtectedRoutesLoggedIn = () => {
-  const token = Cookies.get("token");
-
-  // If token exists, redirect to /c/0
-  if (token) {
-    return <Navigate to="/c/0" replace />;
+  const [token, setToken] = useState(null); // Initialize with null
+  useEffect(() => {
+    const tokenCheck = Cookies.get("token");
+    if (tokenCheck) {
+      setToken(true);
+    } else {
+      setToken(false);
+    }
+  }, []);
+  if (token === null) {
+    return <></>;
   }
-  
-  // If no token, allow access to the protected routes
-  return <Outlet />;
+  return token ? <Navigate to={"/"} /> : <Outlet />;
 };
-
 export default ProtectedRoutesLoggedIn;
