@@ -20,6 +20,7 @@ function Home() {
   const [convId, setConvId] = useState("");
   const navigate = useNavigate();
   const [param, setParam] = useState("default");
+  const [convs, setConvs] = useState([]);
 
   useEffect(() => {
     const handleChangeParam = (newParam) => {
@@ -93,6 +94,7 @@ function Home() {
             ]);
             setThinking(false);
             setMessages(mappedMessages);
+            setConvs(response.data.convsWithTitles)
           }
         } catch (error) {
           console.error("conversations:", error);
