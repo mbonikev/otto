@@ -8,7 +8,7 @@ import remarkGfm from "remark-gfm";
 import { useOutletContext } from "react-router-dom";
 
 function Home() {
-  const { user, models } = useOutletContext();
+  const { user, models } = useOutletContext() || null;
   const { displayName, photo, email } = user || {};
   const [messages, setMessages] = useState([]);
   const [thinking, setThinking] = useState(false);
