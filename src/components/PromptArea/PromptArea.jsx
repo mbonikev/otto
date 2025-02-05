@@ -115,7 +115,7 @@ function PromptArea({
             },
           }
         );
-        console.log(response.data);
+        // console.log(response.data);
         if (convId !== "" || convId !== null) {
           setConvId(response.data.conversationId);
           navigate(`?chat=${response.data.conversationId}`, { replace: true });
