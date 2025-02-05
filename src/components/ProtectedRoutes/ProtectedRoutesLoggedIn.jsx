@@ -50,6 +50,7 @@ const ProtectedRoutesLoggedIn = () => {
       fetchUserStatus();
     } else{
       setLoading(false)
+      setUser(null)
     }
   }, []);
 
