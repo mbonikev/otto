@@ -15,6 +15,12 @@ export default {
         "card-dark-1": "#303030",
         "card-dark-2": "#2f2f2f",
         "light-color": "#ececec",
+        "light-color-weak":"#b4b4b4",
+        "":"",
+        "":"",
+        "":"",
+        "":"",
+        "":"",
       },
       animation: {
         spinLoader: "spin .5s linear infinite",
