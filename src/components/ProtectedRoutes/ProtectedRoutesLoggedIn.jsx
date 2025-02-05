@@ -1,53 +1,36 @@
+// Frontend (React) - Custom Protected Route Logic:
 import { useEffect, useState } from "react";
 import { Outlet, Navigate } from "react-router-dom";
 import axios from "axios";
-import Cookies from "js-cookie"; // Install via `npm install js-cookie`
 
-const ProtectedRoutes = () => {
+const ProtectedRoute = () => {
   const apiUrl = import.meta.env.VITE_BACKEND_API;
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [models, setModels] = useState([]);
 
   useEffect(() => {
+    // Check if the user is logged in by fetching user status from the backend
     const fetchUserStatus = async () => {
       try {
         const response = await axios.get(`${apiUrl}/auth/status`, {
-          withCredentials: true,
+          withCredentials: true, // Include cookies for the token
         });
-
-        setUser(response.data.user || null);
-
-        // ✅ Set the default model cookie if not set
-        if (!Cookies.get("selectedModel")) {
-          Cookies.set("selectedModel", "llama3-8b-8192", {
-            expires: 7,
-            path: "/",
-          });
-        }
+        setUser(response.data.user);
       } catch (error) {
-        console.error("Error fetching user status:", error);
-        setUser(null);
+        setUser(null); // User is not logged in, redirect to login
       } finally {
         setLoading(false);
       }
     };
+
     fetchUserStatus();
-  }, []);
+  }, [apiUrl]);
 
   if (loading) {
-    return (
-      <div className="w-full h-screen flex items-center justify-center">
-        <img src="./logo.png" className="h-10 w-auto animate-spinLoader" />
-      </div>
-    );
+    return <div>Loading...</div>; // You can display a loading spinner or placeholder
   }
 
-  return user ? (
-    <Outlet context={{ user, models: {} }} />
-  ) : (
-    <Navigate to="/c/12" />
-  );
+  return user ? <Outlet /> : <Navigate to="/login" />;
 };
 
-export default ProtectedRoutes;
+export default ProtectedRoute;
