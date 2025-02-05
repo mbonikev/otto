@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Outlet, Navigate, useLocation } from "react-router-dom";
+import { Outlet, Navigate } from "react-router-dom";
 import axios from "axios";
 import Cookies from "js-cookie"; // Install via `npm install js-cookie`
 
@@ -8,7 +8,6 @@ const ProtectedRoutes = () => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
   const [models, setModels] = useState([]);
-  const location = useLocation();  // To get the current route
 
   useEffect(() => {
     const fetchUserStatus = async () => {
@@ -18,7 +17,7 @@ const ProtectedRoutes = () => {
         });
 
         setUser(response.data.user || null);
-        console.log(response.data.user)
+
         // ✅ Set the default model cookie if not set
         if (!Cookies.get("selectedModel")) {
           Cookies.set("selectedModel", "llama3-8b-8192", {
@@ -57,11 +56,6 @@ const ProtectedRoutes = () => {
         <img src="./logo.png" className="h-10 w-auto animate-spinLoader" />
       </div>
     );
-  }
-
-  // Redirect logged-in users from `/` and `/login` to `/c/:id`
-  if (user && (location.pathname === "/" || location.pathname === "/login")) {
-    return <Navigate to={`/c/${user._id}`} />;
   }
 
   return user ? (
