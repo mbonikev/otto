@@ -119,7 +119,7 @@ function Home() {
         }
       } catch (error) {
         console.error("conversations:", error);
-      } finally{
+      } finally {
         setThinking(false);
       }
     };
