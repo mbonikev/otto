@@ -36,8 +36,8 @@ function PromptArea({
     Cookies.get("selectedModel") || "llama3-8b-8192"
   );
   const [searchModel, setSearchModel] = useState("");
-  const { id } = useParams();
-  const [convId, setConvId] = useState(id)
+  const { chat } = useParams();
+  const [convId, setConvId] = useState(chat)
 
   const handleInput2Change = (e) => {
     const newInput = e.target.value;
