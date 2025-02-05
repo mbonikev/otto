@@ -17,7 +17,7 @@ function ChatHistory({ messages }) {
       (group) => group[0]
     );
 
-    setConvs(firstMessages)
+    setConvs(firstMessages);
   }
   return (
     <div className="w-[300px] h-svh p-2">
