@@ -4,7 +4,7 @@ import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 import Login from "./pages/Login";
 import Chat from "./pages/Chat";
-import LoggedInRoutes from "./components/LoggedInRoutes";
+import LoggedInRoutes
 import LoggedOutRoutes from "./components/LoggedOutRoutes";
 
 function App() {
