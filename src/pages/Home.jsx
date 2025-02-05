@@ -52,9 +52,10 @@ function Home() {
         }
       }
     }
-
-    const firstAssistantMessage =
-      messages.length > 0 && messages.find((msg) => msg.role === "assistant");
+    
+    const firstAssistantMessage = messages.find(
+      (msg) => msg.role === "assistant"
+    );
     document.title = messages.length
       ? `Otto - ${firstAssistantMessage?.title?.replace(/["`]/g, "") || ""}`
       : "Otto";
@@ -92,7 +93,7 @@ function Home() {
             ]);
             setThinking(false);
             setMessages(mappedMessages);
-            setConvs(response.data.convsWithTitles);
+            setConvs(response.data.convsWithTitles)
           }
         } catch (error) {
           console.error("conversations:", error);
@@ -102,6 +103,7 @@ function Home() {
         }
       }
     };
+
 
     handleGetConvs();
   }, []);
