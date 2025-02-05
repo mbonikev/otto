@@ -17,6 +17,7 @@ const ProtectedRoutes = () => {
         });
 
         setUser(response.data.user || null);
+        console.log(response.data.user || null);
 
         // ✅ Set the default model cookie if not set
         if (!Cookies.get("selectedModel")) {
