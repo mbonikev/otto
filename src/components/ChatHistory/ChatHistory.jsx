@@ -5,17 +5,17 @@ import Cookies from "js-cookie";
 
 function ChatHistory({ convs }) {
   const [searchValue, setSearchValue] = useState("");
-  const location = useLocation()
-  const chat = useParams()
-  console.log(location.pathname, chat)
+  const location = useLocation();
+  const { chat } = useParams();
+  console.log(location.pathname, chat);
   console.log(convs);
   const handleMigrate = (link) => {
     Cookies.set("convId", link, {
       expires: 1,
       path: "/",
     });
-    window.location.reload()
-  }
+    window.location.reload();
+  };
   return (
     <div className="w-[300px] h-svh p-2">
       <div className="w-full h-full bg-white rounded-2xl p-2 flex flex-col">
