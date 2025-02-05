@@ -3,7 +3,7 @@ import { Outlet, Navigate } from "react-router-dom";
 import axios from "axios";
 import Cookies from "js-cookie"; // Install via `npm install js-cookie`
 
-const ProtectedRoutes = () => {
+const ProtectedRoutesLoggedIn = () => {
   const apiUrl = import.meta.env.VITE_BACKEND_API;
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -65,4 +65,4 @@ const ProtectedRoutes = () => {
   );
 };
 
-export default ProtectedRoutes;
+export default ProtectedRoutesLoggedIn;
