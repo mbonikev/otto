@@ -92,7 +92,7 @@ function Home() {
   return (
     <div className="w-full h-svh flex flex-col relative">
       <div className="w-full h-fit z-30 fixed top-0">
-        <Navbar user={user} />
+        <Navbar />
       </div>
 
       <div
