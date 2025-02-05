@@ -103,7 +103,7 @@ function Home() {
     };
 
     handleGetConvs();
-  }, []);
+  }, [messages]);
 
   // Function to render content with code blocks
   const renderContent = (msg) => {
