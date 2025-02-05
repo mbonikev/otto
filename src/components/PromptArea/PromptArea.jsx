@@ -65,20 +65,7 @@ function PromptArea({
               },
             }
           );
-          
-          const transformedMessages = response.data.map((message) => {
-            return message.content.map((contentItem) => {
-              return {
-                role: contentItem.reply ? "assistant" : "user",  // Determine role based on reply
-                content: contentItem.reply || contentItem.prompt,  // Use reply if available, otherwise prompt
-                title: message.title,  // Use the title from the message schema
-              };
-            });
-          });
           console.log(response.data)
-          // Store the transformed messages
-          setMessage(transformedMessages);
-          console.log(transformedMessages);
         } catch (error) {}
       }
     };
@@ -101,7 +88,7 @@ function PromptArea({
       const routePath = user ? "/api/chat" : "/api/unsavedchat";
 
       // Store the message before resetting state
-      const userMessage = { role: "user", content: message };
+      const userMessage = { role: "user", content: message, title: "" };
       setMessages((prev) => [...prev, userMessage]);
 
       setThinking(true);
