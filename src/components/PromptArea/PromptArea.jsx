@@ -71,7 +71,7 @@ function PromptArea({
       }
     };
     handleGetConvs()
-  }, [message]);
+  }, []);
 
   const handleInput2Change = (e) => {
     const newInput = e.target.value;
