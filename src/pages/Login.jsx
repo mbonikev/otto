@@ -22,7 +22,10 @@ const Login = () => {
           </div>
         </div>
         <div className="flex- col-span-2 flex flex-col items-center justify-center gap-6 w-full py-14 bg-red-300">
-          <video src=""></video>
+          <video width="640" height="480" controls>
+            <source src="video.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
       </div>
     </div>
