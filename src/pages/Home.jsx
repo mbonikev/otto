@@ -74,7 +74,7 @@ function Home() {
               "Content-Type": "application/json",
             },
           });
-
+          console.log(response.data)
           if (response.data) {
             const mappedMessages = response.data.flatMap((msg) => [
               {
