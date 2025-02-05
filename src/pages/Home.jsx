@@ -154,7 +154,7 @@ function Home() {
             {thinking ? (
               <img
                 src="./logo.png"
-                className="h-10 w-auto animate-spinLoader"
+                className="h-10 w-auto animate-spinLoader saturate-0"
               />
             ) : (
               <h1 className="text-3xl font-semibold">How can I assist you?</h1>
