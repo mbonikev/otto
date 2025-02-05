@@ -163,6 +163,7 @@ function Home() {
           displayName={displayName}
           user={user}
           messages={messages}
+          convs={convs}
         />
       </div>
 
