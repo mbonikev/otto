@@ -106,7 +106,7 @@ function Navbar({
   const handleNew = () => {
     Cookies.remove("convId");
     setMessages([]);
-    navigate("/login", { replace: true });
+    navigate("/", { replace: true });
   };
 
   return (
