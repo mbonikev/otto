@@ -38,6 +38,8 @@ function Navbar({ photo, displayName, user, messages }) {
       );
 
       Cookies.remove("selectedModel");
+      Cookies.remove("convId");
+
       setTimeout(() => {
         window.location.reload();
       }, 500);
