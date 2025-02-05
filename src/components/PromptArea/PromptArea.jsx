@@ -46,7 +46,7 @@ function PromptArea({
     if (message !== "") {
       const apiUrl = import.meta.env.VITE_BACKEND_API;
       const apiKey = import.meta.env.VITE_GROQ_API_KEY;
-      const routePath = user ? "" : "/api/chat"
+      const routePath = user ? "/api/chat" : "/api/unsavedchat"
 
       // Add user message to the state
       const userMessage = { role: "user", content: message };
