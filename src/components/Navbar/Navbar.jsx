@@ -19,7 +19,7 @@ import { BiSolidLockAlt } from "react-icons/bi";
 import Cookies from "js-cookie";
 import avatar3 from "/avatars/avatar3.png";
 
-function Navbar({ photo, displayName, user, convs }) {
+function Navbar({ photo, displayName, user, convs, userId }) {
   const [showPopup, setShowPopup] = useState(false);
   const profileRef = useRef(null);
   const popupRef = useRef(null);
@@ -101,12 +101,7 @@ function Navbar({ photo, displayName, user, convs }) {
         const response = await axios.post(
           `${apiUrl}/api/createconv`,
           {
-            message: messageToSend,
-            displayName,
             userId,
-            selectedModel,
-            convId,
-            messages
           },
           {
             headers: {
