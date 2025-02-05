@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function ChatHistory({ convs }) {
   const [searchValue, setSearchValue] = useState("");
-
+console.log(convs)
   return (
     <div className="w-[300px] h-svh p-2">
       <div className="w-full h-full bg-white rounded-2xl p-2 flex flex-col">
@@ -40,7 +40,7 @@ function ChatHistory({ convs }) {
           <div className="flex flex-col w-full h-fit">
             {convs.map((msg, index) => (
                 <Link
-                  to={"/"}
+                  to={'/'}
                   key={index}
                   className={`w-full px-2.5 py-2 hover:bg-stone-100 rounded-xl text-sm text-dark-text`}
                 >
