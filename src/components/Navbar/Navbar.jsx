@@ -155,7 +155,7 @@ function Navbar({
                   animateChatsModal ? "translate-x-0" : "-translate-x-[300px]"
                 }`}
         >
-          <ChatHistory convs={convs} />
+          <ChatHistory convs={convs} thinking={thinking} />
         </div>
       )}
       {/* 1 */}
