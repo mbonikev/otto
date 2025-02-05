@@ -116,6 +116,7 @@ function Navbar({ photo, displayName, user, convs, userId, setMessages }) {
         path: "/",
       });
       navigate(`?chat=${response.data.conversationId}`, { replace: true });
+      setMessages("")
     } catch (error) {
       setThinking(false);
       console.error("Error:", error);
