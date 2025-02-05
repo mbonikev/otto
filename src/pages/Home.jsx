@@ -12,6 +12,7 @@ function Home() {
   const { displayName, photo, email } = user || {};
   const [messages, setMessages] = useState([]);
   const [thinking, setThinking] = useState(false);
+  const [chatsModal, setChatsModal] = useState(false);
   const chatBoxRef = useRef(null);
 
   // Scroll to bottom when messages update
@@ -92,7 +93,13 @@ function Home() {
   return (
     <div className="w-full h-svh flex flex-col relative">
       <div className="w-full h-fit z-30 fixed top-0">
-        <Navbar photo={photo} displayName={displayName} user={user} />
+        <Navbar
+          photo={photo}
+          displayName={displayName}
+          user={user}
+          chatsModal={chatsModal}
+          setChatsModal={setChatsModal}
+        />
       </div>
 
       <div
