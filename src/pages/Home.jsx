@@ -15,6 +15,8 @@ function Home() {
   const { displayName, photo, email, userId } = user || {};
   const [messages, setMessages] = useState([]);
   const [thinking, setThinking] = useState(false);
+  const [thinkingMessages, setThinkingMessages] = useState(false);
+  const [loadingConvs, setLoadingConvs] = useState(false);
   const chatBoxRef = useRef(null);
   const { chat } = useParams();
   const [convId, setConvId] = useState("");
@@ -63,13 +65,14 @@ function Home() {
 
   useEffect(() => {
     const handleGetMessages = async () => {
-      const retrieveId = Cookies.get("convId") || "";
+      const retrieveId = Cookies.get("convId");
       const apiUrl = import.meta.env.VITE_BACKEND_API;
       const apiKey = import.meta.env.VITE_GROQ_API_KEY;
+
+      setThinkingMessages(true);
       try {
-        setThinking(true);
-        const response = await axios.get(`${apiUrl}/api/getmsgs`, {
-          params: { convId: retrieveId, userId },
+        const response = await axios.get(`${apiUrl}/api/getmsg`, {
+          params: { convId: retrieveId },
           headers: {
             Authorization: `Bearer ${apiKey}`,
             "Content-Type": "application/json",
@@ -90,18 +93,37 @@ function Home() {
               convId: msg.conversationId,
             },
           ]);
-          setThinking(false);
           setMessages(mappedMessages);
+          setThinkingMessages(false);
+        }
+      } catch (error) {
+        console.error("messages:", error);
+        setThinkingMessages(false);
+      }
+    };
+
+    const handleGetConvs = async () => {
+      const retrieveId = Cookies.get("convId") || "";
+      const apiUrl = import.meta.env.VITE_BACKEND_API;
+      const apiKey = import.meta.env.VITE_GROQ_API_KEY;
+      try {
+        const response = await axios.get(`${apiUrl}/api/getconvs`, {
+          params: { userId },
+          headers: {
+            Authorization: `Bearer ${apiKey}`,
+            "Content-Type": "application/json",
+          },
+        });
+        if (response.data.convsWithTitles) {
           setConvs(response.data.convsWithTitles);
         }
       } catch (error) {
         console.error("conversations:", error);
-        setThinking(false);
-      } finally {
-        setThinking(false);
       }
     };
 
+    // Call both functions to fetch data
+    handleGetConvs();
     handleGetMessages();
   }, [messages]);
 
@@ -210,7 +232,7 @@ function Home() {
           </div>
         ) : (
           <div className="w-full h-full flex flex-col items-center justify-center">
-            {thinking ? (
+            {thinkingMessages ? (
               <RiLoader2Fill className="text-2xl w-auto animate-spin text-dark-text-weak/50 stroke-[1px]" />
             ) : (
               <h1 className="text-3xl font-semibold">How can I assist you?</h1>
