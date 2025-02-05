@@ -59,7 +59,7 @@ function Home() {
     document.title = messages.length
       ? `Otto - ${firstAssistantMessage?.title?.replace(/["`]/g, "") || ""}`
       : "Otto";
-  }, [messages]);
+  }, []);
 
   useEffect(() => {
     const handleGetConvs = async () => {
