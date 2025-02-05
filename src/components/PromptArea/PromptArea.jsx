@@ -84,6 +84,7 @@ function PromptArea({
             userId,
             selectedModel,
             convId,
+            messages
           },
           {
             headers: {
