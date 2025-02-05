@@ -286,6 +286,12 @@ function Navbar({ photo, displayName, user }) {
               <IoShareSocialOutline />
               <Tooltip title="Share" placement="center" />
             </button>
+            <button
+              onClick={() => (window.location = "/#/login")}
+              className="group h-10 w-fit px-4 flex items-center justify-center text-2xl hover:bg-stone-100 text-dark-text-weak hover:text-dark-text rounded-full relative"
+            >
+              Login
+            </button>
           </>
         )}
       </div>
