@@ -54,7 +54,7 @@ function Home() {
     }
 
     const firstAssistantMessage =
-      messages.length > 0 ?? messages.find((msg) => msg.role === "assistant");
+      messages.length > 0 && messages.find((msg) => msg.role === "assistant");
     document.title = messages.length
       ? `Otto - ${firstAssistantMessage?.title?.replace(/["`]/g, "") || ""}`
       : "Otto";
