@@ -91,7 +91,7 @@ function Home() {
   };
 
   return (
-    <div className={`w-full h-svh flex flex-col relative transition-transform duration-300 ease-in-out ${chatsModal ? " " : " "}`}>
+    <div className={`w-full h-svh flex flex-col relative transition-transform duration-300 ease-in-out ${chatsModal ? " pl-[320px]" : " "}`}>
       <div className="w-full h-fit z-30 fixed top-0">
         <Navbar
           photo={photo}
