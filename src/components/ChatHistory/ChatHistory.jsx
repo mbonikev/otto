@@ -12,7 +12,7 @@ function ChatHistory({ convs }) {
   const chatId = urlParams.get("chat");
 
   useEffect(() => {
-    console.log("Current path:", location.pathname, "Chat ID:", chatId);
+    console.log(chatId);
   }, [location]); // Re-run the effect when location changes
 
   const handleMigrate = (link) => {
