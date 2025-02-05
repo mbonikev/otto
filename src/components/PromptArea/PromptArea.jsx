@@ -37,11 +37,11 @@ function PromptArea({
   );
   const [searchModel, setSearchModel] = useState("");
   const { chat } = useParams();
-  const [convId, setConvId] = useState(Cookies.get("convId") || );
+  const [convId, setConvId] = useState(Cookies.get("convId") || chat);
   const navigate = useNavigate();
-  if (convId !== "" || convId !== null) {
-    navigate(`?chat=${convId}`, { replace: true });
-  }
+  // if (convId !== "" || convId !== null) {
+  //   navigate(`?chat=${convId}`, { replace: true });
+  // }
   const handleInput2Change = (e) => {
     const newInput = e.target.value;
     // console.log(JSON.stringify(message));
