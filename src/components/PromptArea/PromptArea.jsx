@@ -15,7 +15,7 @@ import {
   HiMiniXCircle,
 } from "react-icons/hi2";
 import Cookies from "js-cookie";
-import { useLocation, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 function PromptArea({
   setMessages,
@@ -37,12 +37,9 @@ function PromptArea({
     Cookies.get("selectedModel") || "llama3-8b-8192"
   );
   const [searchModel, setSearchModel] = useState("");
-  const [chatId, setChatId] = useState(null);
+  const { chat } = useParams();
   const [convId, setConvId] = useState("");
   const navigate = useNavigate();
-  const location = useLocation(); // Use the useLocation hook to get the current URL
-
-  // Get the 'chat' parameter from the URL
 
   useEffect(() => {
     const retrieveId = Cookies.get("convId") ?? chat;
@@ -50,9 +47,7 @@ function PromptArea({
     if (retrieveId) {
       navigate(`?chat=${retrieveId}`, { replace: true });
     }
-    const urlParams = new URLSearchParams(location.search);
-    setChatId(urlParams.get("chat"));
-  }, [chatId]);
+  }, [convId]);
 
   const handleInput2Change = (e) => {
     const newInput = e.target.value;
@@ -89,7 +84,7 @@ function PromptArea({
             userId,
             selectedModel,
             convId,
-            messages,
+            messages
           },
           {
             headers: {
@@ -108,7 +103,6 @@ function PromptArea({
           });
         }
         const { title, message: assistantResponse } = response.data;
-
         setThinking(false);
 
         // Add assistant's response with title to the state
