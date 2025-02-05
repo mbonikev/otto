@@ -104,7 +104,7 @@ function Navbar({
 
   const handleNew = () => {
       Cookies.remove("convId")
-      setMessages("")
+      setMessages([])
       window.location.reload()
 
   };
