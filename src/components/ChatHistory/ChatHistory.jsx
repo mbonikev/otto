@@ -20,6 +20,11 @@ function ChatHistory({ convs, thinking }) {
     window.location.reload();
   };
 
+  // Filter conversations based on search value
+  const filteredConvs = convs.filter((msg) =>
+    msg.title.toLowerCase().includes(searchValue.toLowerCase())
+  );
+
   return (
     <div className="w-[300px] h-svh p-2">
       <div className="w-full h-full bg-white rounded-2xl p-2 flex flex-col">
@@ -52,7 +57,7 @@ function ChatHistory({ convs, thinking }) {
             </div>
           ) : (
             <div className="flex flex-col w-full h-fit gap-1">
-              {convs.map((msg, index) => (
+              {filteredConvs.map((msg, index) => (
                 <button
                   key={index}
                   onClick={() => handleMigrate(msg.conversationId)}
