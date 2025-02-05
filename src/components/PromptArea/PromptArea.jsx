@@ -91,7 +91,7 @@ function PromptArea({
         if (convId !== "" || convId !== null) {
           setConvId(response.data.conversationId);
           navigate(`?chat=${response.data.conversationId}`, { replace: true });
-          Cookies.set("convId", response.data.conversationId, { expires: 7, path: "/" });
+          Cookies.set("convId", response.data.conversationId, { expires: 1, path: "/" });
         }
         const { title, message: assistantResponse } = response.data;
 
