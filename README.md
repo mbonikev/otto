@@ -1,8 +1,13 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<img src="https://otto-ai.onrender.com/logo.png" alt="Otto-AI Screenshot" width="100"/>
 
-Currently, two official plugins are available:
+# Welcome to Otto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Otto-AI is a powerful, **free-to-use AI tool** that offers intelligent and responsive chat capabilities. Powered by several advanced models from **Groq**, it delivers fast and reliable performance for a variety of tasks.
+
+## Key Features:
+- Free to use
+- Advanced AI models from Groq
+- Engaging, high-quality conversations
+
+Start chatting and experience the next level of AI interactions today!
