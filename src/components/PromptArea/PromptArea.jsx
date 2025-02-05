@@ -65,17 +65,15 @@ function PromptArea({
               },
             }
           );
-
+          
           const transformedMessages = response.data.map((message) => {
-            return message.content.map((contentItem) => {
-              return {
-                role: contentItem.reply ? "assistant" : "user", // Determine role based on reply
-                content: contentItem.reply || contentItem.prompt, // Use reply if available, otherwise prompt
-                title: message.title, // Use the title from the message schema
-              };
-            });
+            return {
+              role: message.reply ? "assistant" : "user",
+              content: message.content,
+              title: message.title,
+            };
           });
-          console.log(response.data);
+          console.log(response.data)
           // Store the transformed messages
           setMessages(transformedMessages);
           console.log(transformedMessages);
