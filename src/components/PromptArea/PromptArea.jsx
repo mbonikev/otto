@@ -49,10 +49,27 @@ function PromptArea({
   }, [convId]);
 
   useEffect(() => {
-    const handleGetConvs = () => {
+    const handleGetConvs = async () => {
       if (convId) {
         const apiUrl = import.meta.env.VITE_BACKEND_API;
         const apiKey = import.meta.env.VITE_GROQ_API_KEY;
+        try {
+          const response = await axios.post(
+            `${apiUrl}${routePath}`,
+            {
+              message: messageToSend,
+              displayName,
+              userId,
+              selectedModel,
+              convId,
+            },
+            {
+              headers: {
+                Authorization: `Bearer ${apiKey}`,
+                "Content-Type": "application/json",
+              },
+            }
+          );}catch(error){}
       }
     };
   }, []);
