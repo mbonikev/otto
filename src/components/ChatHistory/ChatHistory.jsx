@@ -3,7 +3,7 @@ import { HiMiniMagnifyingGlass, HiMiniXCircle } from "react-icons/hi2";
 import { Link, useLocation } from "react-router-dom";
 import Cookies from "js-cookie";
 
-function ChatHistory({ convs }) {
+function ChatHistory({ convs, thinking }) {
   const [searchValue, setSearchValue] = useState("");
   const location = useLocation(); // Use the useLocation hook to get the current URL
 
