@@ -94,8 +94,6 @@ function Home() {
         }
       } catch (error) {
         console.error("messages:", error);
-      } finally {
-        setThinking(false); // Ensure this is only called once after completion
       }
     };
 
