@@ -39,9 +39,11 @@ function PromptArea({
   const { chat } = useParams();
   const [convId, setConvId] = useState(Cookies.get("convId") || chat);
   const navigate = useNavigate();
-  // if (convId !== "" || convId !== null) {
-  //   navigate(`?chat=${convId}`, { replace: true });
-  // }
+  useEffect(() => {
+    if (convId !== "" || convId !== null) {
+      navigate(`?chat=${convId}`, { replace: true });
+    }
+  }, [convId]);
   const handleInput2Change = (e) => {
     const newInput = e.target.value;
     // console.log(JSON.stringify(message));
