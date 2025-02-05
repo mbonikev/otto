@@ -47,7 +47,7 @@ function ChatHistory({ convs, thinking }) {
         <div className="w-full flex-1 flex flex-col overflow-y-auto custom_scrollbar gap-2 mt-2 pr-1 my-0">
           {/* chats */}
           {thinking ? (
-            <div className="w-full h-full flex flex-col items-center justify-start">
+            <div className="w-full h-full flex flex-col items-center justify-start py-10">
               <RiLoader2Fill className="text-2xl w-auto animate-spin text-dark-text-weak/50 stroke-[1px]" />
             </div>
           ) : (
