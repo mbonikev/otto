@@ -54,8 +54,8 @@ function PromptArea({
       if (retrieveId) {
         const apiUrl = import.meta.env.VITE_BACKEND_API;
         const apiKey = import.meta.env.VITE_GROQ_API_KEY;
+        setThinking(true)
         try {
-          setThinking(true)
           const response = await axios.get(`${apiUrl}/api/getconvs`, {
             params: { convId: retrieveId },
             headers: {
@@ -79,6 +79,7 @@ function PromptArea({
             ]);
 
             setMessages(mappedMessages);
+            setThinking(false)
           }
         } catch (error) {
           console.error("Error fetching conversations:", error);
