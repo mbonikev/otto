@@ -8,6 +8,8 @@ import remarkGfm from "remark-gfm";
 import { useOutletContext } from "react-router-dom";
 
 function Home() {
+  const { user, models } = useOutletContext();
+  const { displayName, photo, email } = user || {};
   const [messages, setMessages] = useState([]);
   const [thinking, setThinking] = useState(false);
   const chatBoxRef = useRef(null);
@@ -90,7 +92,7 @@ function Home() {
   return (
     <div className="w-full h-svh flex flex-col relative">
       <div className="w-full h-fit z-30 fixed top-0">
-        <Navbar />
+        <Navbar photo={photo} displayName={displayName} />
       </div>
 
       <div
@@ -146,6 +148,9 @@ function Home() {
         setMessages={setMessages}
         thinking={thinking}
         setThinking={setThinking}
+        displayName={displayName}
+        email={email}
+        models={models}
       />
     </div>
   );
