@@ -162,7 +162,6 @@ function Home() {
           photo={photo}
           displayName={displayName}
           user={user}
-          messages={messages}
           convs={convs}
         />
       </div>
