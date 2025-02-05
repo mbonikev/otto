@@ -16,7 +16,7 @@ export default {
         "card-dark-2": "#2f2f2f",
         "light-color": "#ececec",
         "light-color-weak":"#b4b4b4",
-        "":"",
+        "sidebar-color":"#171717",
         "":"",
         "":"",
         "":"",
