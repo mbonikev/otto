@@ -48,48 +48,6 @@ function PromptArea({
     }
   }, [convId]);
 
-  useEffect(() => {
-    const handleGetConvs = async () => {
-      const retrieveId = Cookies.get("convId") ?? chat;
-      if (retrieveId) {
-        const apiUrl = import.meta.env.VITE_BACKEND_API;
-        const apiKey = import.meta.env.VITE_GROQ_API_KEY;
-        setThinking(true)
-        try {
-          const response = await axios.get(`${apiUrl}/api/getconvs`, {
-            params: { convId: retrieveId },
-            headers: {
-              Authorization: `Bearer ${apiKey}`,
-              "Content-Type": "application/json",
-            },
-          });
-
-          if (response.data) {
-            const mappedMessages = response.data.flatMap((msg) => [
-              {
-                role: "user",
-                content: msg.content[0]?.prompt, // User's message
-                title: msg.title || "Untitled",
-              },
-              {
-                role: "assistant",
-                content: msg.content[0]?.reply, // Assistant's reply
-                title: msg.title || "Untitled",
-              },
-            ]);
-
-            setMessages(mappedMessages);
-            setThinking(false)
-          }
-        } catch (error) {
-          console.error("Error fetching conversations:", error);
-        }
-      }
-    };
-
-    handleGetConvs();
-  }, []);
-
   const handleInput2Change = (e) => {
     const newInput = e.target.value;
     // console.log(JSON.stringify(message));
