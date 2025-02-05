@@ -118,14 +118,14 @@ function Home() {
       } catch (error) {
         console.error("conversations:", error);
       } finally {
-        setThinking(false); // Ensure this is only called once after completion
+        setThinking(false);
       }
     };
 
     // Call both functions to fetch data
     handleGetConvs();
     handleGetMessages();
-  }, []); // Only run once when the component mounts
+  }, []);
 
   // Function to render content with code blocks
   const renderContent = (msg) => {
