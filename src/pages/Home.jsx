@@ -164,6 +164,7 @@ function Home() {
           convs={convs}
           userId={userId}
           setMessages={setMessages}
+          setThinking={setThinking}
         />
       </div>
 
