@@ -163,6 +163,7 @@ function Home() {
         displayName={displayName}
         email={email}
         models={models}
+        user={user}
       />
     </div>
   );
