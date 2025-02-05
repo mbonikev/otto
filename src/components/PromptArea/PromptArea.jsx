@@ -66,6 +66,7 @@ function PromptArea({
               },
             }
           );
+          console.log(response)
         } catch (error) {}
       }
     };
