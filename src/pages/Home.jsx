@@ -127,7 +127,7 @@ function Home() {
     };
 
     handleGetConvs()
-    // handleGetMessages();
+    handleGetMessages();
   }, [messages]);
 
   // Function to render content with code blocks
