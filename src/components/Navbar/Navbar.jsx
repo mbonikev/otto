@@ -288,7 +288,7 @@ function Navbar({ photo, displayName, user }) {
             </button>
             <button
               onClick={() => (window.location = "/#/login")}
-              className="group h-11 w-fit px-5 flex items-center justify-center text-base bg-stone-100 text-dark-text-weak hover:text-dark-text rounded-full relative"
+              className="group h-10 w-fit px-5 flex items-center justify-center text-base bg-dark-text text-white rounded-full relative"
             >
               Login
             </button>
