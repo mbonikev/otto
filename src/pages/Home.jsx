@@ -5,7 +5,7 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneLight } from "react-syntax-highlighter/dist/esm/styles/prism";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import { useNavigate, useOutletContext } from "react-router-dom";
+import { useNavigate, useOutletContext, useParams } from "react-router-dom";
 import { RiLoader2Fill } from "react-icons/ri";
 
 function Home() {
@@ -14,6 +14,8 @@ function Home() {
   const [messages, setMessages] = useState([]);
   const [thinking, setThinking] = useState(true);
   const chatBoxRef = useRef(null);
+  const { chat } = useParams();
+  const [convId, setConvId] = useState("");
   const navigate = useNavigate();
   const [param, setParam] = useState("default");
 
