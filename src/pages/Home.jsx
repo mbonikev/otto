@@ -130,7 +130,7 @@ function Home() {
     // Call both functions to fetch data
     handleGetConvs();
     handleGetMessages();
-  }, [thinking]);
+  }, []);
 
   // Function to render content with code blocks
   const renderContent = (msg) => {
