@@ -108,7 +108,7 @@ function Navbar({
     console.log("After removing:", Cookies.get("convId"));
 
     setMessages([]);
-    navigate('/');
+    navigate(`?chat=`, { replace: true });
   };
 
   return (
