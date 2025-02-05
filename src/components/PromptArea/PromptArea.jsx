@@ -15,7 +15,7 @@ import {
   HiMiniXCircle,
 } from "react-icons/hi2";
 import Cookies from "js-cookie";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 function PromptArea({
   setMessages,
@@ -38,6 +38,7 @@ function PromptArea({
   const [searchModel, setSearchModel] = useState("");
   const { chat } = useParams();
   const [convId, setConvId] = useState(chat)
+  const navigate = useNavigate();
 
   const handleInput2Change = (e) => {
     const newInput = e.target.value;
