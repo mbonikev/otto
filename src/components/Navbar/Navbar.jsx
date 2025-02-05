@@ -137,7 +137,7 @@ function Navbar({ photo, displayName, user }) {
         ) : (
           <>
             <button
-              onClick={() => (window.location = "/#/login")}
+              onClick={() => (window.location = "/login")}
               className="group h-10 w-auto aspect-square flex items-center justify-center text-2xl hover:bg-stone-100 text-dark-text-weak hover:text-dark-text rounded-full relative"
             >
               <HiOutlineChatBubbleLeftRight />
@@ -148,7 +148,7 @@ function Navbar({ photo, displayName, user }) {
               />
             </button>
             <button
-              onClick={() => (window.location = "/#/login")}
+              onClick={() => (window.location = "/login")}
               className="group h-10 w-auto aspect-square flex items-center justify-center text-2xl hover:bg-stone-100 text-dark-text-weak hover:text-dark-text rounded-full relative"
             >
               <RxPencil2 />
@@ -262,21 +262,21 @@ function Navbar({ photo, displayName, user }) {
         ) : (
           <>
             <button
-              onClick={() => (window.location = "/#/login")}
+              onClick={() => (window.location = "/login")}
               className="group h-10 w-auto aspect-square flex items-center justify-center text-2xl hover:bg-stone-100 text-dark-text-weak hover:text-dark-text rounded-full relative"
             >
               <BsIncognito />
               <Tooltip title="Temporary Mode" placement="center" />
             </button>
             <button
-              onClick={() => (window.location = "/#/login")}
+              onClick={() => (window.location = "/login")}
               className="group h-10 w-auto aspect-square flex items-center justify-center text-2xl hover:bg-stone-100 text-dark-text-weak hover:text-dark-text rounded-full relative"
             >
               <IoShareSocialOutline />
               <Tooltip title="Share" placement="center" />
             </button>
             <button
-              onClick={() => (window.location = "/#/login")}
+              onClick={() => (window.location = "/login")}
               className="group h-10 ml-2 w-fit px-6 flex items-center justify-center text-base bg-dark-text text-white rounded-full relative"
             >
               Login
