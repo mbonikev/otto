@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Outlet, Navigate } from "react-router-dom";
 import axios from "axios";
-import Cookies from "js-cookie"; // Install via `npm install js-cookie`
+import Cookies from "js-cookie";
 
 const ProtectedRoutesLoggedIn = () => {
   const apiUrl = import.meta.env.VITE_BACKEND_API;
@@ -9,6 +9,7 @@ const ProtectedRoutesLoggedIn = () => {
   const [loading, setLoading] = useState(true);
   const [models, setModels] = useState([]);
   const token = Cookies.get("token");
+
   useEffect(() => {
     const fetchUserStatus = async () => {
       try {
@@ -18,7 +19,7 @@ const ProtectedRoutesLoggedIn = () => {
 
         setUser(response.data.user || null);
 
-        // ✅ Set the default model cookie if not set
+        // Set the default model cookie if not set
         if (!Cookies.get("selectedModel")) {
           Cookies.set("selectedModel", "llama3-8b-8192", {
             expires: 7,
@@ -45,14 +46,16 @@ const ProtectedRoutesLoggedIn = () => {
         setModels([]);
       }
     };
+
+    // Fetch user status and models if token is present
     if (token) {
       fetchModels();
       fetchUserStatus();
-    } else{
-      setLoading(false)
-      setUser(null)
+    } else {
+      setLoading(false);
+      setUser(null);
     }
-  }, []);
+  }, [token]);
 
   if (loading) {
     return (
@@ -62,7 +65,13 @@ const ProtectedRoutesLoggedIn = () => {
     );
   }
 
-  return user !== null ? <Navigate to="/c/1" /> : <Outlet context={{ user, models }} />;
+  // Redirect logged-in users to the default page (e.g., `/c/1`)
+  if (user !== null) {
+    return <Navigate to="/c/1" />;
+  }
+
+  // Allow non-logged-in users to access the login page (by rendering Outlet)
+  return <Outlet context={{ user, models }} />;
 };
 
 export default ProtectedRoutesLoggedIn;
