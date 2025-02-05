@@ -84,7 +84,7 @@ function PromptArea({
             userId,
             selectedModel,
             convId,
-            messages
+            messages,
           },
           {
             headers: {
@@ -182,16 +182,33 @@ function PromptArea({
           {/* 1 */}
           <div className="w-full h-full flex items-center justify-start gap-3 select-none relative">
             <div className=" h-full w-fit px-3 flex items-center justify-center gap-1 text-sm ring-1 ring-stone-300 text-dark-text-weak font-semibold rounded-full relative">
-              <div
-                ref={modelsButtonRef}
-                onClick={() => setShowModels(true)}
-                className="group cursor-pointer w-full h-full flex items-center justify-center gap-1 hover:text-dark-text"
-              >
-                <LuBrain className="text-lg text-purple-500" />
-                <p className="w-full truncate max-w-[100px]">{selectedModel}</p>
-                <HiChevronUpDown className="text-lg opacity-75" />
-                <Tooltip title="Models" placement="right-center" />
-              </div>
+              {user ? (
+                <div
+                  ref={modelsButtonRef}
+                  onClick={() => setShowModels(true)}
+                  className="group cursor-pointer w-full h-full flex items-center justify-center gap-1 hover:text-dark-text"
+                >
+                  <LuBrain className="text-lg text-purple-500" />
+                  <p className="w-full truncate max-w-[100px]">
+                    {selectedModel}
+                  </p>
+                  <HiChevronUpDown className="text-lg opacity-75" />
+                  <Tooltip title="Models" placement="right-center" />
+                </div>
+              ) : (
+                <div
+                  ref={modelsButtonRef}
+                  onClick={() => setShowModels(true)}
+                  className="group cursor-pointer w-full h-full flex items-center justify-center gap-1 hover:text-dark-text"
+                >
+                  <LuBrain className="text-lg text-purple-500" />
+                  <p className="w-full truncate max-w-[100px]">
+                    {selectedModel}
+                  </p>
+                  <HiChevronUpDown className="text-lg opacity-75" />
+                  <Tooltip title="Models" placement="right-center" />
+                </div>
+              )}
             </div>
             <div className="group cursor-pointer h-full w-fit px-3 flex items-center justify-center gap-1 text-sm ring-1 ring-stone-300 text-dark-text-weak hover:text-dark-text font-semibold rounded-full relative">
               <GoCommandPalette className="text-lg text-lime-600 stroke-[1px]" />
