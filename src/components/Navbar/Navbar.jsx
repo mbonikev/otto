@@ -208,9 +208,9 @@ function Navbar({ photo, displayName, user }) {
               onClick={() => setShowPopup(true)}
               className="h-9 w-9 rounded-full overflow-hidden ml-3"
             >
-              {photo !== "" ? (
+              {photo? (
                 <img
-                  src={''}
+                  src={`${photo}`}
                   alt="avatar"
                   className="bg-stone-100 w-full h-fit min-h-full object-cover rounded-full"
                 />
