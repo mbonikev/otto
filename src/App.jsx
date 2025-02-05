@@ -22,6 +22,7 @@ function App() {
         <Route element={<ProtectedRoutes />}>
           <Route path="/c/:id" element={<Chat />} />
         </Route>
+
         <Route path="*" element={<NotFound />} />
       </Routes>
     </HashRouter>
