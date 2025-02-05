@@ -24,6 +24,7 @@ function PromptArea({
   displayName,
   email,
   models,
+  userId,
 }) {
   const [message, setMessage] = useState("");
   const textareaRef = useRef(null);
