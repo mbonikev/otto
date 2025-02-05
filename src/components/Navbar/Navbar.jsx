@@ -106,7 +106,6 @@ function Navbar({
       Cookies.remove("convId")
       setMessages([])
       navigate(`?chat=`, { replace: true });
-      // window.location.reload()
 
   };
 
