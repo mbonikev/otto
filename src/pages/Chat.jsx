@@ -152,6 +152,7 @@ function Chat() {
         displayName={displayName}
         email={email}
         models={models}
+        user={user}
       />
     </div>
   );
