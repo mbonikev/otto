@@ -115,7 +115,7 @@ function Navbar({ photo, displayName, user }) {
       )}
       {/* 1 */}
       <div className="flex items-center justify-start gap-0">
-        {user !== "" ? (
+        {user ? (
           <>
             <button
               onClick={handleOpenChatsModal}
