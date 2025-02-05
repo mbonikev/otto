@@ -110,7 +110,7 @@ function Navbar({ photo, displayName, user, convs, userId }) {
             },
           }
         );
-        
+        console.log(response)
       } catch (error) {
         setThinking(false);
         console.error(
