@@ -46,7 +46,7 @@ function PromptArea({
     if (retrieveId) {
       navigate(`?chat=${retrieveId}`, { replace: true });
     }
-  }, [retrieveId]);
+  }, [convId]);
 
   const handleInput2Change = (e) => {
     const newInput = e.target.value;
