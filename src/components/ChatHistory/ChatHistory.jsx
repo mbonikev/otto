@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { HiMiniMagnifyingGlass, HiMiniXCircle } from "react-icons/hi2";
 import { Link } from "react-router-dom";
 
-function ChatHistory() {
+function ChatHistory({ messages }) {
   const [searchValue, setSearchValue] = useState("");
   return (
     <div className="w-[300px] h-svh p-2">
