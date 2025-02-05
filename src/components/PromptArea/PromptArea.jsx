@@ -55,6 +55,7 @@ function PromptArea({
         const apiUrl = import.meta.env.VITE_BACKEND_API;
         const apiKey = import.meta.env.VITE_GROQ_API_KEY;
         try {
+          setThinking(true)
           const response = await axios.get(`${apiUrl}/api/getconvs`, {
             params: { convId: retrieveId },
             headers: {
