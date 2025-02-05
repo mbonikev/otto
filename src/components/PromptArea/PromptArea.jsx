@@ -48,7 +48,6 @@ function PromptArea({
   };
 
   const submit = async () => {
-    const convId = id || ""; // Ensure convId is always a string
 
     if (message.trim() !== "") {
       const apiUrl = import.meta.env.VITE_BACKEND_API;
