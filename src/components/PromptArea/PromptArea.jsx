@@ -27,7 +27,7 @@ function PromptArea({
   userId,
   user,
 }) {
-  const [message, setMessage] = useState("");
+  const [message, setMessage] = useState([]);
   const textareaRef = useRef(null);
   const modelsButtonRef = useRef(null);
   const modelsRef = useRef(null);
