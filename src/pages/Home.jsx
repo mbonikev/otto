@@ -8,6 +8,7 @@ import remarkGfm from "remark-gfm";
 import { useNavigate, useOutletContext, useParams } from "react-router-dom";
 import { RiLoader2Fill } from "react-icons/ri";
 import Cookies from "js-cookie";
+import axios from "axios";
 
 function Home() {
   const { user, models } = useOutletContext() || {};
