@@ -5,7 +5,6 @@ import NotFound from "./pages/NotFound";
 import Login from "./pages/Login";
 import ProtectedRoutes from "./components/ProtectedRoutes/ProtectedRoutes";
 import Chat from "./pages/Chat";
-import ProtectedRoutesLoggedIn from "./components/ProtectedRoutes/ProtectedRoutesLoggedIn";
 
 function App() {
   const hasHash = window.location.hash.includes("#");
