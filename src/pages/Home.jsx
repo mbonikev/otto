@@ -103,6 +103,9 @@ function Home() {
     };
 
     const handleGetConvs = async () => {
+      if(convs.length === 0){
+        setLoadingConvs(true)
+      }
       const retrieveId = Cookies.get("convId") || "";
       const apiUrl = import.meta.env.VITE_BACKEND_API;
       const apiKey = import.meta.env.VITE_GROQ_API_KEY;
