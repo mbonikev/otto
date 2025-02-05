@@ -19,7 +19,6 @@ import { BiSolidLockAlt } from "react-icons/bi";
 import Cookies from "js-cookie";
 import avatar3 from "../assets/avatars/avatar3.png";
 
-
 function Navbar({ photo, displayName, user }) {
   const [showPopup, setShowPopup] = useState(false);
   const profileRef = useRef(null);
@@ -210,19 +209,11 @@ function Navbar({ photo, displayName, user }) {
               onClick={() => setShowPopup(true)}
               className="h-9 w-9 rounded-full overflow-hidden ml-3"
             >
-              {photo? (
-                <img
-                  src={`${photo}`}
-                  alt="avatar"
-                  className="bg-stone-100 w-full h-fit min-h-full object-cover rounded-full"
-                />
-              ) : (
-                <img
-                  src="/avatars/avatar3.png"
-                  alt="avatar"
-                  className="bg-stone-100 w-full h-fit min-h-full object-cover rounded-full"
-                />
-              )}
+              <img
+                src={photo || avatar3}
+                alt="avatar"
+                className="bg-stone-100 w-full h-fit min-h-full object-cover rounded-full"
+              />
             </button>
             {/* dropdown */}
             {showPopup && (
