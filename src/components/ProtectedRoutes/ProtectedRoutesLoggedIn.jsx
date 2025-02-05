@@ -32,21 +32,6 @@ const ProtectedRoutes = () => {
         setLoading(false);
       }
     };
-
-    const fetchModels = async () => {
-      try {
-        const response = await axios.get(`${apiUrl}/api/models`, {
-          withCredentials: true,
-        });
-
-        setModels(response.data);
-      } catch (error) {
-        console.error("Error fetching models:", error);
-        setModels([]);
-      }
-    };
-
-    fetchModels();
     fetchUserStatus();
   }, []);
 
@@ -59,7 +44,7 @@ const ProtectedRoutes = () => {
   }
 
   return user ? (
-    <Outlet context={{ user, models }} />
+    <Outlet context={{ user, models: {} }} />
   ) : (
     <Navigate to="/login" />
   );
