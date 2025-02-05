@@ -49,8 +49,12 @@ function PromptArea({
   }, [convId]);
 
   useEffect(() => {
-    
-  },[])
+    const handleGetConvs = () => {
+      if (convId) {
+        
+      }
+    };
+  }, []);
 
   const handleInput2Change = (e) => {
     const newInput = e.target.value;
