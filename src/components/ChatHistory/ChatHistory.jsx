@@ -6,6 +6,7 @@ import Cookies from "js-cookie";
 function ChatHistory({ convs }) {
   const [searchValue, setSearchValue] = useState("");
   const location = useLocation()
+  console.log(location.pathname)
   console.log(convs);
   const handleMigrate = (link) => {
     Cookies.set("convId", link, {
