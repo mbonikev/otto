@@ -28,6 +28,7 @@ function Navbar({
   setMessages,
   setThinking,
   thinking,
+  loadingConvs,
 }) {
   const [showPopup, setShowPopup] = useState(false);
   const profileRef = useRef(null);
