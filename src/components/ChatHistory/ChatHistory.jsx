@@ -51,9 +51,7 @@ function ChatHistory({ messages }) {
           </h1> */}
           {/* chats */}
           <div className="flex flex-col w-full h-fit">
-            {firstMessages
-              .filter((msg) => msg.role === "user")
-              .map((msg, index) => (
+            {firstMessages.map((msg, index) => (
                 <Link
                   to={"/"}
                   key={index}
