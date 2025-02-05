@@ -44,7 +44,7 @@ function PromptArea({
     const retrieveId = Cookies.get("convId") || chat;
     setConvId(retrieveId);
     if (retrieveId !== "" || retrieveId !== null) {
-      navigate(`?chat=${convId}`, { replace: true });
+      navigate(`?chat=${retrieveId}`, { replace: true });
     }
   }, []);
   const handleInput2Change = (e) => {
