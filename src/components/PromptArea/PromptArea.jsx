@@ -69,7 +69,7 @@ function PromptArea({
             return {
               role: message.reply ? "assistant" : "user", // Set role based on whether there's a reply
               content: message.content,
-              title: message.sender ? message.sender._id : "", // Use sender's _id as title (or modify based on your need)
+              title: message.title, // Use sender's _id as title (or modify based on your need)
             };
           });
 
