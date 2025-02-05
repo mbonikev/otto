@@ -197,75 +197,90 @@ function Navbar({ photo, displayName, user }) {
       </div>
       {/* 3 */}
       <div className="flex items-center justify-end gap-0 relative select-none">
-        <button className="group h-10 w-auto aspect-square flex items-center justify-center text-2xl hover:bg-stone-100 text-dark-text-weak hover:text-dark-text rounded-full relative">
-          <BsIncognito />
-          <Tooltip title="Temporary Mode" placement="center" />
-        </button>
-        <button className="group h-10 w-auto aspect-square flex items-center justify-center text-2xl hover:bg-stone-100 text-dark-text-weak hover:text-dark-text rounded-full relative">
-          <IoShareSocialOutline />
-          <Tooltip title="Share" placement="center" />
-        </button>
-        <button
-          ref={profileRef}
-          onClick={() => setShowPopup(true)}
-          className="h-9 w-9 rounded-full overflow-hidden ml-3"
-        >
-          {photo !== "" ? (
-            <img
-              src={photo}
-              alt="avatar"
-              className="bg-stone-100 w-full h-fit min-h-full object-cover rounded-full"
-            />
-          ) : (
-            <img
-              src="/avatars/avatar3.png"
-              alt="avatar"
-              className="bg-stone-100 w-full h-fit min-h-full object-cover rounded-full"
-            />
-          )}
-        </button>
-        {/* dropdown */}
-        {showPopup && (
-          <div
-            ref={popupRef}
-            className="absolute top-[90%] w-[220px] h-fit rounded-2xl ring-1 bg-white ring-stone-200 shadow-lg p-1.5"
-          >
-            <button className="w-full rounded-xl p-2 flex items-center justify-start gap-2 hover:bg-stone-100">
-              <HiOutlineUser className="text-2xl text-dark-text-weak/70" />
-              <h1 className="text-sm">My account</h1>
+        {user ? (
+          <>
+            <button className="group h-10 w-auto aspect-square flex items-center justify-center text-2xl hover:bg-stone-100 text-dark-text-weak hover:text-dark-text rounded-full relative">
+              <BsIncognito />
+              <Tooltip title="Temporary Mode" placement="center" />
             </button>
-            <button className="w-full rounded-xl p-2 flex items-center justify-start gap-2 hover:bg-stone-100">
-              <HiOutlineCog6Tooth className="text-2xl text-dark-text-weak/70" />
-              <h1 className="text-sm">Settings</h1>
+            <button className="group h-10 w-auto aspect-square flex items-center justify-center text-2xl hover:bg-stone-100 text-dark-text-weak hover:text-dark-text rounded-full relative">
+              <IoShareSocialOutline />
+              <Tooltip title="Share" placement="center" />
             </button>
-            {/*  */}
-            <div className="w-[90%] h-[1px] bg-stone-200 mx-auto my-1"></div>
-            {/*  */}
-            <button className="w-full rounded-xl p-2 flex items-center justify-start gap-2 hover:bg-stone-100">
-              <HiOutlineMegaphone className="text-2xl text-dark-text-weak/70" />
-              <h1 className="text-sm">Updates</h1>
-            </button>
-            {/*  */}
-            <div className="w-[90%] h-[1px] bg-stone-200 mx-auto my-1"></div>
-            {/*  */}
             <button
-              onClick={handleLogout}
-              disabled={loading}
-              className="w-full rounded-xl p-2 flex items-center justify-start gap-2 hover:bg-stone-100"
+              ref={profileRef}
+              onClick={() => setShowPopup(true)}
+              className="h-9 w-9 rounded-full overflow-hidden ml-3"
             >
-              {loading ? (
-                <>
-                  <LuLoaderCircle className="text-2xl text-dark-text-weak/70 animate-spinLoader" />
-                  <h1 className="text-sm">Sign Out</h1>
-                </>
+              {photo !== "" ? (
+                <img
+                  src={photo}
+                  alt="avatar"
+                  className="bg-stone-100 w-full h-fit min-h-full object-cover rounded-full"
+                />
               ) : (
-                <>
-                  <HiOutlineArrowRightStartOnRectangle className="text-2xl text-dark-text-weak/70" />
-                  <h1 className="text-sm">Sign Out</h1>
-                </>
+                <img
+                  src="/avatars/avatar3.png"
+                  alt="avatar"
+                  className="bg-stone-100 w-full h-fit min-h-full object-cover rounded-full"
+                />
               )}
             </button>
-          </div>
+            {/* dropdown */}
+            {showPopup && (
+              <div
+                ref={popupRef}
+                className="absolute top-[90%] w-[220px] h-fit rounded-2xl ring-1 bg-white ring-stone-200 shadow-lg p-1.5"
+              >
+                <button className="w-full rounded-xl p-2 flex items-center justify-start gap-2 hover:bg-stone-100">
+                  <HiOutlineUser className="text-2xl text-dark-text-weak/70" />
+                  <h1 className="text-sm">My account</h1>
+                </button>
+                <button className="w-full rounded-xl p-2 flex items-center justify-start gap-2 hover:bg-stone-100">
+                  <HiOutlineCog6Tooth className="text-2xl text-dark-text-weak/70" />
+                  <h1 className="text-sm">Settings</h1>
+                </button>
+                {/*  */}
+                <div className="w-[90%] h-[1px] bg-stone-200 mx-auto my-1"></div>
+                {/*  */}
+                <button className="w-full rounded-xl p-2 flex items-center justify-start gap-2 hover:bg-stone-100">
+                  <HiOutlineMegaphone className="text-2xl text-dark-text-weak/70" />
+                  <h1 className="text-sm">Updates</h1>
+                </button>
+                {/*  */}
+                <div className="w-[90%] h-[1px] bg-stone-200 mx-auto my-1"></div>
+                {/*  */}
+                <button
+                  onClick={handleLogout}
+                  disabled={loading}
+                  className="w-full rounded-xl p-2 flex items-center justify-start gap-2 hover:bg-stone-100"
+                >
+                  {loading ? (
+                    <>
+                      <LuLoaderCircle className="text-2xl text-dark-text-weak/70 animate-spinLoader" />
+                      <h1 className="text-sm">Sign Out</h1>
+                    </>
+                  ) : (
+                    <>
+                      <HiOutlineArrowRightStartOnRectangle className="text-2xl text-dark-text-weak/70" />
+                      <h1 className="text-sm">Sign Out</h1>
+                    </>
+                  )}
+                </button>
+              </div>
+            )}
+          </>
+        ) : (
+          <>
+            <button className="group h-10 w-auto aspect-square flex items-center justify-center text-2xl hover:bg-stone-100 text-dark-text-weak hover:text-dark-text rounded-full relative">
+              <BsIncognito />
+              <Tooltip title="Temporary Mode" placement="center" />
+            </button>
+            <button className="group h-10 w-auto aspect-square flex items-center justify-center text-2xl hover:bg-stone-100 text-dark-text-weak hover:text-dark-text rounded-full relative">
+              <IoShareSocialOutline />
+              <Tooltip title="Share" placement="center" />
+            </button>
+          </>
         )}
       </div>
     </div>
