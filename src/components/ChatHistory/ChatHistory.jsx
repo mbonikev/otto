@@ -4,8 +4,19 @@ import { Link } from "react-router-dom";
 
 function ChatHistory({ messages }) {
   const [searchValue, setSearchValue] = useState("");
+  const [convs, setConvs] = useState([]);
 
-  console.log(messages);
+  const groupedMessages = messages.reduce((acc, msg) => {
+    if (!acc[msg.convId]) {
+      acc[msg.convId] = []; // Initialize array if not exists
+    }
+    acc[msg.convId].push(msg);
+    return acc || [];
+  }, {});
+  const firstMessages =
+    Object.values(groupedMessages).map((group) => group[0]) || [];
+
+  console(firstMessages);
 
   return (
     <div className="w-[300px] h-svh p-2">
@@ -40,7 +51,7 @@ function ChatHistory({ messages }) {
           </h1> */}
           {/* chats */}
           <div className="flex flex-col w-full h-fit">
-            {messages.filter((msg) => msg.role === "user").map((msg, index) => (
+            {firstMessages.map((msg, index) => (
                 <Link
                   to={"/"}
                   key={index}
