@@ -12,7 +12,7 @@ const ProtectedRoute = () => {
     // Check if the user is logged in by fetching user status from the backend
     const fetchUserStatus = async () => {
       try {
-        const response = await axios.get(`${apiUrl}/auth/status`, {
+        const response = await axios.get(`${apiUrl}/api/protected-route`, {
           withCredentials: true, // Include cookies for the token
         });
         setUser(response.data.user);
