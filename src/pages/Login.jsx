@@ -3,7 +3,7 @@ const Login = () => {
   document.title = "Login - Otto";
   return (
     <div className="h-screen flex justify-start items-center flex-col p-5">
-      <div className="w-full h-full grid grid-cols-2 max-lg:grid-cols-1">
+      <div className="w-full h-full grid grid-cols-3 max-lg:grid-cols-1">
         <div className="h-full flex-1 flex flex-col items-center justify-start gap-6 w-full">
           <div className="w-full h-fit flex gap-2">
             <img src="./logo.png" className="h-9" />
