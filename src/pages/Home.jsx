@@ -180,12 +180,10 @@ function Home() {
           photo={photo}
           displayName={displayName}
           user={user}
-          convs={convs}
           userId={userId}
           setMessages={setMessages}
           setThinking={setThinking}
           thinking={thinking}
-          loadingConvs={loadingConvs}
         />
       </div>
 
