@@ -291,7 +291,7 @@ function Navbar({
             </button>
             <button
               onClick={() => (window.location = "/#/login")}
-              className="group h-10 w-auto aspect-square flex items-center justify-center text-2xl hover:bg-stone-100 text-dark-text-weak hover:text-dark-text dark:hover:bg-card-dark-1 dark:hover:text-light-color rounded-full relative"
+              className="group h-10 w-auto aspect-square flex items-center justify-center text-2xl hover:bg-stone-100 text-dark-text-weak hover:text-dark-text dark:text-light-color-weak dark:hover:bg-card-dark-1 dark:hover:text-light-color rounded-full relative"
             >
               <IoShareSocialOutline />
               <Tooltip title="Share" placement="center" />
