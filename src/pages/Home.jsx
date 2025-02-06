@@ -7,7 +7,8 @@ import {
   oneLight,
 } from "react-syntax-highlighter/dist/esm/styles/prism";
 import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
+import remarkGfm from "remark-gfm"; // For GFM (GitHub-flavored Markdown) support
+import rehypeReact from "rehype-react";
 import { useNavigate, useOutletContext, useParams } from "react-router-dom";
 import { RiLoader2Fill } from "react-icons/ri";
 import Cookies from "js-cookie";
@@ -124,6 +125,10 @@ function Home() {
     handleGetMessages();
   }, []);
 
+  const renderAst = new rehypeReact({
+    createElement: React.createElement, // This ensures that React uses the correct JSX
+  }).Compiler;
+
   // Function to render content with code blocks
   const renderContent = (msg) => {
     const content = msg.content;
@@ -159,7 +164,10 @@ function Home() {
             // Render non-code content as markdown
             return (
               <div key={index} className="markdown">
-                <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                <ReactMarkdown
+                  remarkPlugins={[remarkGfm]} // Use GFM plugin for extended markdown features
+                  rehypePlugins={[renderAst]} // Use rehype-react to convert markdown to React components
+                >
                   {part}
                 </ReactMarkdown>
               </div>
