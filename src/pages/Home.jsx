@@ -159,9 +159,9 @@ function Home() {
             // Render non-code content as markdown
             return (
               <div key={index} className="markdown">
-                {/* <ReactMarkdown remarkPlugins={[remarkGfm]}> */}
+                <ReactMarkdown remarkPlugins={[remarkGfm]}>
                   {part}
-                {/* </ReactMarkdown> */}
+                </ReactMarkdown>
               </div>
             );
           }
@@ -204,7 +204,8 @@ function Home() {
                         : "w-full bg-transparent flex items-start justify-start gap-4 break-words whitespace-pre-wrap pr-9 max-lg:pr-0"
                     } ${isLastNonUserMsg ? "animate-message" : ""}`}
                   >
-                    {renderContent(msg)}
+                    {/* {renderContent(msg)} */}
+                    {msg}
                   </div>
                 );
               })}
