@@ -110,7 +110,7 @@ function Chat() {
                     key={index}
                     className={`message text-base font-normal text-dark-text dark:text-light-color leading-[26px] overflow-x-auto no_scroll whitespace-pre-wrap p-1 ${
                       msg.role === "user"
-                        ? "w-fit bg-stone-200/40 px-4 py-2 ml-auto max-w-[600px] rounded-3xl"
+                        ? "w-fit bg-stone-200/40 dark:bg-card-dark-1 px-4 py-2 ml-auto max-w-[600px] rounded-3xl"
                         : "w-full bg-transparent flex items-start justify-start gap-4 break-words whitespace-pre-wrap pr-9"
                     } ${isLastNonUserMsg ? "animate-message" : ""}`}
                   >
