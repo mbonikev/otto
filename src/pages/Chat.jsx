@@ -115,7 +115,7 @@ function Chat() {
                     } ${isLastNonUserMsg ? "animate-message" : ""}`}
                   >
                     {msg.role !== "user" && (
-                      <div className="h-8 aspect-square min-w-fit bg-white dark:bg-card-dark-1 rounded-full overflow-hidden ring-1 ring-stone-200/60 dark:ring-dark-text-weak p-1">
+                      <div className="h-8 aspect-square min-w-fit bg-white dark:bg-card-dark-1 rounded-full overflow-hidden ring-1 ring-stone-200/60 dark:ring-dark-text-weak/50 p-1">
                         <img src="./logo.png" className="rounded-full" />
                       </div>
                     )}
@@ -126,7 +126,7 @@ function Chat() {
 
               {thinking && (
                 <div className="text-sm leading-[22px] rounded-[25px] w-fit max-w-[500px] bg-transparent flex items-center gap-4">
-                  <div className="h-8 aspect-square min-w-fit bg-white dark:bg-card-dark-1 rounded-full overflow-hidden ring-1 ring-stone-200/60 dark:ring-dark-text-weak p-1">
+                  <div className="h-8 aspect-square min-w-fit bg-white dark:bg-card-dark-1 rounded-full overflow-hidden ring-1 ring-stone-200/60 dark:ring-dark-text-weak/50 p-1">
                     <img src="./logo.png" className="rounded-full" />
                   </div>
                   <div className="thinking_container">
