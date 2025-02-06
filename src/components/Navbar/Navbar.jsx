@@ -104,10 +104,9 @@ function Navbar({
   }, []);
 
   const handleNew = () => {
-      Cookies.remove("convId")
-      setMessages([])
-      window.location.reload()
-
+    Cookies.remove("convId");
+    setMessages([]);
+    window.location.reload();
   };
 
   return (
@@ -285,21 +284,21 @@ function Navbar({
           <>
             <button
               onClick={() => (window.location = "/#/login")}
-              className="group h-10 w-auto aspect-square flex items-center justify-center text-2xl hover:bg-stone-100 text-dark-text-weak hover:text-dark-text rounded-full relative"
+              className="group h-10 w-auto aspect-square flex items-center justify-center text-2xl hover:bg-stone-100 text-dark-text-weak hover:text-dark-text dark:text-light-color-weak rounded-full relative"
             >
               <BsIncognito />
               <Tooltip title="Temporary Mode" placement="center" />
             </button>
             <button
               onClick={() => (window.location = "/#/login")}
-              className="group h-10 w-auto aspect-square flex items-center justify-center text-2xl hover:bg-stone-100 text-dark-text-weak hover:text-dark-text rounded-full relative"
+              className="group h-10 w-auto aspect-square flex items-center justify-center text-2xl hover:bg-stone-100 text-dark-text-weak hover:text-dark-text dark:hover:bg-card-dark-1 dark:hover:text-light-color rounded-full relative"
             >
               <IoShareSocialOutline />
               <Tooltip title="Share" placement="center" />
             </button>
             <button
               onClick={() => (window.location = "/#/login")}
-              className="group h-10 ml-2 w-fit px-6 flex items-center justify-center text-base bg-dark-text text-white rounded-full relative"
+              className="group h-10 ml-2 w-fit px-6 flex items-center justify-center text-base bg-dark-text text-white rounded-full dark:text-light-color-weak dark:hover:bg-card-dark-1 dark:hover:text-light-color relative"
             >
               Login
             </button>
