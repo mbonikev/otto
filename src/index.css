@@ -207,7 +207,7 @@ input {
 }
 
 .markdown li {
-  
+  display: flex;
 }
 
 .markdown ul li strong {
