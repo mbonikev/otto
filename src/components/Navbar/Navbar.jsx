@@ -217,11 +217,11 @@ function Navbar({
       <div className="flex items-center justify-end gap-0 relative select-none">
         {user ? (
           <>
-            <button className="group h-10 w-auto aspect-square flex items-center justify-center text-2xl hover:bg-stone-100 text-dark-text-weak hover:text-dark-text dark:text-light-color-weak dark:hover:bg-card-dark-1 dark:hover:text-light-color relative">
+            <button className="group h-12 w-auto aspect-square flex items-center justify-center text-2xl hover:bg-stone-100 text-dark-text-weak hover:text-dark-text dark:text-light-color-weak dark:hover:bg-card-dark-1 dark:hover:text-light-color relative">
               <BsIncognito />
               <Tooltip title="Temporary Mode" placement="center" />
             </button>
-            <button className="group h-10 w-auto aspect-square flex items-center justify-center text-2xl hover:bg-stone-100 text-dark-text-weak hover:text-dark-text dark:text-light-color-weak dark:hover:bg-card-dark-1 dark:hover:text-light-color relative">
+            <button className="group h-12 w-auto aspect-square flex items-center justify-center text-2xl hover:bg-stone-100 text-dark-text-weak hover:text-dark-text dark:text-light-color-weak dark:hover:bg-card-dark-1 dark:hover:text-light-color relative">
               <IoShareSocialOutline />
               <Tooltip title="Share" placement="center" />
             </button>
@@ -284,21 +284,21 @@ function Navbar({
           <>
             <button
               onClick={() => (window.location = "/#/login")}
-              className="group h-10 w-auto aspect-square flex items-center justify-center text-2xl hover:bg-stone-100 text-dark-text-weak hover:text-dark-text dark:text-light-color-weak dark:hover:bg-card-dark-1 dark:hover:text-light-color rounded-full relative"
+              className="group h-12 w-auto aspect-square flex items-center justify-center text-2xl hover:bg-stone-100 text-dark-text-weak hover:text-dark-text dark:text-light-color-weak dark:hover:bg-card-dark-1 dark:hover:text-light-color rounded-full relative"
             >
               <BsIncognito />
               <Tooltip title="Temporary Mode" placement="center" />
             </button>
             <button
               onClick={() => (window.location = "/#/login")}
-              className="group h-10 w-auto aspect-square flex items-center justify-center text-2xl hover:bg-stone-100 text-dark-text-weak hover:text-dark-text dark:text-light-color-weak dark:hover:bg-card-dark-1 dark:hover:text-light-color rounded-full relative"
+              className="group h-12 w-auto aspect-square flex items-center justify-center text-2xl hover:bg-stone-100 text-dark-text-weak hover:text-dark-text dark:text-light-color-weak dark:hover:bg-card-dark-1 dark:hover:text-light-color rounded-full relative"
             >
               <IoShareSocialOutline />
               <Tooltip title="Share" placement="center" />
             </button>
             <button
               onClick={() => (window.location = "/#/login")}
-              className="group h-10 ml-2 w-fit px-5 flex items-center justify-center text-base font-medium bg-dark-text text-white rounded-full dark:text-dark-text dark:bg-white relative"
+              className="group h-12 ml-2 w-fit px-5 flex items-center justify-center text-base font-medium bg-dark-text text-white rounded-full dark:text-dark-text dark:bg-white relative"
             >
               Login
             </button>
