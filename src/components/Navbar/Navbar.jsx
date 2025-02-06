@@ -202,7 +202,7 @@ function Navbar({
                     </p>
                   </div>
                 </div>
-                <div className="h-full w-7 min-w-5 flex items-center justify-center text-dark-text/60 text-lg">
+                <div className="h-full w-7 min-w-5 flex items-center justify-center text-dark-text/60 dark:text-light-color/60 text-lg">
                   <BiSolidLockAlt />
                 </div>
               </div>
