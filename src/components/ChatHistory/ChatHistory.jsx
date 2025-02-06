@@ -75,7 +75,9 @@ function ChatHistory({ convs, loadingConvs }) {
               ) : (
                 <div className="w-full min-h-full flex items-center justify-center flex-col gap-1">
                   <PiChatsCircleFill className="text-dark-text-weak dark:text-light-color-weak text-6xl opacity-40" />
-                  <p className="text-dark-text-weak/50 dark:text-light-color-weak/50">0 Conversations</p>
+                  <p className="text-dark-text-weak/50 dark:text-light-color-weak/50">
+                    chats empty
+                  </p>
                 </div>
               )}
             </div>
