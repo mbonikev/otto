@@ -205,7 +205,7 @@ function Home() {
                     } ${isLastNonUserMsg ? "animate-message" : ""}`}
                   >
                     {/* {renderContent(msg)} */}
-                    {msg}
+                    {msg.content}
                   </div>
                 );
               })}
