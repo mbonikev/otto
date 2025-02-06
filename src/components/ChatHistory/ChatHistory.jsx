@@ -58,7 +58,7 @@ function ChatHistory({ convs, loadingConvs }) {
             </div>
           ) : (
             <div className="flex flex-col w-full h-full gap-0.5">
-              {filteredConvs.length === 0 ? (
+              {filteredConvs.length !== 0 ? (
                 filteredConvs.map((msg, index) => (
                   <button
                     key={index}
