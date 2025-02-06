@@ -116,7 +116,6 @@ function Home() {
           ]);
           setMessages(mappedMessages);
           setThinkingMessages(false);
-          loadingConvs(true);
         }
       } catch (error) {
         console.error("messages:", error);
