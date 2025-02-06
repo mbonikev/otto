@@ -263,7 +263,7 @@ function Navbar({
                 <button
                   onClick={handleLogout}
                   disabled={loading}
-                  className="w-full rounded-xl p-2 flex items-center justify-start gap-2 hover:bg-stone-100"
+                  className="w-full rounded-xl p-2 flex items-center justify-start gap-2 hover:bg-stone-100 text-dark-text-weak hover:text-dark-text dark:text-light-color-weak dark:hover:bg-card-dark-1 dark:hover:text-light-color"
                 >
                   {loading ? (
                     <>
