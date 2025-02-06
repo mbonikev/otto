@@ -73,9 +73,9 @@ function ChatHistory({ convs, loadingConvs }) {
                   </button>
                 ))
               ) : (
-                <div className="w-full min-h-full flex items-center justify-center">
+                <div className="w-full min-h-full flex items-center justify-center flex-col gap-2">
                   <PiChatsCircleFill className="text-dark-text-weak dark:text-light-color-weak text-6xl opacity-40" />
-                  <p className=""></p>
+                  <p className="">Empty</p>
                 </div>
               )}
             </div>
