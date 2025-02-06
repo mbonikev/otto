@@ -89,7 +89,7 @@ function Chat() {
                 wrapLines={true}
                 language="javascript"
                 style={isDarkMode ? darcula : oneLight} // Switch theme based on dark mode
-                className={`rounded-2xl overflow-x-auto max-w-[100%] p-6 break-all whitespace-pre-wrap`}
+                className={`rounded-2xl overflow-x-auto max-w-[100%] p-6 `}
               >
                 {part}
               </SyntaxHighlighter>
