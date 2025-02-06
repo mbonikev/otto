@@ -3,6 +3,7 @@ import { HiMiniMagnifyingGlass, HiMiniXCircle } from "react-icons/hi2";
 import { Link, useLocation } from "react-router-dom";
 import Cookies from "js-cookie";
 import { RiLoader2Fill } from "react-icons/ri";
+import { PiChatsCircleFill } from "react-icons/pi";
 
 function ChatHistory({ convs, loadingConvs }) {
   const [searchValue, setSearchValue] = useState("");
@@ -72,7 +73,9 @@ function ChatHistory({ convs, loadingConvs }) {
                   </button>
                 ))
               ) : (
-                <></>
+                <div className="w-full h-full flex items-center justify-center">
+                  <PiChatsCircleFill className="text-dark-text-weak dark:text-light-color-weak" />
+                </div>
               )}
             </div>
           )}
