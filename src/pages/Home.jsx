@@ -186,10 +186,10 @@ function Home() {
 
       <div
         ref={chatBoxRef}
-        className="w-full flex-1 flex flex-col mt-[70px] scroll-smooth overflow-y-scroll pl-[12px] bg-white dark:bg-body-dark"
+        className="w-full flex-1 flex flex-col mt-[70px] scroll-smooth overflow-y-scroll pl-[12px] bg-white dark:bg-body-dark text-dark-text dark:text-light-color"
       >
         {messages.length > 0 ? (
-          <div className="w-full max-w-[800px] mx-auto flex-1 flex flex-col items-center justify-start py-10">
+          <div className="w-full max-w-[800px] mx-auto flex-1 flex flex-col items-center justify-start py-10 max-lg:px-5">
             <div className="w-full flex flex-col gap-10">
               {messages.map((msg, index) => {
                 const isLastNonUserMsg =
@@ -198,17 +198,12 @@ function Home() {
                 return (
                   <div
                     key={index}
-                    className={`message text-base font-normal text-dark-text leading-[26px] overflow-x-auto no_scroll whitespace-pre-wrap ${
+                    className={`message text-base font-normal text-dark-text dark:text-light-color leading-[26px] overflow-x-auto no_scroll whitespace-pre-wrap flex p-1 ${
                       msg.role === "user"
-                        ? "w-fit bg-stone-200/40 px-4 py-2 ml-auto max-w-[600px] rounded-3xl"
-                        : "w-full bg-transparent flex items-start justify-start gap-4 break-words whitespace-pre-wrap pr-9"
+                        ? "w-fit bg-stone-200/40 dark:bg-card-dark-1 px-6 py-4 ml-auto max-w-[600px] rounded-3xl break-words whitespace-pre-wrap text-left"
+                        : "w-full bg-transparent flex items-start justify-start gap-4 break-words whitespace-pre-wrap pr-9 max-lg:pr-0"
                     } ${isLastNonUserMsg ? "animate-message" : ""}`}
                   >
-                    {msg.role !== "user" && (
-                      <div className="h-8 aspect-square min-w-fit bg-white rounded-full overflow-hidden ring-1 ring-stone-200/60 p-1 -translate-y-1">
-                        <img src="./logo.png" className="rounded-full" />
-                      </div>
-                    )}
                     {renderContent(msg)}
                   </div>
                 );
@@ -216,9 +211,9 @@ function Home() {
 
               {thinking && (
                 <div className="text-sm leading-[22px] rounded-[25px] w-fit max-w-[500px] bg-transparent flex items-center gap-4">
-                  <div className="h-8 aspect-square min-w-fit bg-white rounded-full overflow-hidden ring-1 ring-stone-200/60 p-1">
+                  {/* <div className="h-8 aspect-square min-w-fit bg-white dark:bg-card-dark-1 rounded-full overflow-hidden ring-1 ring-stone-200/60 dark:ring-dark-text-weak/50 p-1">
                     <img src="./logo.png" className="rounded-full" />
-                  </div>
+                  </div> */}
                   <div className="thinking_container">
                     <div className="dot" />
                   </div>
@@ -228,11 +223,7 @@ function Home() {
           </div>
         ) : (
           <div className="w-full h-full flex flex-col items-center justify-center">
-            {thinkingMessages ? (
-              <RiLoader2Fill className="text-2xl w-auto animate-spin text-dark-text-weak/50 stroke-[1px]" />
-            ) : (
-              <h1 className="text-3xl font-semibold">How can I assist you?</h1>
-            )}
+            <h1 className="text-3xl font-semibold">How can I assist you?</h1>
           </div>
         )}
       </div>
