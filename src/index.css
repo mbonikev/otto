@@ -163,6 +163,7 @@ input {
 
 /* Style for subheadings */
 .markdown h2,
+.markdown h3,
 .markdown h3 {
   font-size: 1.5rem;
   font-weight: bold;
