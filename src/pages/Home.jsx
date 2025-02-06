@@ -176,7 +176,7 @@ function Home() {
                 }}
                 wrapLines={true}
                 language="javascript"
-                style={!isDarkMode ? oneDark : oneLight} // Switch theme based on dark mode
+                style={oneDark} // Switch theme based on dark mode
                 className={`rounded-2xl overflow-x-auto max-w-[100%] p-6 break-all whitespace-pre-wrap`}
               >
                 {part}
