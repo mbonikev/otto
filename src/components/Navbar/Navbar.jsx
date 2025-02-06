@@ -273,18 +273,18 @@ function Navbar({
                 ref={popupRef}
                 className="absolute top-[90%] w-[220px] h-fit rounded-2xl ring-1 bg-white dark:bg-card-dark-1 ring-stone-200 dark:ring-card-dark-1 shadow-lg p-1.5"
               >
-                <button className="w-full rounded-xl p-2 flex items-center justify-start gap-2 hover:bg-stone-100 text-dark-text-weak hover:text-dark-text dark:text-light-color-weak dark:hover:bg-card-dark-1 dark:hover:text-light-color">
+                <button className="w-full rounded-xl p-2 flex items-center justify-start gap-2 hover:bg-stone-100 text-dark-text-weak hover:text-dark-text dark:text-light-color-weak dark:hover:bg-light-color-weak dark:hover:text-light-color">
                   <HiOutlineUser className="text-2xl text-dark-text-weak/70 dark:text-light-color-weak/50" />
                   <h1 className="text-sm">My account</h1>
                 </button>
-                <button className="w-full rounded-xl p-2 flex items-center justify-start gap-2 hover:bg-stone-100 text-dark-text-weak hover:text-dark-text dark:text-light-color-weak dark:hover:bg-card-dark-1 dark:hover:text-light-color">
+                <button className="w-full rounded-xl p-2 flex items-center justify-start gap-2 hover:bg-stone-100 text-dark-text-weak hover:text-dark-text dark:text-light-color-weak dark:hover:bg-light-color-weak dark:hover:text-light-color">
                   <HiOutlineCog6Tooth className="text-2xl text-dark-text-weak/70 dark:text-light-color-weak/50" />
                   <h1 className="text-sm">Settings</h1>
                 </button>
                 {/*  */}
                 <div className="w-[90%] h-[1px] bg-stone-200 dark:bg-dark-text-weak/40 mx-auto my-1"></div>
                 {/*  */}
-                <button className="w-full rounded-xl p-2 flex items-center justify-start gap-2 hover:bg-stone-100 text-dark-text-weak hover:text-dark-text dark:text-light-color-weak dark:hover:bg-card-dark-1 dark:hover:text-light-color">
+                <button className="w-full rounded-xl p-2 flex items-center justify-start gap-2 hover:bg-stone-100 text-dark-text-weak hover:text-dark-text dark:text-light-color-weak dark:hover:bg-light-color-weak dark:hover:text-light-color">
                   <HiOutlineMegaphone className="text-2xl text-dark-text-weak/70 dark:text-light-color-weak/50" />
                   <h1 className="text-sm">Updates</h1>
                 </button>
@@ -294,7 +294,7 @@ function Navbar({
                 <button
                   onClick={handleLogout}
                   disabled={loading}
-                  className="w-full rounded-xl p-2 flex items-center justify-start gap-2 hover:bg-stone-100 text-dark-text-weak hover:text-dark-text dark:text-light-color-weak dark:hover:bg-card-dark-1 dark:hover:text-light-color"
+                  className="w-full rounded-xl p-2 flex items-center justify-start gap-2 hover:bg-stone-100 text-dark-text-weak hover:text-dark-text dark:text-light-color-weak dark:hover:bg-light-color-weak dark:hover:text-light-color"
                 >
                   {loading ? (
                     <>
