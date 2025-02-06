@@ -159,9 +159,9 @@ function Home() {
             // Render non-code content as markdown
             return (
               <div key={index} className="markdown">
-                {/* <ReactMarkdown remarkPlugins={[remarkGfm]}> */}
+                <ReactMarkdown remarkPlugins={[remarkGfm]}>
                   {part}
-                {/* </ReactMarkdown> */}
+                </ReactMarkdown>
               </div>
             );
           }
