@@ -6,6 +6,7 @@ import { oneDark, oneLight, darcula } from "react-syntax-highlighter/dist/esm/st
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { useOutletContext, useParams } from "react-router-dom";
+import { monokaiSublime } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
 function Chat() {
   const { id } = useParams();
