@@ -206,10 +206,6 @@ input {
   padding-left: 40px;
 }
 
-.markdown li {
-  line-height: fit-content !important;
-}
-
 .markdown ul li strong {
   font-size: 18px;
 }
