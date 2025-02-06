@@ -116,7 +116,7 @@ function Chat() {
                   >
                     {msg.role !== "user" && (
                       <div className="h-8 aspect-square min-w-fit bg-white rounded-full overflow-hidden ring-1 ring-stone-200/60 p-1 -translate-y-1">
-                        <img src="./logo.png" className="rounded-full" />
+                        <img src="./logo.png" className="rounded-full w-full h-full" />
                       </div>
                     )}
                     {renderContent(msg)}
