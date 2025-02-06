@@ -206,9 +206,9 @@ input {
   padding-left: 40px;
 }
 
-/* .markdown li {
-  display: flex;
-} */
+.markdown li {
+  height: 10px;
+}
 
 .markdown ul li strong {
   font-size: 18px;
