@@ -213,7 +213,7 @@ function PromptArea({
               Code
               <Tooltip title="Type Codes" placement="right-center" />
             </div>
-            <div className="group cursor-default h-full w-fit px-3 flex items-center justify-center gap-1 text-sm ring-1 ring-stone-300 dark:ring-dark-text-weak dark:hover:bg-light-color-weak/10 text-dark-text-weak dark:text-light-color-weak dark:hover:text-light-color font-semibold rounded-full relative">
+            <div className="group cursor-default h-full w-fit px-3 flex items-center justify-center gap-1 text-sm ring-1 ring-stone-300 dark:ring-dark-text-weak dark:hover:bg-light-color-weak/10 text-dark-text-weak dark:text-light-color-weak font-semibold rounded-full relative">
               <BsFileEarmarkText className="text-base text-blue-400 stroke-[0.6px]" />
               Files
               <Tooltip title="Comming Soon" placement="right-center" />
