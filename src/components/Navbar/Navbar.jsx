@@ -251,14 +251,14 @@ function Navbar({
                   <h1 className="text-sm">Settings</h1>
                 </button>
                 {/*  */}
-                <div className="w-[90%] h-[1px] bg-stone-200 mx-auto my-1"></div>
+                <div className="w-[90%] h-[1px] bg-stone-200 dark:bg-dark-text-weak/20 mx-auto my-1"></div>
                 {/*  */}
                 <button className="w-full rounded-xl p-2 flex items-center justify-start gap-2 hover:bg-stone-100 text-dark-text-weak hover:text-dark-text dark:text-light-color-weak dark:hover:bg-card-dark-1 dark:hover:text-light-color">
                   <HiOutlineMegaphone className="text-2xl text-dark-text-weak/70" />
                   <h1 className="text-sm">Updates</h1>
                 </button>
                 {/*  */}
-                <div className="w-[90%] h-[1px] bg-stone-200 mx-auto my-1"></div>
+                <div className="w-[90%] h-[1px] bg-stone-200 dark:bg-dark-text-weak/20 mx-auto my-1"></div>
                 {/*  */}
                 <button
                   onClick={handleLogout}
