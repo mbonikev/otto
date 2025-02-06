@@ -12,7 +12,7 @@ function Tooltip({ title, placement, shortcut }) {
           : placement === "right"
           ? "top-[120%] right-0 "
           : placement === "right-center"
-          ? "top-0 bottom-0 my-auto left-[115%]"
+          ? "top-0 bottom-0 my-auto left-[100%]"
           : "top-[120%] left-0"
       }`}
     >
