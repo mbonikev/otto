@@ -19,13 +19,11 @@ function Home() {
   const [messages, setMessages] = useState([]);
   const [thinking, setThinking] = useState(false);
   const [thinkingMessages, setThinkingMessages] = useState(false);
-  const [loadingConvs, setLoadingConvs] = useState(false);
   const chatBoxRef = useRef(null);
   const { chat } = useParams();
   const [convId, setConvId] = useState("");
   const navigate = useNavigate();
   const [param, setParam] = useState("default");
-  const [convs, setConvs] = useState([]);
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
