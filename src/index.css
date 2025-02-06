@@ -207,7 +207,7 @@ input {
 }
 
 .markdown li {
-  height: fit-content !important;
+  line-height: fit-content !important;
 }
 
 .markdown ul li strong {
