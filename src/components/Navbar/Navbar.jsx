@@ -23,12 +23,10 @@ function Navbar({
   photo,
   displayName,
   user,
-  convs,
   userId,
   setMessages,
   setThinking,
   thinking,
-  loadingConvs,
 }) {
   const [showPopup, setShowPopup] = useState(false);
   const profileRef = useRef(null);
