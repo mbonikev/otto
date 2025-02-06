@@ -185,7 +185,7 @@ function Navbar({
           <div className="w-full h-full bg-white dark:bg-card-dark-1 ring-1 ring-stone-200 dark:ring-card-dark-1 shadow-lg rounded-2xl pt-[88px] px-2 pb-2 text-center">
             <h1 className="font-Kanit delay-150 transition-all whitespace-nowrap opacity-0 group-hover:opacity-100 text-2xl font-light text-dark-text-weak dark:text-light-color-weak text-center">
               Otto
-              <span className="text-xs mx-1 rounded-xl bg-stone-200/50 dark:bg-light-color-weak font-Inter px-2 py-0.5 delay-150 transition-all whitespace-nowrap opacity-0 group-hover:opacity-100 font-medium text-dark-text-weak mt-0">
+              <span className="text-xs mx-1 rounded-xl bg-stone-200/50 dark:bg-light-color-weak/50 font-Inter px-2 py-0.5 delay-150 transition-all whitespace-nowrap opacity-0 group-hover:opacity-100 font-medium text-dark-text-weak mt-0">
                 Beta
               </span>
             </h1>
