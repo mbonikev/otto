@@ -57,7 +57,7 @@ input {
 
 @media (prefers-color-scheme: dark) {
   ::-webkit-scrollbar-thumb {
-    background: #ececec; /* Optional: change the thumb background color for dark mode */
+    background: #303030; /* Optional: change the thumb background color for dark mode */
     border: 4px solid #212121; /* Darker border for dark mode */
   }
 }
