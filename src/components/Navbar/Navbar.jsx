@@ -89,18 +89,20 @@ function Navbar({
 
   // shortcuts
   useEffect(() => {
-    const handleKeyDown = (event) => {
-      if (event.key === "Escape") {
-        event.preventDefault();
-        handleCloseChatsModal();
-      } else if (event.altKey && event.key.toLowerCase() === "c") {
-        event.preventDefault();
-        handleOpenChatsModal();
-      }
-    };
+    if (user) {
+      const handleKeyDown = (event) => {
+        if (event.key === "Escape") {
+          event.preventDefault();
+          handleCloseChatsModal();
+        } else if (event.altKey && event.key.toLowerCase() === "c") {
+          event.preventDefault();
+          handleOpenChatsModal();
+        }
+      };
 
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
+      window.addEventListener("keydown", handleKeyDown);
+      return () => window.removeEventListener("keydown", handleKeyDown);
+    }
   }, []);
 
   const handleNew = () => {
