@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import Navbar from "../components/Navbar/Navbar";
 import PromptArea from "../components/PromptArea/PromptArea";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { oneLight } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { oneDark, oneLight } from "react-syntax-highlighter/dist/esm/styles/prism";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { useNavigate, useOutletContext, useParams } from "react-router-dom";
