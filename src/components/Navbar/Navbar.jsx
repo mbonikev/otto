@@ -248,11 +248,11 @@ function Navbar({
       <div className="flex items-center justify-end gap-0 relative select-none">
         {user ? (
           <>
-            <button className="group h-12 w-auto aspect-square flex items-center justify-center text-2xl hover:bg-stone-100 text-dark-text-weak hover:text-dark-text dark:text-light-color-weak dark:hover:bg-card-dark-1 dark:hover:text-light-color relative">
+            <button className="group h-12 w-auto aspect-square flex items-center justify-center text-2xl hover:bg-stone-100 text-dark-text-weak hover:text-dark-text dark:text-light-color-weak dark:hover:bg-card-dark-1 dark:hover:text-light-color rounded-full relative">
               <BsIncognito />
               <Tooltip title="Temporary Mode" placement="center" />
             </button>
-            <button className="group h-12 w-auto aspect-square flex items-center justify-center text-2xl hover:bg-stone-100 text-dark-text-weak hover:text-dark-text dark:text-light-color-weak dark:hover:bg-card-dark-1 dark:hover:text-light-color relative">
+            <button className="group h-12 w-auto aspect-square flex items-center justify-center text-2xl hover:bg-stone-100 text-dark-text-weak hover:text-dark-text dark:text-light-color-weak dark:hover:bg-card-dark-1 dark:hover:text-light-color rounded-full relative">
               <IoShareSocialOutline />
               <Tooltip title="Share" placement="center" />
             </button>
