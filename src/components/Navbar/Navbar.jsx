@@ -139,7 +139,7 @@ function Navbar({
           <>
             <button
               onClick={handleOpenChatsModal}
-              className="group h-10 w-auto aspect-square flex items-center justify-center text-2xl hover:bg-stone-100 text-dark-text-weak hover:text-dark-text rounded-full relative"
+              className="group h-10 w-auto aspect-square flex items-center justify-center text-2xl hover:bg-stone-100 text-dark-text-weak dark:text-light-color-weak hover:text-dark-text rounded-full relative"
             >
               <HiOutlineChatBubbleLeftRight />
               <Tooltip
@@ -150,7 +150,7 @@ function Navbar({
             </button>
             <button
               onClick={handleNew}
-              className="group h-10 w-auto aspect-square flex items-center justify-center text-2xl hover:bg-stone-100 text-dark-text-weak hover:text-dark-text rounded-full relative"
+              className="group h-10 w-auto aspect-square flex items-center justify-center text-2xl hover:bg-stone-100 text-dark-text-weak dark:text-light-color-weak hover:text-dark-text rounded-full relative"
             >
               <RxPencil2 />
               <Tooltip title="New chat" placement="center" />
@@ -160,7 +160,7 @@ function Navbar({
           <>
             <button
               onClick={() => (window.location = "/#/login")}
-              className="group h-10 w-auto aspect-square flex items-center justify-center text-2xl hover:bg-stone-100 text-dark-text-weak hover:text-dark-text rounded-full relative"
+              className="group h-10 w-auto aspect-square flex items-center justify-center text-2xl hover:bg-stone-100 text-dark-text-weak dark:text-light-color-weak hover:text-dark-text rounded-full relative"
             >
               <HiOutlineChatBubbleLeftRight />
               <Tooltip
@@ -171,7 +171,7 @@ function Navbar({
             </button>
             <button
               onClick={() => (window.location = "/#/login")}
-              className="group h-10 w-auto aspect-square flex items-center justify-center text-2xl hover:bg-stone-100 text-dark-text-weak hover:text-dark-text rounded-full relative"
+              className="group h-10 w-auto aspect-square flex items-center justify-center text-2xl hover:bg-stone-100 text-dark-text-weak dark:text-light-color-weak hover:text-dark-text rounded-full relative"
             >
               <RxPencil2 />
               <Tooltip title="New chat" placement="center" />
