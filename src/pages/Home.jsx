@@ -197,7 +197,7 @@ function Home() {
 
       <div
         ref={chatBoxRef}
-        className="w-full flex-1 flex flex-col mt-[70px] scroll-smooth overflow-y-scroll pl-[12px]"
+        className="w-full flex-1 flex flex-col mt-[70px] scroll-smooth overflow-y-scroll pl-[12px] bg-white dark:bg-body-dark"
       >
         {messages.length > 0 ? (
           <div className="w-full max-w-[800px] mx-auto flex-1 flex flex-col items-center justify-start py-10">
