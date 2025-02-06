@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import Navbar from "../components/Navbar/Navbar";
 import PromptArea from "../components/PromptArea/PromptArea";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { oneDark, oneLight, darcula } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { oneDark, oneLight, darcula, monokaiSublime } from "react-syntax-highlighter/dist/esm/styles/prism";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { useOutletContext, useParams } from "react-router-dom";
@@ -85,7 +85,7 @@ function Chat() {
                 }}
                 wrapLines={true}
                 language="javascript"
-                style={isDarkMode ? darcula : oneLight} // Switch theme based on dark mode
+                style={isDarkMode ? monokaiSublime : oneLight} // Switch theme based on dark mode
                 className={`rounded-2xl overflow-x-auto max-w-[100%] p-6 break-all whitespace-pre-wrap`}
               >
                 {part}
