@@ -2,7 +2,10 @@ import React, { useEffect, useRef, useState } from "react";
 import Navbar from "../components/Navbar/Navbar";
 import PromptArea from "../components/PromptArea/PromptArea";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { oneLight, darcula } from "react-syntax-highlighter/dist/esm/styles/prism";
+import {
+  oneLight,
+  darcula,
+} from "react-syntax-highlighter/dist/esm/styles/prism";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { useOutletContext, useParams } from "react-router-dom";
@@ -128,7 +131,7 @@ function Chat() {
                     key={index}
                     className={`message text-base font-normal text-dark-text dark:text-light-color leading-[26px] overflow-x-auto no_scroll whitespace-pre-wrap flex p-1 ${
                       msg.role === "user"
-                        ? "w-fit bg-stone-200/40 dark:bg-card-dark-1 px-6 py-4 ml-auto max-w-[600px] rounded-3xl break-words whitespace-pre-wrap flex"
+                        ? "w-fit bg-stone-200/40 dark:bg-card-dark-1 px-6 py-4 ml-auto max-w-[600px] rounded-3xl break-words whitespace-pre-wrap flex items-start justify-start"
                         : "w-full bg-transparent flex items-start justify-start gap-4 break-words whitespace-pre-wrap pr-9"
                     } ${isLastNonUserMsg ? "animate-message" : ""}`}
                   >
