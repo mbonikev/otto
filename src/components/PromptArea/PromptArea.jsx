@@ -154,7 +154,7 @@ function PromptArea({
   };
 
   return (
-    <div className="w-full h-fit flex flex-col gap-3 px-3 pb-3 z-0 sticky bottom-0 bg-white">
+    <div className="w-full h-fit flex flex-col gap-3 px-3 pb-3 z-0 sticky bottom-0 bg-white dark:bg-body-dark">
       <form
         onSubmit={submit}
         className="w-full max-w-[850px] mx-auto h-fit rounded-[25px] shadow-lg ring-1 p-2 ring-stone-200 flex flex-col gap-5"
