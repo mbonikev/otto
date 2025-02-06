@@ -73,6 +73,7 @@ function Navbar({
             "Content-Type": "application/json",
           },
         });
+        console.log(response.data)
         if (response.data.convsWithTitles) {
           setConvs(response.data.convsWithTitles);
           setLoadingConvs(false);
