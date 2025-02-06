@@ -223,7 +223,11 @@ function Home() {
           </div>
         ) : (
           <div className="w-full h-full flex flex-col items-center justify-center">
-            <h1 className="text-3xl font-semibold">How can I assist you?</h1>
+            {thinkingMessages ? (
+              <RiLoader2Fill className="text-2xl w-auto animate-spin text-dark-text-weak/50 stroke-[1px]" />
+            ) : (
+              <h1 className="text-3xl font-semibold">How can I assist you?</h1>
+            )}
           </div>
         )}
       </div>
