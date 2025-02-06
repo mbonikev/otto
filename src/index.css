@@ -220,7 +220,7 @@ input {
 @media (prefers-color-scheme: dark) {
   .markdown code {
     font-weight: 500 !important;
-    background-color: #212121;
+    background-color: #303030;
     color: #111111;
   }
 }
