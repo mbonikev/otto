@@ -221,7 +221,7 @@ input {
   .markdown code {
     font-weight: 500 !important;
     background-color: #303030;
-    color: #f1f1f1;
+    color: #afafaf;
   }
 }
 /* Style for blockquotes (optional) */
