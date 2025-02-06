@@ -43,7 +43,7 @@ function ChatHistory({ convs, loadingConvs }) {
             {searchValue !== "" && (
               <HiMiniXCircle
                 onClick={() => setSearchValue("")}
-                className="mx-2 min-w-fit text-xl text-dark-text-weak/40 hover:text-dark-text-weak transition cursor-pointer"
+                className="mx-2 min-w-fit text-xl text-dark-text-weak/40 dark:text-light-color-weak hover:text-dark-text-weak transition cursor-pointer"
               />
             )}
           </div>
