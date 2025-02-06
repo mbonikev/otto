@@ -124,33 +124,6 @@ function Home() {
       }
     };
 
-    const handleGetConvs = async () => {
-      if (convs.length === 0) {
-        setLoadingConvs(true);
-      }
-      const retrieveId = Cookies.get("convId") || "";
-      const apiUrl = import.meta.env.VITE_BACKEND_API;
-      const apiKey = import.meta.env.VITE_GROQ_API_KEY;
-      try {
-        const response = await axios.get(`${apiUrl}/api/getconvs`, {
-          params: { userId },
-          headers: {
-            Authorization: `Bearer ${apiKey}`,
-            "Content-Type": "application/json",
-          },
-        });
-        if (response.data.convsWithTitles) {
-          setConvs(response.data.convsWithTitles);
-          setLoadingConvs(false);
-        }
-      } catch (error) {
-        console.error("conversations:", error);
-        setLoadingConvs(false);
-      }
-    };
-
-    // Call both functions to fetch data
-    handleGetConvs();
     handleGetMessages();
   }, []);
 
