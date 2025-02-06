@@ -298,7 +298,7 @@ function Navbar({
             </button>
             <button
               onClick={() => (window.location = "/#/login")}
-              className="group h-10 ml-2 w-fit px-6 flex items-center justify-center text-base font-medium bg-dark-text text-white rounded-full dark:text-dark-text dark:bg-white relative"
+              className="group h-10 ml-2 w-fit px-5 flex items-center justify-center text-base font-medium bg-dark-text text-white rounded-full dark:text-dark-text dark:bg-white relative"
             >
               Login
             </button>
