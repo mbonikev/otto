@@ -226,7 +226,7 @@ function PromptArea({
                 className="w-[300px] max-sm:w-full h-[300px] bg-white dark:text-light-color dark:bg-card-dark-2 ring-1 ring-stone-300/80 dark:ring-dark-text-weak shadow-md rounded-2xl absolute left-0 bottom-[130%] py-2 pl-2 flex flex-col"
               >
                 <div className="h-[40px] mb-2 pr-2">
-                  <div className="w-full h-full bg-stone-200/60 rounded-xl flex items-center justify-start">
+                  <div className="w-full h-full bg-stone-200/60 dark:bg-dark-text-weak rounded-xl flex items-center justify-start">
                     <HiMiniMagnifyingGlass className="mx-3 text-lg min-w-fit" />
                     <input
                       type="text"
