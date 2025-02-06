@@ -82,7 +82,7 @@ function Home() {
     document.title = messages.length
       ? `Otto - ${firstAssistantMessage?.title?.replace(/["`]/g, "") || ""}`
       : "Otto";
-  }, []);
+  }, [messages]);
 
   useEffect(() => {
     const handleGetMessages = async () => {
@@ -152,7 +152,7 @@ function Home() {
     // Call both functions to fetch data
     handleGetConvs();
     handleGetMessages();
-  }, [loadingConvs]);
+  }, []);
 
   // Function to render content with code blocks
   const renderContent = (msg) => {
