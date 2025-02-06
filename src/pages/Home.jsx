@@ -23,6 +23,24 @@ function Home() {
   const navigate = useNavigate();
   const [param, setParam] = useState("default");
   const [convs, setConvs] = useState([]);
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  useEffect(() => {
+    // Detect dark mode using prefers-color-scheme or a dark mode toggle
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+    setIsDarkMode(mediaQuery.matches);
+
+    // Listen for changes in the theme preference
+    const handleChange = (e) => {
+      setIsDarkMode(e.matches);
+    };
+
+    mediaQuery.addEventListener("change", handleChange);
+
+    return () => {
+      mediaQuery.removeEventListener("change", handleChange);
+    };
+  }, []);
 
   useEffect(() => {
     const handleChangeParam = (newParam) => {
