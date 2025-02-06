@@ -181,12 +181,12 @@ function PromptArea({
         <div className="flex items-center justify-between w-full h-[36px] bg-red-400/0 min-h-[32px] px-1.5 mb-1.5">
           {/* 1 */}
           <div className="w-full h-full flex items-center justify-start gap-3 select-none relative">
-            <div className=" h-full w-fit px-3 flex items-center justify-center gap-1 text-sm ring-1 ring-stone-300 dark:ring-dark-text-weak text-dark-text-weak font-semibold rounded-full relative">
+            <div className=" h-full w-fit px-3 flex items-center justify-center gap-1 text-sm ring-1 ring-stone-300 dark:ring-dark-text-weak dark:hover:bg-light-color-weak/20 text-dark-text-weak font-semibold rounded-full relative">
               {user ? (
                 <div
                   ref={modelsButtonRef}
                   onClick={() => setShowModels(true)}
-                  className="group cursor-pointer w-full h-full flex items-center justify-center gap-1.5 hover:text-dark-text dark:text-light-color-weak dark:hover:bg-light-color-weak dark:hover:text-light-color"
+                  className="group cursor-pointer w-full h-full flex items-center justify-center gap-1.5 hover:text-dark-text dark:text-light-color-weak dark:hover:text-light-color"
                 >
                   <LuBrain className="text-lg text-purple-500" />
                   <p className="w-full truncate max-w-[100px]">
@@ -197,7 +197,7 @@ function PromptArea({
                 </div>
               ) : (
                 <div
-                  className="group cursor-pointer w-full h-full flex items-center justify-center gap-1.5 hover:text-dark-text dark:text-light-color-weak dark:hover:bg-light-color-weak dark:hover:text-light-color"
+                  className="group cursor-pointer w-full h-full flex items-center justify-center gap-1.5 hover:text-dark-text dark:text-light-color-weak dark:hover:text-light-color"
                 >
                   <LuBrain className="text-lg text-purple-500" />
                   <p className="w-full truncate max-w-[100px]">
