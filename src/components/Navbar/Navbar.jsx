@@ -190,7 +190,7 @@ function Navbar({
               </span>
             </h1>
             <div className="w-full flex flex-col mt-3">
-              <div className="w-full h-14 rounded-xl hover:bg-stone-100/70 dark:hover:bg-light-color-weak/20 cursor-pointer p-2 flex items-center justify-between">
+              <div className="w-full h-14 rounded-xl hover:bg-stone-100/70 dark:hover:bg-light-color-weak/10 cursor-pointer p-2 flex items-center justify-between">
                 <div className="flex-1 flex items-center gap-2">
                   <div className="w-9 h-9 min-w-9 aspect-square flex justify-center items-center rounded-full bg-stone-200/50 text-dark-text text-lg">
                     <BsStars />
