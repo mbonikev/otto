@@ -204,8 +204,8 @@ function Home() {
                         : "w-full bg-transparent flex items-start justify-start gap-4 break-words whitespace-pre-wrap pr-9 max-lg:pr-0"
                     } ${isLastNonUserMsg ? "animate-message" : ""}`}
                   >
-                    {/* {renderContent(msg)} */}
-                    {msg.content}
+                    {renderContent(msg)}
+                    {/* {msg.content} */}
                   </div>
                 );
               })}
