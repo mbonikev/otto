@@ -25,7 +25,7 @@ const Login = () => {
               To enable full feature functionality.
             </p>
             <p className="text-base text-dark-text-weak dark:text-light-color-weak">
-              Continuw with:
+              Continue with:
             </p>
             <a
               href={`${backendUrl}/auth/google`}
