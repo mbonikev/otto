@@ -162,21 +162,21 @@ input {
   margin-top: 30px;
   font-size: 1.8rem !important;
   font-weight: 700 !important;
-  line-height: rem !important;
+  /* line-height: 2rem !important; */
 }
 
 .markdown h2 {
   margin-top: 30px;
   font-size: 1.8rem !important;
   font-weight: 600 !important;
-  line-height: rem !important;
+  /* line-height: 2rem !important; */
 }
 
 .markdown h3 {
   margin-top: 30px;
   font-size: 1.6rem !important;
   font-weight: 600 !important;
-  line-height: rem !important;
+  /* line-height: 2rem !important; */
 }
 
 .markdown h4 {
