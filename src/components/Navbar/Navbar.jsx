@@ -241,7 +241,7 @@ function Navbar({
           </button>
         ) : (
           <button
-            className="h-9 w-fit px-3 bg-body-dark dark:bg-light-color text-light-color dark:text-dark-text rounded-full overflow-hidden ml-3"
+            className="h-9 w-fit px-4 bg-body-dark dark:bg-light-color text-light-color dark:text-dark-text rounded-full overflow-hidden ml-3"
           >
             Login
           </button>
