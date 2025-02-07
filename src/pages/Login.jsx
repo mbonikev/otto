@@ -47,14 +47,21 @@ const Login = () => {
           <div className="w-full h-full overflow-hidden rounded-[30px] shadow-xl shadow-stone-200 dark:shadow-black/60 relative">
             <div className="w-full h-full rounded-3xl bg-white p-0">
               <ReactPlayer
-                url="./assets/tutorial.mp4"
+                url="/assets/tutorial.mp4"
                 controls={false}
                 muted={true}
                 loop={true}
                 playing={true}
                 width="100%"
                 height="100%"
-                quality={0}
+                config={{
+                  file: {
+                    attributes: {
+                      controlsList: "nodownload", // Prevents downloading
+                      preload: "auto", // Preloads video for better quality
+                    },
+                  },
+                }}
               />
             </div>
           </div>
