@@ -36,7 +36,7 @@ const Login = () => {
                 Continue with Google
               </a>
             </div>
-            <p className="text-base text-dark-text-weak dark:text-light-color-weak mt-10">
+            <p className="text-base text-dark-text-weak dark:text-light-color-weak mt-10 max-w-[500px]">
               By signing in, you agree to the Terms of Service and Privacy
               Policy.
             </p>
