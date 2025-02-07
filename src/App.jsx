@@ -17,7 +17,7 @@ function App() {
   };
   const handleCloseLoginModal = () => {
     setAnimateLoginModal(false);
-    setTimeout(() => setLoginModal(false), 50);
+    setTimeout(() => setLoginModal(false), 200);
   };
 
   const hasHash = window.location.hash.includes("#");
