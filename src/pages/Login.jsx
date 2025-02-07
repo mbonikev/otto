@@ -24,7 +24,7 @@ const Login = () => {
             <p className="text-base text-dark-text-weak dark:text-light-color-weak mb-9">
               To enable full feature functionality.
             </p>
-            <div className="flex-1"></div>
+            <div className="flex-1 w-full flex flex-col gap-1"></div>
             <p className="text-base text-dark-text-weak dark:text-light-color-weak">
               Continue with:
             </p>
