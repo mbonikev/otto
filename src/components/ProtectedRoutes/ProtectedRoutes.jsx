@@ -53,7 +53,7 @@ const ProtectedRoutes = () => {
     return (
       <div className="w-full h-screen flex items-center justify-center bg-white dark:bg-dark-text">
         {/* <img src="./logo.png" className="h-10 w-auto animate-spinLoader" /> */}
-        <span class="loader"></span>
+        <span className="loader"></span>
       </div>
     );
   }
