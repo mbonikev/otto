@@ -27,6 +27,7 @@ function PromptArea({
   models,
   userId,
   user,
+  handleOpenLoginModal,
 }) {
   const [message, setMessage] = useState([]);
   const textareaRef = useRef(null);
