@@ -10,7 +10,7 @@ function LoginModal() {
     <div className="w-[320px] h-[300px] p-2">
       <div className="w-full h-full bg-white dark:bg-card-dark-1 text-dark-text dark:text-light-color rounded-2xl p-5 flex flex-col">
         <div className="h-12 w-fit">
-          <img src="/logo.png" alt="" />
+          <img src="/logo.png" alt="" className="h-full w-auto" />
         </div>
         <p className="text-xl text-dark-text dark:text-light-color">
           Log in to access your account and enable full feature functionality.
