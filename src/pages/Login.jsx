@@ -11,13 +11,13 @@ const Login = () => {
     <div className="h-svh flex justify-start items-center flex-col">
       <div className="w-full h-full flex p-3">
         <div className="h-full flex-1 flex flex-col items-start justify-start gap-6 w-full p-0">
-          <Link to={"/"} className="w-fit h-fit flex gap-2">
-            <img src="./logo.png" className="h-8" />
-            {/* <h1 className="font-Kanit text-xl font-medium text-dark-text dark:text-light-color text-center">
+          <div className="w-fit bg-stone-300/5 flex-1 flex flex-col items-start justify-start gap-1">
+            <Link to={"/"} className="w-fit h-fit flex gap-2">
+              <img src="./logo.png" className="h-8" />
+              {/* <h1 className="font-Kanit text-xl font-medium text-dark-text dark:text-light-color text-center">
               Otto
             </h1> */}
-          </Link>
-          <div className="w-fit bg-stone-300/5 flex-1 flex flex-col items-start justify-start gap-1">
+            </Link>
             <h1 className="text-2xl font-semibold text-dark-text dark:text-light-color">
               Sign in to Otto
             </h1>
