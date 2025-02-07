@@ -38,7 +38,7 @@ function App() {
       {/* login Modal */}
       {loginModal && (
         <div
-          className={`w-fit h-svh fixed top-0 left-0 right-0 bottom-0 m-auto transition-opacity duration-300 ease-in-out z-30
+          className={`w-fit h-svh fixed top-0 left-0 right-0 bottom-0 m-auto transition-all duration-300 ease-in-out z-30
                 ${
                   animateLoginModal ? "opacity-100" : "opacity-0 translate-y-6 scale-90"
                 }`}
