@@ -143,7 +143,7 @@ function Navbar({
   const handleLoginModal = () => {};
 
   return (
-    <div className="w-full h-[60px] max-h-[60px] bg-white/80 dark:bg-red-300 backdrop-blur-lg grid grid-cols-3 text-dark-text dark:text-light-color px-4 sticky top-0">
+    <div className="w-full h-fit bg-white/80 dark:bg-red-300 backdrop-blur-lg grid grid-cols-3 text-dark-text dark:text-light-color px-4 sticky">
       {/* Overlay */}
       {chatsModal && (
         <div
@@ -213,7 +213,7 @@ function Navbar({
             </div>
           </div>
         </div>
-        <div className="w-7 min-w-7 z-10 group-hover:w-16 delay-150 transition-all">
+        <div className="w-7 min-w-7 z-10 group-hover:w-16 delay-150 group-hover:translate-y-5 transition-all">
           <img src="/logo.png" alt="logo" className="w-full h-fit " />
         </div>
       </div>
