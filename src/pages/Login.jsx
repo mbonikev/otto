@@ -45,14 +45,14 @@ const Login = () => {
             Demo
           </h1>
           <div className="w-full h-full overflow-hidden rounded-[30px] shadow-xl shadow-stone-200 dark:shadow-black/60 relative">
-            <div className="w-full h-full rounded-3xl bg-white p-0">
+            <div className="w-full h-full rounded-3xl bg-white p-20">
               <ReactPlayer
                 url="/assets/tutorial.mp4"
                 controls={false}
                 muted={true}
                 loop={true}
                 playing={true}
-                width="100%"
+                width="auto"
                 height="fit-content"
                 config={{
                   file: {
