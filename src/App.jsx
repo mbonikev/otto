@@ -42,7 +42,7 @@ function App() {
                   animateLoginModal ? "translate-x-0" : "-translate-x-[300px]"
                 }`}
         >
-          <ChatHistory convs={convs} loadingConvs={loadingConvs} />
+          
         </div>
       )}
 
