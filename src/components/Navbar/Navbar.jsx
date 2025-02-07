@@ -143,7 +143,7 @@ function Navbar({
   const handleLoginModal = () => {};
 
   return (
-    <div className="w-full h-[60px] max-h-[60px] relative bg-white/80 dark:bg-red-300 backdrop-blur-lg grid grid-cols-3 text-dark-text dark:text-light-color px-4 sticky">
+    <div className="w-full h-[60px] max-h-[60px] bg-white/80 dark:bg-red-300 backdrop-blur-lg grid grid-cols-3 text-dark-text dark:text-light-color px-4 sticky top-0">
       {/* Overlay */}
       {chatsModal && (
         <div
