@@ -111,54 +111,53 @@ function Chat() {
 
   return (
     <div className="w-full h-svh flex flex-col relative">
-      {/* <div className="w-full h-fit z-30 fixed top-0"> */}
+      <div className="w-full flex-1 flex flex-col scroll-smooth overflow-y-scroll bg-red-400">
         <Navbar />
-      {/* </div> */}
 
-      <div
-        ref={chatBoxRef}
-        className="w-full flex-1 flex flex-col pl-[12px] bg-white dark:bg-body-dark text-dark-text dark:text-light-color"
-      >
-        {messages.length > 0 ? (
-          <div className="w-full max-w-[765px] mx-auto flex-1 flex flex-col items-center justify-start py-10 max-lg:px-5">
-            <div className="w-full flex flex-col gap-10">
-              {messages.map((msg, index) => {
-                const isLastNonUserMsg =
-                  msg.role !== "user" && index === messages.length - 1;
+        <div
+          ref={chatBoxRef}
+          className="w-full flex-1 flex flex-col pl-[12px] bg-white dark:bg-body-dark text-dark-text dark:text-light-color"
+        >
+          {messages.length > 0 ? (
+            <div className="w-full max-w-[765px] mx-auto flex-1 flex flex-col items-center justify-start py-10 max-lg:px-5">
+              <div className="w-full flex flex-col gap-10">
+                {messages.map((msg, index) => {
+                  const isLastNonUserMsg =
+                    msg.role !== "user" && index === messages.length - 1;
 
-                return (
-                  <div
-                    key={index}
-                    className={`message text-base font-normal text-dark-text dark:text-light-color leading-[26px] overflow-x-auto no_scroll whitespace-pre-wrap flex py-1 px-5 ${
-                      msg.role === "user"
-                        ? "w-fit bg-stone-200/40 dark:bg-card-dark-1 px-5 py-[11px] ml-auto max-w-[600px] rounded-3xl break-words whitespace-pre-wrap text-left"
-                        : "w-full bg-transparent flex items-start justify-start gap-4 break-words whitespace-pre-wrap"
-                    } ${isLastNonUserMsg ? "animate-message" : ""}`}
-                  >
-                    {renderContent(msg)}
-                  </div>
-                );
-              })}
+                  return (
+                    <div
+                      key={index}
+                      className={`message text-base font-normal text-dark-text dark:text-light-color leading-[26px] overflow-x-auto no_scroll whitespace-pre-wrap flex py-1 px-5 ${
+                        msg.role === "user"
+                          ? "w-fit bg-stone-200/40 dark:bg-card-dark-1 px-5 py-[11px] ml-auto max-w-[600px] rounded-3xl break-words whitespace-pre-wrap text-left"
+                          : "w-full bg-transparent flex items-start justify-start gap-4 break-words whitespace-pre-wrap"
+                      } ${isLastNonUserMsg ? "animate-message" : ""}`}
+                    >
+                      {renderContent(msg)}
+                    </div>
+                  );
+                })}
 
-              {thinking && (
-                <div className="text-sm leading-[22px] rounded-[25px] w-fit max-w-[500px] bg-transparent flex items-center gap-4">
-                  {/* <div className="h-8 aspect-square min-w-fit bg-white dark:bg-card-dark-1 rounded-full overflow-hidden ring-1 ring-stone-200/60 dark:ring-dark-text-weak/50 p-1">
+                {thinking && (
+                  <div className="text-sm leading-[22px] rounded-[25px] w-fit max-w-[500px] bg-transparent flex items-center gap-4">
+                    {/* <div className="h-8 aspect-square min-w-fit bg-white dark:bg-card-dark-1 rounded-full overflow-hidden ring-1 ring-stone-200/60 dark:ring-dark-text-weak/50 p-1">
                     <img src="./logo.png" className="rounded-full" />
                   </div> */}
-                  <div className="thinking_container">
-                    <div className="dot" />
+                    <div className="thinking_container">
+                      <div className="dot" />
+                    </div>
                   </div>
-                </div>
-              )}
+                )}
+              </div>
             </div>
-          </div>
-        ) : (
-          <div className="w-full h-full flex flex-col items-center justify-center">
-            <h1 className="text-3xl font-semibold">How can I assist you?</h1>
-          </div>
-        )}
+          ) : (
+            <div className="w-full h-full flex flex-col items-center justify-center">
+              <h1 className="text-3xl font-semibold">How can I assist you?</h1>
+            </div>
+          )}
+        </div>
       </div>
-
       <PromptArea
         setMessages={setMessages}
         thinking={thinking}
