@@ -39,7 +39,7 @@ const Login = () => {
             </div>
           </div>
         </div>
-        <div className="w-2/4 h-full max-xl:hidden flex flex-col items-end justify-center gap-6 bg-stone-100 dark:bg-card-dark-1/40 overflow-hidden p-2 relative">
+        <div className="w-4/6 h-full max-xl:hidden flex flex-col items-end justify-center gap-6 bg-stone-100 dark:bg-card-dark-1/40 overflow-hidden p-2 relative">
          
         </div>
       </div>
