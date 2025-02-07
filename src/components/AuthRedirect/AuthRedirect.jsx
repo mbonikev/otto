@@ -24,7 +24,7 @@ const AuthRedirect = ({ children }) => {
     fetchUserStatus();
   }, []);
 
-  if (!loading) {
+  if (loading) {
     return (
       <div className="w-full h-screen flex items-center justify-center">
         {/* <img src="./logo.png" className="h-10 w-auto animate-spinLoader" /> */}
