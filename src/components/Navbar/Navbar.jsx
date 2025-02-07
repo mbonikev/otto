@@ -17,7 +17,7 @@ import axios from "axios";
 import { BsIncognito, BsLockFill, BsStars } from "react-icons/bs";
 import { BiSolidLockAlt } from "react-icons/bi";
 import Cookies from "js-cookie";
-import avatar3 from "/avatars/avatar3.png";
+import avatar from "/avatars/avatar1.png";
 
 function Navbar({
   photo,
@@ -233,7 +233,7 @@ function Navbar({
           className="h-10 w-10 rounded-full overflow-hidden ml-3"
         >
           <img
-            src={user ? photo : avatar3}
+            src={user ? photo : avatar}
             alt="avatar"
             className="bg-stone-100 w-full h-fit min-h-full object-cover rounded-full"
           />
