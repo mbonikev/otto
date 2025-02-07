@@ -182,14 +182,14 @@ input {
 .markdown h4 {
   margin-top: 30px;
   font-size: 1.4rem !important;
-  font-weight: 500 !important;
+  font-weight: 700 !important;
   line-height: 2rem !important;
 }
 
 .markdown h5 {
   margin-top: 30px;
   font-size: 1.2rem !important;
-  font-weight: 800 !important;
+  font-weight: 500 !important;
 }
 
 .markdown h6 {
