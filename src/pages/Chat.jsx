@@ -10,7 +10,7 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { useOutletContext, useParams } from "react-router-dom";
 
-function Chat() {
+function Chat({ handleOpenLoginModal }) {
   const { id } = useParams();
   const [messages, setMessages] = useState([]);
   const [thinking, setThinking] = useState(false);
@@ -112,7 +112,7 @@ function Chat() {
   return (
     <div className="w-full h-svh flex flex-col relative">
       {/* <div className="w-full h-fit z-30 fixed top-0"> */}
-        <Navbar />
+      <Navbar handleOpenLoginModal={handleOpenLoginModal} />
       {/* </div> */}
 
       <div
