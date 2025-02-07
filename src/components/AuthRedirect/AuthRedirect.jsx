@@ -33,7 +33,9 @@ const AuthRedirect = ({ children }) => {
     );
   }
 
-  return user ? <Navigate to="/" /> : children;
+  return user ? <Navigate to="/" /> : <>
+  {children}
+  </>;
 };
 
 export default AuthRedirect;
