@@ -23,7 +23,7 @@ const Login = () => {
             </h1>
             <a
               href={`${backendUrl}/auth/google`}
-              className="bg-white dark:bg-card-dark-1 hover:bg-stone-200 dark:hover:bg-card-hover-dark ring-1 ring-stone-200 dark:ring-card-dark-1 text-dark-text dark:text-light-color py-2 px-3 w-fit min-w-[230px] max-md:min-w-fit max-md:pr-5 max-lg:text-sm flex items-center justify-start gap-3 rounded-full"
+              className="bg-white dark:bg-card-dark-1 hover:bg-stone-200 dark:hover:bg-card-hover-dark ring-1 ring-stone-200 dark:ring-card-dark-1 text-dark-text dark:text-light-color py-2 px-3 w-full max-md:min-w-fit max-md:pr-5 max-lg:text-sm flex items-center justify-start gap-3 rounded-full"
             >
               <FcGoogle className="text-3xl" />
               Continue with Google
