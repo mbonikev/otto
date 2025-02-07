@@ -165,6 +165,10 @@ function Navbar({
           <ChatHistory convs={convs} loadingConvs={loadingConvs} />
         </div>
       )}
+
+      {/* login Modal */}
+      
+
       {/* 1 */}
       <div className="flex items-center justify-start gap-0">
         <button
