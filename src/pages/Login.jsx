@@ -37,7 +37,6 @@ const Login = () => {
               </a>
             </div>
             <p className="text-sm text-dark-text-weak dark:text-light-color-weak mt-10 max-w-[300px] mb-7">
-              &copy; Otto 2025. All rights reserved. <br />
               By signing in, you agree to the{" "}
               <a className="underline hover:text-dark-text dark:hover:text-light-color cursor-pointer">
                 Terms of Service
