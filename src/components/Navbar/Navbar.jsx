@@ -224,7 +224,7 @@ function Navbar({
           <Tooltip title="Temporary Mode" placement="center" />
         </button>
         <button className="group h-10 w-auto aspect-square flex items-center justify-center text-[22px] hover:bg-stone-200/70 text-dark-text-weak hover:text-dark-text-weak dark:text-light-color-weak dark:hover:bg-card-hover-dark dark:hover:text-light-color-weak rounded-full relative">
-          <IoShareSocialOutline className="stroke-[4px]" />
+          <IoShareSocialOutline className="stroke-[1px]" />
           <Tooltip title="Share" placement="center" />
         </button>
         {user ? (
