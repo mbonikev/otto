@@ -11,7 +11,7 @@ const Login = () => {
     <div className="h-svh flex justify-start items-center flex-col max-lg:p-0">
       <div className="w-full h-full flex">
         <div className="h-full flex-1 flex flex-col items-start justify-start gap-6 w-full p-6">
-          <Link to={'/'} className="w-fit h-fit flex gap-2">
+          <Link to={"/"} className="w-fit h-fit flex gap-2">
             <img src="./logo.png" className="h-9" />
             <h1 className="font-Kanit text-2xl font-light text-dark-text-weak text-center">
               Otto
@@ -39,12 +39,12 @@ const Login = () => {
             </div>
           </div>
         </div>
-        <div className="w-3/5 h-full max-xl:hidden flex flex-col items-end justify-center gap-6 bg-stone-100 overflow-hidden p-20 bg-stone-100.0">
+        <div className="w-3/5 h-full max-xl:hidden flex flex-col items-end justify-center gap-6 bg-stone-100 overflow-hidden p-20 bg-stone-100/0 relative">
+          <h1 className="absolute top-5 right-7 text-dark-text-weak text-sm flex items-center gap-2 font-medium">
+            <FaPlay className="text-xs opacity-40" />
+            Demo
+          </h1>
           <div className="w-full h-full object-contain overflow-hidden rounded-[30px] shadow-xl shadow-stone-200 relative">
-            <h1 className="absolute top-5 right-7 text-dark-text-weak text-sm flex items-center gap-2 font-medium">
-              <FaPlay className="text-xs opacity-40" />
-              Demo
-            </h1>
             <div className="w-full h-full object-contain overflow-hidden rounded-3xl bg-white p-5">
               <div className="h-full w-full">
                 <ReactPlayer
