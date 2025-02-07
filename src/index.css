@@ -275,7 +275,13 @@ pre {
   font-size: 14px !important;
   overflow-x: auto !important;
   padding: 10px !important;
-  background-color: #fafafa !important;
+  /* background-color: #fafafa !important; */
+}
+
+@media (prefers-color-scheme: dark) {
+  pre {
+    /* background-color: #fafafa !important; */
+  }
 }
 
 .hide_fist_span code span:only-child {
