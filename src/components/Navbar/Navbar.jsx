@@ -169,14 +169,14 @@ function Navbar({
       <div className="flex items-center justify-start gap-0">
         <button
           onClick={user ? handleOpenChatsModal : handleLoginModal}
-          className="group h-10 w-auto aspect-square flex items-center justify-center text-[22px] hover:bg-stone-100 text-dark-text-weak dark:text-light-color-weak hover:text-dark-text dark:hover:bg-card-hover-dark dark:hover:text-light-color-weak rounded-full relative"
+          className="group h-10 w-auto aspect-square flex items-center justify-center text-[22px] hover:bg-stone-100 text-dark-text-weak dark:text-light-color-weak hover:text-dark-text-weak dark:hover:bg-card-hover-dark dark:hover:text-light-color-weak rounded-full relative"
         >
-          <HiOutlineChatBubbleLeftRight className="stroke-[2.5px]" />
+          <HiOutlineChatBubbleLeftRight className="stroke-[2px]" />
           <Tooltip title="Chat history" placement="left" shortcut="Alt + c" />
         </button>
         <button
           onClick={user ? handleNew : handleLoginModal}
-          className="group h-10 w-auto aspect-square flex items-center justify-center text-[22px] hover:bg-stone-100 text-dark-text-weak dark:text-light-color-weak hover:text-dark-text dark:hover:bg-card-hover-dark dark:hover:text-light-color-weak rounded-full relative"
+          className="group h-10 w-auto aspect-square flex items-center justify-center text-[22px] hover:bg-stone-100 text-dark-text-weak dark:text-light-color-weak hover:text-dark-text-weak dark:hover:bg-card-hover-dark dark:hover:text-light-color-weak rounded-full relative"
         >
           <RxPencil2 />
           <Tooltip title="New chat" placement="center" />
@@ -219,11 +219,11 @@ function Navbar({
       </div>
       {/* 3 */}
       <div className="flex items-center justify-end gap-0 relative select-none">
-        <button className="group h-10 w-auto aspect-square flex items-center justify-center text-[22px] hover:bg-stone-100 text-dark-text-weak hover:text-dark-text dark:text-light-color-weak dark:hover:bg-card-hover-dark dark:hover:text-light-color-weak rounded-full relative">
+        <button className="group h-10 w-auto aspect-square flex items-center justify-center text-[22px] hover:bg-stone-100 text-dark-text-weak hover:text-dark-text-weak dark:text-light-color-weak dark:hover:bg-card-hover-dark dark:hover:text-light-color-weak rounded-full relative">
           <BsIncognito />
           <Tooltip title="Temporary Mode" placement="center" />
         </button>
-        <button className="group h-10 w-auto aspect-square flex items-center justify-center text-[22px] hover:bg-stone-100 text-dark-text-weak hover:text-dark-text dark:text-light-color-weak dark:hover:bg-card-hover-dark dark:hover:text-light-color-weak rounded-full relative">
+        <button className="group h-10 w-auto aspect-square flex items-center justify-center text-[22px] hover:bg-stone-100 text-dark-text-weak hover:text-dark-text-weak dark:text-light-color-weak dark:hover:bg-card-hover-dark dark:hover:text-light-color-weak rounded-full relative">
           <IoShareSocialOutline />
           <Tooltip title="Share" placement="center" />
         </button>
