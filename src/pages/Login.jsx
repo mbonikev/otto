@@ -61,7 +61,7 @@ const Login = () => {
           </div>
           <div className=" w-full h-full rounded-tl-3xl overflow-hidden dark:bg-body-dark pt-4 pl-10 block dark:hidden">
             <img
-              src="./assets/screenshot_dark.png"
+              src="./assets/screenshot_light.png"
               className="w-fit h-full object-cover object-left-top "
             />
           </div>
