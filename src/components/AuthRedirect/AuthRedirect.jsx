@@ -26,7 +26,7 @@ const AuthRedirect = ({ children }) => {
 
   if (loading) {
     return (
-      <div className="w-full h-screen flex items-center justify-center">
+      <div className="w-full h-screen flex items-center justify-center bg-red-400">
         {/* <img src="./logo.png" className="h-10 w-auto animate-spinLoader" /> */}
         <span class="loader"></span>
       </div>
