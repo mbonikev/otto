@@ -37,7 +37,8 @@ function Navbar({
   const [loadingConvs, setLoadingConvs] = useState(false);
   const [convs, setConvs] = useState([]);
   const navigate = useNavigate();
-  const [loginModal, setLoginModal] = useState(false)
+  const [loginModal, setLoginModal] = useState(false);
+  const [animateLoginModal, setAnimateLoginModal] = useState(false);
 
   const handleLogout = async () => {
     setLoading(true);
@@ -168,7 +169,16 @@ function Navbar({
       )}
 
       {/* login Modal */}
-      {loginModal && (<div></div>)}
+      {loginModal && (
+        <div
+          className={`w-fit h-svh fixed top-0 left-0 transition-transform duration-300 ease-in-out z-30
+                ${
+                  animateChatsModal ? "translate-x-0" : "-translate-x-[300px]"
+                }`}
+        >
+          <ChatHistory convs={convs} loadingConvs={loadingConvs} />
+        </div>
+      )}
 
       {/* 1 */}
       <div className="flex items-center justify-start gap-0">
@@ -183,7 +193,7 @@ function Navbar({
           onClick={user ? handleNew : handleLoginModal}
           className="group h-10 w-auto aspect-square flex items-center justify-center text-[22px] hover:bg-stone-200/70 text-dark-text-weak dark:text-light-color-weak hover:text-dark-text-weak dark:hover:bg-card-hover-dark dark:hover:text-light-color-weak rounded-full relative"
         >
-          <RxPencil2 className=""  />
+          <RxPencil2 className="" />
           <Tooltip title="New chat" placement="center" />
         </button>
       </div>
