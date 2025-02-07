@@ -15,7 +15,7 @@ function App() {
     setLoginModal(true);
     setTimeout(() => setAnimateLoginModal(true), 50);
   };
-  const handleCloseModal = () => {
+  const handleCloseLoginModal = () => {
     setAnimateLoginModal(false);
     setTimeout(() => setLoginModal(false), 300);
   };
@@ -28,7 +28,7 @@ function App() {
       {/* Overlay */}
       {loginModal && (
         <div
-          onClick={handleCloseModal}
+          onClick={handleCloseLoginModal}
           className={`fixed top-0 left-0 w-full h-svh bg-black/15 dark:bg-black/30 z-30 transition-opacity duration-300 ${
             animateLoginModal ? "opacity-100" : "opacity-0"
           }`}
@@ -51,7 +51,7 @@ function App() {
         <Routes>
           {/* Protected Routes for Logged-In Users */}
           <Route element={<ProtectedRoutes />}>
-            <Route path="/" element={<Home handleOpenLoginModal={handleOpenLoginModal} handleCloseModal={handleCloseModal} />} />
+            <Route path="/" element={<Home handleOpenLoginModal={handleOpenLoginModal} handleCloseLoginModal={handleCloseLoginModal} />} />
           </Route>
 
           {/* Prevent Logged-In Users from Accessing Login & Chat */}
