@@ -46,7 +46,7 @@ function App() {
         <Routes>
           {/* Protected Routes for Logged-In Users */}
           <Route element={<ProtectedRoutes />}>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Home handleOpenLoginModal={handleOpenLoginModal} />} />
           </Route>
 
           {/* Prevent Logged-In Users from Accessing Login & Chat */}
