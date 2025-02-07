@@ -6,6 +6,7 @@ import Login from "./pages/Login";
 import ProtectedRoutes from "./components/ProtectedRoutes/ProtectedRoutes";
 import Chat from "./pages/Chat";
 import AuthRedirect from "./components/AuthRedirect/AuthRedirect"; // Import AuthRedirect
+import LoginModal from "./components/LoginModal/LoginModal";
 
 function App() {
   const [loginModal, setLoginModal] = useState(false);
@@ -42,7 +43,7 @@ function App() {
                   animateLoginModal ? "translate-x-0" : "-translate-x-[300px]"
                 }`}
         >
-          
+          <LoginModal />
         </div>
       )}
 
