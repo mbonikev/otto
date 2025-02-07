@@ -18,8 +18,8 @@ const Login = () => {
             </h1>
           </Link>
           <div className="w-full flex-1 flex flex-col items-start justify-start gap-3 pt-[5vh]">
-            <h1 className="text-3xl font-semibold max-2xl:text-2xl mb-4 text-dark-text dark:text-light-color">
-              Log in to your account
+            <h1 className="text-3xl font-semibold max-2xl:text-2xl mb-0 text-dark-text dark:text-light-color">
+              Continue with:
             </h1>
             <a
               href={`${backendUrl}/auth/google`}
