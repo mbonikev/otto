@@ -187,6 +187,9 @@ input {
   font-weight: normal;
 }
 
+.markdown h2:only-child{
+  color: yellow !important;
+}
 
 /* Style for paragraphs */
 .markdown p {
