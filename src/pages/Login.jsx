@@ -13,7 +13,7 @@ const Login = () => {
         <div className="h-full flex-1 flex flex-col items-start justify-start gap-6 w-full p-4">
           <Link to={"/"} className="w-fit h-fit flex gap-2">
             <img src="./logo.png" className="h-8" />
-            <h1 className="font-Kanit text-xl font-medium text-dark-text dark:text-light-color text-center">
+            <h1 className="font-Kanit text-xl font-normal text-dark-text dark:text-light-color text-center">
               Otto
             </h1>
           </Link>
