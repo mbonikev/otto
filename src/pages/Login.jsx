@@ -37,8 +37,9 @@ const Login = () => {
               </a>
             </div>
             <p className="text-base text-dark-text-weak dark:text-light-color-weak mt-10 max-w-[300px] mb-7">
-              By signing in, you agree to the Terms of Service and Privacy
-              Policy.
+              By signing in, you agree to the{" "}
+              <a className="underline">Terms of Service</a> and{" "}
+              <a className="underline">Privacy Policy.</a>
             </p>
             <p className="text-base text-dark-text-weak dark:text-light-color-weak">
               Need help? Contact support
