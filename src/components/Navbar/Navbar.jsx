@@ -241,12 +241,12 @@ function Navbar({
           </button>
         ) : (
           <button
-            className="h-9 w-auto aspect-square rounded-full overflow-hidden ml-3"
+            className="h-9 w-fit px-3 bg-body-dark dark:bg-light-color rounded-full overflow-hidden ml-3"
           >
             <img
               src={photo ? photo : avatar}
               alt="avatar"
-              className="bg-body-dark dark:bg-light-color w-full h-fit px-3 min-h-full object-cover rounded-full"
+              className=" w-full h-fit px-3 min-h-full object-cover rounded-full"
             />
           </button>
         )}
