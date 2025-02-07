@@ -62,7 +62,7 @@ function App() {
             path="/chat"
             element={
               <AuthRedirect>
-                <Chat />
+                <Chat handleOpenLoginModal={handleOpenLoginModal}/>
               </AuthRedirect>
             }
           />
