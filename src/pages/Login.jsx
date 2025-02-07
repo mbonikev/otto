@@ -54,7 +54,7 @@ const Login = () => {
         </div>
         <div className="w-1/2 h-full max-xl:hidden flex flex-col items-end justify-center gap-6 overflow-hidden relative">
           <div className="bg-stone-100 dark:bg-red-400 w-full h-full ">
-          <img src="./assets/screenshot_dark.png" className="" />
+          <img src="./assets/screenshot_dark.png" className="w-fit" />
           </div>
         </div>
       </div>
