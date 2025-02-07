@@ -207,7 +207,7 @@ function PromptArea({
                 </div>
               )}
             </div>
-            <div className="group cursor-pointer h-full w-fit px-3 flex items-center justify-center gap-1 text-sm ring-1 ring-stone-300 dark:ring-dark-text-weak/50 dark:hover:bg-light-color-weak/10 text-dark-text-weak dark:text-light-color-weak dark:hover:text-light-color hover:text-dark-text font-semibold rounded-full relative">
+            <div onClick={handleOpenLoginModal}  className="group cursor-pointer h-full w-fit px-3 flex items-center justify-center gap-1 text-sm ring-1 ring-stone-300 dark:ring-dark-text-weak/50 dark:hover:bg-light-color-weak/10 text-dark-text-weak dark:text-light-color-weak dark:hover:text-light-color hover:text-dark-text font-semibold rounded-full relative">
               <GoCommandPalette className="text-lg text-lime-600 stroke-[1px]" />
               Code
               <Tooltip title="Type Codes" placement="right-center" />
