@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { HashRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
@@ -8,6 +8,8 @@ import Chat from "./pages/Chat";
 import AuthRedirect from "./components/AuthRedirect/AuthRedirect"; // Import AuthRedirect
 
 function App() {
+  const [loginModal, setLoginModal] = useState(false);
+  const [animateLoginModal, setAnimateLoginModal] = useState(false);
   const handleOpenLoginModal = () => {
     setLoginModal(true);
     setTimeout(() => setAnimateLoginModal(true), 50);
