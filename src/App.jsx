@@ -40,7 +40,7 @@ function App() {
       {/* login Modal */}
       {loginModal && (
         <div
-          className={`w-fit h-svh fixed top-0 left-0 right-0 bottom-0 bg-red-300 m-auto transition-all duration-300 ease-in-out z-30
+          className={`w-fit h-fit fixed top-0 left-0 right-0 bottom-0 m-auto transition-all duration-300 ease-in-out z-30
                 ${
                   animateLoginModal
                     ? "opacity-100"
