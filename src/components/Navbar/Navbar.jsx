@@ -166,7 +166,7 @@ function Navbar({
         </div>
       )}
       {/* 1 */}
-      <div className="flex items-center justify-start gap-0 bg-blue-400">
+      <div className="flex items-center justify-start gap-0">
         <button
           onClick={user ? handleOpenChatsModal : handleLoginModal}
           className="group h-10 w-auto aspect-square flex items-center justify-center text-[22px] hover:bg-stone-100 text-dark-text-weak dark:text-light-color-weak hover:text-dark-text dark:hover:bg-card-hover-dark dark:hover:text-light-color-weak rounded-full relative"
