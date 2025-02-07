@@ -197,7 +197,10 @@ function PromptArea({
                   <Tooltip title="Models" placement="right-center" />
                 </div>
               ) : (
-                <div onClick={handleOpenLoginModal} className="group cursor-pointer w-fit h-full flex items-center justify-center gap-1.5 px-3 relative hover:text-dark-text dark:text-light-color-weak dark:hover:text-light-color">
+                <div
+                  onClick={handleOpenLoginModal}
+                  className="group cursor-pointer w-fit h-full flex items-center justify-center gap-1.5 px-3 relative hover:text-dark-text dark:text-light-color-weak dark:hover:text-light-color"
+                >
                   <LuBrain className="text-lg text-purple-500" />
                   <p className="w-full truncate max-w-[100px]">
                     {selectedModel}
@@ -207,7 +210,10 @@ function PromptArea({
                 </div>
               )}
             </div>
-            <div onClick={handleOpenLoginModal}  className="group cursor-pointer h-full w-fit px-3 flex items-center justify-center gap-1 text-sm ring-1 ring-stone-300 dark:ring-dark-text-weak/50 dark:hover:bg-light-color-weak/10 text-dark-text-weak dark:text-light-color-weak dark:hover:text-light-color hover:text-dark-text font-semibold rounded-full relative">
+            <div
+              onClick={handleOpenLoginModal}
+              className="group cursor-pointer h-full w-fit px-3 flex items-center justify-center gap-1 text-sm ring-1 ring-stone-300 dark:ring-dark-text-weak/50 dark:hover:bg-light-color-weak/10 text-dark-text-weak dark:text-light-color-weak dark:hover:text-light-color hover:text-dark-text font-semibold rounded-full relative"
+            >
               <GoCommandPalette className="text-lg text-lime-600 stroke-[1px]" />
               Code
               <Tooltip title="Type Codes" placement="right-center" />
@@ -215,6 +221,11 @@ function PromptArea({
             <div className="group cursor-default h-full w-fit px-3 flex items-center justify-center gap-1 text-sm ring-1 ring-stone-300 dark:ring-dark-text-weak/50 dark:hover:bg-light-color-weak/10 text-dark-text-weak dark:text-light-color-weak font-semibold rounded-full relative">
               <BsFileEarmarkText className="text-base text-blue-400 stroke-[0.6px]" />
               Files
+              <Tooltip title="Comming Soon" placement="right-center" />
+            </div>
+            <div className="group cursor-default h-full w-fit px-3 flex items-center justify-center gap-1 text-sm ring-1 ring-stone-300 dark:ring-dark-text-weak/50 dark:hover:bg-light-color-weak/10 text-dark-text-weak dark:text-light-color-weak font-semibold rounded-full relative">
+              <BsFileEarmarkText className="text-base text-blue-400 stroke-[0.6px]" />
+              Audop
               <Tooltip title="Comming Soon" placement="right-center" />
             </div>
 
@@ -298,7 +309,13 @@ function PromptArea({
                 submit();
               }}
               className={`group h-full w-auto aspect-square flex items-center justify-center text-dark-text dark:text-light-color hover:opacity-70 rounded-full relative
-                ${thinking ? "opacity-30" : message.length === 0 ? "opacity-30" : "opacity-100"}`}
+                ${
+                  thinking
+                    ? "opacity-30"
+                    : message.length === 0
+                    ? "opacity-30"
+                    : "opacity-100"
+                }`}
             >
               <IoSend className="text-[27px]" />
             </button>
