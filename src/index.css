@@ -229,6 +229,17 @@ input {
   margin: 20px 0;
 }
 
+/* Style for emphasis */
+.markdown hr {
+  color: #2e2e2e;
+}
+
+@media (prefers-color-scheme: dark) {
+  .markdown hr {
+    color: #cecece;
+  }
+  
+}
 
 /* Style for links */
 .markdown a {
