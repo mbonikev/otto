@@ -220,7 +220,7 @@ function PromptArea({
               <Tooltip title="Type Codes" placement="right-center" />
             </div>
             <div className="group cursor-default h-full w-fit px-3 flex items-center justify-center gap-1 text-sm ring-1 ring-stone-300 dark:ring-dark-text-weak/50 dark:hover:bg-light-color-weak/10 text-dark-text-weak dark:text-light-color-weak font-semibold rounded-full relative">
-              <LuImage className="text-base text-orange-400 stroke-[1.5px]" />
+              <LuImage className="text-base text-orange-600 stroke-[1.5px]" />
               Image
               <Tooltip title="Comming Soon" placement="right-center" />
             </div>
