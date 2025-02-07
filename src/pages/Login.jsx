@@ -18,7 +18,7 @@ const Login = () => {
               Otto
             </h1> */}
             </Link>
-            <h1 className="text-2xl font-semibold text-dark-text dark:text-light-color">
+            <h1 className="text-2xl font-medium text-dark-text dark:text-light-color">
               Sign in to Otto
             </h1>
             <p className="text-base text-dark-text-weak dark:text-light-color-weak mb-9">
