@@ -163,6 +163,7 @@ function Chat({ handleOpenLoginModal, handleCloseLoginModal }) {
         setMessages={setMessages}
         thinking={thinking}
         setThinking={setThinking}
+        handleOpenLoginModal={handleOpenLoginModal}
       />
     </div>
   );
