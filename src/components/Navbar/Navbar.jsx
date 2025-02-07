@@ -230,7 +230,7 @@ function Navbar({
         <button
           ref={profileRef}
           onClick={() => setShowPopup(true)}
-          className="h-9 w-auto aspect-square rounded-full overflow-hidden"
+          className="h-9 w-auto aspect-square rounded-full overflow-hidden ml-3"
         >
           <img
             src={user ? photo : avatar}
