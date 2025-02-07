@@ -178,7 +178,7 @@ function PromptArea({
           placeholder="Message Otto"
           className="text-base font-normal bg-transparent min-h-[40px] max-h-[150px] px-3 pt-1 outline-none w-full placeholder:text-dark-text-weak dark:placeholder:text-light-color-weak text-dark-text dark:text-light-color resize-none whitespace-pre-wrap "
         ></textarea>
-        <div className="flex items-center justify-between w-full h-[36px] bg-red-400/0 min-h-[20px] px-1.5 mb-1.5">
+        <div className="flex items-center justify-between w-full h-[30px] bg-red-400/0 px-1.5 mb-1.5">
           {/* 1 */}
           <div className="w-full h-full flex items-center justify-start gap-3 select-none relative">
             <div className="h-full w-fit flex items-center justify-center gap-1 text-sm ring-1 ring-stone-300  dark:ring-dark-text-weak/50 dark:hover:bg-light-color-weak/10 text-dark-text-weak font-semibold rounded-full relative">
