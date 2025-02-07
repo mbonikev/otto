@@ -283,6 +283,7 @@ input {
   background-position: top left;
   background-repeat: no-repeat;
   background-size: auto;
+  backdrop-filter: red;
 }
 
 pre {
