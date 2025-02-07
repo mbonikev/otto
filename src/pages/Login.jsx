@@ -52,7 +52,7 @@ const Login = () => {
             >
               <img
                 src="https://img.icons8.com/color/50/microsoft.png"
-                className="h-[32px]"
+                className="h-[28px]"
               />
 
               <p className="min-w-[65px] font-medium">Microsoft</p>
