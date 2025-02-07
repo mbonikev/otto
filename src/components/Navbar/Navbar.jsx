@@ -141,7 +141,7 @@ function Navbar({
   };
 
   return (
-    <div className="w-full h-fit bg-white dark:bg-red-400 grid grid-cols-3 text-dark-text dark:text-light-color px-3 py-1 sticky">
+    <div className="w-full h-fit bg-white dark:bg-red-400 grid grid-cols-3 text-dark-text dark:text-light-color px-3 py-2 sticky">
       {/* Overlay */}
       {chatsModal && (
         <div
