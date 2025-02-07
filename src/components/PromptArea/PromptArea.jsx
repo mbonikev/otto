@@ -1,7 +1,7 @@
 import TextArea from "antd/es/input/TextArea";
 import React, { useEffect, useRef, useState } from "react";
 import { BsArrowUpCircleFill, BsFileEarmarkText } from "react-icons/bs";
-import { LuBrain, LuCheck } from "react-icons/lu";
+import { LuBrain, LuCheck, LuImage } from "react-icons/lu";
 import { PiBrainLight } from "react-icons/pi";
 import { RiRobot3Line } from "react-icons/ri";
 import Tooltip from "../Tooltip/Tooltip";
@@ -219,7 +219,7 @@ function PromptArea({
               <Tooltip title="Type Codes" placement="right-center" />
             </div>
             <div className="group cursor-default h-full w-fit px-3 flex items-center justify-center gap-1 text-sm ring-1 ring-stone-300 dark:ring-dark-text-weak/50 dark:hover:bg-light-color-weak/10 text-dark-text-weak dark:text-light-color-weak font-semibold rounded-full relative">
-              <BsFileEarmarkText className="text-base text-blue-400 stroke-[0.6px]" />
+              <LuImage className="text-base text-orange-400 stroke-[0.6px]" />
               Image
               <Tooltip title="Comming Soon" placement="right-center" />
             </div>
