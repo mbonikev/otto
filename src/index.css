@@ -280,7 +280,7 @@ pre {
 
 pre::-webkit-scrollbar-thumb {
   background: #64646466;
-  border: 4px solid white !important;
+  border: 4px solid #fafafa;
 }
 
 @media (prefers-color-scheme: dark) {
