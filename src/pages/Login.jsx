@@ -53,7 +53,7 @@ const Login = () => {
           </div>
         </div>
         <div className="w-1/2 h-full max-xl:hidden flex flex-col items-end justify-center gap-6 overflow-hidden relative">
-          <div className="bg-stone-100 dark:bg-red-400 w-full h-full p-10">
+          <div className="bg-stone-100 dark:bg-red-400 w-full h-full p-1 rounded-3xl overflow-hidden">
           <img src="./assets/screenshot_dark.png" className="w-fit h-full object-cover object-left-top" />
           </div>
         </div>
