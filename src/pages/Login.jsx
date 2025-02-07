@@ -48,7 +48,7 @@ const Login = () => {
             </p>
             <p className="text-base text-dark-text-weak dark:text-light-color-weak">
               Need help?{" "}
-              <a className="underline hover:text-dark-text dark:hover:text-light-color cursor-pointer">
+              <a className=" font-semibold text-main-color">
                 Contact support
               </a>
             </p>
