@@ -149,7 +149,6 @@ function Navbar({
     window.location.reload();
   };
 
-  const handleLoginModal = () => {};
 
   return (
     <div className="w-full h-fit bg-white/80 dark:bg-body-dark/80 backdrop-blur-lg grid grid-cols-3 text-dark-text dark:text-light-color px-3 py-2 sticky top-0">
@@ -193,14 +192,14 @@ function Navbar({
       {/* 1 */}
       <div className="flex items-center justify-start gap-0">
         <button
-          onClick={user ? handleOpenChatsModal : handleLoginModal}
+          onClick={user ? handleOpenChatsModal : handleOpenLoginModal}
           className="group h-10 w-auto aspect-square flex items-center justify-center text-[22px] hover:bg-stone-200/70 text-dark-text-weak dark:text-light-color-weak hover:text-dark-text-weak dark:hover:bg-card-hover-dark dark:hover:text-light-color-weak rounded-full relative"
         >
           <HiOutlineChatBubbleLeftRight className="" />
           <Tooltip title="Chat history" placement="left" shortcut="Alt + c" />
         </button>
         <button
-          onClick={user ? handleNew : handleLoginModal}
+          onClick={user ? handleNew : handleOpenLoginModal}
           className="group h-10 w-auto aspect-square flex items-center justify-center text-[22px] hover:bg-stone-200/70 text-dark-text-weak dark:text-light-color-weak hover:text-dark-text-weak dark:hover:bg-card-hover-dark dark:hover:text-light-color-weak rounded-full relative"
         >
           <RxPencil2 className="" />
