@@ -18,11 +18,11 @@ const Login = () => {
             </h1> */}
           </Link>
           <div className="w-full flex-1 flex flex-col items-start justify-start gap-3 pt-[5vh]">
-            <h1 className="text-3xl font-semibold max-2xl:text-2xl mb-4 text-dark-text dark:text-light-color">
+            <h1 className="text-3xl font-semibold max-2xl:text-2xl text-dark-text dark:text-light-color">
               Sign in to Otto
             </h1>
             <p className="text-base text-dark-text-weak dark:text-light-color-weak">
-              to enable full feature functionality.
+              To enable full feature functionality.
             </p>
             <a
               href={`${backendUrl}/auth/google`}
