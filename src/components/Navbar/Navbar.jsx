@@ -113,7 +113,6 @@ function Navbar({
     setTimeout(() => setAnimateChatsModal(true), 50);
   };
 
-
   const handleCloseChatsModal = () => {
     setAnimateChatsModal(false);
     setTimeout(() => setChatsModal(false), 300);
@@ -125,7 +124,19 @@ function Navbar({
       const handleKeyDown = (event) => {
         if (event.key === "Escape") {
           event.preventDefault();
-          handleCloseChatsModal();
+          handleCloseChatsModal
+        } else if (event.altKey && event.key.toLowerCase() === "c") {
+          event.preventDefault();
+          handleOpenChatsModal();
+        }
+      };
+
+      window.addEventListener("keydown", handleKeyDown);
+      return () => window.removeEventListener("keydown", handleKeyDown);
+    } else {
+      const handleKeyDown = (event) => {
+        if (event.key === "Escape") {
+          event.preventDefault();
           handleCloseModal();
         } else if (event.altKey && event.key.toLowerCase() === "c") {
           event.preventDefault();
