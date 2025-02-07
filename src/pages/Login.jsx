@@ -29,18 +29,18 @@ const Login = () => {
               <FcGoogle className="text-3xl" />
               <p className="min-w-[65px] font-medium">Google</p>
             </a>
-            <div className="bg-white dark:bg-card-dark-1 ring-1 ring-stone-200 dark:ring-card-dark-1 text-dark-text dark:text-light-color py-2.5 px-3 w-full max-md:min-w-fit max-md:pr-5 max-lg:text-sm flex items-center justify-center gap-2 rounded-full">
+            <div className="opacity-50 bg-white dark:bg-card-dark-1 ring-1 ring-stone-200 dark:ring-card-dark-1 text-dark-text dark:text-light-color py-2.5 px-3 w-full max-md:min-w-fit max-md:pr-5 max-lg:text-sm flex items-center justify-center gap-2 rounded-full">
               <img
                 src="https://img.icons8.com/fluency/50/facebook-new.png"
                 className="h-[32px]"
               />
               <p className="min-w-[65px] font-medium">Facebook</p>
             </div>
-            <div className="bg-white dark:bg-card-dark-1 ring-1 ring-stone-200 dark:ring-card-dark-1 text-dark-text dark:text-light-color py-2.5 px-3 w-full max-md:min-w-fit max-md:pr-5 max-lg:text-sm flex items-center justify-center gap-2 rounded-full">
+            <div className="opacity-50 bg-white dark:bg-card-dark-1 ring-1 ring-stone-200 dark:ring-card-dark-1 text-dark-text dark:text-light-color py-2.5 px-3 w-full max-md:min-w-fit max-md:pr-5 max-lg:text-sm flex items-center justify-center gap-2 rounded-full">
               <IoLogoGithub className="text-3xl" />
               <p className="min-w-[65px] font-medium">GitHub</p>
             </div>
-            <div className="bg-white dark:bg-card-dark-1 ring-1 ring-stone-200 dark:ring-card-dark-1 text-dark-text dark:text-light-color py-2.5 px-3 w-full max-md:min-w-fit max-md:pr-5 max-lg:text-sm flex items-center justify-center gap-2 rounded-full">
+            <div className="opacity-50 bg-white dark:bg-card-dark-1 ring-1 ring-stone-200 dark:ring-card-dark-1 text-dark-text dark:text-light-color py-2.5 px-3 w-full max-md:min-w-fit max-md:pr-5 max-lg:text-sm flex items-center justify-center gap-2 rounded-full">
               <img
                 src="https://img.icons8.com/color/50/microsoft.png"
                 className="h-[28px]"
