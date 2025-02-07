@@ -186,14 +186,14 @@ function PromptArea({
                 <div
                   ref={modelsButtonRef}
                   onClick={() => setShowModels(true)}
-                  className="group cursor-pointer w-fit h-full flex items-center justify-center gap-1.5 px-3 relative hover:text-dark-text dark:text-light-color-weak dark:hover:text-light-color relative"
+                  className="group cursor-pointer w-fit h-full flex items-center justify-center gap-1.5 px-3 relative hover:text-dark-text dark:text-light-color-weak dark:hover:text-light-color"
                 >
                   <LuBrain className="text-lg text-purple-500" />
                   <p className="w-full truncate max-w-[100px]">
                     {selectedModel}
                   </p>
                   <HiChevronUpDown className="text-lg opacity-75" />
-                  <Tooltip title="Models" placement="center" />
+                  <Tooltip title="Models" placement="right-center" />
                 </div>
               ) : (
                 <div className="group cursor-pointer w-fit h-full flex items-center justify-center gap-1.5 px-3 relative hover:text-dark-text dark:text-light-color-weak dark:hover:text-light-color">
@@ -202,7 +202,7 @@ function PromptArea({
                     {selectedModel}
                   </p>
                   <HiChevronUpDown className="text-lg opacity-75" />
-                  <Tooltip title="Models" placement="center" />
+                  <Tooltip title="Models" placement="right-center" />
                 </div>
               )}
             </div>
