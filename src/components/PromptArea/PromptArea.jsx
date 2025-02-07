@@ -239,7 +239,7 @@ function PromptArea({
             {showModels && (
               <div
                 ref={modelsRef}
-                className=" w-[300px] max-sm:w-full h-[300px] bg-white dark:text-light-color dark:bg-card-dark-2 ring-1 ring-stone-300/80 dark:ring-dark-text-weak/50 shadow-md rounded-2xl absolute left-0 bottom-[130%] py-2 pl-2 flex flex-col"
+                className="w-[300px] max-sm:w-full h-[300px] bg-white dark:text-light-color dark:bg-card-dark-2 ring-1 ring-stone-300/80 dark:ring-dark-text-weak/50 shadow-md rounded-2xl absolute left-0 bottom-[130%] py-2 pl-2 flex flex-col"
               >
                 <div className="h-[40px] mb-2 pr-2">
                   <div className="w-full h-full bg-stone-200/60 dark:bg-light-color-weak/20  rounded-xl flex items-center justify-start">
