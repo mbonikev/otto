@@ -24,17 +24,18 @@ const Login = () => {
             <p className="text-base text-dark-text-weak dark:text-light-color-weak mb-9">
               To enable full feature functionality.
             </p>
-            <div className="flex-1 w-full flex flex-col gap-1"></div>
-            <p className="text-base text-dark-text-weak dark:text-light-color-weak">
-              Continue with:
-            </p>
-            <a
-              href={`${backendUrl}/auth/google`}
-              className="bg-white dark:bg-card-dark-1 hover:bg-stone-200 dark:hover:bg-card-hover-dark ring-1 ring-stone-200 dark:ring-card-dark-1 text-dark-text dark:text-light-color py-2 px-3 w-fit min-w-[330px] max-md:min-w-fit max-md:pr-5 max-lg:text-sm flex items-center justify-center gap-3 rounded-full"
-            >
-              <FcGoogle className="text-2xl" />
-              Continue with Google
-            </a>
+            <div className="flex-1 w-full flex flex-col gap-1">
+              <p className="text-base text-dark-text-weak dark:text-light-color-weak">
+                Continue with:
+              </p>
+              <a
+                href={`${backendUrl}/auth/google`}
+                className="bg-white dark:bg-card-dark-1 hover:bg-stone-200 dark:hover:bg-card-hover-dark ring-1 ring-stone-200 dark:ring-card-dark-1 text-dark-text dark:text-light-color py-2 px-3 w-fit min-w-[330px] max-md:min-w-fit max-md:pr-5 max-lg:text-sm flex items-center justify-center gap-3 rounded-full"
+              >
+                <FcGoogle className="text-2xl" />
+                Continue with Google
+              </a>
+            </div>
             <p className="text-base text-dark-text-weak dark:text-light-color-weak mt-10">
               By signing in, you agree to the Terms of Service and Privacy
               Policy.
