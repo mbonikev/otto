@@ -202,7 +202,7 @@ function Navbar({
                   <div className="flex flex-col gap-[2px] items-start leading-5">
                     <h1>Otto Plus</h1>
                     <p className="text-xs text-left text-dark-text/50 dark:text-light-color/50 leading-3">
-                      More Models & more (comming soon)
+                      Comming Soon
                     </p>
                   </div>
                 </div>
