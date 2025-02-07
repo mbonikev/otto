@@ -120,7 +120,7 @@ function Chat() {
         className="w-full flex-1 flex flex-col scroll-smooth overflow-y-scroll pl-[12px] bg-white dark:bg-body-dark text-dark-text dark:text-light-color"
       >
         {messages.length > 0 ? (
-          <div className="w-full max-w-[800px] mx-auto flex-1 flex flex-col items-center justify-start py-10 max-lg:px-5">
+          <div className="w-full max-w-[765px] mx-auto flex-1 flex flex-col items-center justify-start py-10 max-lg:px-5">
             <div className="w-full flex flex-col gap-10">
               {messages.map((msg, index) => {
                 const isLastNonUserMsg =
