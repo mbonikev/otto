@@ -54,7 +54,7 @@ const Login = () => {
         </div>
         <div className="login_right_side w-1/2 h-full max-xl:hidden flex flex-col items-end justify-center gap-6 pointer-events-none select-none overflow-hidden pt-10 pl-10 bg-blue-100 dark:bg-blue-400/40 relative">
           <div className="absolute bottom-0 left-0 h-[40%] w-full bg-gradient-to-t from-sidebar-color via-sidebar-color/40"></div>
-          <div className=" w-full h-full rounded-tl-[0px] overflow-hidden dark:bg-body-dark py-4 pl-4 hidden dark:block">
+          <div className=" w-full h-full rounded-tl-[20px] overflow-hidden dark:bg-body-dark py-4 pl-4 hidden dark:block">
             <img
               src="./assets/screenshot_dark.png"
               className="w-fit h-full object-cover object-left-top "
