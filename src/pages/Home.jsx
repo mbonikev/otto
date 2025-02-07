@@ -173,15 +173,15 @@ function Home() {
   return (
     <div className="w-full h-svh flex flex-col relative">
       {/* <div className="w-full h-fit z-30 fixed top-0"> */}
-        <Navbar
-          photo={photo}
-          displayName={displayName}
-          user={user}
-          userId={userId}
-          setMessages={setMessages}
-          setThinking={setThinking}
-          thinking={thinking}
-        />
+      <Navbar
+        photo={photo}
+        displayName={displayName}
+        user={user}
+        userId={userId}
+        setMessages={setMessages}
+        setThinking={setThinking}
+        thinking={thinking}
+      />
       {/* </div> */}
 
       <div
@@ -189,7 +189,7 @@ function Home() {
         className="w-full flex-1 flex flex-col scroll-smooth overflow-y-scroll pl-[12px] bg-white dark:bg-body-dark text-dark-text dark:text-light-color"
       >
         {messages.length > 0 ? (
-          <div className="w-full max-w-[800px] mx-auto flex-1 flex flex-col items-center justify-start py-10 max-lg:px-5">
+          <div className="w-full max-w-[765px] mx-auto flex-1 flex flex-col items-center justify-start py-10 max-lg:px-5">
             <div className="w-full flex flex-col gap-10">
               {messages.map((msg, index) => {
                 const isLastNonUserMsg =
@@ -198,14 +198,13 @@ function Home() {
                 return (
                   <div
                     key={index}
-                    className={`message text-base font-normal text-dark-text dark:text-light-color leading-[26px] overflow-x-auto no_scroll whitespace-pre-wrap flex p-1 ${
+                    className={`message text-base font-normal text-dark-text dark:text-light-color leading-[26px] overflow-x-auto no_scroll whitespace-pre-wrap flex py-1 px-5 ${
                       msg.role === "user"
-                        ? "w-fit bg-stone-200/40 dark:bg-card-dark-1 px-5 py-3 ml-auto max-w-[600px] rounded-3xl break-words whitespace-pre-wrap text-left"
-                        : "w-full bg-transparent flex items-start justify-start gap-4 break-words whitespace-pre-wrap pr-9 max-lg:pr-0"
+                        ? "w-fit bg-stone-200/40 dark:bg-card-dark-1 px-4 py-3 ml-auto max-w-[600px] rounded-3xl break-words whitespace-pre-wrap text-left"
+                        : "w-full bg-transparent flex items-start justify-start gap-4 break-words whitespace-pre-wrap"
                     } ${isLastNonUserMsg ? "animate-message" : ""}`}
                   >
                     {renderContent(msg)}
-                    {/* {msg.content} */}
                   </div>
                 );
               })}
@@ -224,11 +223,7 @@ function Home() {
           </div>
         ) : (
           <div className="w-full h-full flex flex-col items-center justify-center">
-            {thinkingMessages ? (
-              <RiLoader2Fill className="text-2xl w-auto animate-spin text-dark-text-weak/50 stroke-[1px]" />
-            ) : (
-              <h1 className="text-3xl font-semibold">How can I assist you?</h1>
-            )}
+            <h1 className="text-3xl font-semibold">How can I assist you?</h1>
           </div>
         )}
       </div>
