@@ -46,7 +46,7 @@ const Login = () => {
                 Privacy Policy.
               </a>
             </p>
-            <p className="text-base text-dark-text-weak dark:text-light-color-weak">
+            <p className="text-sm text-dark-text-weak dark:text-light-color-weak">
               Need help?{" "}
               <a className=" font-medium text-main-color">
                 Contact support
