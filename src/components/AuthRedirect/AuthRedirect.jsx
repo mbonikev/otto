@@ -3,9 +3,16 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 const AuthRedirect = ({ children }) => {
+  const [loginModal, setLoginModal] = useState(false);
+  const [animateLoginModal, setAnimateLoginModal] = useState(false);
   const apiUrl = import.meta.env.VITE_BACKEND_API;
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+
+  const handleOpenLoginModal = () => {
+    setLoginModal(true);
+    setTimeout(() => setAnimateLoginModal(true), 50);
+  };
 
   useEffect(() => {
     const fetchUserStatus = async () => {
