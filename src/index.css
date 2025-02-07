@@ -278,13 +278,6 @@ input {
   background: #f8f8f8;
 }
 
-.login_right_side{
-  background-image: url("/assets/blue_sky.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: auto;
-}
-
 pre {
   border-radius: 16px !important;
   border: 1px solid #aaaaaa1e;
