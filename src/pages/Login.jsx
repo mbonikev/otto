@@ -26,28 +26,28 @@ const Login = () => {
               className="bg-white dark:bg-card-dark-1 hover:bg-stone-200 dark:hover:bg-card-hover-dark ring-1 ring-stone-200 dark:ring-card-dark-1 text-dark-text dark:text-light-color py-2 px-3 w-full max-md:min-w-fit max-md:pr-5 max-lg:text-sm flex items-center justify-center gap-3 rounded-full"
             >
               <FcGoogle className="text-3xl" />
-              <p className="bg-red-500 min-w-[60px]">Google</p>
+              <p className="bg-red-500 min-w-[65px]">Google</p>
             </a>
             <a
               href={`${backendUrl}/auth/google`}
               className="bg-white dark:bg-card-dark-1 hover:bg-stone-200 dark:hover:bg-card-hover-dark ring-1 ring-stone-200 dark:ring-card-dark-1 text-dark-text dark:text-light-color py-2 px-3 w-full max-md:min-w-fit max-md:pr-5 max-lg:text-sm flex items-center justify-center gap-3 rounded-full"
             >
               <FcGoogle className="text-3xl" />
-              <p className="bg-red-500 min-w-[60px]">Facebook</p>
+              <p className="bg-red-500 min-w-[65px]">Facebook</p>
             </a>
             <a
               href={`${backendUrl}/auth/google`}
               className="bg-white dark:bg-card-dark-1 hover:bg-stone-200 dark:hover:bg-card-hover-dark ring-1 ring-stone-200 dark:ring-card-dark-1 text-dark-text dark:text-light-color py-2 px-3 w-full max-md:min-w-fit max-md:pr-5 max-lg:text-sm flex items-center justify-center gap-3 rounded-full"
             >
               <FcGoogle className="text-3xl" />
-              <p className="bg-red-500 min-w-[60px]">GitHub</p>
+              <p className="bg-red-500 min-w-[65px]">GitHub</p>
             </a>
             <a
               href={`${backendUrl}/auth/google`}
               className="bg-white dark:bg-card-dark-1 hover:bg-stone-200 dark:hover:bg-card-hover-dark ring-1 ring-stone-200 dark:ring-card-dark-1 text-dark-text dark:text-light-color py-2 px-3 w-full max-md:min-w-fit max-md:pr-5 max-lg:text-sm flex items-center justify-center gap-3 rounded-full"
             >
               <FcGoogle className="text-3xl" />
-              <p className="bg-red-500 min-w-[60px]">Microsoft</p>
+              <p className="bg-red-500 min-w-[65px]">Microsoft</p>
             </a>
           </div>
           <div className="w-full flex items-center justify-between p-1 flex-wrap gap-2 max-lg:justify-center">
