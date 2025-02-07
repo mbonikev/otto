@@ -1,6 +1,7 @@
 import { FaGoogle, FaPlay } from "react-icons/fa";
 import { FaApple, FaFacebook } from "react-icons/fa6";
 import { FcGoogle } from "react-icons/fc";
+import { IoLogoGithub } from "react-icons/io";
 import ReactPlayer from "react-player";
 import { Link } from "react-router-dom";
 
@@ -39,7 +40,7 @@ const Login = () => {
               href={`${backendUrl}/auth/google`}
               className="bg-white dark:bg-card-dark-1 hover:bg-stone-200 dark:hover:bg-card-hover-dark ring-1 ring-stone-200 dark:ring-card-dark-1 text-dark-text dark:text-light-color py-2.5 px-3 w-full max-md:min-w-fit max-md:pr-5 max-lg:text-sm flex items-center justify-center gap-2 rounded-full"
             >
-              <FcGoogle className="text-3xl" />
+              <IoLogoGithub className="text-3xl" />
               <p className="min-w-[65px] font-medium">GitHub</p>
             </a>
             <a
