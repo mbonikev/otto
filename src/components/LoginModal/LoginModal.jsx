@@ -9,7 +9,7 @@ function LoginModal() {
   return (
     <div className="w-[320px] h-[300px] p-2">
       <div className="w-full h-full bg-white dark:bg-card-dark-1 text-dark-text dark:text-light-color rounded-2xl p-5 flex flex-col">
-        <p className="text-base text-dark-text dark:text-light-color">
+        <p className="text-xl text-dark-text dark:text-light-color">
           Log in to access your account and enable full feature functionality.
         </p>
       </div>
