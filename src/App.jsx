@@ -31,7 +31,7 @@ function App() {
       {loginModal && (
         <div
           onClick={handleCloseLoginModal}
-          className={`fixed top-0 left-0 w-full h-svh bg-black/20 dark:bg-black/40 z-30 transition-opacity duration-300 ${
+          className={`fixed top-0 left-0 w-full h-svh bg-black/20 dark:bg-black/40 z-30 transition-opacity duration-200 ${
             animateLoginModal ? "opacity-100" : "opacity-0"
           }`}
         />
@@ -40,7 +40,7 @@ function App() {
       {/* login Modal */}
       {loginModal && (
         <div
-          className={`w-fit h-fit fixed top-0 left-0 right-0 bottom-0 m-auto transition-all duration-300 ease-in-out z-30
+          className={`w-fit h-fit fixed top-0 left-0 right-0 bottom-0 m-auto transition-all duration-200 ease-in-out z-30
                 ${
                   animateLoginModal
                     ? "opacity-100"
