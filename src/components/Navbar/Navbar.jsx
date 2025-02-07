@@ -157,7 +157,7 @@ function Navbar({
       )}
 
       {/* Chat Modal */}
-      {chatsModal && (
+      {user && chatsModal && (
         <div
           className={`w-fit h-svh fixed top-0 left-0 transition-transform duration-300 ease-in-out z-30
                 ${
