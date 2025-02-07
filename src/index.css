@@ -231,7 +231,7 @@ input {
 
 /* Style for emphasis */
 .markdown hr {
-  color: #2e2e2e;
+  color: #535353;
 }
 
 @media (prefers-color-scheme: dark) {
