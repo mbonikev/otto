@@ -140,6 +140,10 @@ function Navbar({
     window.location.reload();
   };
 
+  const handleLoginModal = () => {
+
+  }
+
   return (
     <div className="w-full h-fit bg-white/80 dark:bg-body-dark/80 backdrop-blur-lg grid grid-cols-3 text-dark-text dark:text-light-color px-3 py-2 sticky">
       {/* Overlay */}
@@ -166,7 +170,7 @@ function Navbar({
       {/* 1 */}
       <div className="flex items-center justify-start gap-0">
         <button
-          onClick={handleOpenChatsModal}
+          onClick={user ? handleOpenChatsModal : handleLoginModal}
           className="group h-10 w-auto aspect-square flex items-center justify-center text-2xl hover:bg-stone-100 text-dark-text-weak dark:text-light-color-weak hover:text-dark-text dark:hover:bg-card-dark-1 dark:hover:text-light-color rounded-full relative"
         >
           <HiOutlineChatBubbleLeftRight />
