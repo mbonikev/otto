@@ -18,7 +18,7 @@ const Login = () => {
             </h1>
           </Link>
           <div className="w-full flex-1 flex flex-col items-start justify-start gap-3 pt-[5vh]">
-            <h1 className="text-xl font-medium mb-1 text-dark-text dark:text-light-color">
+            <h1 className="text-2xl font-semibold mb-1 text-dark-text dark:text-light-color">
               Continue with
             </h1>
             <a
