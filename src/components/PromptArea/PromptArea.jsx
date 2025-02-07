@@ -202,7 +202,7 @@ function PromptArea({
                     {selectedModel}
                   </p>
                   <HiChevronUpDown className="text-lg opacity-75" />
-                  <Tooltip title="Models" placement="right-center" />
+                  <Tooltip title="Models" placement="center" />
                 </div>
               )}
             </div>
