@@ -50,8 +50,8 @@ const Login = () => {
                 <video
                   src="./assets/tutorial.mp4"
                   controls={false}
-                  muted={true}
-                  loop={true}
+                  muted
+                  loop
                   playing={true}
                   className=""
                 />
