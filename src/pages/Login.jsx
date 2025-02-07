@@ -36,7 +36,7 @@ const Login = () => {
                 Continue with Google
               </a>
             </div>
-            <p className="text-base text-dark-text-weak dark:text-light-color-weak mt-10 max-w-[300px] mb-7">
+            <p className="text-sm text-dark-text-weak dark:text-light-color-weak mt-10 max-w-[300px] mb-7">
               By signing in, you agree to the{" "}
               <a className="underline hover:text-dark-text dark:hover:text-light-color cursor-pointer">
                 Terms of Service
