@@ -37,8 +37,6 @@ function Navbar({
   const [loadingConvs, setLoadingConvs] = useState(false);
   const [convs, setConvs] = useState([]);
   const navigate = useNavigate();
-  const [loginModal, setLoginModal] = useState(false);
-  const [animateLoginModal, setAnimateLoginModal] = useState(false);
 
   const handleLogout = async () => {
     setLoading(true);
