@@ -39,13 +39,12 @@ const Login = () => {
               />
               <p className="min-w-[65px] font-medium">Facebook</p>
             </a>
-            <a
-              href={`${backendUrl}/auth/google`}
-              className="bg-white dark:bg-card-dark-1 hover:bg-stone-200 dark:hover:bg-card-hover-dark ring-1 ring-stone-200 dark:ring-card-dark-1 text-dark-text dark:text-light-color py-2.5 px-3 w-full max-md:min-w-fit max-md:pr-5 max-lg:text-sm flex items-center justify-center gap-2 rounded-full"
+            <div
+              className="bg-white dark:bg-card-dark-1 ring-1 ring-stone-200 dark:ring-card-dark-1 text-dark-text dark:text-light-color py-2.5 px-3 w-full max-md:min-w-fit max-md:pr-5 max-lg:text-sm flex items-center justify-center gap-2 rounded-full"
             >
               <IoLogoGithub className="text-3xl" />
               <p className="min-w-[65px] font-medium">GitHub</p>
-            </a>
+            </div>
             <div
               className="bg-white dark:bg-card-dark-1 ring-1 ring-stone-200 dark:ring-card-dark-1 text-dark-text dark:text-light-color py-2.5 px-3 w-full max-md:min-w-fit max-md:pr-5 max-lg:text-sm flex items-center justify-center gap-2 rounded-full"
             >
