@@ -13,6 +13,7 @@ import {
   HiChevronUpDown,
   HiMiniMagnifyingGlass,
   HiMiniXCircle,
+  HiOutlineMicrophone,
 } from "react-icons/hi2";
 import Cookies from "js-cookie";
 import { useNavigate, useParams } from "react-router-dom";
@@ -224,7 +225,7 @@ function PromptArea({
               <Tooltip title="Comming Soon" placement="right-center" />
             </div>
             <div className="group cursor-default h-full w-fit px-3 flex items-center justify-center gap-1 text-sm ring-1 ring-stone-300 dark:ring-dark-text-weak/50 dark:hover:bg-light-color-weak/10 text-dark-text-weak dark:text-light-color-weak font-semibold rounded-full relative">
-              <BsFileEarmarkText className="text-base text-blue-400 stroke-[0.6px]" />
+              <HiOutlineMicrophone className="text-base text-red-400 stroke-[0.6px]" />
               Audio
               <Tooltip title="Comming Soon" placement="right-center" />
             </div>
