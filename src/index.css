@@ -282,7 +282,7 @@ input {
   background-image: url("https://img2.wallspic.com/crops/8/9/4/1/21498/21498-reflection-metropolis-skyline-landmark-cityscape-3840x2160.jpg");
   background-position: top left;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: auto;
 }
 
 pre {
