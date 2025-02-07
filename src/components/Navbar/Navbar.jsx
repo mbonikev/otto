@@ -113,6 +113,11 @@ function Navbar({
     setTimeout(() => setAnimateChatsModal(true), 50);
   };
 
+  const handleOpenLoginModal = () => {
+    setChatsModal(true);
+    setTimeout(() => setAnimateChatsModal(true), 50);
+  };
+
   const handleCloseModal = () => {
     setAnimateChatsModal(false);
     setAnimateLoginModal(false);
