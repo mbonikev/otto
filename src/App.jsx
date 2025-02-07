@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { HashRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
@@ -19,10 +19,12 @@ function App() {
     setAnimateLoginModal(false);
     setTimeout(() => setLoginModal(false), 300);
   };
+  
   const hasHash = window.location.hash.includes("#");
   if (!hasHash && window.location.pathname !== "/") {
     return <NotFound />;
   }
+
   return (
     <>
       {/* Overlay */}
@@ -40,7 +42,9 @@ function App() {
         <div
           className={`w-fit h-svh fixed top-0 left-0 right-0 bottom-0 m-auto transition-all duration-300 ease-in-out z-30
                 ${
-                  animateLoginModal ? "opacity-100" : "opacity-0 translate-y-6 scale-90"
+                  animateLoginModal
+                    ? "opacity-100"
+                    : "opacity-0 translate-y-6 scale-90"
                 }`}
         >
           <LoginModal />
@@ -51,7 +55,7 @@ function App() {
         <Routes>
           {/* Protected Routes for Logged-In Users */}
           <Route element={<ProtectedRoutes />}>
-            <Route path="/" element={<Home  />} />
+            <Route path="/" element={<Home />} />
           </Route>
 
           {/* Prevent Logged-In Users from Accessing Login & Chat */}
@@ -67,7 +71,7 @@ function App() {
             path="/chat"
             element={
               <AuthRedirect>
-                <Chat handleOpenLoginModal={handleOpenLoginModal}/>
+                <Chat handleOpenLoginModal={handleOpenLoginModal} />
               </AuthRedirect>
             }
           />
