@@ -13,11 +13,11 @@ function App() {
   const [animateLoginModal, setAnimateLoginModal] = useState(false);
   const handleOpenLoginModal = () => {
     setLoginModal(true);
-    setTimeout(() => setAnimateLoginModal(true), 50);
+    setTimeout(() => setAnimateLoginModal(true), 0);
   };
   const handleCloseLoginModal = () => {
     setAnimateLoginModal(false);
-    setTimeout(() => setLoginModal(false), 300);
+    setTimeout(() => setLoginModal(false), 0);
   };
 
   const hasHash = window.location.hash.includes("#");
