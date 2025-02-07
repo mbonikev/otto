@@ -37,6 +37,7 @@ function Navbar({
   const [loadingConvs, setLoadingConvs] = useState(false);
   const [convs, setConvs] = useState([]);
   const navigate = useNavigate();
+  const [loginModal, setLoginModal] = useState(false)
 
   const handleLogout = async () => {
     setLoading(true);
@@ -167,7 +168,7 @@ function Navbar({
       )}
 
       {/* login Modal */}
-      
+
 
       {/* 1 */}
       <div className="flex items-center justify-start gap-0">
