@@ -273,6 +273,7 @@ pre {
   margin-top: 15px !important;
   margin-bottom: 15px !important;
   font-size: 14px !important;
+  overflow-x: auto;
 }
 
 .hide_fist_span code span:only-child {
