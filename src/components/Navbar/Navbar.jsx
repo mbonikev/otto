@@ -138,7 +138,6 @@ function Navbar({
       const handleKeyDown = (event) => {
         if (event.key === "Escape") {
           event.preventDefault();
-          handleCloseLoginModal();
         }
       };
 
