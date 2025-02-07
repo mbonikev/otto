@@ -280,10 +280,9 @@ input {
 
 .login_right_side{
   background-image: url("/assets/blue_sky.jpg");
-  background-position: top left;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: auto;
-  opacity: .7;
 }
 
 pre {
