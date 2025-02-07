@@ -296,7 +296,7 @@ function PromptArea({
                 e.preventDefault();
                 submit();
               }}
-              className={`group h-full bg-red-200 w-auto aspect-square flex items-center justify-center text-dark-text dark:text-light-color hover:opacity-70 rounded-full relative pr-1 pb-1
+              className={`group h-full bg-red-200 w-auto aspect-square flex items-center justify-center text-dark-text dark:text-light-color hover:opacity-70 rounded-full relative
                 ${thinking ? "opacity-30" : "opacity-100"}`}
             >
               <IoSend className="text-[27px]" />
