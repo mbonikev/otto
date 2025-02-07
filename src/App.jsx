@@ -29,7 +29,7 @@ function App() {
       {loginModal && (
         <div
           onClick={handleCloseModal}
-          className={`fixed top-0 left-0 w-full h-svh bg-black/15 dark:bg-black/30 z-50 transition-opacity duration-300 ${
+          className={`fixed top-0 left-0 w-full h-svh bg-black/15 dark:bg-black/30 z-30 transition-opacity duration-300 ${
             animateLoginModal ? "opacity-100" : "opacity-0"
           }`}
         />
