@@ -32,7 +32,7 @@ const Login = () => {
               href={`${backendUrl}/auth/google`}
               className="bg-white dark:bg-card-dark-1 hover:bg-stone-200 dark:hover:bg-card-hover-dark ring-1 ring-stone-200 dark:ring-card-dark-1 text-dark-text dark:text-light-color py-2.5 px-3 w-full max-md:min-w-fit max-md:pr-5 max-lg:text-sm flex items-center justify-center gap-2 rounded-full"
             >
-              <img src="https://img.icons8.com/fluency/50/facebook-new.png" className="h-[33px] text-[#1773ea]" />
+              <img src="https://img.icons8.com/fluency/50/facebook-new.png" className="h-[32px] text-[#1773ea]" />
               <p className="min-w-[65px] font-medium">Facebook</p>
             </a>
             <a
