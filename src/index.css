@@ -283,10 +283,6 @@ pre::-webkit-scrollbar-thumb {
   border: 4px solid #fafafa;
 }
 
-tr::-webkit-scrollbar-thumb {
-  background: #64646466;
-  border: 4px solid #2f2f2f;
-}
 
 @media (prefers-color-scheme: dark) {
   pre {
