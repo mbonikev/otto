@@ -231,12 +231,12 @@ input {
 
 /* Style for emphasis */
 .markdown hr {
-  color: #535353;
+  color: #b4b4b4;
 }
 
 @media (prefers-color-scheme: dark) {
   .markdown hr {
-    background-color: #474747;
+    background-color: #414141;
   }
   
 }
