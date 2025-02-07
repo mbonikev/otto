@@ -335,7 +335,7 @@ th {
   border-radius: 50%;
   display: inline-block;
   box-sizing: border-box;
-  animation: rotation 0.5s linear infinite;
+  animation: rotation 0.4s ease-in linear infinite;
 }
 
 @keyframes rotation {
