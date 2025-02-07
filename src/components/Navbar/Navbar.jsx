@@ -124,7 +124,7 @@ function Navbar({
       const handleKeyDown = (event) => {
         if (event.key === "Escape") {
           event.preventDefault();
-          handleCloseChatsModal;
+          handleCloseChatsModal();
         } else if (event.altKey && event.key.toLowerCase() === "c") {
           event.preventDefault();
           handleOpenChatsModal();
