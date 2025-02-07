@@ -28,7 +28,7 @@ function Navbar({
   setThinking,
   thinking,
   handleOpenLoginModal,
-  handleCloseModal,
+  handleCloseLoginModal,
 }) {
   const [showPopup, setShowPopup] = useState(false);
   const profileRef = useRef(null);
@@ -138,7 +138,7 @@ function Navbar({
       const handleKeyDown = (event) => {
         if (event.key === "Escape") {
           event.preventDefault();
-          handleCloseModal();
+          handleCloseLoginModal();
         }
       };
 
