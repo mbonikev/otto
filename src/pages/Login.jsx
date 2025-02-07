@@ -18,9 +18,9 @@ const Login = () => {
             </h1>
           </Link>
           <div className="w-full flex-1 flex flex-col items-center justify-center gap-3">
-            {/* <h1 className="text-3xl font-semibold max-2xl:text-2xl mb-4 text-dark-text dark:text-light-color">
+            <h1 className="text-3xl font-semibold max-2xl:text-2xl mb-4 text-dark-text dark:text-light-color">
               Welcome back
-            </h1> */}
+            </h1>
             <a
               href={`${backendUrl}/auth/google`}
               className="bg-white dark:bg-card-dark-1 hover:bg-stone-200 dark:hover:bg-card-hover-dark ring-1 ring-stone-200 dark:ring-card-dark-1 text-dark-text dark:text-light-color py-2 px-3 w-fit min-w-[230px] max-md:min-w-fit max-md:pr-5 max-lg:text-sm flex items-center justify-start gap-3 rounded-full"
