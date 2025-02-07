@@ -38,6 +38,8 @@ function Navbar({
   const [loadingConvs, setLoadingConvs] = useState(false);
   const [convs, setConvs] = useState([]);
   const navigate = useNavigate();
+  const backendUrl = import.meta.env.VITE_BACKEND_API;
+
 
   const handleLogout = async () => {
     setLoading(true);
