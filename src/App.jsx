@@ -14,6 +14,10 @@ function App() {
     setLoginModal(true);
     setTimeout(() => setAnimateLoginModal(true), 50);
   };
+  const handleCloseModal = () => {
+    setAnimateChatsModal(false);
+    setTimeout(() => setChatsModal(false), 300);
+  };
   const hasHash = window.location.hash.includes("#");
   if (!hasHash && window.location.pathname !== "/") {
     return <NotFound />;
