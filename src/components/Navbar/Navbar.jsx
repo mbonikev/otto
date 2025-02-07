@@ -171,14 +171,14 @@ function Navbar({
           onClick={user ? handleOpenChatsModal : handleLoginModal}
           className="group h-10 w-auto aspect-square flex items-center justify-center text-[22px] hover:bg-stone-200/70 text-dark-text-weak dark:text-light-color-weak hover:text-dark-text-weak dark:hover:bg-card-hover-dark dark:hover:text-light-color-weak rounded-full relative"
         >
-          <HiOutlineChatBubbleLeftRight className="stroke-[2px]" />
+          <HiOutlineChatBubbleLeftRight className="" />
           <Tooltip title="Chat history" placement="left" shortcut="Alt + c" />
         </button>
         <button
           onClick={user ? handleNew : handleLoginModal}
           className="group h-10 w-auto aspect-square flex items-center justify-center text-[22px] hover:bg-stone-200/70 text-dark-text-weak dark:text-light-color-weak hover:text-dark-text-weak dark:hover:bg-card-hover-dark dark:hover:text-light-color-weak rounded-full relative"
         >
-          <RxPencil2 className="stroke-[0.3px]"  />
+          <RxPencil2 className=""  />
           <Tooltip title="New chat" placement="center" />
         </button>
       </div>
@@ -220,11 +220,11 @@ function Navbar({
       {/* 3 */}
       <div className="flex items-center justify-end gap-0 relative select-none">
         <button className="group h-10 w-auto aspect-square flex items-center justify-center text-[22px] hover:bg-stone-200/70 text-dark-text-weak hover:text-dark-text-weak dark:text-light-color-weak dark:hover:bg-card-hover-dark dark:hover:text-light-color-weak rounded-full relative">
-          <BsIncognito className="stroke-[0.1px]" />
+          <BsIncognito className="" />
           <Tooltip title="Temporary Mode" placement="center" />
         </button>
         <button className="group h-10 w-auto aspect-square flex items-center justify-center text-[22px] hover:bg-stone-200/70 text-dark-text-weak hover:text-dark-text-weak dark:text-light-color-weak dark:hover:bg-card-hover-dark dark:hover:text-light-color-weak rounded-full relative">
-          <IoShareSocialOutline className="stroke-[1px]" />
+          <IoShareSocialOutline className="" />
           <Tooltip title="Share" placement="center" />
         </button>
         {user ? (
