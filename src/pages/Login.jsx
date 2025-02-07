@@ -34,7 +34,7 @@ const Login = () => {
               <FcGoogle className="text-2xl" />
               Continue with Google
             </a>
-            <p className="text-base text-dark-text-weak dark:text-light-color-weak">
+            <p className="text-base text-dark-text-weak dark:text-light-color-weak mt-10">
               By signing in, you agree to the Terms of Service and Privacy
               Policy.
             </p>
