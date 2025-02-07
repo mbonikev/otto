@@ -114,8 +114,8 @@ function Navbar({
   };
 
   const handleOpenLoginModal = () => {
-    setChatsModal(true);
-    setTimeout(() => setAnimateChatsModal(true), 50);
+    setLoginModal(true);
+    setTimeout(() => setAnimateLoginModal(true), 50);
   };
 
   const handleCloseModal = () => {
