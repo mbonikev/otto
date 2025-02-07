@@ -274,7 +274,7 @@ pre {
   margin-bottom: 15px !important;
   font-size: 14px !important;
   overflow-x: auto !important;
-  padding: 40px !important;
+  padding: 10px !important;
 }
 
 .hide_fist_span code span:only-child {
