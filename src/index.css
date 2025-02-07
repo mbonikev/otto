@@ -330,8 +330,8 @@ th {
 .loader {
   width: 48px;
   height: 48px;
-  border: 5px solid #92929242;
-  border-bottom-color: #FF3D00;
+  border: 4px solid #92929242;
+  border-bottom-color: #3d8bff;
   border-radius: 50%;
   display: inline-block;
   box-sizing: border-box;
