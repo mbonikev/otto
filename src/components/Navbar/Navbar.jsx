@@ -233,7 +233,7 @@ function Navbar({
           className="h-10 w-10 rounded-full overflow-hidden ml-3"
         >
           <img
-            src={photo || avatar3}
+            src={user ? photo : avatar3}
             alt="avatar"
             className="bg-stone-100 w-full h-fit min-h-full object-cover rounded-full"
           />
