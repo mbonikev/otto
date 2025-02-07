@@ -45,7 +45,7 @@ const Login = () => {
             Demo
           </h1>
           <div className="w-full h-full overflow-hidden rounded-[30px] shadow-xl shadow-stone-200 dark:shadow-black/60 relative">
-            <div className="w-full h-full overflow-hidden rounded-3xl bg-white p-5">
+            <div className="w-full h-fit overflow-hidden rounded-3xl bg-white p-5">
               {/* <div className="h-full w-full"> */}
                 <ReactPlayer
                   url="./assets/tutorial.mp4"
