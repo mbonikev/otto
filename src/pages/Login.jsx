@@ -47,7 +47,7 @@ const Login = () => {
               <p className="min-w-[65px] font-medium">GitHub</p>
             </a>
             <div
-              className="bg-white dark:bg-card-dark-1 hover:bg-stone-200 dark:hover:bg-card-hover ring-1 ring-stone-200 dark:ring-card-dark-1 text-dark-text dark:text-light-color py-2.5 px-3 w-full max-md:min-w-fit max-md:pr-5 max-lg:text-sm flex items-center justify-center gap-2 rounded-full"
+              className="bg-white dark:bg-card-dark-1 ring-1 ring-stone-200 dark:ring-card-dark-1 text-dark-text dark:text-light-color py-2.5 px-3 w-full max-md:min-w-fit max-md:pr-5 max-lg:text-sm flex items-center justify-center gap-2 rounded-full"
             >
               <img
                 src="https://img.icons8.com/color/50/microsoft.png"
