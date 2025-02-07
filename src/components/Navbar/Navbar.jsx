@@ -213,7 +213,7 @@ function Navbar({
             </div>
           </div>
         </div>
-        <div className="w-7 min-w-7 z-10 group-hover:w-16 absolute top-1.5 left-0 right-0 m-auto delay-150 group-hover:translate-y-5 transition-all dark:saturate-0 group-hover:saturate-100 dark:opacity-65 group-hover:opacity-80">
+        <div className="w-7 min-w-7 z-10 group-hover:w-16 absolute top-1.5 left-0 right-0 m-auto delay-150 group-hover:translate-y-5 transition-all dark:saturate-0 dark:group-hover:saturate-100 dark:opacity-65 dark:group-hover:opacity-80">
           <img src="/logo.png" alt="logo" className="w-full h-fit " />
         </div>
       </div>
@@ -240,9 +240,7 @@ function Navbar({
             />
           </button>
         ) : (
-          <button
-            className="h-9 w-fit px-4 bg-body-dark dark:bg-light-color text-light-color dark:text-dark-text rounded-full overflow-hidden ml-3"
-          >
+          <button className="h-9 w-fit px-4 bg-body-dark dark:bg-light-color text-light-color dark:text-dark-text rounded-full overflow-hidden ml-3">
             Login
           </button>
         )}
