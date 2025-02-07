@@ -234,6 +234,13 @@ input {
   color: #2e2e2e;
 }
 
+@media (prefers-color-scheme: dark) {
+  .markdown em {
+    color: #979797;
+  }
+  
+}
+
 /* Style for links */
 .markdown a {
   color: #007bff;
