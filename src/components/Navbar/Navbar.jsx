@@ -173,7 +173,6 @@ function Navbar({
         </div>
       )}
 
-
       {/* 1 */}
       <div className="flex items-center justify-start gap-0">
         <button
