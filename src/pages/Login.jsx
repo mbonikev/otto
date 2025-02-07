@@ -8,7 +8,7 @@ const Login = () => {
   const backendUrl = import.meta.env.VITE_BACKEND_API;
   document.title = "Login - Otto";
   return (
-    <div className="h-svh max-lg:min-h-full flex justify-start items-center flex-col bg-sidebar-color">
+    <div className="h-svh max-lg:min-h-full flex justify-start items-center flex-col bg-white dark:bg-sidebar-color">
       <div className="w-full h-full flex flex-1">
         <div className="h-full flex-1 flex flex-col items-center justify-start gap-6 w-full p-10 max-lg:p-5 overflow-auto no_scroll">
           <div className="w-fit flex-1 flex flex-col items-start justify-center gap-1">
@@ -52,7 +52,7 @@ const Login = () => {
             </p>
           </div>
         </div>
-        <div className="w-1/2 h-full max-xl:hidden flex flex-col items-end justify-center gap-6 overflow-hidden relative pt-10 pl-10">
+        <div className="w-1/2 h-full max-xl:hidden flex flex-col items-end justify-center gap-6 overflow-hidden relative pt-10 pl-10 bg-green-50">
           <div className=" w-full h-full rounded-tl-3xl overflow-hidden dark:bg-body-dark pt-4 pl-10">
           <img src="./assets/screenshot_dark.png" className="w-fit h-full object-cover object-left-top " />
           </div>
