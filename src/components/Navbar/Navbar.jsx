@@ -28,7 +28,6 @@ function Navbar({
   setThinking,
   thinking,
   handleOpenLoginModal,
-  handleCloseLoginModal,
 }) {
   const [showPopup, setShowPopup] = useState(false);
   const profileRef = useRef(null);
