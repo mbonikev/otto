@@ -297,7 +297,7 @@ function PromptArea({
                 submit();
               }}
               className={`group h-full w-auto aspect-square flex items-center justify-center text-dark-text dark:text-light-color hover:opacity-70 rounded-full relative
-                ${thinking ? "opacity-30" : "opacity-100"}`}
+                ${thinking ? "opacity-30" : message.length === 0 ? "opacity-30" : "opacity-100"}`}
             >
               <IoSend className="text-[27px]" />
             </button>
