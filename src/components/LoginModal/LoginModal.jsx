@@ -5,7 +5,7 @@ import Cookies from "js-cookie";
 import { RiLoader2Fill } from "react-icons/ri";
 import { PiChatsCircleFill } from "react-icons/pi";
 
-function ChatHistory({ convs, loadingConvs }) {
+function LoginModal() {
   const [searchValue, setSearchValue] = useState("");
   const location = useLocation(); // Use the useLocation hook to get the current URL
 
@@ -88,4 +88,4 @@ function ChatHistory({ convs, loadingConvs }) {
   );
 }
 
-export default ChatHistory;
+export default LoginModal;
