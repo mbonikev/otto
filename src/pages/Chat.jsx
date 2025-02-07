@@ -10,7 +10,7 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { useOutletContext, useParams } from "react-router-dom";
 
-function Chat({ handleOpenLoginModal }) {
+function Chat({ handleOpenLoginModal, handleCloseModal }) {
   const { id } = useParams();
   const [messages, setMessages] = useState([]);
   const [thinking, setThinking] = useState(false);
