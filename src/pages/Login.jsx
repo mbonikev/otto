@@ -21,7 +21,7 @@ const Login = () => {
             <h1 className="text-2xl font-semibold text-dark-text dark:text-light-color">
               Sign in to Otto
             </h1>
-            <p className="text-base text-dark-text-weak dark:text-light-color-weak">
+            <p className="text-base text-dark-text-weak dark:text-light-color-weak mb-9">
               To enable full feature functionality.
             </p>
             <p className="text-base text-dark-text-weak dark:text-light-color-weak">
