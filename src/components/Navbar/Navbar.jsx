@@ -133,7 +133,8 @@ function Navbar({
 
       window.addEventListener("keydown", handleKeyDown);
       return () => window.removeEventListener("keydown", handleKeyDown);
-    } else {
+    }
+    if (!user) {
       const handleKeyDown = (event) => {
         if (event.key === "Escape") {
           event.preventDefault();
