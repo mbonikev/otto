@@ -26,28 +26,28 @@ const Login = () => {
               className="bg-white dark:bg-card-dark-1 hover:bg-stone-200 dark:hover:bg-card-hover-dark ring-1 ring-stone-200 dark:ring-card-dark-1 text-dark-text dark:text-light-color py-2 px-3 w-full max-md:min-w-fit max-md:pr-5 max-lg:text-sm flex items-center justify-center gap-3 rounded-full"
             >
               <FcGoogle className="text-3xl" />
-              Google
+              <p className="bg-red-500 min-w-[100px]">Google</p>
             </a>
             <a
               href={`${backendUrl}/auth/google`}
               className="bg-white dark:bg-card-dark-1 hover:bg-stone-200 dark:hover:bg-card-hover-dark ring-1 ring-stone-200 dark:ring-card-dark-1 text-dark-text dark:text-light-color py-2 px-3 w-full max-md:min-w-fit max-md:pr-5 max-lg:text-sm flex items-center justify-center gap-3 rounded-full"
             >
               <FcGoogle className="text-3xl" />
-              Facebook
+              <p className="bg-red-500 min-w-[100px]">Facebook</p>
             </a>
             <a
               href={`${backendUrl}/auth/google`}
               className="bg-white dark:bg-card-dark-1 hover:bg-stone-200 dark:hover:bg-card-hover-dark ring-1 ring-stone-200 dark:ring-card-dark-1 text-dark-text dark:text-light-color py-2 px-3 w-full max-md:min-w-fit max-md:pr-5 max-lg:text-sm flex items-center justify-center gap-3 rounded-full"
             >
               <FcGoogle className="text-3xl" />
-              GitHub
+              <p className="bg-red-500 min-w-[100px]">GitHub</p>
             </a>
             <a
               href={`${backendUrl}/auth/google`}
               className="bg-white dark:bg-card-dark-1 hover:bg-stone-200 dark:hover:bg-card-hover-dark ring-1 ring-stone-200 dark:ring-card-dark-1 text-dark-text dark:text-light-color py-2 px-3 w-full max-md:min-w-fit max-md:pr-5 max-lg:text-sm flex items-center justify-center gap-3 rounded-full"
             >
               <FcGoogle className="text-3xl" />
-              Microsoft
+              <p className="bg-red-500 min-w-[100px]">Microsoft</p>
             </a>
           </div>
           <div className="w-full flex items-center justify-between p-1 flex-wrap gap-2 max-lg:justify-center">
