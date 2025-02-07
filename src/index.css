@@ -343,9 +343,9 @@ th {
     transform: rotate(0deg);
   }
   50% {
-    transform: rotate(90deg);
+    transform: rotate(360deg);
   }
   100% {
-    transform: rotate(360deg);
+    transform: rotate(0deg);
   }
 }
