@@ -27,6 +27,7 @@ function Navbar({
   setMessages,
   setThinking,
   thinking,
+  handleOpenLoginModal
 }) {
   const [showPopup, setShowPopup] = useState(false);
   const profileRef = useRef(null);
