@@ -177,7 +177,7 @@ function Navbar({
       {loginModal && (
         <div
           onClick={handleCloseModal}
-          className={`fixed top-0 left-0 w-full h-full bg-black/15 dark:bg-black/30 z-20 transition-opacity duration-300 ${
+          className={`fixed top-0 left-0 w-full h-svh z-10 bg-black/15 dark:bg-black/30 z-20 transition-opacity duration-300 ${
             animateLoginModal ? "opacity-100" : "opacity-0"
           }`}
         />
