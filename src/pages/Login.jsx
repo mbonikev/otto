@@ -9,7 +9,7 @@ const Login = () => {
   document.title = "Login - Otto";
   return (
     <div className="h-svh max-lg:min-h-full flex justify-start items-center flex-col bg-sidebar-color">
-      <div className="w-full h-full flex flex-1 p-3">
+      <div className="w-full h-full flex flex-1 p-2">
         <div className="h-full flex-1 flex flex-col items-center justify-start gap-6 w-full p-10 max-lg:p-5 overflow-auto no_scroll">
           <div className="w-fit flex-1 flex flex-col items-start justify-center gap-1">
             <Link to={"/"} className="w-fit h-fit flex gap-2 mb-8">
