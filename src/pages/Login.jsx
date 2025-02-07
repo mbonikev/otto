@@ -39,9 +39,6 @@ const Login = () => {
             </div>
           </div>
         </div>
-        <div className="w-3/5 h-full max-xl:hidden flex flex-col items-end justify-center gap-6 bg-stone-100 dark:bg-card-dark-1/40 overflow-hidden p-2 relative">
-         
-        </div>
       </div>
     </div>
   );
