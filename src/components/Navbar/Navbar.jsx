@@ -227,17 +227,29 @@ function Navbar({
           <IoShareSocialOutline />
           <Tooltip title="Share" placement="center" />
         </button>
-        <button
-          ref={profileRef}
-          onClick={() => setShowPopup(true)}
-          className="h-9 w-auto aspect-square rounded-full overflow-hidden ml-3"
-        >
-          <img
-            src={photo ? photo : avatar}
-            alt="avatar"
-            className="bg-stone-100 w-full h-fit min-h-full object-cover rounded-full"
-          />
-        </button>
+        {user ? (
+          <button
+            ref={profileRef}
+            onClick={() => setShowPopup(true)}
+            className="h-9 w-auto aspect-square rounded-full overflow-hidden ml-3"
+          >
+            <img
+              src={photo ? photo : avatar}
+              alt="avatar"
+              className="bg-stone-100 w-full h-fit min-h-full object-cover rounded-full"
+            />
+          </button>
+        ) : (
+          <button
+            className="h-9 w-auto aspect-square rounded-full overflow-hidden ml-3"
+          >
+            <img
+              src={photo ? photo : avatar}
+              alt="avatar"
+              className="bg-stone-100 w-full h-fit min-h-full object-cover rounded-full"
+            />
+          </button>
+        )}
         {/* dropdown */}
         {user && showPopup && (
           <div
