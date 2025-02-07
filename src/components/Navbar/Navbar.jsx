@@ -11,7 +11,7 @@ import Tooltip from "../Tooltip/Tooltip";
 import { RxPencil2 } from "react-icons/rx";
 import { IoShareSocialOutline } from "react-icons/io5";
 import ChatHistory from "../ChatHistory/ChatHistory";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { LuLoaderCircle } from "react-icons/lu";
 import axios from "axios";
 import { BsIncognito, BsLockFill, BsStars } from "react-icons/bs";
@@ -241,9 +241,9 @@ function Navbar({
             />
           </button>
         ) : (
-          <button className="h-9 w-fit px-4 bg-body-dark dark:bg-light-color text-light-color dark:text-dark-text rounded-full overflow-hidden ml-3">
+          <Link to={`/login`} className="h-9 w-fit px-4 bg-body-dark dark:bg-light-color text-light-color dark:text-dark-text rounded-full overflow-hidden ml-3 flex">
             Login
-          </button>
+          </Link>
         )}
         {/* dropdown */}
         {user && showPopup && (
