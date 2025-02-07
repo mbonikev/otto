@@ -8,8 +8,8 @@ const Login = () => {
   const backendUrl = import.meta.env.VITE_BACKEND_API;
   document.title = "Login - Otto";
   return (
-    <div className="h-svh flex justify-start items-center flex-col max-lg:p-0 p-3">
-      <div className="w-full h-full flex">
+    <div className="h-svh flex justify-start items-center flex-col">
+      <div className="w-full h-full flex p-3 gap-3">
         <div className="h-full flex-1 flex flex-col items-start justify-start gap-6 w-full p-0">
           <Link to={"/"} className="w-fit h-fit flex gap-2">
             <img src="./logo.png" className="h-8" />
