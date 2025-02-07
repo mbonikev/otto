@@ -44,7 +44,7 @@ const Login = () => {
             <FaPlay className="text-xs opacity-40" />
             Demo
           </h1>
-          <div className="w-full h-full overflow-hidden rounded-[30px] shadow-xl shadow-stone-200 dark:shadow-black/60 relative">
+          <div className="w-full h-full relative">
             <div className="w-full h-full rounded-3xl p-5">
               <ReactPlayer
                 url="/assets/tutorial.mp4"
