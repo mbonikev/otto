@@ -213,7 +213,7 @@ function Navbar({
             </div>
           </div>
         </div>
-        <div className="w-7 min-w-7 z-10 group-hover:w-16 delay-150 group-hover:translate-y-5 transition-all">
+        <div className="w-7 min-w-7 z-10 group-hover:w-16 delay-150 transition-all">
           <img src="/logo.png" alt="logo" className="w-full h-fit " />
         </div>
       </div>
