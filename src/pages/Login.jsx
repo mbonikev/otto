@@ -46,8 +46,8 @@ const Login = () => {
           </h1>
           <div className="w-full h-full overflow-hidden rounded-[30px] shadow-xl shadow-stone-200 dark:shadow-black/60 relative">
             <div className="w-full h-fit object-contain overflow-hidden rounded-3xl bg-white p-0">
-              <source controls={false} muted loop>
-                <video src="./assets/tutorial.mp4" className="" />
+              <source controls type="video/mp4" muted loop>
+                <video src="./assets/tutorial.mp4" />
               </source>
             </div>
           </div>
