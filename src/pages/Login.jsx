@@ -8,7 +8,7 @@ const Login = () => {
   const backendUrl = import.meta.env.VITE_BACKEND_API;
   document.title = "Login - Otto";
   return (
-    <div className="h-full max-lg:min-h-full flex justify-start items-center flex-col bg-sidebar-color overflow-y-auto">
+    <div className="h-svh max-lg:min-h-full flex justify-start items-center flex-col bg-sidebar-color overflow-y-auto">
       <div className="w-full h-full flex flex-1 p-3">
         <div className="h-full flex-1 flex flex-col items-center justify-start gap-6 w-full p-10">
           <div className="w-fit flex-1 flex flex-col items-start justify-center gap-1">
