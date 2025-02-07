@@ -17,8 +17,8 @@ const Login = () => {
               Otto
             </h1> */}
           </Link>
-          <div className="w-full flex-1 flex flex-col items-start justify-start gap-3 pt-[5vh]">
-            <h1 className="text-3xl font-semibold text-dark-text dark:text-light-color">
+          <div className="w-full flex-1 flex flex-col items-start justify-start gap-0 pt-[5vh]">
+            <h1 className="text-2xl font-semibold text-dark-text dark:text-light-color">
               Sign in to Otto
             </h1>
             <p className="text-base text-dark-text-weak dark:text-light-color-weak">
