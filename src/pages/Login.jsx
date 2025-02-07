@@ -53,7 +53,7 @@ const Login = () => {
                 loop={true}
                 playing={true}
                 width="100%"
-                height="100%"
+                height="fit-content"
                 config={{
                   file: {
                     attributes: {
