@@ -118,11 +118,9 @@ function Navbar({
     setTimeout(() => setAnimateLoginModal(true), 50);
   };
 
-  const handleCloseModal = () => {
+  const handleCloseChatsModal = () => {
     setAnimateChatsModal(false);
-    setAnimateLoginModal(false);
     setTimeout(() => setChatsModal(false), 300);
-    setTimeout(() => setLoginModal(false), 300);
   };
 
   // shortcuts
