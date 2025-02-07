@@ -215,22 +215,22 @@ function PromptArea({
               onClick={handleOpenLoginModal}
               className="group cursor-pointer h-full w-fit px-3 flex items-center justify-center gap-1 text-sm ring-1 ring-stone-300 dark:ring-dark-text-weak/50 dark:hover:bg-light-color-weak/10 text-dark-text-weak dark:text-light-color-weak dark:hover:text-light-color hover:text-dark-text font-semibold rounded-full relative"
             >
-              <GoCommandPalette className="text-lg text-lime-600 dark:text-card-hover-dark stroke-[1px]" />
+              <GoCommandPalette className="text-lg text-lime-600 dark:text-light-color-weak stroke-[1px]" />
               Code
               <Tooltip title="Type Codes" placement="right-center" />
             </div>
             <div className="group cursor-default h-full w-fit px-3 flex items-center justify-center gap-1 text-sm ring-1 ring-stone-300 dark:ring-dark-text-weak/50 dark:hover:bg-light-color-weak/10 text-dark-text-weak dark:text-light-color-weak font-semibold rounded-full relative">
-              <LuImage className="text-base text-orange-600 dark:text-card-hover-dark stroke-[1.5px]" />
+              <LuImage className="text-base text-orange-600 dark:text-light-color-weak stroke-[1.5px]" />
               Image
               <Tooltip title="Comming Soon" placement="right-center" />
             </div>
             <div className="group cursor-default h-full w-fit px-3 flex items-center justify-center gap-1 text-sm ring-1 ring-stone-300 dark:ring-dark-text-weak/50 dark:hover:bg-light-color-weak/10 text-dark-text-weak dark:text-light-color-weak font-semibold rounded-full relative">
-              <LuAudioLines className="text-base text-pink-500 dark:text-card-hover-dark stroke-[1.5px]" />
+              <LuAudioLines className="text-base text-pink-500 dark:text-light-color-weak stroke-[1.5px]" />
               Audio
               <Tooltip title="Comming Soon" placement="right-center" />
             </div>
             <div className="group cursor-default h-full w-fit px-3 flex items-center justify-center gap-1 text-sm ring-1 ring-stone-300 dark:ring-dark-text-weak/50 dark:hover:bg-light-color-weak/10 text-dark-text-weak dark:text-light-color-weak font-semibold rounded-full relative">
-              <BsFileEarmarkText className="text-base text-blue-400 dark:text-card-hover-dark stroke-[0.6px]" />
+              <BsFileEarmarkText className="text-base text-blue-400 dark:text-light-color-weak stroke-[0.6px]" />
               Files
               <Tooltip title="Comming Soon" placement="right-center" />
             </div>
