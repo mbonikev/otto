@@ -240,6 +240,7 @@ function Home({ handleOpenLoginModal, handleCloseLoginModal }) {
         models={models}
         user={user}
         userId={userId}
+        handleOpenLoginModal={handleOpenLoginModal}
       />
     </div>
   );
