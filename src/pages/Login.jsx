@@ -23,7 +23,7 @@ const Login = () => {
             </h1>
             <a
               href={`${backendUrl}/auth/google`}
-              className="bg-stone-200/60 hover:bg-stone-200 ring-1 ring-stone-200 text-dark-text py-2.5 px-3 w-fit min-w-[260px] max-md:min-w-fit max-md:pr-5 max-lg:text-sm flex items-center justify-start gap-3 rounded-full"
+              className="bg-stone-200/10 hover:bg-stone-200 ring-1 ring-stone-200 text-dark-text py-2.5 px-3 w-fit min-w-[260px] max-md:min-w-fit max-md:pr-5 max-lg:text-sm flex items-center justify-start gap-3 rounded-full"
             >
               <FcGoogle className="text-3xl" />
               Continue with Google
