@@ -182,6 +182,7 @@ function Home({handleOpenLoginModal}) {
         setThinking={setThinking}
         thinking={thinking}
         handleOpenLoginModal={handleOpenLoginModal}
+        handleCloseModal={handleCloseModal}
       />
       {/* </div> */}
 
