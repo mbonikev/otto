@@ -278,6 +278,10 @@ input {
   background: #f8f8f8;
 }
 
+.login_right_side{
+  background-image: url("https://img2.wallspic.com/crops/8/9/4/1/21498/21498-reflection-metropolis-skyline-landmark-cityscape-3840x2160.jpg");
+}
+
 pre {
   border-radius: 16px !important;
   border: 1px solid #aaaaaa1e;
