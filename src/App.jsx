@@ -40,7 +40,7 @@ function App() {
         <div
           className={`w-fit h-svh fixed top-0 left-0 transition-transform duration-300 ease-in-out z-30
                 ${
-                  animateLoginModal ? "translate-x-0" : "-translate-x-[300px]"
+                  animateLoginModal ? "opacity-100" : "opacity-0"
                 }`}
         >
           <LoginModal />
