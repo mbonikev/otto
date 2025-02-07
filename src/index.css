@@ -163,7 +163,7 @@ input {
 }
 
 .markdown h2 {
-  font-size: 1.75rem; /* Slightly smaller than h1 */
+  font-size: 2rem; /* Slightly smaller than h1 */
   font-weight: bold;
 }
 
