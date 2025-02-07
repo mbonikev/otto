@@ -40,31 +40,7 @@ const Login = () => {
           </div>
         </div>
         <div className="w-3/5 h-full max-xl:hidden flex flex-col items-end justify-center gap-6 bg-stone-100 dark:bg-card-dark-1/40 overflow-hidden p-2 relative">
-          <h1 className="absolute top-6 right-8 z-10 text-dark-text-weak dark:text-light-color-weak text-sm flex items-center gap-2 font-medium">
-            <FaPlay className="text-xs opacity-40" />
-            Demo
-          </h1>
-          <div className="w-full h-full overflow-hidden rounded-[30px] shadow-xl shadow-stone-200 dark:shadow-black/60 relative">
-            <div className="w-full h-full rounded-3xl bg-white p-10">
-              <ReactPlayer
-                url="/assets/tutorial.mp4"
-                controls={false}
-                muted={true}
-                loop={true}
-                playing={true}
-                width="100%"
-                height="100%"
-                config={{
-                  file: {
-                    attributes: {
-                      controlsList: "nodownload",
-                      preload: "auto",
-                    },
-                  },
-                }}
-              />
-            </div>
-          </div>
+         
         </div>
       </div>
     </div>
