@@ -213,7 +213,7 @@ function Navbar({
             </div>
           </div>
         </div>
-        <div className="w-7 min-w-7 z-10 group-hover:w-16 absolute top-1.5 left-0 right-0 m-auto delay-150 group-hover:translate-y-5 transition-all saturate-0">
+        <div className="w-7 min-w-7 z-10 group-hover:w-16 absolute top-1.5 left-0 right-0 m-auto delay-150 group-hover:translate-y-5 transition-all saturate-0 group-hover:saturate-100">
           <img src="/logo.png" alt="logo" className="w-full h-fit " />
         </div>
       </div>
