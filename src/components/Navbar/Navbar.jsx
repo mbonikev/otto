@@ -178,7 +178,7 @@ function Navbar({
           onClick={user ? handleNew : handleLoginModal}
           className="group h-10 w-auto aspect-square flex items-center justify-center text-[22px] hover:bg-stone-100 text-dark-text-weak dark:text-light-color-weak hover:text-dark-text-weak dark:hover:bg-card-hover-dark dark:hover:text-light-color-weak rounded-full relative"
         >
-          <RxPencil2 className="stroke-[0.4px]"  />
+          <RxPencil2 className="stroke-[0.3px]"  />
           <Tooltip title="New chat" placement="center" />
         </button>
       </div>
