@@ -53,15 +53,6 @@ const Login = () => {
               </a>
             </p>
           </div>
-          {/* <div className="w-full flex items-center justify-between p-1 flex-wrap gap-2 max-lg:justify-center">
-            <h1 className="text-dark-text-weak dark:text-light-color-weak text-sm font-medium">
-              &copy; Otto 2025. All rights reserved.
-            </h1>
-            <div className="flex items-center justify-end gap-3 text-dark-text-weak dark:text-light-color-weak text-sm">
-              <Link to="/">Terms of Use</Link>|
-              <Link to="/">Privacy Policy</Link>
-            </div>
-          </div> */}
         </div>
         <div className="w-1/2 h-full max-xl:hidden flex flex-col items-end justify-center gap-6 overflow-hidden relative">
           <div className="bg-stone-100 dark:bg-card-dark-1/40 w-full h-full rounded-2xl "></div>
