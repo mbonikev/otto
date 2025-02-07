@@ -34,6 +34,9 @@ const Login = () => {
               <FcGoogle className="text-2xl" />
               Continue with Google
             </a>
+            <p className="text-base text-dark-text-weak dark:text-light-color-weak">
+            By signing in, you agree to the Terms of Service and Privacy Policy.
+            </p>
           </div>
           <div className="w-full flex items-center justify-between p-1 flex-wrap gap-2 max-lg:justify-center">
             <h1 className="text-dark-text-weak dark:text-light-color-weak text-sm font-medium">
