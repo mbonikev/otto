@@ -57,8 +57,8 @@ const Login = () => {
                 config={{
                   file: {
                     attributes: {
-                      controlsList: "nodownload", // Prevents downloading
-                      preload: "auto", // Preloads video for better quality
+                      controlsList: "nodownload",
+                      preload: "auto",
                     },
                   },
                 }}
