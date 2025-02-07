@@ -55,6 +55,7 @@ const Login = () => {
                   playing={true}
                   width="100%"
                   height="100%"
+                  className="opacity-0"
                 />
               </div>
             </div>
