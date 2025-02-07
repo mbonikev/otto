@@ -13,7 +13,7 @@ function LoginModal() {
           <img src="/logo.png" alt="" className="h-full w-auto" />
         </div>
         <p className="text-xl text-dark-text dark:text-light-color">
-          Log in to access your account and enable full feature functionality.
+          Log in to enable full feature functionality.
         </p>
       </div>
     </div>
