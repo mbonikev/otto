@@ -10,9 +10,9 @@ const Login = () => {
   return (
     <div className="h-svh flex justify-start items-center flex-col max-lg:p-0">
       <div className="w-full h-full flex">
-        <div className="h-full flex-1 flex flex-col items-start justify-start gap-6 w-full p-0">
+        <div className="h-full flex-1 flex flex-col items-start justify-start gap-6 w-full p-6">
           <Link to={"/"} className="w-fit h-fit flex gap-2">
-            <img src="./logo.png" className="h-9" />
+            <img src="./logo.png" className="h-7" />
             <h1 className="font-Kanit text-2xl font-light text-dark-text-weak dark:text-light-color-weak text-center">
               Otto
             </h1>
