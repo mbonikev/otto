@@ -39,7 +39,7 @@ const Login = () => {
             </div>
           </div>
         </div>
-        <div className="w-2/4 h-full max-xl:hidden flex flex-col items-end justify-center gap-6 overflow-hidden p-10 bg-stone-100">
+        <div className="w-2/4 h-full max-xl:hidden flex flex-col items-end justify-center gap-6 overflow-hidden p-10 ">
           <div className="w-full h-fit object-contain overflow-hidden rounded-[30px] ring-1 ring-stone-200 relative">
             <h1 className="absolute top-8 right-8 text-dark-text-weak text-sm flex items-center gap-2 font-medium">
               <FaPlay className="text-xs opacity-40" />
