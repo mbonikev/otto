@@ -1,7 +1,7 @@
 import TextArea from "antd/es/input/TextArea";
 import React, { useEffect, useRef, useState } from "react";
 import { BsArrowUpCircleFill, BsFileEarmarkText } from "react-icons/bs";
-import { LuBrain, LuCheck, LuImage } from "react-icons/lu";
+import { LuAudioLines, LuBrain, LuCheck, LuImage } from "react-icons/lu";
 import { PiBrainLight } from "react-icons/pi";
 import { RiRobot3Line } from "react-icons/ri";
 import Tooltip from "../Tooltip/Tooltip";
@@ -225,7 +225,7 @@ function PromptArea({
               <Tooltip title="Comming Soon" placement="right-center" />
             </div>
             <div className="group cursor-default h-full w-fit px-3 flex items-center justify-center gap-1 text-sm ring-1 ring-stone-300 dark:ring-dark-text-weak/50 dark:hover:bg-light-color-weak/10 text-dark-text-weak dark:text-light-color-weak font-semibold rounded-full relative">
-              <HiOutlineMicrophone className="text-base text-red-600 stroke-[1.5px]" />
+              <LuAudioLines className="text-base text-red-600 stroke-[1.5px]" />
               Audio
               <Tooltip title="Comming Soon" placement="right-center" />
             </div>
