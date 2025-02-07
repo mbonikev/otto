@@ -9,7 +9,7 @@ function LoginModal() {
 
   return (
     <div className="w-[320px] h-[300px] p-2">
-      <div className="w-full h-full bg-white dark:bg-[#252525] rounded-2xl p-2 flex flex-col">
+      <div className="w-full h-full bg-white dark:bg-[#282828] rounded-2xl p-2 flex flex-col">
 
       </div>
     </div>
