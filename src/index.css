@@ -187,9 +187,7 @@ input {
   font-weight: normal;
 }
 
-.markdown h1:nth-child(1),
-.markdown h2:nth-child(1),
-.markdown h3:nth-child(1){
+.markdown :nth-child(1) h3{
   color: yellow !important;
 }
 
