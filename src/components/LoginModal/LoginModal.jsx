@@ -14,7 +14,7 @@ function LoginModal() {
         <div className="h-12 w-fit">
           <img src="/logo.png" alt="" className="h-full w-auto" />
         </div>
-        <p className="text-xl text-dark-text dark:text-light-color n">
+        <p className="text-xl text-dark-text dark:text-light-color mb-5">
           Log in to enable full feature functionality.
         </p>
         <a
