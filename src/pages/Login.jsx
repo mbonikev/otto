@@ -38,11 +38,19 @@ const Login = () => {
             </div>
             <p className="text-base text-dark-text-weak dark:text-light-color-weak mt-10 max-w-[300px] mb-7">
               By signing in, you agree to the{" "}
-              <a className="underline hover:text-dark-text dark:hover:text-light-color cursor-pointer">Terms of Service</a> and{" "}
-              <a className="underline hover:text-dark-text dark:hover:text-light-color cursor-pointer">Privacy Policy.</a>
+              <a className="underline hover:text-dark-text dark:hover:text-light-color cursor-pointer">
+                Terms of Service
+              </a>{" "}
+              and{" "}
+              <a className="underline hover:text-dark-text dark:hover:text-light-color cursor-pointer">
+                Privacy Policy.
+              </a>
             </p>
             <p className="text-base text-dark-text-weak dark:text-light-color-weak">
-              Need help? Contact support
+              Need help?{" "}
+              <a className="underline hover:text-dark-text dark:hover:text-light-color cursor-pointer">
+                Contact support
+              </a>
             </p>
           </div>
           {/* <div className="w-full flex items-center justify-between p-1 flex-wrap gap-2 max-lg:justify-center">
