@@ -35,7 +35,11 @@ const Login = () => {
               Continue with Google
             </a>
             <p className="text-base text-dark-text-weak dark:text-light-color-weak">
-            By signing in, you agree to the Terms of Service and Privacy Policy.
+              By signing in, you agree to the Terms of Service and Privacy
+              Policy.
+            </p>
+            <p className="text-base text-dark-text-weak dark:text-light-color-weak">
+              Need help? Contact support
             </p>
           </div>
           <div className="w-full flex items-center justify-between p-1 flex-wrap gap-2 max-lg:justify-center">
