@@ -19,7 +19,7 @@ const Login = () => {
           </Link>
           <div className="w-full flex-1 flex flex-col items-center justify-center gap-2">
             <h1 className="text-3xl font-semibold max-2xl:text-2xl mb-4 text-dark-text dark:text-light-color">
-              Login
+              
             </h1>
             <a
               href={`${backendUrl}/auth/google`}
@@ -29,7 +29,7 @@ const Login = () => {
               Continue with Google
             </a>
           </div>
-          <div className="w-full flex items-center justify-between p-1 flex-wrap gap-3 max-lg:justify-center">
+          {/* <div className="w-full flex items-center justify-between p-1 flex-wrap gap-3 max-lg:justify-center">
             <h1 className="text-dark-text-weak dark:text-light-color-weak text-sm font-medium">
               &copy; Otto 2025. All rights reserved.
             </h1>
@@ -37,7 +37,7 @@ const Login = () => {
               <Link to="/">Terms of Use</Link>|
               <Link to="/">Privacy Policy</Link>
             </div>
-          </div>
+          </div> */}
         </div>
         <div className="w-3/5 h-full max-xl:hidden flex flex-col items-end justify-center gap-6 bg-stone-100 dark:bg-card-dark-1/40 overflow-hidden p-2 relative">
          
