@@ -193,7 +193,7 @@ function PromptArea({
                     {selectedModel}
                   </p>
                   <HiChevronUpDown className="text-lg opacity-75" />
-                  <Tooltip title="Models" placement="right-center" />
+                  <Tooltip title="Models" placement="center" />
                 </div>
               ) : (
                 <div className="group cursor-pointer w-fit h-full flex items-center justify-center gap-1.5 px-3 relative hover:text-dark-text dark:text-light-color-weak dark:hover:text-light-color">
