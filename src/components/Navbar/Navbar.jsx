@@ -171,14 +171,14 @@ function Navbar({
       <div className="flex items-center justify-start gap-0">
         <button
           onClick={user ? handleOpenChatsModal : handleLoginModal}
-          className="group h-10 w-auto aspect-square flex items-center justify-center text-[20px] hover:bg-stone-100 text-dark-text-weak dark:text-light-color-weak hover:text-dark-text dark:hover:bg-card-dark-1 dark:hover:text-light-color rounded-full relative"
+          className="group h-10 w-auto aspect-square flex items-center justify-center text-[22px] hover:bg-stone-100 text-dark-text-weak dark:text-light-color-weak hover:text-dark-text dark:hover:bg-card-dark-1 dark:hover:text-light-color rounded-full relative"
         >
           <HiOutlineChatBubbleLeftRight />
           <Tooltip title="Chat history" placement="left" shortcut="Alt + c" />
         </button>
         <button
           onClick={user ? handleNew : handleLoginModal}
-          className="group h-10 w-auto aspect-square flex items-center justify-center text-[20px] hover:bg-stone-100 text-dark-text-weak dark:text-light-color-weak hover:text-dark-text dark:hover:bg-card-dark-1 dark:hover:text-light-color rounded-full relative"
+          className="group h-10 w-auto aspect-square flex items-center justify-center text-[22px] hover:bg-stone-100 text-dark-text-weak dark:text-light-color-weak hover:text-dark-text dark:hover:bg-card-dark-1 dark:hover:text-light-color rounded-full relative"
         >
           <RxPencil2 />
           <Tooltip title="New chat" placement="center" />
