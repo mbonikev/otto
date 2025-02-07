@@ -29,25 +29,6 @@ const Login = () => {
               <FcGoogle className="text-3xl" />
               <p className="min-w-[65px] font-medium">Google</p>
             </a>
-            <div className="opacity-40 pointer-events-none select-none bg-white dark:bg-card-dark-1 ring-1 ring-stone-200 dark:ring-card-dark-1 text-dark-text dark:text-light-color py-2.5 px-3 w-full max-md:min-w-fit max-md:pr-5 max-lg:text-sm flex items-center justify-center gap-2 rounded-full">
-              <img
-                src="https://img.icons8.com/fluency/50/facebook-new.png"
-                className="h-[32px]"
-              />
-              <p className="min-w-[65px] font-medium">Facebook</p>
-            </div>
-            <div className="opacity-40 pointer-events-none select-none bg-white dark:bg-card-dark-1 ring-1 ring-stone-200 dark:ring-card-dark-1 text-dark-text dark:text-light-color py-2.5 px-3 w-full max-md:min-w-fit max-md:pr-5 max-lg:text-sm flex items-center justify-center gap-2 rounded-full">
-              <IoLogoGithub className="text-3xl" />
-              <p className="min-w-[65px] font-medium">GitHub</p>
-            </div>
-            <div className="opacity-40 pointer-events-none select-none bg-white dark:bg-card-dark-1 ring-1 ring-stone-200 dark:ring-card-dark-1 text-dark-text dark:text-light-color py-2.5 px-3 w-full max-md:min-w-fit max-md:pr-5 max-lg:text-sm flex items-center justify-center gap-2 rounded-full">
-              <img
-                src="https://img.icons8.com/color/50/microsoft.png"
-                className="h-[28px]"
-              />
-
-              <p className="min-w-[65px] font-medium">Microsoft</p>
-            </div>
           </div>
           <div className="w-full flex items-center justify-between p-1 flex-wrap gap-2 max-lg:justify-center">
             <h1 className="text-dark-text-weak dark:text-light-color-weak text-sm font-normal">
