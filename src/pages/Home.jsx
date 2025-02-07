@@ -13,7 +13,7 @@ import { RiLoader2Fill } from "react-icons/ri";
 import Cookies from "js-cookie";
 import axios from "axios";
 
-function Home({ handleOpenLoginModal, handleCloseLoginModal }) {
+function Home({ handleOpenLoginModal }) {
   const { user, models } = useOutletContext() || {};
   const { displayName, photo, email, userId } = user || {};
   const [messages, setMessages] = useState([]);
@@ -182,7 +182,6 @@ function Home({ handleOpenLoginModal, handleCloseLoginModal }) {
         setThinking={setThinking}
         thinking={thinking}
         handleOpenLoginModal={handleOpenLoginModal}
-        handleCloseLoginModal={handleCloseLoginModal}
       />
       {/* </div> */}
 
