@@ -172,7 +172,7 @@ input {
 .markdown h3 {
   margin-top: 30px;
   font-size: 1.6rem !important;
-  font-weight: bold;
+  font-weight: 600 !important;
 }
 
 .markdown h4 {
