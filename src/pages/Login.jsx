@@ -17,7 +17,7 @@ const Login = () => {
               Otto
             </h1> */}
           </Link>
-          <div className="w-full flex-1 flex flex-col items-start justify-start gap-1">
+          <div className="w-fit bg-red-300 flex-1 flex flex-col items-start justify-start gap-1">
             <h1 className="text-2xl font-semibold text-dark-text dark:text-light-color">
               Sign in to Otto
             </h1>
