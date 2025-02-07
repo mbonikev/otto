@@ -8,8 +8,8 @@ import { PiChatsCircleFill } from "react-icons/pi";
 function LoginModal() {
   return (
     <div className="w-[320px] h-[300px] p-2">
-      <div className="w-full h-full bg-white dark:bg-card-dark-1 text-dark-text dark:text-light-color rounded-2xl p-2 flex flex-col">
-        <h1 className="text-2xl">Log in</h1>
+      <div className="w-full h-full bg-white dark:bg-card-dark-1 text-dark-text dark:text-light-color rounded-2xl p-5 flex flex-col">
+        <h1 className="text-3xl">Log in</h1>
         <p>
           Please log in to access your account and enable full feature
           functionality.
