@@ -10,7 +10,7 @@ const Login = () => {
   return (
     <div className="h-svh flex justify-start items-center flex-col max-lg:p-0">
       <div className="w-full h-full flex">
-        <div className="h-full flex-1 flex flex-col items-start justify-start gap-6 w-full p-6">
+        <div className="h-full flex-1 flex flex-col items-start justify-start gap-6 w-full p-0">
           <Link to={"/"} className="w-fit h-fit flex gap-2">
             <img src="./logo.png" className="h-8" />
             <h1 className="font-Kanit text-xl font-medium text-dark-text dark:text-light-color text-center">
