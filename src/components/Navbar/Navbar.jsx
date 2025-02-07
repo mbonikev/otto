@@ -239,7 +239,7 @@ function Navbar({
           />
         </button>
         {/* dropdown */}
-        {showPopup && (
+        {user && showPopup && (
           <div
             ref={popupRef}
             className="absolute top-[120%] w-[220px] h-fit rounded-2xl ring-1 bg-white dark:bg-card-dark-1 ring-stone-200 dark:ring-card-dark-1 shadow-lg p-1.5"
