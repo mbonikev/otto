@@ -40,11 +40,11 @@ const Login = () => {
           </div>
         </div>
         <div className="w-3/5 h-full max-xl:hidden flex flex-col items-end justify-center gap-6 bg-stone-100 dark:bg-card-dark-1/40 overflow-hidden p-2 relative">
+          <h1 className="text-dark-text-weak dark:text-light-color-weak text-sm flex items-center gap-2 font-medium">
+            <FaPlay className="text-xs opacity-40" />
+            Demo
+          </h1>
           <div className="w-full h-full relative">
-            <h1 className="absolute top-5 right-7 z-30 text-dark-text-weak dark:text-light-color-weak text-sm flex items-center gap-2 font-medium">
-              <FaPlay className="text-xs opacity-40" />
-              Demo
-            </h1>
             <div className="w-full h-full rounded-3xl p-5">
               <ReactPlayer
                 url="/assets/tutorial.mp4"
