@@ -111,7 +111,7 @@ function Navbar({
     setTimeout(() => setAnimateChatsModal(true), 50);
   };
 
-  const handleCloseChatsModal = () => {
+  const handleCloseModal = () => {
     setAnimateChatsModal(false);
     setTimeout(() => setChatsModal(false), 300);
   };
@@ -122,7 +122,7 @@ function Navbar({
       const handleKeyDown = (event) => {
         if (event.key === "Escape") {
           event.preventDefault();
-          handleCloseChatsModal();
+          handleCloseModal();
         } else if (event.altKey && event.key.toLowerCase() === "c") {
           event.preventDefault();
           handleOpenChatsModal();
@@ -147,7 +147,7 @@ function Navbar({
       {/* Overlay */}
       {chatsModal && (
         <div
-          onClick={handleCloseChatsModal}
+          onClick={handleCloseModal}
           className={`fixed top-0 left-0 w-full h-full bg-black/15 dark:bg-black/30 z-20 transition-opacity duration-300 ${
             animateChatsModal ? "opacity-100" : "opacity-0"
           }`}
