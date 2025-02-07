@@ -190,7 +190,7 @@ function PromptArea({
                   onClick={() => setShowModels(true)}
                   className="group cursor-pointer w-fit h-full flex items-center justify-center gap-1.5 px-3 relative hover:text-dark-text dark:text-light-color-weak dark:hover:text-light-color"
                 >
-                  <LuBrain className="text-lg text-purple-500" />
+                  <LuBrain className="text-lg text-purple-500 dark:text-light-color-weak" />
                   <p className="w-full truncate max-w-[100px]">
                     {selectedModel}
                   </p>
@@ -202,7 +202,7 @@ function PromptArea({
                   onClick={handleOpenLoginModal}
                   className="group cursor-pointer w-fit h-full flex items-center justify-center gap-1.5 px-3 relative hover:text-dark-text dark:text-light-color-weak dark:hover:text-light-color"
                 >
-                  <LuBrain className="text-lg text-purple-500" />
+                  <LuBrain className="text-lg text-purple-500 dark:text-light-color-weak" />
                   <p className="w-full truncate max-w-[100px]">
                     {selectedModel}
                   </p>
