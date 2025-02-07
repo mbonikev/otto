@@ -12,8 +12,8 @@ const Login = () => {
       <div className="w-full h-full flex">
         <div className="h-full flex-1 flex flex-col items-start justify-start gap-6 w-full p-6">
           <Link to={"/"} className="w-fit h-fit flex gap-2">
-            <img src="./logo.png" className="h-7" />
-            <h1 className="font-Kanit text-2xl font-light text-dark-text-weak dark:text-light-color-weak text-center">
+            <img src="./logo.png" className="h-8" />
+            <h1 className="font-Kanit text-xl font-light text-dark-text-weak dark:text-light-color-weak text-center">
               Otto
             </h1>
           </Link>
