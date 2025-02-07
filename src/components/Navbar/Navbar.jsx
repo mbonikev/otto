@@ -183,7 +183,7 @@ function Navbar({
         </button>
       </div>
       {/* 2 */}
-      <div className="flex items-center justify-center gap-1 select-none w-full max-w-[100px] mx-auto relative group bg-transparent">
+      <div className="flex items-center justify-center gap-1 select-none w-full max-w-[100px] mx-auto relative group bg-blue-300">
         {/* info */}
         <div className="w-[260px] h-fit delay-150 scale-0 group-hover:scale-100 opacity-0 group-hover:opacity-100 group-hover:transition-all bg-transparent absolute top-0 mx-auto z-10 pt-2">
           <div className="w-full h-full bg-white dark:bg-card-dark-1 ring-1 ring-stone-200 dark:ring-card-dark-1 shadow-lg rounded-2xl pt-[88px] px-2 pb-2 text-center">
