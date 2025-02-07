@@ -198,7 +198,7 @@ input {
 .markdown:nth-child(1) h3:first-child{
   /* color: yellow !important; */
   margin-top: unset !important;
-  background-color: red !important;
+  /* background-color: red !important; */
 }
 
 /* Style for paragraphs */
