@@ -157,7 +157,7 @@ function Navbar({
           <div
             onClick={handleCloseModal}
             className={`fixed top-0 left-0 w-full h-full bg-black/15 dark:bg-black/30 z-20 transition-opacity duration-300 ${
-              animateChatsModal || animateLoginModal
+              animateChatsModal
                 ? "opacity-100"
                 : "opacity-0"
             }`}
@@ -181,7 +181,7 @@ function Navbar({
           <div
             onClick={handleCloseModal}
             className={`fixed top-0 left-0 w-full h-full bg-black/15 dark:bg-black/30 z-20 transition-opacity duration-300 ${
-              animateChatsModal || animateLoginModal
+              animateLoginModal
                 ? "opacity-100"
                 : "opacity-0"
             }`}
