@@ -26,7 +26,7 @@ const Login = () => {
               className="bg-white dark:bg-body-dark hover:bg-stone-200 dark:hover:bg-card-hover-dark ring-1 ring-stone-200 dark:ring-card-hover-dark text-dark-text dark:text-light-color py-2 px-3 w-fit min-w-[230px] max-md:min-w-fit max-md:pr-5 max-lg:text-sm flex items-center justify-start gap-3 rounded-full"
             >
               <FcGoogle className="text-3xl" />
-              Continue with Google
+              Log in with Google
             </a>
           </div>
           <div className="w-full flex items-center justify-between p-1 flex-wrap gap-3 max-lg:justify-center">
