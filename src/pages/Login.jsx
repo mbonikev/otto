@@ -44,9 +44,9 @@ const Login = () => {
             <FaPlay className="text-xs opacity-40" />
             Demo
           </h1>
-          <div className="w-full h-full object-contain overflow-hidden rounded-[30px] shadow-xl shadow-stone-200 dark:shadow-black/60 relative">
-            <div className="w-full h-full object-contain overflow-hidden rounded-3xl bg-white p-5">
-              <div className="h-full w-full">
+          <div className="w-full h-full overflow-hidden rounded-[30px] shadow-xl shadow-stone-200 dark:shadow-black/60 relative">
+            <div className="w-full h-full overflow-hidden rounded-3xl bg-white p-5">
+              {/* <div className="h-full w-full"> */}
                 <ReactPlayer
                   url="./assets/tutorial.mp4"
                   controls={false}
@@ -56,7 +56,7 @@ const Login = () => {
                   width="100%"
                   height="100%"
                 />
-              </div>
+              {/* </div> */}
             </div>
           </div>
         </div>
