@@ -45,7 +45,7 @@ const Login = () => {
             Demo
           </h1>
           <div className="w-full h-full relative">
-            <div className="w-full h-full rounded-3xl">
+            <div className="w-full h-fit rounded-3xl">
               <ReactPlayer
                 url="/assets/tutorial.mp4"
                 controls={false}
