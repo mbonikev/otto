@@ -46,8 +46,7 @@ const Login = () => {
               <IoLogoGithub className="text-3xl" />
               <p className="min-w-[65px] font-medium">GitHub</p>
             </a>
-            <a
-              href={`${backendUrl}/auth/google`}
+            <div
               className="bg-white dark:bg-card-dark-1 hover:bg-stone-200 dark:hover:bg-card-hover-dark ring-1 ring-stone-200 dark:ring-card-dark-1 text-dark-text dark:text-light-color py-2.5 px-3 w-full max-md:min-w-fit max-md:pr-5 max-lg:text-sm flex items-center justify-center gap-2 rounded-full"
             >
               <img
@@ -56,7 +55,7 @@ const Login = () => {
               />
 
               <p className="min-w-[65px] font-medium">Microsoft</p>
-            </a>
+            </div>
           </div>
           <div className="w-full flex items-center justify-between p-1 flex-wrap gap-2 max-lg:justify-center">
             <h1 className="text-dark-text-weak dark:text-light-color-weak text-sm font-normal">
