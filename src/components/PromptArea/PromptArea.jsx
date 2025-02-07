@@ -253,7 +253,7 @@ function PromptArea({
                     />
                   </div>
                 </div>
-                <div className="w-full flex-1 flex flex-col gap-0 scrollbar_nobg overflow-y-auto pr-1">
+                <div className="w-full flex-1 flex flex-col gap-0 tr overflow-y-auto pr-1">
                   {models?.length > 0 ? (
                     Object.entries(
                       models
