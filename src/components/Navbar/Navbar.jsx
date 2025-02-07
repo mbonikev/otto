@@ -173,27 +173,6 @@ function Navbar({
         </div>
       )}
 
-      {/* Overlay */}
-      {loginModal && (
-        <div
-          onClick={handleCloseModal}
-          className={`fixed top-0 left-0 w-full h-svh bg-black/15 dark:bg-black/30 z-50 transition-opacity duration-300 ${
-            animateLoginModal ? "opacity-100" : "opacity-0"
-          }`}
-        />
-      )}
-
-      {/* login Modal */}
-      {loginModal && (
-        <div
-          className={`w-fit h-svh fixed top-0 left-0 transition-transform duration-300 ease-in-out z-30
-                ${
-                  animateLoginModal ? "translate-x-0" : "-translate-x-[300px]"
-                }`}
-        >
-          <ChatHistory convs={convs} loadingConvs={loadingConvs} />
-        </div>
-      )}
 
       {/* 1 */}
       <div className="flex items-center justify-start gap-0">
