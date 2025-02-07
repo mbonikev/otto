@@ -111,7 +111,7 @@ function Chat() {
 
   return (
     <div className="w-full h-svh flex flex-col relative">
-      <div className="w-full flex-1 flex flex-col scroll-smooth overflow-y-scroll bg-red-400">
+      <div className="w-full flex-1 flex flex-col scroll-smooth overflow-y-scroll bg-red-400 relative">
         <Navbar />
 
         <div
