@@ -246,7 +246,7 @@ function Navbar({
             <img
               src={photo ? photo : avatar}
               alt="avatar"
-              className="bg-stone-100 w-full h-fit min-h-full object-cover rounded-full"
+              className="bg-body-dark dark:bg-white w-full h-fit px-3 min-h-full object-cover rounded-full"
             />
           </button>
         )}
