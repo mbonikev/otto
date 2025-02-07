@@ -304,7 +304,7 @@ function PromptArea({
           </div>
         </div>
       </form>
-      <h1 className="text-xs font-normal text-dark-text-weak w-fit mx-auto">
+      <h1 className="text-xs font-normal text-dark-text dark:text-light-color w-fit mx-auto">
         Otto can make mistakes. double check!
       </h1>
     </div>
