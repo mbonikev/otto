@@ -21,7 +21,9 @@ const Login = () => {
             <h1 className="text-3xl font-semibold max-2xl:text-2xl mb-4 text-dark-text dark:text-light-color">
               Sign in to Otto
             </h1>
-            <p className="text-sm text-dark-text-weak dark:bg-light-color-weak"></p>
+            <p className="text-sm text-dark-text-weak dark:bg-light-color-weak">
+              to enable full feature functionality.
+            </p>
             <a
               href={`${backendUrl}/auth/google`}
               className="bg-white dark:bg-card-dark-1 hover:bg-stone-200 dark:hover:bg-card-hover-dark ring-1 ring-stone-200 dark:ring-card-dark-1 text-dark-text dark:text-light-color py-2 px-3 w-full max-md:min-w-fit max-md:pr-5 max-lg:text-sm flex items-center justify-center gap-3 rounded-full"
