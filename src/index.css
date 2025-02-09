@@ -64,6 +64,10 @@ input {
   border-radius: 9px;
 }
 
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 100, 100, 0.6);
+}
+
 @media (prefers-color-scheme: dark) {
   ::-webkit-scrollbar-track {
     background: transparent;
@@ -71,6 +75,9 @@ input {
   ::-webkit-scrollbar-thumb {
     background: #404040;
     border: 4px solid #212121;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(100, 100, 100, 0.6);
   }
 }
 
@@ -221,7 +228,6 @@ input {
   font-size: 16px;
 }
 
-
 /* Style for horizontal rules */
 .markdown hr {
   border: 0;
@@ -239,7 +245,6 @@ input {
   .markdown hr {
     background-color: #414141;
   }
-  
 }
 
 /* Style for links */
@@ -293,7 +298,6 @@ pre::-webkit-scrollbar-thumb {
   background: #64646466;
   border: 4px solid #fafafa;
 }
-
 
 @media (prefers-color-scheme: dark) {
   pre {
