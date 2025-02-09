@@ -151,7 +151,8 @@ input {
 }
 
 .markdown,
-.markdown ul {
+.markdown ul,
+.markdown ol {
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -213,14 +214,17 @@ input {
 }
 
 /* Style for bullet points */
-.markdown ul {
-  list-style-type: disc;
+.markdown ul,
+.markdown ol {
+  list-style-type: circle;
   padding-left: 40px;
 }
 
-.markdown ul li strong {
+.markdown ul li strong,
+.markdown ol li strong {
   font-size: 18px;
 }
+
 
 /* Style for horizontal rules */
 .markdown hr {
