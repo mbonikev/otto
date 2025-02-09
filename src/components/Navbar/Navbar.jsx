@@ -41,7 +41,6 @@ function Navbar({
   const navigate = useNavigate();
   const backendUrl = import.meta.env.VITE_BACKEND_API;
 
-
   const handleLogout = async () => {
     setLoading(true);
     try {
@@ -243,7 +242,10 @@ function Navbar({
             />
           </button>
         ) : (
-          <Link to={`/login`} className="h-9 w-fit px-4 bg-body-dark dark:bg-light-color text-light-color dark:text-dark-text rounded-full overflow-hidden ml-3 flex items-center justify-center">
+          <Link
+            to={`/login`}
+            className="h-9 w-fit px-4 bg-body-dark dark:bg-light-color text-light-color dark:text-dark-text rounded-full overflow-hidden ml-3 flex items-center justify-center"
+          >
             Login
           </Link>
         )}
@@ -264,6 +266,12 @@ function Navbar({
             {/*  */}
             <div className="w-[90%] h-[1px] bg-stone-200 dark:bg-dark-text-weak/40 mx-auto my-1"></div>
             {/*  */}
+            <button className="w-full rounded-xl p-2 flex items-center justify-start gap-2 hover:bg-stone-100 text-dark-text-weak hover:text-dark-text dark:text-light-color dark:hover:text-light-color dark:hover:bg-light-color-weak/10">
+              <div className="w-9 h-9 min-w-9 aspect-square flex justify-center items-center rounded-full bg-stone-200/50 text-dark-text dark:text-light-color dark:bg-light-color-weak/20 text-lg">
+                <HiSparkles />
+              </div>
+              <h1 className="text-sm">Updates</h1>
+            </button>
             <button className="w-full rounded-xl p-2 flex items-center justify-start gap-2 hover:bg-stone-100 text-dark-text-weak hover:text-dark-text dark:text-light-color dark:hover:text-light-color dark:hover:bg-light-color-weak/10">
               <HiOutlineMegaphone className="text-2xl text-dark-text-weak/70 dark:text-light-color-weak" />
               <h1 className="text-sm">Updates</h1>
