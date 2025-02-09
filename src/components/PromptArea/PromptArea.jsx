@@ -241,16 +241,18 @@ function PromptArea({
                 ref={modelsRef}
                 className=" w-[300px] max-sm:w-full h-[300px] bg-white dark:text-light-color dark:bg-card-dark-2 ring-1 ring-stone-300/80 dark:ring-dark-text-weak/50 shadow-md rounded-2xl absolute left-0 bottom-[130%] flex flex-col"
               >
-                <div className="w-full h-[44px] min-h-[44px] border-b-[1px] dark:border-light-color-weak/40">
-                  <div className="w-full h-full bg-transparent rounded-xl flex items-center justify-start">
-                    <HiMiniMagnifyingGlass className="mx-3 text-lg min-w-fit" />
-                    <input
-                      type="text"
-                      autoFocus={true}
-                      onChange={(e) => setSearchModel(e.target.value)}
-                      className="h-full w-full bg-transparent text-dark-text dark:text-light-color placeholder:text-dark-text-weak/50 dark:placeholder:text-light-color-weak text-sm"
-                      placeholder="Search models..."
-                    />
+                <div className="w-full h-fit p-2">
+                  <div className="w-full h-[44px] min-h-[44px] border-b-[1px] dark:border-light-color-weak/40">
+                    <div className="w-full h-full bg-transparent rounded-xl flex items-center justify-start">
+                      <HiMiniMagnifyingGlass className="mx-3 text-lg min-w-fit" />
+                      <input
+                        type="text"
+                        autoFocus={true}
+                        onChange={(e) => setSearchModel(e.target.value)}
+                        className="h-full w-full bg-transparent text-dark-text dark:text-light-color placeholder:text-dark-text-weak/50 dark:placeholder:text-light-color-weak text-sm"
+                        placeholder="Search models..."
+                      />
+                    </div>
                   </div>
                 </div>
                 <div className="w-full flex-1 flex flex-col gap-0 scrollbar_nobg overflow-y-auto pr-1 pl-2">
