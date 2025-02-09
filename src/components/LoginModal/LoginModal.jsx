@@ -19,7 +19,7 @@ function LoginModal() {
         </p>
         <a
           href={`${backendUrl}/auth/google`}
-          className="bg-transparent hover:bg-stone-200/50 dark:hover:bg-card-hover-dark/30 ring-1 ring-stone-200 dark:ring-card-dark-1 text-dark-text dark:text-light-color py-2 px-3 w-full max-md:pr-5 text-sm flex items-center justify-center gap-2 rounded-2xl transition-all active:scale-95"
+          className="bg-transparent hover:bg-stone-200/50 dark:hover:bg-card-hover-dark/30 ring-1 ring-stone-200 dark:ring-card-hover-dark text-dark-text dark:text-light-color py-2 px-3 w-full max-md:pr-5 text-sm flex items-center justify-center gap-2 rounded-2xl transition-all active:scale-95"
         >
           <FcGoogle className="text-3xl" />
           Continue with Google
