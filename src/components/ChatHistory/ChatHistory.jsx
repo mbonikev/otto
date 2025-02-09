@@ -67,7 +67,7 @@ function ChatHistory({ convs, loadingConvs }) {
                     onClick={() => handleMigrate(msg.conversationId)}
                     className={`w-full px-3 py-2 ${
                       chatId === msg.conversationId
-                        ? "bg-stone-100 dark:bg-card-hover-dark"
+                        ? "bg-stone-100 dark:bg-card-hover-dark dark:text-light-color"
                         : "hover:bg-stone-100 "
                     } rounded-xl text-sm text-left text-dark-text`}
                   >
