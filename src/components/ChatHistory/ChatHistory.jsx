@@ -52,7 +52,7 @@ function ChatHistory({ convs, loadingConvs }) {
           </div>
         </div>
         {/*  */}
-        <div className="w-full flex-1 flex flex-col overflow-y-auto custom_scrollbar gap-2 mt-2 px-1 my-0">
+        <div className="w-full flex-1 flex flex-col overflow-y-auto custom_scrollbar gap-2 mt-2 px-1 pr-2 my-0">
           {/* chats */}
           {loadingConvs ? (
             <div className="w-full h-full flex flex-col items-center justify-start py-10">
