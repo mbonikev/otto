@@ -216,7 +216,7 @@ input {
 /* Style for bullet points */
 .markdown ul,
 .markdown ol {
-  list-style-type:lower-roman;
+  list-style-type: disc;
   padding-left: 40px;
 }
 
