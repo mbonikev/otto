@@ -69,7 +69,7 @@ function ChatHistory({ convs, loadingConvs }) {
                       chatId === msg.conversationId
                         ? "bg-stone-100 dark:bg-card-hover-dark dark:text-light-color"
                         : "hover:bg-stone-100 dark:hover:bg-card-hover-dark"
-                    } rounded-xl text-sm tracking-wide text-left text-dark-text dark:text-light-color`}
+                    } rounded-xl text-sm text-left text-dark-text dark:text-light-color`}
                   >
                     {msg.title.replace(/"/g, "")}
                   </button>
