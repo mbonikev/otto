@@ -286,7 +286,7 @@ function PromptArea({
                                 <div
                                   key={model.id}
                                   onClick={() => handleModelSelect(model.id)}
-                                  className="px-2 py-1.5 rounded-lg w-full hover:bg-stone-200/60 text-dark-text-weak hover:text-dark-text dark:hover:bg-light-color-weak/15 dark:text-light-color dark:hover:text-light-color text-sm font-medium cursor-pointer flex items-center justify-between"
+                                  className="px-2 py-1.5 capitalize rounded-lg w-full hover:bg-stone-200/60 text-dark-text-weak hover:text-dark-text dark:hover:bg-light-color-weak/15 dark:text-light-color dark:hover:text-light-color text-sm font-medium cursor-pointer flex items-center justify-between"
                                 >
                                   {model.id}
                                   {selectedModel === model.id && (
