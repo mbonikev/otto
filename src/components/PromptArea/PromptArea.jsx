@@ -243,7 +243,7 @@ function PromptArea({
               >
                 <div className="h-[40px] w-full mb-2 bg-red-200">
                   <div className="w-full h-full bg-transparent rounded-xl flex items-center justify-start">
-                    <HiMiniMagnifyingGlass className="mx-0 text-lg min-w-fit" />
+                    <HiMiniMagnifyingGlass className="mx-3 text-lg min-w-fit" />
                     <input
                       type="text"
                       autoFocus={true}
