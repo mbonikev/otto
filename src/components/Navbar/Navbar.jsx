@@ -6,6 +6,7 @@ import {
   HiOutlineMegaphone,
   HiOutlineShare,
   HiOutlineUser,
+  HiSparkles,
 } from "react-icons/hi2";
 import Tooltip from "../Tooltip/Tooltip";
 import { RxPencil2 } from "react-icons/rx";
@@ -199,7 +200,7 @@ function Navbar({
               <div className="w-full h-14 rounded-xl hover:bg-stone-100/70 dark:hover:bg-light-color-weak/10 cursor-pointer p-2 flex items-center justify-between">
                 <div className="flex-1 flex items-center gap-2">
                   <div className="w-9 h-9 min-w-9 aspect-square flex justify-center items-center rounded-full bg-stone-200/50 text-dark-text dark:text-light-color dark:bg-light-color-weak/20 text-lg">
-                    <BsStars />
+                    <HiSparkles />
                   </div>
                   <div className="flex flex-col gap-[2px] items-start leading-5">
                     <h1>Otto Plus</h1>
