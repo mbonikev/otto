@@ -271,7 +271,7 @@ function PromptArea({
                           return acc;
                         }, {})
                     )
-                      .sort(([a], [b]) => a.localeCompare(b)) // 🔥 Sort owners A-Z
+                      // .sort(([a], [b]) => a.localeCompare(b))
                       .map(([owner, ownerModels]) => (
                         <div key={owner} className="w-full">
                           {/* Owner Header */}
