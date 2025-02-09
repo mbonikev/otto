@@ -282,6 +282,9 @@ function Navbar({
               <HiOutlineMegaphone className="text-2xl text-dark-text-weak dark:text-light-color-weak" />
               <h1 className="text-sm">What's New</h1>
             </button>
+            {/*  */}
+            <div className="w-[90%] h-[1px] bg-stone-200 dark:bg-dark-text-weak/40 mx-auto my-1"></div>
+            {/*  */}
             <button
               onClick={handleLogout}
               disabled={loading}
