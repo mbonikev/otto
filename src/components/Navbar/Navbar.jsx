@@ -261,7 +261,7 @@ function Navbar({
               <h1 className="text-sm">My account</h1>
             </button> */}
             <button className="w-full rounded-xl p-2 flex items-center justify-start gap-2 hover:bg-stone-100 text-dark-text-weak hover:text-dark-text dark:text-light-color dark:hover:text-light-color dark:hover:bg-light-color-weak/10">
-              <HiOutlineCog6Tooth className="text-2xl text-dark-text-weak/70 dark:text-light-color-weak" />
+              <HiOutlineCog6Tooth className="text-xl text-dark-text-weak/70 dark:text-light-color-weak" />
               <h1 className="text-sm">Settings</h1>
             </button>
             {/*  */}
@@ -285,12 +285,12 @@ function Navbar({
             >
               {loading ? (
                 <>
-                  <LuLoaderCircle className="text-2xl text-dark-text-weak/70 dark:text-light-color-weak animate-spinLoader" />
+                  <LuLoaderCircle className="text-xl text-dark-text-weak/70 dark:text-light-color-weak animate-spinLoader" />
                   <h1 className="text-sm">Sign Out</h1>
                 </>
               ) : (
                 <>
-                  <HiOutlineArrowRightStartOnRectangle className="text-2xl text-dark-text-weak/70 dark:text-light-color-weak" />
+                  <HiOutlineArrowRightStartOnRectangle className="text-xl text-dark-text-weak/70 dark:text-light-color-weak" />
                   <h1 className="text-sm">Sign Out</h1>
                 </>
               )}
