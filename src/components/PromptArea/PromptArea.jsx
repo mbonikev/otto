@@ -12,6 +12,7 @@ import { RxTextAlignMiddle } from "react-icons/rx";
 import {
   HiChevronUpDown,
   HiMiniMagnifyingGlass,
+  HiMiniPaperAirplane,
   HiMiniXCircle,
   HiOutlineMicrophone,
 } from "react-icons/hi2";
@@ -325,7 +326,7 @@ function PromptArea({
                     : "opacity-100"
                 }`}
             >
-              <IoSend className="text-[27px]" />
+              <HiMiniPaperAirplane className="text-[27px]" />
             </button>
           </div>
         </div>
