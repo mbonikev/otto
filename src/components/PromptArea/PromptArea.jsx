@@ -281,7 +281,7 @@ function PromptArea({
                             {owner}
                           </h1>
                           {/* Models List */}
-                          <div className="w-full h-fit flex flex-col mb-[5px]">
+                          <div className="w-full h-fit flex flex-col mb-[8px]">
                             {ownerModels
                               .filter((model) => model.active)
                               .map((model) => (
