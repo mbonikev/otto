@@ -277,7 +277,7 @@ function PromptArea({
                       .map(([owner, ownerModels]) => (
                         <div key={owner} className="w-full">
                           {/* Owner Header */}
-                          <h1 className="mt-[10px] text-xs font-medium text-dark-text-weak/40 dark:text-light-color-weak py-1.5 px-2">
+                          <h1 className="text-xs font-medium text-dark-text-weak/40 dark:text-light-color-weak py-1.5 px-2">
                             {owner}
                           </h1>
                           {/* Models List */}
