@@ -30,8 +30,8 @@ function ChatHistory({ convs, loadingConvs }) {
     <div className="w-[300px] h-svh p-2">
       <div className="w-full h-full bg-white dark:bg-card-dark-1 rounded-2xl px-1 py-2 flex flex-col">
         {/* 1 */}
-        <div className="w-full h-fit px-2 bg-red-300">
-          <div className="w-full h-[44px] min-h-[44px] border-b-[1px] dark:border-light-color-weak/40 pb-0">
+        <div className="w-full h-fit px-2 bg-red-300/20">
+          <div className="w-full h-[40px] min-h-[40px] border-b-[1px] dark:border-light-color-weak/40 pb-0">
             <div className="w-full h-full bg-transparent rounded-xl flex items-center justify-start">
               <HiMiniMagnifyingGlass className="mx-2 text-lg min-w-fit dark:text-light-color-weak" />
               <input
