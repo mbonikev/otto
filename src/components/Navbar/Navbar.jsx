@@ -268,11 +268,11 @@ function Navbar({
             <div className="w-[90%] h-[1px] bg-stone-200 dark:bg-dark-text-weak/40 mx-auto my-1"></div>
             {/*  */}
             <button className="w-full rounded-xl p-2 flex items-center justify-start gap-2 hover:bg-stone-100 text-dark-text-weak hover:text-dark-text dark:text-light-color dark:hover:text-light-color dark:hover:bg-light-color-weak/10">
-              <HiOutlineSparkles className="text-2xl text-dark-text-weak/70 dark:text-light-color-weak" />
+              <HiOutlineSparkles className="text-xl text-dark-text-weak/70 dark:text-light-color-weak" />
               <h1 className="text-sm">Upgrade Plan</h1>
             </button>
             <button className="w-full rounded-xl p-2 flex items-center justify-start gap-2 hover:bg-stone-100 text-dark-text-weak hover:text-dark-text dark:text-light-color dark:hover:text-light-color dark:hover:bg-light-color-weak/10">
-              <HiOutlineMegaphone className="text-2xl text-dark-text-weak/70 dark:text-light-color-weak" />
+              <HiOutlineMegaphone className="text-xl text-dark-text-weak/70 dark:text-light-color-weak" />
               <h1 className="text-sm">What's New</h1>
             </button>
             {/*  */}
