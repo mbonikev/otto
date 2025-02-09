@@ -216,7 +216,7 @@ input {
 /* Style for bullet points */
 .markdown ul,
 .markdown ol {
-  list-style-type:georgian;
+  list-style-type:lower-greek;
   padding-left: 40px;
 }
 
