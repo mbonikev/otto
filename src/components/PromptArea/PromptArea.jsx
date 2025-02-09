@@ -239,9 +239,9 @@ function PromptArea({
             {showModels && (
               <div
                 ref={modelsRef}
-                className=" w-[300px] max-sm:w-full h-[300px] bg-white dark:text-light-color dark:bg-card-dark-2 ring-1 ring-stone-300/80 dark:ring-dark-text-weak/50 shadow-md rounded-2xl absolute left-0 bottom-[130%] py-2 pl-2 bg-sky-300 flex flex-col"
+                className=" w-[300px] max-sm:w-full h-[300px] bg-white dark:text-light-color dark:bg-card-dark-2 ring-1 ring-stone-300/80 dark:ring-dark-text-weak/50 shadow-md rounded-2xl absolute left-0 bottom-[130%] px-2 flex flex-col"
               >
-                <div className="w-full h-[44px] min-h-[44px] border-b-[1px] dark:border-light-color-weak/40 mr-2">
+                <div className="w-full h-[44px] min-h-[44px] border-b-[1px] dark:border-light-color-weak/40">
                   <div className="w-full h-full bg-transparent rounded-xl flex items-center justify-start">
                     <HiMiniMagnifyingGlass className="mx-3 text-lg min-w-fit" />
                     <input
