@@ -30,23 +30,25 @@ function ChatHistory({ convs, loadingConvs }) {
     <div className="w-[300px] h-svh p-2">
       <div className="w-full h-full bg-white dark:bg-card-dark-1 rounded-2xl p-1 flex flex-col">
         {/* 1 */}
-        <div className="w-full h-[44px] min-h-[44px] border-b-[1px] dark:border-light-color-weak/40 pb-2">
-          <div className="w-full h-full bg-transparent rounded-xl flex items-center justify-start">
-            <HiMiniMagnifyingGlass className="mx-2 text-lg min-w-fit dark:text-light-color-weak" />
-            <input
-              type="text"
-              autoFocus={true}
-              onChange={(e) => setSearchValue(e.target.value)}
-              value={searchValue}
-              className="h-full w-full bg-transparent text-dark-text dark:text-light-color placeholder:text-dark-text-weak/50 dark:placeholder:text-light-color-weak text-sm"
-              placeholder="Search chats..."
-            />
-            {searchValue !== "" && (
-              <HiMiniXCircle
-                onClick={() => setSearchValue("")}
-                className="mx-2 min-w-fit text-xl text-dark-text-weak/40 dark:text-light-color-weak/40 hover:text-dark-text-weak dark:hover:text-light-color-weak transition cursor-pointer"
+        <div className="w-full h-fit p-1">
+          <div className="w-full h-[44px] min-h-[44px] border-b-[1px] dark:border-light-color-weak/40 pb-2">
+            <div className="w-full h-full bg-transparent rounded-xl flex items-center justify-start">
+              <HiMiniMagnifyingGlass className="mx-2 text-lg min-w-fit dark:text-light-color-weak" />
+              <input
+                type="text"
+                autoFocus={true}
+                onChange={(e) => setSearchValue(e.target.value)}
+                value={searchValue}
+                className="h-full w-full bg-transparent text-dark-text dark:text-light-color placeholder:text-dark-text-weak/50 dark:placeholder:text-light-color-weak text-sm"
+                placeholder="Search chats..."
               />
-            )}
+              {searchValue !== "" && (
+                <HiMiniXCircle
+                  onClick={() => setSearchValue("")}
+                  className="mx-2 min-w-fit text-xl text-dark-text-weak/40 dark:text-light-color-weak/40 hover:text-dark-text-weak dark:hover:text-light-color-weak transition cursor-pointer"
+                />
+              )}
+            </div>
           </div>
         </div>
         {/*  */}
