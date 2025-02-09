@@ -216,7 +216,7 @@ input {
 /* Style for bullet points */
 .markdown ul,
 .markdown ol {
-  list-style-type: circle;
+  list-style-type:georgian;
   padding-left: 40px;
 }
 
