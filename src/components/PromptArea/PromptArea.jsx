@@ -248,7 +248,7 @@ function PromptArea({
                       type="text"
                       autoFocus={true}
                       onChange={(e) => setSearchModel(e.target.value)}
-                      className="h-full w-full bg-transparent text-dark-text dark:text-light-color placeholder:text-dark-text-weak/50 dark:placeholder:text-light-color-weak text-sm font-normal"
+                      className="h-full w-full bg-transparent text-dark-text dark:text-light-color placeholder:text-dark-text-weak/50 dark:placeholder:text-light-color-weak text-sm"
                       placeholder="Search models..."
                     />
                   </div>
