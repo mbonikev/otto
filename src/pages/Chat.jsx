@@ -111,13 +111,13 @@ function Chat({ handleOpenLoginModal }) {
 
   return (
     <div className="w-full h-svh flex flex-col relative">
-      {/* <div className="w-full h-fit z-30 fixed top-0"> */}
-      <Navbar handleOpenLoginModal={handleOpenLoginModal} />
-      {/* </div> */}
+      <div className="w-full h-fit z-30 fixed top-0">
+        <Navbar handleOpenLoginModal={handleOpenLoginModal} />
+      </div>
 
       <div
         ref={chatBoxRef}
-        className="w-full flex-1 flex flex-col scroll-smooth overflow-y-scroll pl-[12px] bg-white dark:bg-body-dark text-dark-text dark:text-light-color"
+        className="w-full flex-1 flex flex-col scroll-smooth overflow-y-scroll pt-[40px] pl-[12px] bg-white dark:bg-body-dark text-dark-text dark:text-light-color"
       >
         {messages.length > 0 ? (
           <div className="w-full max-w-[765px] mx-auto flex-1 flex flex-col items-center justify-start py-10 max-lg:px-5">
@@ -129,10 +129,10 @@ function Chat({ handleOpenLoginModal }) {
                 return (
                   <div
                     key={index}
-                    className={`message text-base font-normal text-dark-text dark:text-light-color leading-[26px] overflow-x-auto no_scroll whitespace-pre-wrap flex py-1 px-5 ${
+                    className={`message text-base font-normal text-dark-text dark:text-light-color leading-[26px] overflow-x-auto no_scroll whitespace-pre-wrap flex py-1 ${
                       msg.role === "user"
-                        ? "w-fit bg-stone-200/40 dark:bg-card-dark-1 px-5 py-[11px] ml-auto max-w-[600px] rounded-3xl break-words whitespace-pre-wrap text-left"
-                        : "w-full bg-transparent flex items-start justify-start gap-4 break-words whitespace-pre-wrap"
+                        ? "w-fit bg-stone-200/40 dark:bg-card-dark-1 px-4 mx-5 py-3 ml-auto max-w-[600px] rounded-3xl break-words whitespace-pre-wrap text-left"
+                        : "w-full bg-transparent flex items-start justify-start px-5 gap-4 break-words whitespace-pre-wrap"
                     } ${isLastNonUserMsg ? "animate-message" : ""}`}
                   >
                     {renderContent(msg)}
@@ -159,12 +159,14 @@ function Chat({ handleOpenLoginModal }) {
         )}
       </div>
 
-      <PromptArea
-        setMessages={setMessages}
-        thinking={thinking}
-        setThinking={setThinking}
-        handleOpenLoginModal={handleOpenLoginModal}
-      />
+      <div className="w-full h-fit z-10 sticky bottom-0">
+        <PromptArea
+          setMessages={setMessages}
+          thinking={thinking}
+          setThinking={setThinking}
+          handleOpenLoginModal={handleOpenLoginModal}
+        />
+      </div>
     </div>
   );
 }
