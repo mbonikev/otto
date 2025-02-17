@@ -89,7 +89,9 @@ function Navbar({
     };
 
     // Call both functions to fetch data
-    handleGetConvs();
+    if (user) {
+      handleGetConvs();
+    }
   }, []);
 
   useEffect(() => {
