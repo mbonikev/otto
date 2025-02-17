@@ -10,7 +10,7 @@ const Login = () => {
 
   const handleGoogleLogin = async () => {
     // setLoading(true);
-    setError(null);
+    // setError(null);
   
     try {
       const response = await axios.get(`${backendUrl}/auth/google/callback`, {
@@ -25,7 +25,7 @@ const Login = () => {
       }
     } catch (error) {
       console.error("Error during login:", error);
-      setError(error.response?.data?.message || "Login failed");
+      // setError(error.response?.data?.message || "Login failed");
     } finally {
       // setLoading(false);
     }
