@@ -20,11 +20,9 @@ const Login = () => {
         withCredentials: true, // Include cookies with the request
       });
 
-      if (response.data.token) {
+      if (response) {
         Cookies.set("token", response.data.token);
         navigate("/");
-      } else {
-        throw new Error("No token received");
       }
     } catch (error) {
       console.error("Error during login:", error);
