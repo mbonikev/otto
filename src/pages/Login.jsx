@@ -1,41 +1,12 @@
-import { useEffect, useState } from "react";
+import { FaGoogle, FaPlay } from "react-icons/fa";
+import { FaApple } from "react-icons/fa6";
 import { FcGoogle } from "react-icons/fc";
-import { Link, useNavigate } from "react-router-dom";
-import axios from "axios";
-import Cookies from "js-cookie";
+import ReactPlayer from "react-player";
+import { Link } from "react-router-dom";
 
 const Login = () => {
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
   const backendUrl = import.meta.env.VITE_BACKEND_API;
-  const navigate = useNavigate();
-
-  // Handle the Google login callback and save JWT token
-  const handleGoogleLogin = async () => {
-    setLoading(true);
-    setError(null);
-
-    try {
-      const response = await axios.get(`${backendUrl}/auth/google/callback`, {
-        withCredentials: true, // Include cookies with the request
-      });
-
-      if (response) {
-        Cookies.set("token", response.data.token);
-        navigate("/");
-      }
-    } catch (error) {
-      console.error("Error during login:", error);
-      setError(error.response?.data?.message || "Login failed"); // Capture specific error message from backend
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  useEffect(() => {
-    document.title = "Login - Otto";
-  }, []);
-
+  document.title = "Login - Otto";
   return (
     <div className="h-svh max-lg:min-h-full flex justify-start items-center flex-col bg-white dark:bg-sidebar-color">
       <div className="w-full h-full flex flex-1">
@@ -43,6 +14,9 @@ const Login = () => {
           <div className="w-fit flex-1 flex flex-col items-start justify-center gap-1">
             <Link to={"/"} className="w-fit h-fit flex gap-2 mb-8">
               <img src="./logo.png" className="h-8" />
+              {/* <h1 className="font-Kanit text-xl font-medium text-dark-text dark:text-light-color text-center">
+              Otto
+            </h1> */}
             </Link>
             <h1 className="text-2xl font-medium text-dark-text dark:text-light-color">
               Sign in to Otto
@@ -54,15 +28,13 @@ const Login = () => {
               <p className="text-base text-dark-text dark:text-light-color mb-3">
                 Continue with:
               </p>
-              <button
-                onClick={handleGoogleLogin}
+              <a
+                href={`${backendUrl}/auth/google`}
                 className="bg-transparent hover:bg-stone-200/50 dark:hover:bg-card-hover-dark/30 ring-1 ring-stone-200 dark:ring-card-dark-1 text-dark-text dark:text-light-color py-[10px] px-3 w-fit min-w-[330px] max-md:min-w-full max-md:pr-5 text-sm flex items-center justify-center gap-2 rounded-2xl transition-all active:scale-95"
-                disabled={loading}
               >
                 <FcGoogle className="text-2xl" />
-                {loading ? "Logging in..." : "Continue with Google"}
-              </button>
-              {error && <p className="text-red-500 text-sm mt-2">{error}</p>}
+                Continue with Google
+              </a>
             </div>
             <p className="text-sm text-dark-text-weak dark:text-light-color-weak mt-10 max-w-[300px] mb-7">
               By signing in, you agree to the{" "}
