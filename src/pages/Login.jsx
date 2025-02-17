@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import Cookies from "js-cookie";
 
 const Login = () => {
   const [loading, setLoading] = useState(false);
@@ -20,8 +21,8 @@ const Login = () => {
       });
 
       if (response.data.token) {
-        localStorage.setItem("jwtToken", response.data.token); // Save JWT token to localStorage
-        navigate("/dashboard"); // Redirect to dashboard or home page after successful login
+        Cookies.set("token", response.data.token);
+        navigate("/");
       } else {
         throw new Error("No token received");
       }
