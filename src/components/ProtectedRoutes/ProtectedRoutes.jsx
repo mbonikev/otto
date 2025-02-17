@@ -25,8 +25,9 @@ const ProtectedRoutes = () => {
           });
         }
       } catch (error) {
-        console.error("Error fetching user status:", error);
+        // console.error("Error fetching user status:", error)
         setUser(null);
+        return null
       } finally {
         setLoading(false);
       }
