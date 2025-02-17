@@ -9,7 +9,7 @@ const Login = () => {
   document.title = "Login - Otto";
 
   const handleGoogleLogin = async () => {
-    setLoading(true);
+    // setLoading(true);
     setError(null);
   
     try {
@@ -27,7 +27,7 @@ const Login = () => {
       console.error("Error during login:", error);
       setError(error.response?.data?.message || "Login failed");
     } finally {
-      setLoading(false);
+      // setLoading(false);
     }
   };
 
