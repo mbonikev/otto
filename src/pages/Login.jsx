@@ -1,3 +1,4 @@
+import axios from "axios";
 import { FaGoogle, FaPlay } from "react-icons/fa";
 import { FaApple } from "react-icons/fa6";
 import { FcGoogle } from "react-icons/fc";
@@ -8,8 +9,7 @@ const Login = () => {
   const backendUrl = import.meta.env.VITE_BACKEND_API;
   document.title = "Login - Otto";
 
-  const handleLogin = () => {
-    
+  const handleLogin = async () => {
   }
   return (
     <div className="h-svh max-lg:min-h-full flex justify-start items-center flex-col bg-white dark:bg-sidebar-color">
