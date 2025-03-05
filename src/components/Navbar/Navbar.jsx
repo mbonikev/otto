@@ -13,7 +13,7 @@ import Tooltip from "../Tooltip/Tooltip";
 import { RxPencil2 } from "react-icons/rx";
 import { IoShareSocialOutline } from "react-icons/io5";
 import ChatHistory from "../ChatHistory/ChatHistory";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { LuLoaderCircle } from "react-icons/lu";
 import axios from "axios";
 import { BsIncognito, BsLockFill, BsStars } from "react-icons/bs";
@@ -40,6 +40,7 @@ function Navbar({
   const [loadingConvs, setLoadingConvs] = useState(false);
   const [convs, setConvs] = useState([]);
   const navigate = useNavigate();
+  const location = useLocation();
   const backendUrl = import.meta.env.VITE_BACKEND_API;
 
   const handleLogout = async () => {
@@ -69,7 +70,7 @@ function Navbar({
       const apiUrl = import.meta.env.VITE_BACKEND_API;
       const apiKey = import.meta.env.VITE_GROQ_API_KEY;
       try {
-        setLoadingConvs(true);
+        setLoadingConvs(convs.length === 0);
         const response = await axios.get(`${apiUrl}/api/getconvs`, {
           params: { userId },
           headers: {
@@ -92,7 +93,7 @@ function Navbar({
     if (user) {
       handleGetConvs();
     }
-  }, []);
+  }, [location]);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
