@@ -39,6 +39,7 @@ function Navbar({
   const [loading, setLoading] = useState(false);
   const [loadingConvs, setLoadingConvs] = useState(false);
   const [convs, setConvs] = useState([]);
+  const [updateActiveChat, setUpdateActiveChat] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
   const backendUrl = import.meta.env.VITE_BACKEND_API;
@@ -142,9 +143,22 @@ function Navbar({
   }, []);
 
   const handleNew = () => {
-    Cookies.remove("convId");
+    // Cookies.remove("convId");
+    Cookies.set("convId", "", {
+      expires: 1,
+      path: "/",
+    });
     setMessages([]);
-    window.location.reload();
+    setUpdateActiveChat(true);
+
+    // Preserve `?chat=` in the URL without a value
+    const newUrl =
+      window.location.origin +
+      window.location.pathname +
+      window.location.hash.split("?")[0] +
+      "?chat=";
+
+    window.history.replaceState(null, "", newUrl);
   };
 
   return (
@@ -167,7 +181,11 @@ function Navbar({
                   animateChatsModal ? "translate-x-0" : "-translate-x-[300px]"
                 }`}
         >
-          <ChatHistory convs={convs} loadingConvs={loadingConvs} />
+          <ChatHistory
+            convs={convs}
+            loadingConvs={loadingConvs}
+            updateActiveChat={updateActiveChat}
+          />
         </div>
       )}
 

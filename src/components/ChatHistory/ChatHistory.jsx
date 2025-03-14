@@ -5,13 +5,16 @@ import Cookies from "js-cookie";
 import { RiLoader2Fill } from "react-icons/ri";
 import { PiChatsCircleFill } from "react-icons/pi";
 
-function ChatHistory({ convs, loadingConvs }) {
+function ChatHistory({ convs, loadingConvs, updateActiveChat }) {
   const [searchValue, setSearchValue] = useState("");
+  const [chatId, setChatId] = useState(null);
   const location = useLocation(); // Use the useLocation hook to get the current URL
 
   // Get the 'chat' parameter from the URL
   const urlParams = new URLSearchParams(location.search);
-  const chatId = urlParams.get("chat") || "";
+  useEffect(() => {
+    setChatId(urlParams.get("chat") || null);
+  }, [updateActiveChat]);
 
   const handleMigrate = (link) => {
     Cookies.set("convId", link, {
