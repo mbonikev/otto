@@ -7,7 +7,9 @@ import { Link } from "react-router-dom";
 const Login = () => {
   const backendUrl = import.meta.env.VITE_BACKEND_API;
   document.title = "Login - Otto";
-  
+  const handleGoogleLogin = () => {
+    window.location.href = `${backendUrl}/auth/google`;
+  };
   return (
     <div className="h-svh max-lg:min-h-full flex justify-start items-center flex-col bg-white dark:bg-sidebar-color">
       <div className="w-full h-full flex flex-1">
@@ -29,13 +31,13 @@ const Login = () => {
               <p className="text-base text-dark-text dark:text-light-color mb-3">
                 Continue with:
               </p>
-              <a
-                href={`${backendUrl}/auth/google`}
+              <button
+                onClick={handleGoogleLogin}
                 className="bg-transparent hover:bg-stone-200/50 dark:hover:bg-card-hover-dark/30 ring-1 ring-stone-200 dark:ring-card-dark-1 text-dark-text dark:text-light-color py-[10px] px-3 w-fit min-w-[330px] max-md:min-w-full max-md:pr-5 text-sm flex items-center justify-center gap-2 rounded-2xl transition-all active:scale-95"
               >
                 <FcGoogle className="text-2xl" />
                 Continue with Google
-              </a>
+              </button>
             </div>
             <p className="text-sm text-dark-text-weak dark:text-light-color-weak mt-10 max-w-[300px] mb-7">
               By signing in, you agree to the{" "}
