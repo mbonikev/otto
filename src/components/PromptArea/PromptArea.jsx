@@ -156,6 +156,10 @@ function PromptArea({
     setShowModels(false);
   };
 
+  useEffect(() => {
+    setSearchModel("")
+  },[showModels])
+
   return (
     <div className="w-full h-fit flex flex-col gap-2 px-3 pb-2 bg-white dark:bg-body-dark">
       <form
