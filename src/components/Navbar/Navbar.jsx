@@ -185,6 +185,7 @@ function Navbar({
             convs={convs}
             loadingConvs={loadingConvs}
             updateActiveChat={updateActiveChat}
+            handleCloseChatsModal={handleCloseChatsModal}
           />
         </div>
       )}
