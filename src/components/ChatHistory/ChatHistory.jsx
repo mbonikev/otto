@@ -4,6 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 import Cookies from "js-cookie";
 import { RiLoader2Fill } from "react-icons/ri";
 import { PiChatsCircleFill } from "react-icons/pi";
+import { LuX } from "react-icons/lu";
 
 function ChatHistory({ convs, loadingConvs, updateActiveChat }) {
   const [searchValue, setSearchValue] = useState("");
@@ -54,7 +55,9 @@ function ChatHistory({ convs, loadingConvs, updateActiveChat }) {
             </div>
           </div>
           <div className="w-[60px] h-full justify-center hidden max-md:flex items-center ">
-            <button></button>
+            <button >
+              <LuX />
+            </button>
           </div>
         </div>
         {/*  */}
