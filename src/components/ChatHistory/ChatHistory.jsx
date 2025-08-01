@@ -7,7 +7,7 @@ import { PiChatsCircleFill } from "react-icons/pi";
 
 function ChatHistory({ convs, loadingConvs, updateActiveChat }) {
   const [searchValue, setSearchValue] = useState("");
-  const [chatId, setChatId] = useState(null);
+  const [chatId, setChatId] = useState(Cookies.get("convId") || null);
   const location = useLocation(); // Use the useLocation hook to get the current URL
 
   // Get the 'chat' parameter from the URL
@@ -16,7 +16,7 @@ function ChatHistory({ convs, loadingConvs, updateActiveChat }) {
     setChatId(urlParams.get("chat") || null);
   }, [updateActiveChat]);
 
-  const handleMigrate = (link) => {
+const handleMigrate = (link) => {
     Cookies.set("convId", link, {
       expires: 1,
       path: "/",
@@ -24,13 +24,14 @@ function ChatHistory({ convs, loadingConvs, updateActiveChat }) {
     window.location.reload();
   };
 
+
   // Filter conversations based on search value
   const filteredConvs = convs.filter((msg) =>
     msg.title.toLowerCase().includes(searchValue.toLowerCase())
   );
 
   return (
-    <div className="w-[300px] h-svh p-2">
+    <div className="w-[300px] max-md:w-full h-svh p-2 max-md:p-0">
       <div className="w-full h-full bg-white dark:bg-card-dark-1 rounded-2xl px-1 pb-2 flex flex-col">
         {/* 1 */}
         <div className="w-full h-fit px-2">
@@ -66,6 +67,7 @@ function ChatHistory({ convs, loadingConvs, updateActiveChat }) {
               {filteredConvs.length !== 0 ? (
                 filteredConvs.map((msg, index) => (
                   <button
+                  // title={msg.conversationId}
                     key={index}
                     onClick={() => handleMigrate(msg.conversationId)}
                     className={`w-full px-3 py-2 ${
