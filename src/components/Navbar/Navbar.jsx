@@ -197,7 +197,7 @@ function Navbar({
           className="group h-10 w-auto aspect-square flex items-center justify-center text-[22px] hover:bg-stone-200/70 text-dark-text-weak dark:text-light-color-weak hover:text-dark-text-weak dark:hover:bg-card-hover-dark dark:hover:text-light-color-weak rounded-full relative"
         >
           <HiOutlineChatBubbleLeftRight className="" />
-          <Tooltip title="Chat history" placement="left" shortcut="Alt + c" />
+          <Tooltip title="Chat history" placement="left" />
         </button>
         <button
           onClick={user ? handleNew : handleOpenLoginModal}
