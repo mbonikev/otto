@@ -34,7 +34,7 @@ function ChatHistory({ convs, loadingConvs, updateActiveChat }) {
     <div className="w-[300px] max-md:w-full h-svh p-2 max-md:p-0">
       <div className="w-full h-full bg-white dark:bg-card-dark-1 rounded-2xl max-md:rounded-none px-1 pb-2 flex flex-col">
         {/* 1 */}
-        <div className="w-full h-fit px-2 flex">
+        <div className="w-full h-fit px-2 max-md:pr-0 flex">
           <div className="w-full max-md:flex-1 h-[45px] min-h-[45px] border-b-[1px] dark:border-light-color-weak/40">
             <div className="w-full h-full bg-transparent rounded-xl flex items-center justify-start">
               <HiMiniMagnifyingGlass className="mx-2 text-lg min-w-fit dark:text-light-color-weak" />
@@ -54,7 +54,7 @@ function ChatHistory({ convs, loadingConvs, updateActiveChat }) {
               )}
             </div>
           </div>
-          <div className="w-[60px] py-2 h-full justify-center hidden max-md:flex items-center ">
+          <div className="w-[60px] py-1 h-full justify-center hidden max-md:flex items-center ">
             <button className="h-full aspect-square rounded-full p-2 flex items-center justify-center gap-2 hover:bg-stone-100 text-dark-text hover:text-dark-text dark:text-light-color dark:hover:text-light-color dark:hover:bg-light-color-weak/10">
               <LuX  className="text-xl" />
             </button>
