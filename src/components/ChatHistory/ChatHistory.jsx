@@ -54,9 +54,9 @@ function ChatHistory({ convs, loadingConvs, updateActiveChat }) {
               )}
             </div>
           </div>
-          <div className="w-[60px] h-full justify-center hidden max-md:flex items-center ">
+          <div className="w-[60px] py-2 h-full justify-center hidden max-md:flex items-center ">
             <button className="h-full aspect-square rounded-full p-2 flex items-center justify-center gap-2 hover:bg-stone-100 text-dark-text hover:text-dark-text dark:text-light-color dark:hover:text-light-color dark:hover:bg-light-color-weak/10">
-              <LuX />
+              <LuX  className="text-xl" />
             </button>
           </div>
         </div>
