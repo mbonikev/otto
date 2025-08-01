@@ -16,14 +16,13 @@ function ChatHistory({ convs, loadingConvs, updateActiveChat }) {
     setChatId(urlParams.get("chat") || null);
   }, [updateActiveChat]);
 
-const handleMigrate = (link) => {
+  const handleMigrate = (link) => {
     Cookies.set("convId", link, {
       expires: 1,
       path: "/",
     });
     window.location.reload();
   };
-
 
   // Filter conversations based on search value
   const filteredConvs = convs.filter((msg) =>
@@ -54,6 +53,7 @@ const handleMigrate = (link) => {
               )}
             </div>
           </div>
+          <div className="w-[60px] h-full"></div>
         </div>
         {/*  */}
         <div className="w-full flex-1 flex flex-col overflow-y-auto custom_scrollbar gap-2 mt-2 px-1 pr-2 my-0">
@@ -67,7 +67,7 @@ const handleMigrate = (link) => {
               {filteredConvs.length !== 0 ? (
                 filteredConvs.map((msg, index) => (
                   <button
-                  // title={msg.conversationId}
+                    // title={msg.conversationId}
                     key={index}
                     onClick={() => handleMigrate(msg.conversationId)}
                     className={`w-full px-3 py-2 ${
