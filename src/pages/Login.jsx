@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const Login = () => {
   const backendUrl = import.meta.env.VITE_BACKEND_API;
-  document.title = "Login - Otto";
+  document.title = "Login - Otto AI";
   const handleGoogleLogin = () => {
     window.location.href = `${backendUrl}/auth/google`;
   };
