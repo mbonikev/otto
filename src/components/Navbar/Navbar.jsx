@@ -176,9 +176,9 @@ function Navbar({
       {/* Chat Modal */}
       {user && chatsModal && (
         <div
-          className={`w-fit h-svh absolute top-0 left-0 transition-transform duration-300 ease-in-out z-50
+          className={`w-fit max-md:w-full h-svh absolute top-0 left-0 transition-transform duration-300 ease-in-out z-50
                 ${
-                  animateChatsModal ? "translate-x-0" : "-translate-x-[300px]"
+                  animateChatsModal ? "translate-x-0" : "-translate-x-[300px] max-md:-translate-x-full"
                 }`}
         >
           <ChatHistory
