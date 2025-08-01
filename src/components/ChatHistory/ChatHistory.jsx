@@ -55,7 +55,7 @@ function ChatHistory({ convs, loadingConvs, updateActiveChat, handleCloseChatsMo
             </div>
           </div>
           <div className="w-[60px] py-0.5 h-full justify-center hidden max-md:flex items-center ">
-            <button className="h-full translate-y-0.5 aspect-square rounded-full p-2 flex items-center justify-center gap-2 hover:bg-stone-100 text-dark-text hover:text-dark-text dark:text-light-color dark:hover:text-light-color dark:hover:bg-light-color-weak/10">
+            <button onClick={handleCloseChatsModal} className="h-full translate-y-0.5 aspect-square rounded-full p-2 flex items-center justify-center gap-2 hover:bg-stone-100 text-dark-text hover:text-dark-text dark:text-light-color dark:hover:text-light-color dark:hover:bg-light-color-weak/10">
               <LuX  className="text-xl" />
             </button>
           </div>
