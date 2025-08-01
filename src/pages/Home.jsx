@@ -229,7 +229,7 @@ function Home({ handleOpenLoginModal }) {
             </div>
           ) : (
             <div className="w-full h-full flex flex-col items-center justify-center">
-              <h1 className="text-3xl font-semibold">How can I assist you?</h1>
+              <h1 className="text-2xl font-medium">Hi, how can I assist you?</h1>
             </div>
           )}
         </div>
