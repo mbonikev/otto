@@ -59,8 +59,8 @@ function Chat({ handleOpenLoginModal }) {
       (msg) => msg.role === "assistant"
     );
     document.title = messages.length
-      ? `${firstAssistantMessage?.title?.replace(/["`]/g, "") || ""} - Otto`
-      : "Otto";
+      ? `${firstAssistantMessage?.title?.replace(/["`]/g, "") || ""} - Otto AI`
+      : "Otto AI";
   }, [messages]);
 
   // Function to render content with code blocks
