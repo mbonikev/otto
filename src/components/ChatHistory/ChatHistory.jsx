@@ -6,7 +6,7 @@ import { RiLoader2Fill } from "react-icons/ri";
 import { PiChatsCircleFill } from "react-icons/pi";
 import { LuX } from "react-icons/lu";
 
-function ChatHistory({ convs, loadingConvs, updateActiveChat }) {
+function ChatHistory({ convs, loadingConvs, updateActiveChat, handleCloseChatsModal }) {
   const [searchValue, setSearchValue] = useState("");
   const [chatId, setChatId] = useState(Cookies.get("convId") || null);
   const location = useLocation(); // Use the useLocation hook to get the current URL
