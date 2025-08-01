@@ -37,7 +37,7 @@ function PromptArea({
   const modelsRef = useRef(null);
   const [showModels, setShowModels] = useState(false);
   const [selectedModel, setSelectedModel] = useState(
-    Cookies.get("selectedModel") || "llama3-8b-8192"
+    Cookies.get("selectedModel") || "compound-beta-mini" // before llama3-8b-8192
   );
   const [searchModel, setSearchModel] = useState("");
   const { chat } = useParams();
@@ -192,7 +192,7 @@ function PromptArea({
                   className="group cursor-pointer w-fit h-full flex items-center justify-center gap-1.5 px-3 relative hover:text-dark-text dark:text-light-color-weak dark:hover:text-light-color"
                 >
                   <LuBrain className="text-lg text-purple-500 dark:text-light-color-weak/80" />
-                  <p className="w-full truncate max-w-[100px]">
+                  <p className="w-fit truncate max-w-[250px] max-lg:max-w-[200px] max-md:w-full max-md:max-w-[120px] max-sm:max-w-[90px]">
                     {selectedModel}
                   </p>
                   <HiChevronUpDown className="text-lg opacity-75" />
@@ -204,7 +204,7 @@ function PromptArea({
                   className="group cursor-pointer w-fit h-full flex items-center justify-center gap-1.5 px-3 relative hover:text-dark-text dark:text-light-color-weak dark:hover:text-light-color"
                 >
                   <LuBrain className="text-lg text-purple-500 dark:text-light-color-weak/80" />
-                  <p className="w-full truncate max-w-[100px]">
+                  <p className="w-fit truncate max-w-[250px] max-lg:max-w-[200px] max-md:w-full max-md:max-w-[120px] max-sm:max-w-[90px]">
                     {selectedModel}
                   </p>
                   <HiChevronUpDown className="text-lg opacity-75" />
