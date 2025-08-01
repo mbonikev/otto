@@ -53,7 +53,9 @@ function ChatHistory({ convs, loadingConvs, updateActiveChat }) {
               )}
             </div>
           </div>
-          <div className="w-[60px] h-full flex items-center justify-center"></div>
+          <div className="w-[60px] h-full justify-center hidden max-md:flex items-center ">
+            <button></button>
+          </div>
         </div>
         {/*  */}
         <div className="w-full flex-1 flex flex-col overflow-y-auto custom_scrollbar gap-2 mt-2 px-1 pr-2 my-0">
