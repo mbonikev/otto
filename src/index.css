@@ -175,7 +175,7 @@ input {
   line-height: 2.4rem !important;
 }
 
-.markdown h2 {
+.markdown h2,.markdown h2 strong {
   margin-top: 20px;
   font-size: 1.2rem !important;
   font-weight: 500 !important;
