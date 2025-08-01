@@ -164,7 +164,7 @@ input {
 .markdown ol {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 12px;
 }
 
 /* Style for main headings */
