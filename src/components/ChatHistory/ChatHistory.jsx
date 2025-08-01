@@ -55,7 +55,7 @@ function ChatHistory({ convs, loadingConvs, updateActiveChat }) {
             </div>
           </div>
           <div className="w-[60px] h-full justify-center hidden max-md:flex items-center ">
-            <button className="h-full aspect-square rounded-xl p-2 flex items-center justify-start gap-2 hover:bg-stone-100 text-dark-text hover:text-dark-text dark:text-light-color dark:hover:text-light-color dark:hover:bg-light-color-weak/10">
+            <button className="h-full aspect-square rounded-full p-2 flex items-center justify-center gap-2 hover:bg-stone-100 text-dark-text hover:text-dark-text dark:text-light-color dark:hover:text-light-color dark:hover:bg-light-color-weak/10">
               <LuX />
             </button>
           </div>
