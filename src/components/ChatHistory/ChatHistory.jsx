@@ -32,7 +32,7 @@ const handleMigrate = (link) => {
 
   return (
     <div className="w-[300px] max-md:w-full h-svh p-2 max-md:p-0">
-      <div className="w-full h-full bg-white dark:bg-card-dark-1 rounded-2xl px-1 pb-2 flex flex-col">
+      <div className="w-full h-full bg-white dark:bg-card-dark-1 rounded-2xl max-md:rounded-none px-1 pb-2 flex flex-col">
         {/* 1 */}
         <div className="w-full h-fit px-2">
           <div className="w-full h-[45px] min-h-[45px] border-b-[1px] dark:border-light-color-weak/40">
