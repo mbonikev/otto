@@ -167,6 +167,10 @@ input {
   gap: 6px;
 }
 
+.markdown strong{
+  font-weight: 600 !important;
+}
+
 /* Style for main headings */
 .markdown h1,.markdown h1 strong {
   margin-top: 20px;
