@@ -168,7 +168,7 @@ input {
 }
 
 /* Style for main headings */
-.markdown h1 {
+.markdown h1,.markdown h1 strong {
   margin-top: 20px;
   font-size: 1.4rem !important;
   font-weight: 600 !important;
