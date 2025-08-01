@@ -33,8 +33,8 @@ function ChatHistory({ convs, loadingConvs, updateActiveChat }) {
     <div className="w-[300px] max-md:w-full h-svh p-2 max-md:p-0">
       <div className="w-full h-full bg-white dark:bg-card-dark-1 rounded-2xl max-md:rounded-none px-1 pb-2 flex flex-col">
         {/* 1 */}
-        <div className="w-full h-fit px-2">
-          <div className="w-full h-[45px] min-h-[45px] border-b-[1px] dark:border-light-color-weak/40">
+        <div className="w-full h-fit px-2 flex">
+          <div className="w-full max-md:flex-1 h-[45px] min-h-[45px] border-b-[1px] dark:border-light-color-weak/40">
             <div className="w-full h-full bg-transparent rounded-xl flex items-center justify-start">
               <HiMiniMagnifyingGlass className="mx-2 text-lg min-w-fit dark:text-light-color-weak" />
               <input
@@ -53,7 +53,7 @@ function ChatHistory({ convs, loadingConvs, updateActiveChat }) {
               )}
             </div>
           </div>
-          <div className="w-[60px] h-full"></div>
+          <div className="w-[60px] h-full flex items-center justify-center"></div>
         </div>
         {/*  */}
         <div className="w-full flex-1 flex flex-col overflow-y-auto custom_scrollbar gap-2 mt-2 px-1 pr-2 my-0">
