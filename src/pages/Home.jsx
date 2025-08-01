@@ -78,7 +78,7 @@ function Home({ handleOpenLoginModal }) {
       (msg) => msg.role === "assistant"
     );
     document.title = messages.length
-      ? `Otto - ${firstAssistantMessage?.title?.replace(/["`]/g, "") || ""}`
+      ? `${firstAssistantMessage?.title?.replace(/["`]/g, "") || ""} - Otto`
       : "Otto";
   }, [messages]);
 
