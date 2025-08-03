@@ -350,8 +350,9 @@ pre::-webkit-scrollbar-thumb {
 }
 @media (prefers-color-scheme: dark) {
   .hide_fist_span code span:only-child {
-    background-color: #212121;
+    background-color: #383838;
     color: #ececec;
+    border: 1px solid #76767638;
   }
 }
 
