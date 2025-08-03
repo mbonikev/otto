@@ -167,19 +167,21 @@ input {
   gap: 6px;
 }
 
-.markdown strong{
+.markdown strong {
   font-weight: 600 !important;
 }
 
 /* Style for main headings */
-.markdown h1,.markdown h1 strong {
+.markdown h1,
+.markdown h1 strong {
   margin-top: 20px;
   font-size: 1.4rem !important;
   font-weight: 600 !important;
   line-height: 2.4rem !important;
 }
 
-.markdown h2,.markdown h2 strong {
+.markdown h2,
+.markdown h2 strong {
   margin-top: 20px;
   font-size: 1.2rem !important;
   font-weight: 500 !important;
@@ -195,21 +197,21 @@ input {
 
 .markdown h4 {
   margin-top: 5px;
-  font-size: .8rem !important;
+  font-size: 0.8rem !important;
   font-weight: 400 !important;
   line-height: 2rem !important;
 }
 
 .markdown h5 {
   margin-top: 5px;
-  font-size: .6rem !important;
+  font-size: 0.6rem !important;
   font-weight: 400 !important;
 }
 
 .markdown h6 {
   margin-top: 5px;
-  font-size: .4rem !important;
-  font-weight: 4  00 !important;
+  font-size: 0.4rem !important;
+  font-weight: 4 00 !important;
 }
 
 .markdown:nth-child(1) h2:first-child,
@@ -326,16 +328,15 @@ pre::-webkit-scrollbar-thumb {
 .hide_fist_span pre {
   position: relative;
 }
-.hide_fist_span pre code span{
+.hide_fist_span pre code span {
   width: 100%;
-
 }
 
 .hide_fist_span code span:only-child {
   /* color: yellow !important;
   display: none; */
   width: fit-content;
-  content: "eee"; 
+  content: "eee";
   position: absolute !important;
   top: 12px;
   right: 12px;
@@ -345,10 +346,12 @@ pre::-webkit-scrollbar-thumb {
   border-radius: 10px;
   border: 1px solid #aaaaaa38;
   text-transform: capitalize;
-  opacity: .9;
+  opacity: 0.9;
 }
 @media (prefers-color-scheme: dark) {
-  
+  .hide_fist_span code span:only-child {
+    background-color: #212121;
+  }
 }
 
 .hide_code_space pre {
