@@ -338,8 +338,8 @@ pre::-webkit-scrollbar-thumb {
   width: fit-content;
   content: "eee";
   position: absolute !important;
-  top: 12px;
-  right: 12px;
+  top: 6px;
+  right: 6px;
   background-color: white;
   padding: 2px 8px;
   font-size: 13px;
