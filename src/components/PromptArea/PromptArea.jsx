@@ -37,7 +37,7 @@ function PromptArea({
   const modelsRef = useRef(null);
   const [showModels, setShowModels] = useState(false);
   const [selectedModel, setSelectedModel] = useState(
-    Cookies.get("selectedModel") || "compound-beta-mini" // before llama3-8b-8192
+    Cookies.get("selectedModel") || "llama-3.1-8b-instant" // before llama3-8b-8192
   );
   const [searchModel, setSearchModel] = useState("");
   const { chat } = useParams();
