@@ -19,7 +19,7 @@ const ProtectedRoutes = () => {
         setUser(response.data.user || null);
 
         if (!Cookies.get("selectedModel")) {
-          Cookies.set("selectedModel", "llama3-8b-8192", {
+          Cookies.set("selectedModel",  import.meta.env.VITE_MODEL, {
             expires: 7,
             path: "/",
           });

@@ -7,6 +7,7 @@ import ProtectedRoutes from "./components/ProtectedRoutes/ProtectedRoutes";
 import Chat from "./pages/Chat";
 import AuthRedirect from "./components/AuthRedirect/AuthRedirect"; // Import AuthRedirect
 import LoginModal from "./components/LoginModal/LoginModal";
+import OAuthRedirect from "./pages/OAuthRedirect";
 
 function App() {
   const [loginModal, setLoginModal] = useState(false);
@@ -57,6 +58,8 @@ function App() {
           <Route element={<ProtectedRoutes />}>
             <Route path="/" element={<Home />} />
           </Route>
+
+          <Route path="/oauth-redirect" element={<OAuthRedirect />} />
 
           {/* Prevent Logged-In Users from Accessing Login & Chat */}
           <Route
